@@ -42,6 +42,23 @@ data/
 - Os itens em `final_json/` são a fonte operacional para renderização de entrevistas estruturadas.
 - Os itens em `normalized_registry/` não renderizam entrevista estruturada e devem ser tratados como registros auxiliares.
 
+
+## Ingestão da release
+
+A release já pode ser consumida diretamente pelos scripts de validação e importação por meio do manifesto:
+
+```bash
+python -m app.scripts.validate_dsm_files --release-path data/dsm/releases/dsm5_operational_2026_05_28
+```
+
+```bash
+python -m app.scripts.import_dsm \
+  --release-path data/dsm/releases/dsm5_operational_2026_05_28 \
+  --activate
+```
+
+O `--release-path` lê `manifest.json`, resolve os caminhos relativos para `final_json/` e `normalized_registry/`, usa `version_id`, `label` e `source_package` declarados no manifesto e mantém compatibilidade com os argumentos explícitos `--final-json`, `--registry`, `--version-id` e `--label`.
+
 ## Aviso
 
 Este repositório contém dados operacionais para software. Ele não substitui julgamento clínico, validação médica, licenciamento de materiais diagnósticos ou revisão regulatória antes de uso em produção.
