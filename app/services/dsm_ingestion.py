@@ -103,7 +103,7 @@ class DsmIngestionService:
         docs: list[dict[str, Any]] = []
         for file in sorted(path.glob("*.json")):
             payload = json.loads(file.read_text(encoding="utf-8"))
-            docs.extend(self._extract_items(payload))
+            docs.extend(self._extract_items(payload, inherit_fields=("chapter_id", "chapter_name")))
         return docs
 
     def load_registry_file(self, path: Path, category: str) -> list[dict[str, Any]]:
@@ -114,13 +114,18 @@ class DsmIngestionService:
             row.setdefault("category", category)
         return rows
 
-    def _extract_items(self, payload: Any) -> list[dict[str, Any]]:
+    def _extract_items(self, payload: Any, inherit_fields: tuple[str, ...] = ()) -> list[dict[str, Any]]:
         if isinstance(payload, list):
             return [p for p in payload if isinstance(p, dict)]
         if isinstance(payload, dict):
-            for key in ("items", "documents", "disorders", "registry"):
+            for key in ("items", "documents", "disorders", "registry", "entries"):
                 if isinstance(payload.get(key), list):
-                    return [p for p in payload[key] if isinstance(p, dict)]
+                    inherited = {field: payload[field] for field in inherit_fields if payload.get(field)}
+                    items: list[dict[str, Any]] = []
+                    for item in payload[key]:
+                        if isinstance(item, dict):
+                            items.append({**inherited, **item})
+                    return items
             return [payload]
         return []
 
