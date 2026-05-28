@@ -1,0 +1,25 @@
+{
+  "version_id": "dsm5_operational_2026_05_28",
+  "label": "DSM-5 Operational Reduction v2C",
+  "source_package": "Kimi_Agent_DSM二轮修订 (4)",
+  "status": "release_candidate",
+  "counts": {
+    "full": 79,
+    "short": 81,
+    "renderable": 160,
+    "minimal": 26,
+    "exclude": 24,
+    "registry": 50
+  },
+  "paths": {
+    "final_json": "./final_json",
+    "minimal_registry": "./normalized_registry/minimal_all.json",
+    "excluded_registry": "./normalized_registry/excluded_all.json",
+    "index": "./INDEX_MASTER_2B.md"
+  },
+  "notes": [
+    "Fonte operacional para ingestão em PostgreSQL.",
+    "Itens FULL/SHORT são renderizáveis.",
+    "Itens MINIMAL/EXCLUDE não renderizam entrevista estruturada."
+  ]
+}

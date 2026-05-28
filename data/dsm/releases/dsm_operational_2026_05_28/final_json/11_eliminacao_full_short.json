@@ -1,0 +1,180 @@
+{
+  "chapter_id": "11",
+  "chapter_name": "Transtornos da Eliminacao",
+  "source_markdown": "11_eliminacao_full_short.md",
+  "normalization_round": "2B",
+  "patch_count": 0,
+  "items": [
+    {
+      "id": "enurese",
+      "name": "Enurese",
+      "category": "SHORT",
+      "estrutura_diagnostica": "temporal_topografico",
+      "render_structured_interview": true,
+      "ui_mode": "structured_compact",
+      "criteria": [
+        "A. Eliminacao repetida de urina na cama ou na roupa, voluntaria ou involuntaria",
+        "B. Clinicamente significativo: frequencia ≥2x/semana por 3 meses OU sofrimento/prejuizo significativo",
+        "C. Idade cronologica minima de 5 anos (ou nivel de desenvolvimento equivalente)",
+        "D. Nao atribuivel a substancia ou condicao medica"
+      ],
+      "diagnostic_rule": "A AND B AND C AND NOT D",
+      "clusters": [],
+      "duration": "≥3 meses ou sofrimento/prejuizo",
+      "age_onset": "≥5 anos",
+      "functional_impairment": "Impacto na autoestima, funcionamento social, evitacao de atividades",
+      "exclusions": [
+        "Bexiga neurogenica",
+        "Diabetes nao tratado",
+        "Efeitos colaterais de medicamentos",
+        "Infeccao aguda do trato urinario"
+      ],
+      "subtypes_presentations": [
+        "Exclusivamente noturna",
+        "Exclusivamente diurna",
+        "Noturna e diurna"
+      ],
+      "specifiers": [],
+      "operational_profiles": [
+        "Primaria (nunca estabeleceu continencia)",
+        "Secundaria (apos periodo de continencia)"
+      ],
+      "severity": {
+        "has_formal_severity": false,
+        "type": "nao_aplica",
+        "levels": [],
+        "assignment_rule": null,
+        "domains": []
+      },
+      "critical_differentials": [
+        "Bexiga neurogenica",
+        "Diabetes",
+        "Efeitos colaterais de medicamentos",
+        "Infeccao urinaria aguda",
+        "Atraso no desenvolvimento"
+      ],
+      "key_questions": [
+        "A crianca faz xixi na cama com frequencia?",
+        "Com que frequencia?",
+        "Ja foi totalmente seca?",
+        "Tem alguma condicao medica?"
+      ],
+      "alerts": [
+        "Entrevista com pais/cuidadores; secundaria pode indicar estressor"
+      ],
+      "source_trace": {
+        "markdown_section": "FICHA SHORT-01: Enurese",
+        "patches_applied": []
+      }
+    },
+    {
+      "id": "encoprese",
+      "name": "Encoprese",
+      "category": "SHORT",
+      "estrutura_diagnostica": "temporal_topografico",
+      "render_structured_interview": true,
+      "ui_mode": "structured_compact",
+      "criteria": [
+        "A. Eliminacao intestinal repetida de fezes em locais inapropriados, voluntaria ou involuntaria",
+        "B. Pelo menos 1 evento por mes por pelo menos 3 meses consecutivos",
+        "C. Idade cronologica minima de 4 anos (ou nivel de desenvolvimento equivalente)",
+        "D. Nao atribuivel a substancia ou condicao medica EXCETO por mecanismo envolvendo constipacao"
+      ],
+      "diagnostic_rule": "A AND B(≥1x/mes_3meses) AND C AND NOT D (exceto constipacao)",
+      "clusters": [],
+      "duration": "≥3 meses",
+      "age_onset": "≥4 anos",
+      "functional_impairment": "Impacto na autoestima, rejeicao social",
+      "exclusions": [
+        "Diarreia cronica",
+        "Espinha bifida",
+        "Estenose anal",
+        "Doenca de Hirschsprung",
+        "Efeito colateral de laxantes"
+      ],
+      "subtypes_presentations": [
+        "Com constipacao e incontinencia por extravasamento",
+        "Sem constipacao e incontinencia por extravasamento"
+      ],
+      "specifiers": [],
+      "operational_profiles": [
+        "Primaria (jamais estabeleceu continencia fecal)",
+        "Secundaria (apos periodo de continencia)"
+      ],
+      "severity": {
+        "has_formal_severity": false,
+        "type": "nao_aplica",
+        "levels": [],
+        "assignment_rule": null,
+        "domains": []
+      },
+      "critical_differentials": [
+        "Condicao medica sem constipacao",
+        "Efeito colateral de laxantes",
+        "TOD",
+        "Transtorno da conduta"
+      ],
+      "key_questions": [
+        "A crianca suja a roupa?",
+        "As fezes sao duras/malformadas?",
+        "Tem dificuldade para fazer coco?",
+        "O sujamento e deliberado?"
+      ],
+      "alerts": [
+        "Critério D: ressalva constipacao",
+        "Subtipo sem constipacao requer avaliacao de TOD/conduta"
+      ],
+      "source_trace": {
+        "markdown_section": "FICHA SHORT-02: Encoprese",
+        "patches_applied": []
+      }
+    },
+    {
+      "id": "eliminacao_induzida_substancia_condicao_medica",
+      "name": "Transtornos da Eliminacao Induzidos por Substancia ou Condicao Medica",
+      "category": "SHORT",
+      "estrutura_diagnostica": "etiologico_externo",
+      "render_structured_interview": true,
+      "ui_mode": "structured_compact",
+      "criteria": [
+        "Sintomas de eliminacao inapropriada predominantes (incontinencia urinaria e/ou fecal)",
+        "Evidencia de etiologia por substancia ou condicao medica",
+        "Sintomas nao ocorrem durante delirium",
+        "Sintomas causam prejuizo significativo"
+      ],
+      "diagnostic_rule": "Incontinencia urinaria OU fecal AND (evidencia_substancia OR evidencia_condicao_medica) AND NOT delirium AND prejuizo_significativo",
+      "clusters": [],
+      "duration": null,
+      "age_onset": null,
+      "functional_impairment": "Prejuizo significativo",
+      "exclusions": [
+        "Delirium"
+      ],
+      "subtypes_presentations": [],
+      "specifiers": [],
+      "operational_profiles": [],
+      "severity": {
+        "has_formal_severity": false,
+        "type": "nao_aplica",
+        "levels": [],
+        "assignment_rule": null,
+        "domains": []
+      },
+      "critical_differentials": [
+        "Enurese primaria",
+        "Encoprese primaria"
+      ],
+      "key_questions": [
+        "A incontinencia comecou apos iniciar algum medicamento?",
+        "Ha condicao medica conhecida?"
+      ],
+      "alerts": [
+        "Verificar timeline sintomas vs inicio substancia/condicao medica"
+      ],
+      "source_trace": {
+        "markdown_section": "FICHA SHORT-03: Transtornos da Eliminacao Induzidos por Substancia ou Condicao Medica",
+        "patches_applied": []
+      }
+    }
+  ]
+}

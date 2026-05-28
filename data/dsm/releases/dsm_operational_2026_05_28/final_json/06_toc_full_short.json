@@ -1,0 +1,349 @@
+{
+  "chapter_id": "06",
+  "chapter_name": "Transtorno Obsessivo-Compulsivo e Transtornos Relacionados",
+  "source_markdown": "06_toc_full_short.md",
+  "normalization_round": "2B",
+  "patch_count": 0,
+  "items": [
+    {
+      "id": "transtorno_obsessivo_compulsivo_toc",
+      "name": "TRANSTORNO OBSESSIVO-COMPULSIVO / TOC",
+      "category": "FULL",
+      "estrutura_diagnostica": "polythetic_monocluster",
+      "render_structured_interview": true,
+      "ui_mode": "structured_full",
+      "criteria": [],
+      "diagnostic_rule": "**(Obsessoes(A1+A2) XOR/OR Compulsoes(A1+A2)) AND B(tempo/prejuizo) AND C(exclusao_substancia) AND D(exclusao_outro_TM)**\n\n**Ponto critico:** O individuo pode ter APENAS obsessoes, APENAS compulsoes, ou ambas. O critério B (tempo >1h/dia ou prejuizo) e o diferencial entre subclinico e transtorno.",
+      "clusters": [],
+      "duration": null,
+      "age_onset": "apos 35 incomum",
+      "functional_impairment": null,
+      "exclusions": [
+        "Transtorno de ansiedade generalizada (preocupacoes excessivas vs. intrusoes)",
+        "Transtorno dismorfico corporal (foco apenas em aparencia)",
+        "Transtorno de acumulacao (dificuldade de descartar vs. acumulacao por obsessoes/compulsoes)",
+        "Tricotilomania (arrancar cabelo sem obsessoes)",
+        "Transtorno de escoriacao (beliscar pele sem obsessoes)",
+        "Transtorno de movimento estereotipado",
+        "Transtornos alimentares (rituais alimentares)",
+        "Uso de substancia ou jogo",
+        "Ansiedade de doença (preocupacao em ter doenca)",
+        "Parafilias (impulsos sexuais prazerosos vs. intrusivos angustiantes)",
+        "Transtornos disruptivos/impulsos",
+        "TDM (ruminacoes de culpa vs. intrusoes)",
+        "Esquizofrenia/insercao de pensamento/delirios",
+        "TEA (padroes repetitivos de comportamento)"
+      ],
+      "subtypes_presentations": [],
+      "specifiers": [
+        "- Com insight bom ou razoavel: reconhece que as crencas obsessivas sao provavelmente/definitivamente nao verdadeiras ou podem/podem-nao ser verdadeiras",
+        "Com insight pobre: acredita que as crencas sao provavelmente verdadeiras",
+        "Com insight ausente/crencas delirantes: completamente convencido de que as crencas sao verdadeiras",
+        "- Relacionado a tique: historia atual ou passada de transtorno de tique (ate 30% dos casos)"
+      ],
+      "operational_profiles": [],
+      "severity": {
+        "has_formal_severity": false,
+        "type": "nao_aplica",
+        "levels": [],
+        "assignment_rule": null,
+        "domains": []
+      },
+      "critical_differentials": [],
+      "key_questions": [
+        "Voce tem pensamentos, imagens ou impulsos que surgem repetidamente na sua cabeca e que voce sente como intrusos e indesejados?",
+        "Esses pensamentos causam ansiedade ou sofrimento acentuado?",
+        "Voce tenta ignora-los, suprimi-los ou fazer algo para neutraliza-los?",
+        "Qual e o conteudo desses pensamentos?",
+        "Voce sente compelido a fazer certos comportamentos ou atos mentais repetidamente?",
+        "Voce os faz segundo regras rigidas ou em numero especifico?",
+        "Eles visam evitar algo ruim ou reduzir ansiedade, mas voce reconhece que sao excessivos ou nao fazem sentido?",
+        "Quanto tempo por dia voce gasta com esses pensamentos ou comportamentos? (mais de 1 hora?)",
+        "Eles atrapalham seu trabalho, relacionamentos ou outras atividades importantes?",
+        "Voce acha que seus medos/preocupacoes sao realistas ou razoaveis, ou reconhece que podem ser exagerados?",
+        "Voce ja esteve completamente convencido de que seus medos sao verdadeiros?",
+        "Voce tem movimentos repetitivos ou sons que faz sem querer (piscar, pigarrear, mover os ombros)?"
+      ],
+      "alerts": [],
+      "source_trace": {
+        "markdown_section": "### TRANSTORNO OBSESSIVO-COMPULSIVO / TOC",
+        "patches_applied": []
+      }
+    },
+    {
+      "id": "transtorno_dismorfico_corporal_bdd",
+      "name": "TRANSTORNO DISMORFICO CORPORAL / BDD",
+      "category": "FULL",
+      "estrutura_diagnostica": "polythetic_monocluster",
+      "render_structured_interview": true,
+      "ui_mode": "structured_full",
+      "criteria": [],
+      "diagnostic_rule": "**A(preocupacao_aparencia_defeito_percebido) AND B(comportamentos_repetitivos) AND C(sofrimento/prejuizo) AND D(exclusao_TA)**",
+      "clusters": [],
+      "duration": null,
+      "age_onset": "** Media 16-17 anos; 2/3 iniciam antes dos 18; mediana 15 anos",
+      "functional_impairment": null,
+      "exclusions": [
+        "Transtornos alimentares (foco em peso/gordura = TA, nao BDD; ambos podem ser comorbidos)",
+        "TOC (no TOC, obsessoes/compulsoes nao se limitam a aparencia)",
+        "Transtorno de escoriacao (se beliscar e para melhorar aparencia = BDD; se sem intencao = escoriacao)",
+        "Tricotilomania (se arrancar pelo e para melhorar defeito = BDD; se sem intencao = trico)",
+        "Ansiedade de doenca (BDD: foco em aparencia; ansiedade de doenca: medo de ter doenca)",
+        "TDM (em TDM, preocupacao nao e proeminente; comportamentos repetitivos nao estao presentes)",
+        "Transtorno psicotico (BDD com insight ausente = BDD, NAO delirium/esquizofrenia)",
+        "Disforia de genero (foco: desconforto com caracteristicas sexuais)"
+      ],
+      "subtypes_presentations": [],
+      "specifiers": [
+        "- Com dismorfia muscular: preocupacao de que a estrutura corporal e muito pequena ou insuficientemente musculosa. Usado mesmo se houver outras preocupacoes corporais.",
+        "- Com insight bom ou razoavel: reconhece que as crencas sao provavelmente/definitivamente nao verdadeiras",
+        "Com insight pobre: acredita que as crencas sao provavelmente verdadeiras",
+        "Com insight ausente/crencas delirantes: completamente convencido de que as crencas sao verdadeiras",
+        "Para individuos com insight ausente/crencas delirantes, os sintomas NAO devem ser diagnosticados como transtorno psicotico (e BDD com especificador)."
+      ],
+      "operational_profiles": [],
+      "severity": {
+        "has_formal_severity": false,
+        "type": "nao_aplica",
+        "levels": [],
+        "assignment_rule": null,
+        "domains": []
+      },
+      "critical_differentials": [],
+      "key_questions": [
+        "Voce tem preocupacoes intensas com algum aspecto da sua aparencia fisica que considera defeituoso ou feio?",
+        "Outras pessoas dizem que esse defeito e leve ou nem percebem?",
+        "Essa preocupacao ocupa muito do seu tempo ou causa sofrimento significativo?",
+        "Voce se verifica frequentemente no espelho, se arruma excessivamente, ou belisca a pele por causa dessa preocupacao?",
+        "Voce compara sua aparencia com a de outras pessoas com frequencia?",
+        "Voce busca tranquilizacao de outras pessoas sobre sua aparencia?",
+        "Essa preocupacao ja interferiu no trabalho, nos relacionamentos ou fez voce evitar situacoes sociais?",
+        "Sua preocupacao e principalmente sobre peso ou gordura corporal?",
+        "Voce ja procurou tratamento estetico/cirurgico por causa dessa preocupacao?",
+        "Voce acha que sua percepcao sobre esses defeitos pode estar exagerada ou distorcida?",
+        "Voce ja esteve completamente convencido de que os outros veem o mesmo defeito que voce?",
+        "Voce se preocupa em ser muito pequeno ou ter pouca musculatura, apesar de ter aparentemente um corpo normal ou musculoso?"
+      ],
+      "alerts": [],
+      "source_trace": {
+        "markdown_section": "### TRANSTORNO DISMORFICO CORPORAL / BDD",
+        "patches_applied": []
+      }
+    },
+    {
+      "id": "acumulacao_hoarding",
+      "name": "TRANSTORNO DE ACUMULACAO / HOARDING",
+      "category": "FULL",
+      "estrutura_diagnostica": "polythetic_monocluster",
+      "render_structured_interview": true,
+      "ui_mode": "structured_full",
+      "criteria": [],
+      "diagnostic_rule": "**A(dificuldade_descartar) AND B(necessidade_guardar+sofrimento) AND C(obstrucao) AND D(sofrimento/prejuizo) AND E(exclusao_medica) AND F(exclusao_outro_TM)**",
+      "clusters": [],
+      "duration": null,
+      "age_onset": null,
+      "functional_impairment": null,
+      "exclusions": [
+        "- Lesao cerebral traumatica, resseccao cirurgica, doenca cerebrovascular",
+        "Infeccoes do SNC (encefalite por herpes simples)",
+        "Sindrome de Prader-Willi",
+        "- TOC (acumulacao por obsessoes: medo de contaminacao/danos/incompletude)",
+        "TDM (acumulacao por fadiga/retardo)",
+        "Esquizofrenia (acumulacao por delirios/sintomas negativos)",
+        "Demencia/neurocognitivo (acumulacao por deficits cognitivos + desinibicao)",
+        "TEA (acumulacao por interesses restritos)",
+        "**Pode coexistir:** Se acumulacao grave aparece concomitantemente a TOC mas e considerada INDEPENDENTE dos sintomas típicos de TOC, ambos sao diagnosticados."
+      ],
+      "subtypes_presentations": [],
+      "specifiers": [
+        "Com aquisicao excessiva: 80-90% dos casos; compras excessivas, roubo, itens gratuitos",
+        "Sem aquisicao excessiva: raro",
+        "- Com insight bom ou razoavel: reconhece que acumulacao e problematica",
+        "Com insight pobre: acredita que nao e problematica apesar de evidencias",
+        "Com insight ausente/crencas delirantes: completamente convencido de que nao e problematica"
+      ],
+      "operational_profiles": [],
+      "severity": {
+        "has_formal_severity": false,
+        "type": "nao_aplica",
+        "levels": [],
+        "assignment_rule": null,
+        "domains": []
+      },
+      "critical_differentials": [],
+      "key_questions": [
+        "Voce tem dificuldade persistente de jogar fora, vender, doar ou reciclar seus pertences?",
+        "Essa dificuldade existe mesmo para itens que outras pessoas considerariam sem valor?",
+        "Voce sente uma necessidade forte de guardar os itens?",
+        "Voce sente sofrimento ou angustia quando precisa se desfazer de alguma coisa?",
+        "A acumulacao de itens esta congestionando ou obstruindo areas da sua casa (cozinha, quarto, sala)?",
+        "Voce consegue usar sua cama para dormir, a mesa para comer, o chuveiro para se banhar?",
+        "Se sua casa nao esta obstruida, e porque outras pessoas (familia, funcionarios, autoridades) limparam por voce?",
+        "A acumulacao esta causando problemas de seguranca (risco de incendio, queda) ou conflitos com familiares?",
+        "Voce compra, rouba ou pega itens excessivamente mesmo sem necessidade ou espaco?",
+        "Essa dificuldade comecou apos uma lesao cerebral, AVC, ou problema neurologico?",
+        "Voce acumula porque tem medo de que algo ruim aconteca se jogar fora, ou porque sente que as coisas estao 'incompletas'?",
+        "Voce reconhece que a acumulacao e um problema, ou acha que esta tudo bem do jeito que esta?"
+      ],
+      "alerts": [],
+      "source_trace": {
+        "markdown_section": "### TRANSTORNO DE ACUMULACAO / HOARDING",
+        "patches_applied": []
+      }
+    },
+    {
+      "id": "tricotilomania_arrancar_o_cabelo",
+      "name": "TRICOTILOMANIA / TRANSTORNO DE ARRANCAR O CABELO",
+      "category": "SHORT",
+      "estrutura_diagnostica": "polythetic_monocluster",
+      "render_structured_interview": true,
+      "ui_mode": "structured_compact",
+      "criteria": [],
+      "diagnostic_rule": "Criterios descritivos para TRICOTILOMANIA / TRANSTORNO DE ARRANCAR O CABELO conforme DSM-5",
+      "clusters": [],
+      "duration": null,
+      "age_onset": null,
+      "functional_impairment": null,
+      "exclusions": [],
+      "subtypes_presentations": [],
+      "specifiers": [],
+      "operational_profiles": [],
+      "severity": {
+        "has_formal_severity": false,
+        "type": "nao_aplica",
+        "levels": [],
+        "assignment_rule": null,
+        "domains": []
+      },
+      "critical_differentials": [],
+      "key_questions": [
+        "Voce arranca seus cabelos de forma recorrente?",
+        "Isso ja causou perda visivel de cabelo ou calvicie em areas?",
+        "Voce ja tentou parar ou reduzir e nao conseguiu?",
+        "Voce arranca por ansiedade, tedio, ou sem perceber?",
+        "Voce sente alivio ou prazer quando arranca?",
+        "Voce engole os cabelos depois de arranca-los (tricofagia)?",
+        "O arrancar e para melhorar algum defeito que voce percebe?"
+      ],
+      "alerts": [],
+      "source_trace": {
+        "markdown_section": "### TRICOTILOMANIA / TRANSTORNO DE ARRANCAR O CABELO",
+        "patches_applied": []
+      }
+    },
+    {
+      "id": "escoriacao_skin_picking",
+      "name": "TRANSTORNO DE ESCORIACAO / SKIN-PICKING",
+      "category": "SHORT",
+      "estrutura_diagnostica": "polythetic_monocluster",
+      "render_structured_interview": true,
+      "ui_mode": "structured_compact",
+      "criteria": [],
+      "diagnostic_rule": "Criterios descritivos para TRANSTORNO DE ESCORIACAO / SKIN-PICKING conforme DSM-5",
+      "clusters": [],
+      "duration": null,
+      "age_onset": null,
+      "functional_impairment": null,
+      "exclusions": [],
+      "subtypes_presentations": [],
+      "specifiers": [],
+      "operational_profiles": [],
+      "severity": {
+        "has_formal_severity": false,
+        "type": "nao_aplica",
+        "levels": [],
+        "assignment_rule": null,
+        "domains": []
+      },
+      "critical_differentials": [],
+      "key_questions": [
+        "Voce belisca sua pele de forma recorrente, deixando marcas ou lesoes?",
+        "Quais areas do corpo voce belisca mais?",
+        "Voce ja tentou parar ou reduzir e nao conseguiu?",
+        "Voce belisca por ansiedade, tedio, ou sem perceber?",
+        "Voce belisca para melhorar algum defeito da pele?",
+        "Ja teve infeccoes ou cicatrizes por causa do beliscar?"
+      ],
+      "alerts": [],
+      "source_trace": {
+        "markdown_section": "### TRANSTORNO DE ESCORIACAO / SKIN-PICKING",
+        "patches_applied": []
+      }
+    },
+    {
+      "id": "toc_e_relacionado_induzido_por_substancia_medicamento",
+      "name": "TOC E RELACIONADO INDUZIDO POR SUBSTANCIA/MEDICAMENTO",
+      "category": "SHORT",
+      "estrutura_diagnostica": "polythetic_monocluster",
+      "render_structured_interview": true,
+      "ui_mode": "structured_compact",
+      "criteria": [],
+      "diagnostic_rule": "Criterios descritivos para TOC E RELACIONADO INDUZIDO POR SUBSTANCIA/MEDICAMENTO conforme DSM-5",
+      "clusters": [],
+      "duration": null,
+      "age_onset": null,
+      "functional_impairment": null,
+      "exclusions": [],
+      "subtypes_presentations": [],
+      "specifiers": [],
+      "operational_profiles": [],
+      "severity": {
+        "has_formal_severity": false,
+        "type": "nao_aplica",
+        "levels": [],
+        "assignment_rule": null,
+        "domains": []
+      },
+      "critical_differentials": [],
+      "key_questions": [
+        "Os sintomas comecaram durante ou logo apos o uso de uma substancia ou medicamento?",
+        "A substancia e conhecida por causar sintomas desse tipo?",
+        "Os sintomas persistem por mais de um mes apos parar a substancia?",
+        "Voce ja teve esses sintomas antes de usar essa substancia?"
+      ],
+      "alerts": [],
+      "source_trace": {
+        "markdown_section": "### TOC E RELACIONADO INDUZIDO POR SUBSTANCIA/MEDICAMENTO",
+        "patches_applied": []
+      }
+    },
+    {
+      "id": "toc_e_relacionado_devido_a_outra_condicao_medica",
+      "name": "TOC E RELACIONADO DEVIDO A OUTRA CONDICAO MEDICA",
+      "category": "SHORT",
+      "estrutura_diagnostica": "polythetic_monocluster",
+      "render_structured_interview": true,
+      "ui_mode": "structured_compact",
+      "criteria": [],
+      "diagnostic_rule": "Criterios descritivos para TOC E RELACIONADO DEVIDO A OUTRA CONDICAO MEDICA conforme DSM-5",
+      "clusters": [],
+      "duration": null,
+      "age_onset": null,
+      "functional_impairment": null,
+      "exclusions": [],
+      "subtypes_presentations": [],
+      "specifiers": [],
+      "operational_profiles": [],
+      "severity": {
+        "has_formal_severity": false,
+        "type": "nao_aplica",
+        "levels": [],
+        "assignment_rule": null,
+        "domains": []
+      },
+      "critical_differentials": [],
+      "key_questions": [
+        "Os sintomas comecaram apos um evento neurologico (AVC, infarto, lesao cerebral)?",
+        "Ha uma relacao temporal clara entre o inicio da condicao medica e os sintomas?",
+        "A condicao medica afeta o cerebro ou sistema nervoso central?",
+        "Voce ja teve esses sintomas antes dessa condicao medica?",
+        "O medicamento para a condicao medica pode estar causando os sintomas?"
+      ],
+      "alerts": [],
+      "source_trace": {
+        "markdown_section": "### TOC E RELACIONADO DEVIDO A OUTRA CONDICAO MEDICA",
+        "patches_applied": []
+      }
+    }
+  ]
+}

@@ -1,0 +1,247 @@
+{
+  "chapter_id": "08",
+  "chapter_name": "Transtornos Dissociativos",
+  "source_markdown": "08_dissociativos_full_short.md",
+  "normalization_round": "2B",
+  "patch_count": 0,
+  "items": [
+    {
+      "id": "transtorno_dissociativo_identidade",
+      "name": "Transtorno Dissociativo de Identidade",
+      "category": "FULL",
+      "estrutura_diagnostica": "polythetic_com_ancora",
+      "render_structured_interview": true,
+      "ui_mode": "structured_full",
+      "criteria": [
+        "A. Ruptura da identidade com dois ou mais estados de personalidade distintos (ancora principal)",
+        "B. Amnesia dissociativa recorrente (ancora secundaria)",
+        "C. Sofrimento clinicamente significativo ou prejuizo funcional",
+        "D. Nao e parte normal de pratica religiosa ou cultural amplamente aceita",
+        "E. Nao atribuivel aos efeitos fisiologicos de substancia ou condicao medica"
+      ],
+      "diagnostic_rule": "A AND B AND C AND NOT D AND NOT E (A1 obrigatorio como ancora)",
+      "clusters": [
+        "Descontinuidade identidade",
+        "Amnesia"
+      ],
+      "duration": null,
+      "age_onset": "Qualquer idade (infancia ate idade adulta avancada)",
+      "functional_impairment": "Altamente variavel: desde aparentemente minimo ate profundo; comprometimento relacional > ocupacional; risco de suicidio >70%",
+      "exclusions": [
+        "Pratica religiosa/cultural normal",
+        "Efeitos fisiologicos de substancia",
+        "Condicao medica (convulsoes parciais complexas)"
+      ],
+      "subtypes_presentations": [
+        "forma de possessao",
+        "forma nao-possessao"
+      ],
+      "specifiers": [],
+      "operational_profiles": [],
+      "severity": {
+        "has_formal_severity": false,
+        "type": "nao_aplica",
+        "levels": [],
+        "assignment_rule": null,
+        "domains": []
+      },
+      "critical_differentials": [
+        "Transtorno dissociativo especificado",
+        "TDM/TDMPS",
+        "TEPT",
+        "Transtornos psicoticos",
+        "Transtorno borderline",
+        "Transtorno conversivo",
+        "Convulsoes do lobo temporal",
+        "Simulacao/facticio"
+      ],
+      "key_questions": [
+        "Voce ja sentiu como se houvesse mais de uma pessoa dentro de voce?",
+        "Ja sentiu como se estivesse observando a si mesmo de fora?",
+        "Outras pessoas ja lhe disseram que voce age de forma muito diferente?",
+        "Ja ouviu vozes internas conversando entre si?",
+        "Ja teve a sensacao de que suas emocoes nao sao suas?",
+        "Ja 'perdeu tempo' sem saber o que aconteceu?"
+      ],
+      "alerts": [
+        "Avaliar historia de trauma",
+        "Nao sugerir sintomas ao paciente",
+        "Avaliar risco de suicidio obrigatoriamente"
+      ],
+      "source_trace": {
+        "markdown_section": "FICHA FULL-01: Transtorno Dissociativo de Identidade",
+        "patches_applied": []
+      }
+    },
+    {
+      "id": "transtorno_despersonalizacao_desrealizacao",
+      "name": "Transtorno de Despersonalizacao/Desrealizacao",
+      "category": "FULL",
+      "estrutura_diagnostica": "monothetic_tripartite",
+      "render_structured_interview": true,
+      "ui_mode": "structured_full",
+      "criteria": [
+        "A. Experiencias dissociativas persistentes ou recorrentes (despersonalizacao e/ou desrealizacao)",
+        "B. Teste de realidade intacto durante as experiencias",
+        "C. Sofrimento clinicamente significativo ou prejuizo funcional",
+        "D. Nao atribuivel a substancia ou condicao medica",
+        "E. Nao melhor explicado por esquizofrenia, transtorno de panico, TDM, TEAG, TEPT ou outro transtorno dissociativo"
+      ],
+      "diagnostic_rule": "(A1 OR A2) AND B AND C AND NOT D AND NOT E",
+      "clusters": [
+        "Despersonalizacao",
+        "Desrealizacao"
+      ],
+      "duration": "Persistente ou recorrente",
+      "age_onset": "Media 16 anos; inicio apos 25 raro; apos 40 investigar condicao medica",
+      "functional_impairment": "Sofrimento clinicamente significativo ou prejuizo funcional",
+      "exclusions": [
+        "Substancias (maconha, alucinogenos, cetamina, ecstasy, Salvia divinorum)",
+        "Condicoes neurologicas (convulsoes)",
+        "Esquizofrenia, panico, TDM, TEAG, TEPT"
+      ],
+      "subtypes_presentations": [],
+      "specifiers": [],
+      "operational_profiles": [],
+      "severity": {
+        "has_formal_severity": false,
+        "type": "nao_aplica",
+        "levels": [],
+        "assignment_rule": null,
+        "domains": []
+      },
+      "critical_differentials": [
+        "Transtorno de ansiedade de doenca",
+        "TDM",
+        "TOC",
+        "Transtornos psicoticos",
+        "Transtorno de panico",
+        "Outros transtornos dissociativos",
+        "Substancias"
+      ],
+      "key_questions": [
+        "Ja sentiu como se voce nao fosse real ou observando a si mesmo de fora?",
+        "Ja sentiu que o mundo ao seu redor nao era real?",
+        "Apesar dessas sensacoes, sempre soube que nao estava louco?",
+        "Essas experiencias causam sofrimento?"
+      ],
+      "alerts": [
+        "Teste de realidade intacto e critico para diferenciar de psicose"
+      ],
+      "source_trace": {
+        "markdown_section": "FICHA FULL-02: Transtorno de Despersonalizacao/Desrealizacao",
+        "patches_applied": []
+      }
+    },
+    {
+      "id": "amnesia_dissociativa",
+      "name": "Amnesia Dissociativa",
+      "category": "FULL",
+      "estrutura_diagnostica": "monothetic_tripartite",
+      "render_structured_interview": true,
+      "ui_mode": "structured_full",
+      "criteria": [
+        "A. Incapacidade de recordar informacoes autobiograficas importantes, geralmente traumaticas/estressantes",
+        "B. Sofrimento clinicamente significativo ou prejuizo funcional",
+        "C. Nao atribuivel a substancia ou condicao medica",
+        "D. Nao melhor explicada por TDI, TEPT, TEAG, TSS ou transtorno neurocognitivo"
+      ],
+      "diagnostic_rule": "A AND B AND NOT C AND NOT D",
+      "clusters": [
+        "Amnesia autobiografica"
+      ],
+      "duration": null,
+      "age_onset": null,
+      "functional_impairment": "Sofrimento clinicamente significativo ou prejuizo funcional",
+      "exclusions": [
+        "Efeitos fisiologicos de substancia (alcool, drogas, medicamentos)",
+        "Condicao neurologica (convulsoes parciais complexas, amnesia global transitoria, TCE)",
+        "TDI, TEPT, TEAG, TSS, transtorno neurocognitivo"
+      ],
+      "subtypes_presentations": [
+        "localizada",
+        "seletiva",
+        "generalizada",
+        "continua",
+        "sistematizada"
+      ],
+      "specifiers": [
+        "Com fuga dissociativa"
+      ],
+      "operational_profiles": [],
+      "severity": {
+        "has_formal_severity": false,
+        "type": "nao_aplica",
+        "levels": [],
+        "assignment_rule": null,
+        "domains": []
+      },
+      "critical_differentials": [
+        "TDI",
+        "TEPT",
+        "Transtornos neurocognitivos",
+        "Substancias",
+        "Amnesia pos-traumatica por LCT",
+        "Convulsoes",
+        "Estupor catatonico",
+        "Simulacao/facticio"
+      ],
+      "key_questions": [
+        "Voce ja teve periodos da sua vida que nao consegue recordar?",
+        "Ja 'perdeu tempo', percebendo que horas ou dias se passaram?",
+        "Ja acordou em um lugar sem saber como chegou la?"
+      ],
+      "alerts": [
+        "Avaliar risco suicida quando amnesia cede"
+      ],
+      "source_trace": {
+        "markdown_section": "FICHA FULL-03: Amnesia Dissociativa",
+        "patches_applied": []
+      }
+    },
+    {
+      "id": "dissociativos_induzidos_substancia_condicao_medica",
+      "name": "Transtornos Dissociativos Induzidos por Substancia ou Condicao Medica",
+      "category": "SHORT",
+      "estrutura_diagnostica": "etiologico_externo",
+      "render_structured_interview": true,
+      "ui_mode": "structured_compact",
+      "criteria": [
+        "Sintomas dissociativos predominantes (descontinuidade identidade, amnesia, despersonalizacao/desrealizacao)",
+        "Evidencia de etiologia por substancia ou condicao medica",
+        "Sintomas nao ocorrem durante delirium",
+        "Sintomas causam sofrimento/prejuizo significativo"
+      ],
+      "diagnostic_rule": "Sintomas dissociativos AND (evidencia_substancia OR evidencia_condicao_medica) AND NOT delirium AND prejuizo_significativo",
+      "clusters": [],
+      "duration": null,
+      "age_onset": null,
+      "functional_impairment": "Sofrimento/prejuizo significativo",
+      "exclusions": [
+        "Delirium"
+      ],
+      "subtypes_presentations": [],
+      "specifiers": [],
+      "operational_profiles": [],
+      "severity": {
+        "has_formal_severity": false,
+        "type": "nao_aplica",
+        "levels": [],
+        "assignment_rule": null,
+        "domains": []
+      },
+      "critical_differentials": [],
+      "key_questions": [
+        "Os sintomas dissociativos comecaram apos usar alguma substancia?",
+        "Ha evidencia de condicao medica neurologica?"
+      ],
+      "alerts": [
+        "Verificar timeline sintomas vs inicio substancia/condicao medica"
+      ],
+      "source_trace": {
+        "markdown_section": "FICHA SHORT-01: Transtornos Dissociativos Induzidos por Substancia ou Condicao Medica",
+        "patches_applied": []
+      }
+    }
+  ]
+}

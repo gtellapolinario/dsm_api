@@ -1,0 +1,414 @@
+{
+  "chapter_id": "05",
+  "chapter_name": "Transtornos de Ansiedade",
+  "source_markdown": "05_ansiedade_full_short.md",
+  "normalization_round": "2B",
+  "patch_count": 1,
+  "items": [
+    {
+      "id": "ansiedade_generalizada_tag",
+      "name": "Transtorno de Ansiedade Generalizada (TAG)",
+      "category": "FULL",
+      "estrutura_diagnostica": "polythetic_monocluster",
+      "render_structured_interview": true,
+      "ui_mode": "structured_full",
+      "criteria": [],
+      "diagnostic_rule": "```\n(A MAJORITY_DAYS_6M) + (B DIFICIL_CONTROLAR) + (C >=3/6 [ou >=1/6 em criancas]) + (D PREJUIZO) + (E NAO_SUBSTANCIA_MEDICA) + (F NAO_OUTRO_TX)\n```",
+      "clusters": [],
+      "duration": "| 6 meses (na maioria dos dias) |",
+      "age_onset": "| 30 anos (mais tardio entre os transtornos de ansiedade) |",
+      "functional_impairment": null,
+      "exclusions": [
+        "→ exames laboratoriais",
+        "→ preocupacao focada em avaliacao social, nao generalizada",
+        "→ preocupacoes sao obsessoes intrusivas, nao excesso de preocupacao futura",
+        "→ ansiedade vinculada a evento traumatico especifico",
+        "→ ansiedade em resposta a estressor identificavel, dentro de 3 meses",
+        "→ nao diagnosticar se ocorreu exclusivamente durante curso desses transtornos",
+        "→ preocupacao centrada em separacao de figuras de apego"
+      ],
+      "subtypes_presentations": [],
+      "specifiers": [
+        "Nenhum especificador formal definido no DSM-5 para TAG"
+      ],
+      "operational_profiles": [],
+      "severity": {
+        "has_formal_severity": false,
+        "type": "nao_aplica",
+        "levels": [],
+        "assignment_rule": null,
+        "domains": []
+      },
+      "critical_differentials": [],
+      "key_questions": [
+        "Nas ultimas semanas, voce tem se sentido preocupado ou ansioso na maioria dos dias?",
+        "Quais sao as areas sobre as quais voce mais se preocupa? (trabalho, saude, financas, familia, outros)",
+        "As preocupacoes parecem maiores ou mais frequentes do que a maioria das pessoas teria?",
+        "Voce consegue controlar ou parar de se preocupar quando quer?",
+        "Voce se sente inquieto ou com os nervos a flor da pele?",
+        "Se sente facilmente cansado?",
+        "Tem dificuldade de concentracao ou sensacao de branco na mente?",
+        "Tem se sentido irritavel?",
+        "Sente tensao muscular ou dores?",
+        "Tem problemas de sono?",
+        "Essa preocupacao tem afetado seu trabalho, relacionamentos ou outras areas da vida?",
+        "As preocupacoes sao principalmente sobre sua saude?",
+        "As preocupacoes sao sobre situacoes sociais?",
+        "As preocupacoes sao sobre separacao de pessoas queridas?",
+        "Voce tem pensamentos intrusivos repetidos?"
+      ],
+      "alerts": [],
+      "source_trace": {
+        "markdown_section": "### Transtorno de Ansiedade Generalizada (TAG)",
+        "patches_applied": []
+      }
+    },
+    {
+      "id": "panico",
+      "name": "Transtorno de Panico",
+      "category": "FULL",
+      "estrutura_diagnostica": "episodico_com_sintomas",
+      "render_structured_interview": true,
+      "ui_mode": "structured_full",
+      "criteria": [],
+      "diagnostic_rule": "```\n(A: >=2 ataques inesperados COM >=4/13 sintomas atingindo pico em minutos) + (B1 OU B2 por >=1 mes) + (C NAO_SUBSTANCIA_MEDICA) + (D NAO_OUTRO_TX)\n```\n\n**Conceito-chave: \"Inesperado\"**\nAtaque sem indicio ou desencadeante obvio no momento — parece \"vir do nada\" (relaxando, emergindo do sono). A presenca de ataques esperados NAO exclui o diagnostico de transtorno de panico (aprox. metade dos individuos tem ambos).",
+      "clusters": [],
+      "duration": null,
+      "age_onset": "| 20-24 anos |",
+      "functional_impairment": null,
+      "exclusions": [
+        "→ exames laboratoriais",
+        "3. **Outros transtornos de ansiedade** → se ataques ocorrem SOMENTE em contexto do outro transtorno, nao diagnosticar panico"
+      ],
+      "subtypes_presentations": [],
+      "specifiers": [
+        "**Com agorafobia** (quando criterios para agorafobia satisfeitos)",
+        "Ataque de panico como especificador pode ser anotado em outros transtornos"
+      ],
+      "operational_profiles": [],
+      "severity": {
+        "has_formal_severity": false,
+        "type": "nao_aplica",
+        "levels": [],
+        "assignment_rule": null,
+        "domains": []
+      },
+      "critical_differentials": [],
+      "key_questions": [
+        "Ja sentiu medo intenso ou desconforto que apareceu de repente e atingiu o maximo em poucos minutos?",
+        "Quantas vezes isso aconteceu?",
+        "O primeiro ataque pareceu vir 'do nada' ou havia um motivo obvio?",
+        "Durante esses surtos, voce sentiu: palpitacoes? falta de ar? tontura? suor? tremores? dor no peito? nausea? calafrios/ondas de calor? formigamento? sensacao de irrealidade? medo de enlouquecer? medo de morrer?",
+        "Depois dos ataques, ficou preocupado que pudessem acontecer novamente?",
+        "Mudou algum comportamento por causa dos ataques? (evitar exercicios, lugares, situacoes)",
+        "Usa cafeina, anfetaminas, cocaina ou outras substancias?",
+        "Tem problemas de tireoide, coracao ou respiracao?",
+        "Os ataques acontecem SOMENTE em situacoes sociais?",
+        "Os ataques acontecem SOMENTE em situacoes ou com objetos especificos?",
+        "Evita transporte publico, espacos abertos, espacos fechados, multidoes ou sair de casa sozinho por medo de ter um ataque?"
+      ],
+      "alerts": [],
+      "source_trace": {
+        "markdown_section": "### Transtorno de Panico",
+        "patches_applied": []
+      }
+    },
+    {
+      "id": "agorafobia",
+      "name": "Agorafobia",
+      "category": "FULL",
+      "estrutura_diagnostica": "polythetic_monocluster",
+      "render_structured_interview": true,
+      "ui_mode": "structured_full",
+      "criteria": [],
+      "diagnostic_rule": "```\n(A >=2/5 SITUACOES) + (B COGNICAO_FUGA_AUXILIO) + (C QUASE_SEMPRE) + (D EVITA_OU_ACOMPANHADO) + (E DESPROPORCIONAL) + (F >=6_MESES) + (G PREJUIZO) + (H NAO_EXCESSO_MEDICO) + (I NAO_OUTRO_TX)\n```",
+      "clusters": [],
+      "duration": "| 6 meses |",
+      "age_onset": "| 17 anos (2/3 dos casos antes dos 35) |",
+      "functional_impairment": null,
+      "exclusions": [],
+      "subtypes_presentations": [],
+      "specifiers": [
+        "Nenhum especificador formal no DSM-5"
+      ],
+      "operational_profiles": [],
+      "severity": {
+        "has_formal_severity": false,
+        "type": "nao_aplica",
+        "levels": [],
+        "assignment_rule": null,
+        "domains": []
+      },
+      "critical_differentials": [],
+      "key_questions": [
+        "Tem medo ou ansiedade em transporte publico?",
+        "Sente ansiedade em espacos abertos como pracas ou estacionamentos?",
+        "Sente ansiedade em lugares fechados como lojas ou cinemas?",
+        "Fica ansioso em filas ou multidoes?",
+        "Tem medo de sair de casa sozinho?",
+        "O que voce pensa poderia acontecer nessas situacoes?",
+        "Essas situacoes SEMPRE lhe causam ansiedade?",
+        "Voce as evita, precisa de alguem acompanhando, ou suporta com muito medo?",
+        "Ja teve ataques de panico inesperados?",
+        "Se tem agorafobia + panico, ambos devem ser diagnosticados"
+      ],
+      "alerts": [],
+      "source_trace": {
+        "markdown_section": "### Agorafobia",
+        "patches_applied": []
+      }
+    },
+    {
+      "id": "ansiedade_social_fobia_social",
+      "name": "Transtorno de Ansiedade Social (Fobia Social)",
+      "category": "FULL",
+      "estrutura_diagnostica": "monothetic_tripartite",
+      "render_structured_interview": true,
+      "ui_mode": "structured_full",
+      "criteria": [],
+      "diagnostic_rule": "```\n(A SITUACAO_SOCIAL_1+) + (B MEDO_DEMONSTRAR_ANSIEDADE) + (C QUASE_SEMPRE) + (D EVITA_OU_INTENSO) + (E DESPROPORCIONAL) + (F >=6_MESES) + (G PREJUIZO) + (H NAO_SUBSTANCIA_MEDICA) + (I NAO_OUTRO_TX) + (J NAO_CONDICAO_MEDICA)\n```",
+      "clusters": [],
+      "duration": "| 6 meses |",
+      "age_onset": "| 13 anos (75% entre 8-15 anos) |",
+      "functional_impairment": null,
+      "exclusions": [],
+      "subtypes_presentations": [],
+      "specifiers": [],
+      "operational_profiles": [],
+      "severity": {
+        "has_formal_severity": false,
+        "type": "nao_aplica",
+        "levels": [],
+        "assignment_rule": null,
+        "domains": []
+      },
+      "critical_differentials": [],
+      "key_questions": [
+        "Sente medo ou ansiedade quando precisa interagir com pessoas que nao conhece?",
+        "Fica ansioso quando e observado comendo ou bebendo?",
+        "Tem medo de falar ou se apresentar em publico?",
+        "A ansiedade ocorre com seus pares/na escola?",
+        "Tem medo de que as pessoas percebam que voce esta ansioso?",
+        "Tem medo de ruborizar, tremer, suar ou tropecar nas palavras?",
+        "Tem medo de ser humilhado, rejeitado ou de ofender os outros?",
+        "ESSAS situacoes SEMPRE causam ansiedade?",
+        "Em criancas: chora, tem raiva, fica imovel ou se agarra?",
+        "Evita essas situacoes ou as suporta com muito medo?",
+        "O medo e APENAS em situacoes de falar ou atuar em publico, ou tambem em interacoes sociais casuais?"
+      ],
+      "alerts": [],
+      "source_trace": {
+        "markdown_section": "### Transtorno de Ansiedade Social (Fobia Social)",
+        "patches_applied": []
+      }
+    },
+    {
+      "id": "ansiedade_de_separacao",
+      "name": "Transtorno de Ansiedade de Separacao",
+      "category": "FULL",
+      "estrutura_diagnostica": "polythetic_monocluster",
+      "render_structured_interview": true,
+      "ui_mode": "structured_full",
+      "criteria": [],
+      "diagnostic_rule": "```\n(A >=3/8 MANIFESTACOES) + (B DURACAO: >=4sem criancas / >=6m adultos) + (C PREJUIZO) + (D NAO_OUTRO_TX)\n```",
+      "clusters": [],
+      "duration": "| >= 4 semanas (criancas/adolescentes); >= 6 meses (adultos, guia flexivel) |",
+      "age_onset": "| Pre-escolar; pode ocorrer em qualquer momento da infancia |",
+      "functional_impairment": null,
+      "exclusions": [],
+      "subtypes_presentations": [],
+      "specifiers": [
+        "Nenhum especificador formal no DSM-5",
+        "Nota sobre faixa etaria: em adultos, pode manifestar como preocupacao excessiva com conjuges/filhos"
+      ],
+      "operational_profiles": [],
+      "severity": {
+        "has_formal_severity": false,
+        "type": "nao_aplica",
+        "levels": [],
+        "assignment_rule": null,
+        "domains": []
+      },
+      "critical_differentials": [],
+      "key_questions": [
+        "Sofre ou chora quando precisa se afastar de casa ou de [pessoa]?",
+        "Fica preocupado que algo de mal aconteca com [pessoa]?",
+        "Tem medo de se perder, ser sequestrado ou ter acidente?",
+        "Reluta em sair de casa, ir a escola ou trabalhar por medo?",
+        "Tem medo de ficar sozinho?",
+        "Recusa dormir fora ou sem [pessoa]?",
+        "Tem pesadelos sobre separacao?",
+        "Sente dores de cabeca ou barriga quando vai se separar?",
+        "Ha quanto tempo isso vem acontecendo?",
+        "Os sintomas ocorrem mesmo quando [pessoa] esta presente?",
+        "Ha preocupacoes que nao envolvem separacao?",
+        "E ansioso em situacoes sociais mesmo com [pessoa]?"
+      ],
+      "alerts": [],
+      "source_trace": {
+        "markdown_section": "### Transtorno de Ansiedade de Separacao",
+        "patches_applied": []
+      }
+    },
+    {
+      "id": "fobia_especifica",
+      "name": "Fobia Especifica",
+      "category": "SHORT",
+      "estrutura_diagnostica": "monothetic_tripartite",
+      "render_structured_interview": true,
+      "ui_mode": "structured_compact",
+      "criteria": [],
+      "diagnostic_rule": "```\n(A OBJETO_ESPECIFICO) + (B QUASE_INVARIAVEL_IMEDIATO) + (C EVITA_OU_INTENSO) + (D DESPROPORCIONAL) + (E >=6M) + (F PREJUIZO) + (G NAO_OUTRO_TX)\n```",
+      "clusters": [],
+      "duration": "| >= 6 meses |",
+      "age_onset": "| 7-11 anos (media ~10 anos); situacionais tem inicio mais tardio |",
+      "functional_impairment": null,
+      "exclusions": [],
+      "subtypes_presentations": [],
+      "specifiers": [],
+      "operational_profiles": [],
+      "severity": {
+        "has_formal_severity": false,
+        "type": "nao_aplica",
+        "levels": [],
+        "assignment_rule": null,
+        "domains": []
+      },
+      "critical_differentials": [],
+      "key_questions": [
+        "Tem medo intenso de algum objeto ou situacao especifica?",
+        "O medo comeca imediatamente quando ve/encontra [estimulo]?",
+        "Evita [estimulo] ou suporta com muito sofrimento?",
+        "O medo e maior do que o perigo real justificaria?",
+        "Ha quanto tempo isso dura?",
+        "O medo interfere na sua vida?"
+      ],
+      "alerts": [],
+      "source_trace": {
+        "markdown_section": "### Fobia Especifica",
+        "patches_applied": []
+      }
+    },
+    {
+      "id": "mutismo_seletivo",
+      "name": "Mutismo Seletivo",
+      "category": "SHORT",
+      "estrutura_diagnostica": "monothetic_puro",
+      "render_structured_interview": true,
+      "ui_mode": "structured_compact",
+      "criteria": [],
+      "diagnostic_rule": "```\n(A FALHA_FALA_SITUACOES_ESPECIFICAS) + (B INTERFERENCIA) + (C >=1_MES) + (D NAO_IDIOMA) + (E NAO_OUTRO_TX)\n```",
+      "clusters": [],
+      "duration": "| >= 1 mes |",
+      "age_onset": "| Parametro | Valor |",
+      "functional_impairment": null,
+      "exclusions": [],
+      "subtypes_presentations": [],
+      "specifiers": [],
+      "operational_profiles": [],
+      "severity": {
+        "has_formal_severity": false,
+        "type": "nao_aplica",
+        "levels": [],
+        "assignment_rule": null,
+        "domains": []
+      },
+      "critical_differentials": [],
+      "key_questions": [
+        "A crianca fala em casa com a familia?",
+        "Fala com amigos da escola ou professores?",
+        "O fracasso em falar dura mais de um mes?",
+        "Nao se deve a desconhecimento do idioma?",
+        "Nao e explicado por gagueira, atraso de linguagem ou autismo?",
+        "A crianca usa outros meios para se comunicar? (gestos, apontar, escrever)"
+      ],
+      "alerts": [],
+      "source_trace": {
+        "markdown_section": "### Mutismo Seletivo",
+        "patches_applied": []
+      }
+    },
+    {
+      "id": "ansiedade_induzido_por_substancia_medicamento",
+      "name": "Transtorno de Ansiedade Induzido por Substancia/Medicamento",
+      "category": "SHORT",
+      "estrutura_diagnostica": "etiologico_externo",
+      "render_structured_interview": true,
+      "ui_mode": "structured_compact",
+      "criteria": [],
+      "diagnostic_rule": "```\n(A PANICO_OU_ANSIEDADE_PROEMINENTE) + (B TEMPORALIDADE_SUBSTANCIA ou CAPACIDADE) + (C NAO_TX_PRIMARIO) + (D NAO_DELIRIUM) + (E PREJUIZO)\n```",
+      "clusters": [],
+      "duration": null,
+      "age_onset": null,
+      "functional_impairment": null,
+      "exclusions": [],
+      "subtypes_presentations": [],
+      "specifiers": [
+        "| Criterios para intoxicacao satisfeitos; sintomas durante intoxicacao |",
+        "| Criterios para abstinencia satisfeitos; sintomas durante/logo apos abstinencia |",
+        "| Sintomas no inicio do uso ou apos modificacao |"
+      ],
+      "operational_profiles": [],
+      "severity": {
+        "has_formal_severity": false,
+        "type": "nao_aplica",
+        "levels": [],
+        "assignment_rule": null,
+        "domains": []
+      },
+      "critical_differentials": [],
+      "key_questions": [
+        "Os sintomas de ansiedade/panico comecaram quando voce usava alguma substancia ou medicamento?",
+        "Qual substancia/medicamento? Quando comecou a usar?",
+        "Os sintomas ocorrem durante a intoxicacao ou quando para de usar?",
+        "Ja teve esses sintomas antes de comecar a usar a substancia?",
+        "Persistem mais de um mes apos parar de usar?",
+        "Ocorrem tambem quando nao esta usando nada?"
+      ],
+      "alerts": [],
+      "source_trace": {
+        "markdown_section": "### Transtorno de Ansiedade Induzido por Substancia/Medicamento",
+        "patches_applied": []
+      }
+    },
+    {
+      "id": "ansiedade_devido_a_outra_condicao_medica",
+      "name": "Transtorno de Ansiedade Devido a Outra Condicao Medica",
+      "category": "SHORT",
+      "estrutura_diagnostica": "etiologico_externo",
+      "render_structured_interview": true,
+      "ui_mode": "structured_compact",
+      "criteria": [],
+      "diagnostic_rule": "```\n(A PANICO_OU_ANSIEDADE) + (B EVIDENCIA_FISIOPATOLOGICA_CONDICAO_MEDICA) + (C NAO_OUTRO_TX) + (D NAO_DELIRIUM) + (E PREJUIZO)\n```",
+      "clusters": [],
+      "duration": null,
+      "age_onset": null,
+      "functional_impairment": null,
+      "exclusions": [],
+      "subtypes_presentations": [],
+      "specifiers": [],
+      "operational_profiles": [],
+      "severity": {
+        "has_formal_severity": false,
+        "type": "nao_aplica",
+        "levels": [],
+        "assignment_rule": null,
+        "domains": []
+      },
+      "critical_differentials": [],
+      "key_questions": [
+        "Os sintomas de ansiedade comecaram junto com algum problema de saude?",
+        "Qual condicao medica foi diagnosticada? Quando?",
+        "A ansiedade parece ser consequencia direta da doenca?",
+        "Ja fez exames recentes? (tireoide, glicemia, eletrocardiograma, etc.)",
+        "Os sintomas de ansiedade melhoram quando a condicao medica melhora?",
+        "Tem historia de ansiedade antes da doenca?"
+      ],
+      "alerts": [],
+      "source_trace": {
+        "markdown_section": "### Transtorno de Ansiedade Devido a Outra Condicao Medica",
+        "patches_applied": []
+      }
+    }
+  ]
+}

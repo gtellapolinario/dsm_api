@@ -1,0 +1,521 @@
+{
+  "registry_type": "minimal",
+  "normalization_round": "2B",
+  "total_entries": 26,
+  "generated_at": "2026-05-24",
+  "source_files": 6,
+  "entries": [
+    {
+      "id": "01_atraso_global_do_desenvolvimento",
+      "name": "Atraso Global do Desenvolvimento",
+      "chapter_id": "01",
+      "chapter_name": "Transtornos do Neurodesenvolvimento",
+      "codigo_dsm5": "315.8 (F88)",
+      "codigo_cid10": "F88",
+      "category": "MINIMAL",
+      "type": "categoria_residual_especificada",
+      "render_structured_interview": false,
+      "show_in_main_picker": false,
+      "show_in_residual_panel": true,
+      "reason": "Usar quando ha sintomas clinicamente relevantes, mas o quadro nao preenche criterios para transtorno especifico",
+      "suggested_free_fields": [
+        "areas_do_desenvolvimento_afetadas",
+        "marcos_nao_atingidos",
+        "justificativa_para_nao_testabilidade",
+        "data_prevista_para_reavaliacao",
+        "intervencoes_precoces_em_andamento"
+      ]
+    },
+    {
+      "id": "01_deficiencia_intelectual_nao_especificada",
+      "name": "Deficiencia Intelectual (Transtorno do Desenvolvimento Intelectual) Nao Especificada",
+      "chapter_id": "01",
+      "chapter_name": "Transtornos do Neurodesenvolvimento",
+      "codigo_dsm5": "319 (F79)",
+      "codigo_cid10": "F79",
+      "category": "MINIMAL",
+      "type": "categoria_residual_especificada",
+      "render_structured_interview": false,
+      "show_in_main_picker": false,
+      "show_in_residual_panel": true,
+      "reason": "Usar quando ha sintomas clinicamente relevantes, mas o quadro nao preenche criterios para transtorno especifico",
+      "suggested_free_fields": [
+        "barreiras_para_avaliacao",
+        "prejuizos_sensoriais_fisicos_presentes",
+        "evidencias_indiretas_de_deficit_intelectual",
+        "data_prevista_para_reavaliacao"
+      ]
+    },
+    {
+      "id": "01_outro_transtorno_de_deficit_de_atencao_hiperatividade_especi",
+      "name": "Outro Transtorno de Deficit de Atencao/Hiperatividade Especificado",
+      "chapter_id": "01",
+      "chapter_name": "Transtornos do Neurodesenvolvimento",
+      "codigo_dsm5": "314.01 (F90.8)",
+      "codigo_cid10": "F90.8",
+      "category": "MINIMAL",
+      "type": "categoria_residual_especificada",
+      "render_structured_interview": false,
+      "show_in_main_picker": false,
+      "show_in_residual_panel": true,
+      "reason": "Usar quando ha sintomas clinicamente relevantes, mas o quadro nao preenche criterios para transtorno especifico",
+      "suggested_free_fields": [
+        "sintomas_presentes_e_quantidade",
+        "razao_para_nao_atendimento_de_criterios",
+        "ambientes_afetados",
+        "historia_de_inicio",
+        "prejuizo_funcional_observado"
+      ]
+    },
+    {
+      "id": "01_outro_transtorno_de_tique_especificado",
+      "name": "Outro Transtorno de Tique Especificado",
+      "chapter_id": "01",
+      "chapter_name": "Transtornos do Neurodesenvolvimento",
+      "codigo_dsm5": "307.20 (F95.8)",
+      "codigo_cid10": "F95.8",
+      "category": "MINIMAL",
+      "type": "categoria_residual_especificada",
+      "render_structured_interview": false,
+      "show_in_main_picker": false,
+      "show_in_residual_panel": true,
+      "reason": "Usar quando ha sintomas clinicamente relevantes, mas o quadro nao preenche criterios para transtorno especifico",
+      "suggested_free_fields": [
+        "tipo_de_tique_motor_vocal",
+        "razao_para_nao_atendimento_de_criterios",
+        "idade_de_inicio",
+        "etiologia_presumida",
+        "associacoes_medicas"
+      ]
+    },
+    {
+      "id": "01_outro_transtorno_do_neurodesenvolvimento_especificado",
+      "name": "Outro Transtorno do Neurodesenvolvimento Especificado",
+      "chapter_id": "01",
+      "chapter_name": "Transtornos do Neurodesenvolvimento",
+      "codigo_dsm5": "315.8 (F88)",
+      "codigo_cid10": "F88",
+      "category": "MINIMAL",
+      "type": "categoria_residual_especificada",
+      "render_structured_interview": false,
+      "show_in_main_picker": false,
+      "show_in_residual_panel": true,
+      "reason": "Usar quando ha sintomas clinicamente relevantes, mas o quadro nao preenche criterios para transtorno especifico",
+      "suggested_free_fields": [
+        "sintomas_neurodesenvolvimentais_presentes",
+        "razao_para_nao_atendimento_de_criterios_especificos",
+        "antecedentes_de_exposicao_prenatal",
+        "historia_genetica_e_medica",
+        "dominios_funcionais_afetados"
+      ]
+    },
+    {
+      "id": "02_outro_transtorno_do_espectro_da_esquizofrenia_outro_transtor",
+      "name": "Outro Transtorno do Espectro da Esquizofrenia e Outro Transtorno Psicótico Especificado",
+      "chapter_id": "02",
+      "chapter_name": "Transtornos do Espectro da Esquizofrenia e Outros Transtornos Psicoticos",
+      "codigo_dsm5": "298.8 (F28)",
+      "codigo_cid10": "F28",
+      "category": "MINIMAL",
+      "type": "categoria_residual_especificada",
+      "render_structured_interview": false,
+      "show_in_main_picker": false,
+      "show_in_residual_panel": true,
+      "reason": "Usar quando ha sintomas clinicamente relevantes, mas o quadro nao preenche criterios para transtorno especifico",
+      "suggested_free_fields": [
+        "Razão específica pela qual critérios não foram satisfeitos",
+        "Sintomas presentes que justificam a categoria",
+        "Exemplos típicos: alucinações auditivas persistentes isoladas; delírios com episódios de humor significativos sobrepostos; síndrome psicótica atenuada; sintomas delirantes em parceiro de pessoa com transtorno delirante (folie à deux)"
+      ]
+    },
+    {
+      "id": "04_outro_transtorno_depressivo_especificado",
+      "name": "Outro Transtorno Depressivo Especificado",
+      "chapter_id": "04",
+      "chapter_name": "Transtornos Depressivos",
+      "codigo_dsm5": "311 (F32.8)",
+      "codigo_cid10": "F32.8",
+      "category": "MINIMAL",
+      "type": "categoria_residual_especificada",
+      "render_structured_interview": false,
+      "show_in_main_picker": false,
+      "show_in_residual_panel": true,
+      "reason": "Usar quando ha sintomas clinicamente relevantes, mas o quadro nao preenche criterios para transtorno especifico",
+      "suggested_free_fields": [
+        "Razão específica pela qual critérios não foram satisfeitos",
+        "Sintomas presentes que justificam a categoria",
+        "Exemplos típicos: depressão breve recorrente (humor deprimido + 4 sintomas por 2-13 dias ≥1x/mês por 12 meses); episódio depressivo de curta duração (4-13 dias com sofrimento/prejuíço); episódio depressivo com sintomas insuficientes (humor deprimido + ≥1 sintoma por ≥2 semanas com prejuíço mas <5 sintomas totais)"
+      ]
+    },
+    {
+      "id": "09_outro_transtorno_de_sintomas_somaticos_transtorno_relacionad",
+      "name": "Outro Transtorno de Sintomas Somaticos e Transtorno Relacionado Especificado",
+      "chapter_id": "09",
+      "chapter_name": "Transtornos Somáticos e Relacionados",
+      "codigo_dsm5": "300.89 (F45.8)",
+      "codigo_cid10": "F45.8",
+      "category": "MINIMAL",
+      "type": "categoria_residual_especificada",
+      "render_structured_interview": false,
+      "show_in_main_picker": false,
+      "show_in_residual_panel": true,
+      "reason": "Usar quando ha sintomas clinicamente relevantes, mas o quadro nao preenche criterios para transtorno especifico",
+      "suggested_free_fields": [
+        "descricao_da_apresentacao_clinica",
+        "sintomas_presentes_e_limiares_nao_atingidos",
+        "razao_especifica_nao_adequacao",
+        "duracao_dos_sintomas",
+        "prejuizo_funcional_observado",
+        "condicao_medica_comorbida_se_houver"
+      ]
+    },
+    {
+      "id": "15_outro_transtorno_disruptivo_do_controle_de_impulsos_ou",
+      "name": "Outro Transtorno Disruptivo, do Controle de Impulsos ou da Conduta Especificado",
+      "chapter_id": "15",
+      "chapter_name": "Transtornos Disruptivos, de Controle de Impulsos e de Conduta",
+      "codigo_dsm5": "312.89 (F91.8)",
+      "codigo_cid10": "F91.8",
+      "category": "MINIMAL",
+      "type": "categoria_residual_especificada",
+      "render_structured_interview": false,
+      "show_in_main_picker": false,
+      "show_in_residual_panel": true,
+      "reason": "Usar quando ha sintomas clinicamente relevantes, mas o quadro nao preenche criterios para transtorno especifico",
+      "suggested_free_fields": [
+        "descricao_da_apresentacao_clinica",
+        "sintomas_presentes_e_limiares_nao_atingidos",
+        "razao_especifica_nao_adequacao",
+        "funcao_clinica_sugerida",
+        "prejuizo_funcional_observado"
+      ]
+    },
+    {
+      "id": "16_transtorno_por_uso_de_fenciclidina_especificado",
+      "name": "Transtorno por Uso de Fenciclidina Especificado",
+      "chapter_id": "16",
+      "chapter_name": "Transtornos Relacionados a Substancias",
+      "codigo_dsm5": "F16.10/F16.20",
+      "codigo_cid10": "F16.1/F16.2",
+      "category": "MINIMAL",
+      "type": "categoria_residual_especificada",
+      "render_structured_interview": false,
+      "show_in_main_picker": false,
+      "show_in_residual_panel": true,
+      "reason": "Usar quando ha sintomas clinicamente relevantes, mas o quadro nao preenche criterios para transtorno especifico",
+      "suggested_free_fields": [
+        "substancia_especifica",
+        "severidade",
+        "especificadores_remissao",
+        "comorbidades"
+      ]
+    },
+    {
+      "id": "16_transtorno_por_uso_de_outros_alucinogenos_especificado",
+      "name": "Transtorno por Uso de Outros Alucinógenos Especificado",
+      "chapter_id": "16",
+      "chapter_name": "Transtornos Relacionados a Substancias",
+      "codigo_dsm5": "F16.10/F16.20",
+      "codigo_cid10": "F16.1/F16.2",
+      "category": "MINIMAL",
+      "type": "categoria_residual_especificada",
+      "render_structured_interview": false,
+      "show_in_main_picker": false,
+      "show_in_residual_panel": true,
+      "reason": "Usar quando ha sintomas clinicamente relevantes, mas o quadro nao preenche criterios para transtorno especifico",
+      "suggested_free_fields": [
+        "substancia_especifica_LSD_Psilocibina_MDMA_DMT_etc",
+        "severidade",
+        "historico_uso"
+      ]
+    },
+    {
+      "id": "16_transtorno_por_uso_de_inalantes_especificado",
+      "name": "Transtorno por Uso de Inalantes Especificado",
+      "chapter_id": "16",
+      "chapter_name": "Transtornos Relacionados a Substancias",
+      "codigo_dsm5": "F18.10/F18.20",
+      "codigo_cid10": "F18.1/F18.2",
+      "category": "MINIMAL",
+      "type": "categoria_residual_especificada",
+      "render_structured_interview": false,
+      "show_in_main_picker": false,
+      "show_in_residual_panel": true,
+      "reason": "Usar quando ha sintomas clinicamente relevantes, mas o quadro nao preenche criterios para transtorno especifico",
+      "suggested_free_fields": [
+        "substancia_inalada_tolueno_gasolina_spray_colas",
+        "via_administracao",
+        "idade_inicio",
+        "comorbidades_conducta"
+      ]
+    },
+    {
+      "id": "16_transtorno_por_uso_de_outra_substancia_especificado",
+      "name": "Transtorno por Uso de Outra Substância Especificado",
+      "chapter_id": "16",
+      "chapter_name": "Transtornos Relacionados a Substancias",
+      "codigo_dsm5": "F19.10/F19.20",
+      "codigo_cid10": "F19.1/F19.2",
+      "category": "MINIMAL",
+      "type": "categoria_residual_especificada",
+      "render_structured_interview": false,
+      "show_in_main_picker": false,
+      "show_in_residual_panel": true,
+      "reason": "Usar quando ha sintomas clinicamente relevantes, mas o quadro nao preenche criterios para transtorno especifico",
+      "suggested_free_fields": [
+        "substancia_especifica",
+        "fonte_prescricao_ilicita",
+        "motivacao_uso",
+        "comorbidades"
+      ]
+    },
+    {
+      "id": "16_transtorno_por_uso_de_cocaina_especificado",
+      "name": "Transtorno por Uso de Cocaína Especificado",
+      "chapter_id": "16",
+      "chapter_name": "Transtornos Relacionados a Substancias",
+      "codigo_dsm5": "F14.10/F14.20",
+      "codigo_cid10": "F14.1/F14.2",
+      "category": "MINIMAL",
+      "type": "categoria_residual_especificada",
+      "render_structured_interview": false,
+      "show_in_main_picker": false,
+      "show_in_residual_panel": true,
+      "reason": "Usar quando ha sintomas clinicamente relevantes, mas o quadro nao preenche criterios para transtorno especifico",
+      "suggested_free_fields": [
+        "forma_cloridrato_crack_pasta",
+        "via_administracao_IV_fumada_nasal",
+        "padrao_uso_binge_diario"
+      ]
+    },
+    {
+      "id": "16_transtorno_por_uso_de_anfetamina_metanfetamina_especificado",
+      "name": "Transtorno por Uso de Anfetamina/Metanfetamina Especificado",
+      "chapter_id": "16",
+      "chapter_name": "Transtornos Relacionados a Substancias",
+      "codigo_dsm5": "F15.10/F15.20",
+      "codigo_cid10": "F15.1/F15.2",
+      "category": "MINIMAL",
+      "type": "categoria_residual_especificada",
+      "render_structured_interview": false,
+      "show_in_main_picker": false,
+      "show_in_residual_panel": true,
+      "reason": "Usar quando ha sintomas clinicamente relevantes, mas o quadro nao preenche criterios para transtorno especifico",
+      "suggested_free_fields": [
+        "substancia_metanfetamina_dexanfetamina_MDMA_Ritalin",
+        "fonte_prescricao_ilicita",
+        "via_administracao"
+      ]
+    },
+    {
+      "id": "16_outros_transtornos_induzidos_por_alcool",
+      "name": "Outros Transtornos Induzidos por Álcool",
+      "chapter_id": "16",
+      "chapter_name": "Transtornos Relacionados a Substancias",
+      "codigo_dsm5": "Varia por condição",
+      "codigo_cid10": "F10.1-F10.9",
+      "category": "MINIMAL",
+      "type": "categoria_residual_especificada",
+      "render_structured_interview": false,
+      "show_in_main_picker": false,
+      "show_in_residual_panel": true,
+      "reason": "Usar quando ha sintomas clinicamente relevantes, mas o quadro nao preenche criterios para transtorno especifico",
+      "suggested_free_fields": [
+        "tipo_transtorno_induzido",
+        "duracao_sintomas",
+        "persistencia_apos_1mes_abstinencia",
+        "gravidade"
+      ]
+    },
+    {
+      "id": "16_outros_transtornos_induzidos_por_cannabis",
+      "name": "Outros Transtornos Induzidos por Cannabis",
+      "chapter_id": "16",
+      "chapter_name": "Transtornos Relacionados a Substancias",
+      "codigo_dsm5": "Varia por condição",
+      "codigo_cid10": "F12.1-F12.9",
+      "category": "MINIMAL",
+      "type": "categoria_residual_especificada",
+      "render_structured_interview": false,
+      "show_in_main_picker": false,
+      "show_in_residual_panel": true,
+      "reason": "Usar quando ha sintomas clinicamente relevantes, mas o quadro nao preenche criterios para transtorno especifico",
+      "suggested_free_fields": [
+        "tipo_induzido_ansiedade_psicose_humor",
+        "inicio_duracao_intoxicacao_vs_persistente",
+        "teste_realidade"
+      ]
+    },
+    {
+      "id": "16_outros_transtornos_induzidos_por_opioides",
+      "name": "Outros Transtornos Induzidos por Opioides",
+      "chapter_id": "16",
+      "chapter_name": "Transtornos Relacionados a Substancias",
+      "codigo_dsm5": "Varia por condição",
+      "codigo_cid10": "F11.1-F11.9",
+      "category": "MINIMAL",
+      "type": "categoria_residual_especificada",
+      "render_structured_interview": false,
+      "show_in_main_picker": false,
+      "show_in_residual_panel": true,
+      "reason": "Usar quando ha sintomas clinicamente relevantes, mas o quadro nao preenche criterios para transtorno especifico",
+      "suggested_free_fields": [
+        "tipo_induzido",
+        "relacao_temporal_intoxicacao_vs_abstinencia",
+        "duracao"
+      ]
+    },
+    {
+      "id": "16_outros_transtornos_induzidos_por_estimulantes",
+      "name": "Outros Transtornos Induzidos por Estimulantes",
+      "chapter_id": "16",
+      "chapter_name": "Transtornos Relacionados a Substancias",
+      "codigo_dsm5": "Varia por condição",
+      "codigo_cid10": "F14.1-F14.9 / F15.1-F15.9",
+      "category": "MINIMAL",
+      "type": "categoria_residual_especificada",
+      "render_structured_interview": false,
+      "show_in_main_picker": false,
+      "show_in_residual_panel": true,
+      "reason": "Usar quando ha sintomas clinicamente relevantes, mas o quadro nao preenche criterios para transtorno especifico",
+      "suggested_free_fields": [
+        "tipo_induzido",
+        "substancia_cocaina_vs_anfetamina",
+        "duracao",
+        "resolucao_com_abstinencia"
+      ]
+    },
+    {
+      "id": "16_outros_transtornos_induzidos_por_sedativos",
+      "name": "Outros Transtornos Induzidos por Sedativos",
+      "chapter_id": "16",
+      "chapter_name": "Transtornos Relacionados a Substancias",
+      "codigo_dsm5": "Varia por condição",
+      "codigo_cid10": "F13.1-F13.9",
+      "category": "MINIMAL",
+      "type": "categoria_residual_especificada",
+      "render_structured_interview": false,
+      "show_in_main_picker": false,
+      "show_in_residual_panel": true,
+      "reason": "Usar quando ha sintomas clinicamente relevantes, mas o quadro nao preenche criterios para transtorno especifico",
+      "suggested_free_fields": [
+        "tipo_induzido",
+        "periodo_intoxicacao_vs_abstinencia",
+        "comorbidade_TUA"
+      ]
+    },
+    {
+      "id": "16_outros_transtornos_induzidos_por_fenciclidina",
+      "name": "Outros Transtornos Induzidos por Fenciclidina",
+      "chapter_id": "16",
+      "chapter_name": "Transtornos Relacionados a Substancias",
+      "codigo_dsm5": "Varia por condição",
+      "codigo_cid10": "F16.1-F16.9",
+      "category": "MINIMAL",
+      "type": "categoria_residual_especificada",
+      "render_structured_interview": false,
+      "show_in_main_picker": false,
+      "show_in_residual_panel": true,
+      "reason": "Usar quando ha sintomas clinicamente relevantes, mas o quadro nao preenche criterios para transtorno especifico",
+      "suggested_free_fields": [
+        "tipo_induzido",
+        "persistencia_sintomas",
+        "teste_realidade"
+      ]
+    },
+    {
+      "id": "16_outros_transtornos_induzidos_por_alucinogenos",
+      "name": "Outros Transtornos Induzidos por Alucinógenos",
+      "chapter_id": "16",
+      "chapter_name": "Transtornos Relacionados a Substancias",
+      "codigo_dsm5": "Varia por condição",
+      "codigo_cid10": "F16.1-F16.9",
+      "category": "MINIMAL",
+      "type": "categoria_residual_especificada",
+      "render_structured_interview": false,
+      "show_in_main_picker": false,
+      "show_in_residual_panel": true,
+      "reason": "Usar quando ha sintomas clinicamente relevantes, mas o quadro nao preenche criterios para transtorno especifico",
+      "suggested_free_fields": [
+        "tipo_induzido",
+        "substancia_LSD_psilocibina_MDMA",
+        "teste_realidade"
+      ]
+    },
+    {
+      "id": "16_outros_transtornos_induzidos_por_inalantes",
+      "name": "Outros Transtornos Induzidos por Inalantes",
+      "chapter_id": "16",
+      "chapter_name": "Transtornos Relacionados a Substancias",
+      "codigo_dsm5": "Varia por condição",
+      "codigo_cid10": "F18.1-F18.9",
+      "category": "MINIMAL",
+      "type": "categoria_residual_especificada",
+      "render_structured_interview": false,
+      "show_in_main_picker": false,
+      "show_in_residual_panel": true,
+      "reason": "Usar quando ha sintomas clinicamente relevantes, mas o quadro nao preenche criterios para transtorno especifico",
+      "suggested_free_fields": [
+        "tipo_induzido",
+        "substancia_inalada",
+        "deficits_cognitivos_avaliados"
+      ]
+    },
+    {
+      "id": "16_outros_transtornos_induzidos_por_cafeina",
+      "name": "Outros Transtornos Induzidos por Cafeína",
+      "chapter_id": "16",
+      "chapter_name": "Transtornos Relacionados a Substancias",
+      "codigo_dsm5": "F15.1-F15.9",
+      "codigo_cid10": "F15.1-F15.9",
+      "category": "MINIMAL",
+      "type": "categoria_residual_especificada",
+      "render_structured_interview": false,
+      "show_in_main_picker": false,
+      "show_in_residual_panel": true,
+      "reason": "Usar quando ha sintomas clinicamente relevantes, mas o quadro nao preenche criterios para transtorno especifico",
+      "suggested_free_fields": [
+        "tipo_induzido",
+        "quantidade_mg_dia",
+        "fontes_cafe"
+      ]
+    },
+    {
+      "id": "16_outros_transtornos_induzidos_por_tabaco",
+      "name": "Outros Transtornos Induzidos por Tabaco",
+      "chapter_id": "16",
+      "chapter_name": "Transtornos Relacionados a Substancias",
+      "codigo_dsm5": "F17.208",
+      "codigo_cid10": "F17.2",
+      "category": "MINIMAL",
+      "type": "categoria_residual_especificada",
+      "render_structured_interview": false,
+      "show_in_main_picker": false,
+      "show_in_residual_panel": true,
+      "reason": "Usar quando ha sintomas clinicamente relevantes, mas o quadro nao preenche criterios para transtorno especifico",
+      "suggested_free_fields": [
+        "padrao_uso_noturno",
+        "relacao_sintomas_com_fumo"
+      ]
+    },
+    {
+      "id": "16_outros_transtornos_induzidos_por_outra_substancia",
+      "name": "Outros Transtornos Induzidos por Outra Substância",
+      "chapter_id": "16",
+      "chapter_name": "Transtornos Relacionados a Substancias",
+      "codigo_dsm5": "F19.1-F19.9",
+      "codigo_cid10": "F19.1-F19.9",
+      "category": "MINIMAL",
+      "type": "categoria_residual_especificada",
+      "render_structured_interview": false,
+      "show_in_main_picker": false,
+      "show_in_residual_panel": true,
+      "reason": "Usar quando ha sintomas clinicamente relevantes, mas o quadro nao preenche criterios para transtorno especifico",
+      "suggested_free_fields": [
+        "substancia_especifica",
+        "tipo_induzido",
+        "contexto_de_uso"
+      ]
+    }
+  ]
+}

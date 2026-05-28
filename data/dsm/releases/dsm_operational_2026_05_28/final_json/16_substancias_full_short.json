@@ -1,0 +1,1825 @@
+{
+  "chapter_id": "16",
+  "chapter_name": "Transtornos Relacionados a Substancias e Transtornos Aditivos",
+  "source_markdown": "16_substancias_full_short.md",
+  "normalization_round": "2B",
+  "patch_count": 3,
+  "items": [
+    {
+      "id": "transtorno_por_uso_de_alcool",
+      "name": "Transtorno por Uso de Alcool",
+      "category": "FULL",
+      "estrutura_diagnostica": "polythetic_monocluster",
+      "render_structured_interview": true,
+      "ui_mode": "structured_full",
+      "criteria": [
+        "Consumo em maiores quantidades ou por periodo maior que o pretendido",
+        "Desejo persistente ou esforcos malsucedidos para reduzir/controlar",
+        "Muito tempo gasto obtendo, usando ou se recuperando",
+        "Fissura (craving) forte",
+        "Fracasso em cumprir obrigacoes (trabalho/escola/casa)",
+        "Uso continuado apesar de problemas sociais/interpessoais",
+        "Abandono/reducao de atividades importantes",
+        "Uso recorrente em situacoes perigosas",
+        "Uso continuado apesar de problemas fisicos/psicologicos",
+        "Tolerancia (doses maiores para mesmo efeito, ou efeito reduzido)",
+        "Abstinencia (sindrome caracteristica ou uso para aliviar sintomas)"
+      ],
+      "diagnostic_rule": "pelo menos 2 de 11 criterios em 12 meses",
+      "clusters": [
+        "Baixo Controle",
+        "Prejuizo Social",
+        "Uso Arriscado",
+        "Farmacologicos"
+      ],
+      "duration": "12 meses",
+      "age_onset": null,
+      "functional_impairment": "comprometimento clinicamente significativo",
+      "exclusions": [
+        "Uso nao patologico de alcool (intoxicacao ocasional, ingestao social)",
+        "Transtorno por uso de sedativos/hipnoticos/ansioliticos (sintomas semelhantes)",
+        "Transtorno da conduta / personalidade antissocial (comorbidade comum, diagnosticar ambos)",
+        "Transtorno mental induzido por alcool (sintomas devem persistir >1 mes apos abstinencia para ser independente)"
+      ],
+      "subtypes_presentations": [],
+      "specifiers": [
+        "em remissao inicial",
+        "em remissao sustentada",
+        "em ambiente protegido"
+      ],
+      "operational_profiles": [],
+      "severity": {
+        "has_formal_severity": true,
+        "type": "contagem_sintomas_e_prejuizo",
+        "levels": [
+          "leve (2-3)",
+          "moderado (4-5)",
+          "grave (6+)"
+        ],
+        "assignment_rule": "numero de criterios preenchidos em 12 meses",
+        "domains": []
+      },
+      "critical_differentials": [
+        {
+          "condicao": "Uso social",
+          "diferenciador": "Nao ha prejuizo funcional ou compulsao"
+        },
+        {
+          "condicao": "Dependencia fisica sem transtorno",
+          "diferenciador": "Tolerancia/abstinencia isoladas nao sao suficientes"
+        },
+        {
+          "condicao": "TDM/Tag",
+          "diferenciador": "Sintomas de ansiedade/depressao que MELHORAM com abstinencia = induzidos"
+        }
+      ],
+      "key_questions": [
+        "Nas ultimas 4 semanas, sentiu necessidade forte de beber? (fissura)",
+        "Alguem ja se preocupou ou reclamou do seu consumo de alcool?",
+        "Ja tentou diminuir ou parar sem conseguir?",
+        "O alcool ja atrapalhou trabalho, estudo ou relacionamentos?",
+        "Ja dirigiu ou fez algo perigoso apos beber?",
+        "Continua bebendo apesar de problemas de saude?"
+      ],
+      "alerts": [
+        "ALERTA: abstinencia de alcool/sedativos pode ser FATAL",
+        "Tolerancia e abstinencia decorrentes de tratamento medico adequado NAO contam para o diagnostico"
+      ],
+      "source_trace": {
+        "markdown_section": "## 1. TRANSTORNO POR USO DE ALCOOL (TUA)",
+        "patches_applied": []
+      },
+      "perguntas_chave_por_criterio": {
+        "1": "Com que frequencia bebeu mais do que pretendia ou por mais tempo?",
+        "2": "Ja tentou diminuir ou parar? Quantas vezes? Funcionou?",
+        "3": "Quanto tempo da semana gasta com alcool ou se recuperando?",
+        "4": "Sentiu necessidade intensa de beber a ponto de nao conseguir pensar em outra coisa?",
+        "5": "O alcool ja causou faltas, baixo rendimento ou negligencia?",
+        "6": "Continuou bebendo mesmo apos brigas ou discussoes por causa do alcool?",
+        "7": "Deixou de fazer atividades que antes gostava por causa do alcool?",
+        "8": "Ja dirigiu, operou maquinas ou fez atividades perigosas apos beber?",
+        "9": "Continuou bebendo mesmo sabendo que piorava um problema de saude?",
+        "10": "Precisa beber mais para sentir o mesmo efeito? O mesmo quantidade ja nao basta?",
+        "11": "Quando para de beber, sente tremor, suor, ansiedade, insonia, nausea?"
+      }
+    },
+    {
+      "id": "intoxicacao_por_alcool",
+      "name": "Intoxicacao por Alcool",
+      "category": "SHORT",
+      "estrutura_diagnostica": "etiologico_externo",
+      "render_structured_interview": true,
+      "ui_mode": "structured_compact",
+      "criteria": [
+        "A: Ingestao recente de alcool",
+        "B: Alteracoes comportamentais/psicologicas clinicamente significativas (ex: comportamento sexual/agressivo inadequado, humor instavel, julgamento prejudicado)",
+        "C: >=1 dos seguintes sinais: fala arrastada, incoordenacao, marcha instavel, nistagmo, comprometimento atencao/memoria, estupor/coma",
+        "D: Nao atribuivel a outra condicao medica nem melhor explicado por outro transtorno mental"
+      ],
+      "diagnostic_rule": "A + B + C + D (uso recente + alteracoes + sinais + exclusao)",
+      "clusters": [],
+      "duration": "Minutos a horas",
+      "age_onset": null,
+      "functional_impairment": "alteracoes clinicamente significativas",
+      "exclusions": [
+        "Hipoglicemia, cetoacidose diabetica",
+        "Traumatismo craniano",
+        "Doenca cerebelar"
+      ],
+      "subtypes_presentations": [],
+      "specifiers": [
+        "Com perturbacoes da percepcao"
+      ],
+      "operational_profiles": [],
+      "severity": {
+        "has_formal_severity": false,
+        "type": "nao_aplica",
+        "levels": [],
+        "assignment_rule": null,
+        "domains": []
+      },
+      "critical_differentials": [
+        {
+          "condicao": "Intoxicacao por sedativos/hipnoticos/ansioliticos",
+          "diferenciador": "Sem odor, detectavel em toxicologico"
+        },
+        {
+          "condicao": "Hipoglicemia",
+          "diferenciador": "Glicemia baixa"
+        },
+        {
+          "condicao": "Traumatismo craniano",
+          "diferenciador": "Historia de trauma"
+        },
+        {
+          "condicao": "Doenca cerebelar",
+          "diferenciador": "Sem historia de ingestao de alcool"
+        }
+      ],
+      "key_questions": [],
+      "alerts": [
+        "Concentracao de alcool no sangue correlaciona-se com gravidade",
+        "BAC >300 mg/dL: coma, depressao respiratoria, risco de morte"
+      ],
+      "source_trace": {
+        "markdown_section": "## 2. INTOXICACAO POR ALCOOL",
+        "patches_applied": []
+      },
+      "sinais_clinicos_triagem": [
+        "Odor de alcool no halito",
+        "Nistagmo (horizontal e vertical)",
+        "Fala arrastada",
+        "Ataxia (marcha instavel)"
+      ],
+      "niveis_bac": [
+        {
+          "bac_mg_dl": "<50",
+          "manifestacoes": "Efeitos subtis, relaxamento"
+        },
+        {
+          "bac_mg_dl": "50-150",
+          "manifestacoes": "Euforia, loquacidade, julgamento prejudicado"
+        },
+        {
+          "bac_mg_dl": "150-200",
+          "manifestacoes": "Incoordenacao marcada, nausea"
+        },
+        {
+          "bac_mg_dl": "200-300",
+          "manifestacoes": "Estupor, vomitos"
+        },
+        {
+          "bac_mg_dl": ">300",
+          "manifestacoes": "Coma, depressao respiratoria, risco de morte"
+        }
+      ]
+    },
+    {
+      "id": "abstinencia_de_alcool",
+      "name": "Abstinencia de Alcool",
+      "category": "SHORT",
+      "estrutura_diagnostica": "etiologico_externo",
+      "render_structured_interview": true,
+      "ui_mode": "structured_compact",
+      "criteria": [
+        "A: Cessacao ou reducao do uso pesado e prolongado de alcool",
+        "B: >=2 dos seguintes sintomas (horas a dias apos cessacao): 1) Hiperatividade autonomica (sudorese, FC >100 bpm), 2) Tremor aumentado nas maos, 3) Insonia, 4) Nausea ou vomitos, 5) Alucinacoes ou ilusoes transitorias (visuais, tateis ou auditivas), 6) Agitacao psicomotora, 7) Ansiedade, 8) Convulsiones tonico-clonicas generalizadas",
+        "C: Sofrimento clinicamente significativo ou prejuizo funcional",
+        "D: Nao atribuivel a outra condicao"
+      ],
+      "diagnostic_rule": "A + B (>=2 sintomas) + C + D",
+      "clusters": [],
+      "duration": "horas a dias",
+      "age_onset": null,
+      "functional_impairment": "sofrimento clinicamente significativo ou prejuizo funcional",
+      "exclusions": [],
+      "subtypes_presentations": [],
+      "specifiers": [
+        "Com perturbacoes da percepcao: Alucinacoes com teste de realidade intacto ou ilusoes na ausencia de delirium"
+      ],
+      "operational_profiles": [],
+      "severity": {
+        "has_formal_severity": false,
+        "type": "nao_aplica",
+        "levels": [],
+        "assignment_rule": null,
+        "domains": []
+      },
+      "critical_differentials": [],
+      "key_questions": [],
+      "alerts": [
+        "ALERTA CRITICO: Abstinencia de alcool pode ser FATAL. Delirium tremens (confusao + agitacao + alucinacoes + autonomica) tem mortalidade de 5-15% sem tratamento. Sempre pergunte sobre uso pesado de alcool em internacoes."
+      ],
+      "source_trace": {
+        "markdown_section": "## 3. ABSTINENCIA DE ALCOOL",
+        "patches_applied": []
+      },
+      "linha_do_tempo": [
+        {
+          "tempo": "4-12h",
+          "sintomas": "Tremor, sudorese, nausea, ansiedade, taquicardia"
+        },
+        {
+          "tempo": "12-24h",
+          "sintomas": "Alucinacoes (visuais/tateis), agitacao"
+        },
+        {
+          "tempo": "24-48h",
+          "sintomas": "Pico de sintomas; risco de convulsoes"
+        },
+        {
+          "tempo": "48-96h",
+          "sintomas": "Risco de delirium tremens (se houver comorbidades)"
+        },
+        {
+          "tempo": "5-7 dias",
+          "sintomas": "Melhora dos sintomas agudos"
+        },
+        {
+          "tempo": "Semanas-meses",
+          "sintomas": "Insonia, ansiedade, disforia podem persistir"
+        }
+      ]
+    },
+    {
+      "id": "transtorno_por_uso_de_cannabis",
+      "name": "Transtorno por Uso de Cannabis",
+      "category": "FULL",
+      "estrutura_diagnostica": "polythetic_monocluster",
+      "render_structured_interview": true,
+      "ui_mode": "structured_full",
+      "criteria": [
+        "Uso em quantidades/periodo maiores que pretendido",
+        "Desejo persistente/esforcos malsucedidos para reduzir",
+        "Muito tempo obtendo, usando, recuperando",
+        "Fissura forte",
+        "Fracasso em obrigacoes por uso",
+        "Uso continuado apesar de problemas sociais",
+        "Reducao de atividades sociais/profissionais",
+        "Uso em situacoes perigosas",
+        "Uso continuado apesar de problemas de saude",
+        "Tolerancia",
+        "Abstinencia (sindrome caracteristica ou uso para aliviar)"
+      ],
+      "diagnostic_rule": "pelo menos 2 de 11 criterios em 12 meses",
+      "clusters": [
+        "Baixo Controle",
+        "Prejuizo Social",
+        "Uso Arriscado",
+        "Farmacologicos"
+      ],
+      "duration": "12 meses",
+      "age_onset": null,
+      "functional_impairment": "comprometimento clinicamente significativo",
+      "exclusions": [
+        "Uso nao problematico (sem criterios de prejuizo funcional)",
+        "Uso medicinal (indicacao medica legitima, sem compulsao)"
+      ],
+      "subtypes_presentations": [],
+      "specifiers": [
+        "em remissao inicial",
+        "em remissao sustentada",
+        "em ambiente protegido"
+      ],
+      "operational_profiles": [],
+      "severity": {
+        "has_formal_severity": true,
+        "type": "contagem_sintomas_e_prejuizo",
+        "levels": [
+          "leve (2-3)",
+          "moderado (4-5)",
+          "grave (6+)"
+        ],
+        "assignment_rule": "numero de criterios preenchidos em 12 meses",
+        "domains": []
+      },
+      "critical_differentials": [
+        {
+          "condicao": "Uso nao problematico",
+          "diferenciador": "Sem criterios de prejuizo funcional"
+        },
+        {
+          "condicao": "Uso medicinal",
+          "diferenciador": "Indicacao medica legitima, sem compulsao"
+        },
+        {
+          "condicao": "Transtorno depressivo persistente",
+          "diferenciador": "Sindrome amotivacional por Cannabis vs. distimia independente"
+        },
+        {
+          "condicao": "Transtorno de ansiedade induzido por Cannabis",
+          "diferenciador": "Ansiedade APENAS durante intoxicacao"
+        },
+        {
+          "condicao": "Esquizofrenia",
+          "diferenciador": "Psicose induzida por Cannabis melhora em semanas; esquizofrenia persiste"
+        }
+      ],
+      "key_questions": [
+        "Com que frequencia usa cannabis? Quantas vezes por dia?",
+        "Ja tentou parar por algum periodo? Por quanto tempo conseguiu?",
+        "Alguem ja reclamou do seu uso?",
+        "Sente que precisa usar para relaxar ou dormir?",
+        "Ja teve problemas por causa do uso (brigas, faltas, acidentes)?"
+      ],
+      "alerts": [
+        "Uso medicinal adequado nao conta para diagnostico. Tolerancia/abstinencia sob supervisao medica sao desconsideradas."
+      ],
+      "source_trace": {
+        "markdown_section": "## 4. TRANSTORNO POR USO DE CANNABIS (TUC)",
+        "patches_applied": []
+      },
+      "perguntas_chave_por_criterio": {
+        "1": "Fumou mais do que planejava ou por mais tempo?",
+        "2": "Ja tentou parar ou diminuir? Conseguiu?",
+        "3": "Quanto tempo gasta com maconha?",
+        "4": "Sentiu vontade intensa de fumar?",
+        "5": "Faltou trabalho/aula ou teve baixo rendimento por causa da maconha?",
+        "6": "Continuou usando apesar de discussoes?",
+        "7": "Deixou de fazer coisas importantes para usar?",
+        "8": "Dirigiu ou fez atividades de risco sob efeito?",
+        "9": "Continua usando apesar de tosse, problemas respiratorios, ou piora de humor?",
+        "10": "Precisa fumar mais para sentir o mesmo efeito?",
+        "11": "Quando para, sente irritabilidade, ansiedade, insonia, falta de apetite?"
+      }
+    },
+    {
+      "id": "intoxicacao_por_cannabis",
+      "name": "Intoxicacao por Cannabis",
+      "category": "SHORT",
+      "estrutura_diagnostica": "etiologico_externo",
+      "render_structured_interview": true,
+      "ui_mode": "structured_compact",
+      "criteria": [
+        "A: Uso recente de Cannabis",
+        "B: Alteracoes comportamentais/psicologicas clinicamente significativas (ex: prejuizo na coordenacao motora, euforia, ansiedade, sensacao de lentidao temporal, julgamento prejudicado, retraimento social)",
+        "C: >=2 dos seguintes (em 2 horas apos uso): conjuntivas hiperemiadas (olhos vermelhos), apetite aumentado, boca seca, taquicardia",
+        "D: Nao atribuivel a outra condicao"
+      ],
+      "diagnostic_rule": "A + B + C (>=2 sinais) + D",
+      "clusters": [],
+      "duration": "Minutos a horas (fumada: 3-4h; oral: pode ser mais prolongada)",
+      "age_onset": null,
+      "functional_impairment": "alteracoes clinicamente significativas",
+      "exclusions": [],
+      "subtypes_presentations": [],
+      "specifiers": [
+        "Com perturbacoes da percepcao: Alucinacoes com teste de realidade intacto ou ilusoes na ausencia de delirium"
+      ],
+      "operational_profiles": [],
+      "severity": {
+        "has_formal_severity": false,
+        "type": "nao_aplica",
+        "levels": [],
+        "assignment_rule": null,
+        "domains": []
+      },
+      "critical_differentials": [],
+      "key_questions": [],
+      "alerts": [],
+      "source_trace": {
+        "markdown_section": "## 5. INTOXICACAO POR CANNABIS",
+        "patches_applied": []
+      },
+      "sinais_de_triagem": [
+        "Conjuntivas hiperemiadas",
+        "Odor caracteristico",
+        "Taquicardia",
+        "Boca seca",
+        "Aumento do apetite"
+      ]
+    },
+    {
+      "id": "abstinencia_de_cannabis",
+      "name": "Abstinencia de Cannabis",
+      "category": "SHORT",
+      "estrutura_diagnostica": "etiologico_externo",
+      "render_structured_interview": true,
+      "ui_mode": "structured_compact",
+      "criteria": [
+        "A: Cessacao do uso pesado e prolongado (uso diario/quase diario por meses)",
+        "B: >=3 dos seguintes (aproximadamente 1 semana apos cessacao): 1) Irritabilidade, raiva ou agressividade, 2) Nervosismo ou ansiedade, 3) Dificuldade em dormir (insonia, sonhos perturbadores), 4) Apetite reduzido ou perda de peso, 5) Inquietacao, 6) Humor deprimido, 7) Pelo menos 1 sintoma fisico com desconforto significativo: dor abdominal, tremor, sudorese, febre, calafrios, cefaleia",
+        "C: Sofrimento clinicamente significativo ou prejuizo funcional",
+        "D: Nao atribuivel a outra condicao"
+      ],
+      "diagnostic_rule": "A + B (>=3 sintomas) + C + D",
+      "clusters": [],
+      "duration": "aproximadamente 1 semana apos cessacao; sintomas podem persistir >30 dias",
+      "age_onset": null,
+      "functional_impairment": "sofrimento clinicamente significativo ou prejuizo funcional",
+      "exclusions": [],
+      "subtypes_presentations": [],
+      "specifiers": [],
+      "operational_profiles": [],
+      "severity": {
+        "has_formal_severity": false,
+        "type": "nao_aplica",
+        "levels": [],
+        "assignment_rule": null,
+        "domains": []
+      },
+      "critical_differentials": [],
+      "key_questions": [],
+      "alerts": [
+        "Nota de Codificacao: Codigo F12.288 indica TUC moderado/grave comorbido; NAO se codifica TUC leve com abstinencia de Cannabis"
+      ],
+      "source_trace": {
+        "markdown_section": "## 6. ABSTINENCIA DE CANNABIS",
+        "patches_applied": []
+      },
+      "linha_do_tempo": [
+        {
+          "tempo": "24-72h",
+          "manifestacoes": "Inicio dos sintomas"
+        },
+        {
+          "tempo": "Semana 1",
+          "manifestacoes": "Pico da irritabilidade, insonia, ansiedade"
+        },
+        {
+          "tempo": "Semana 2",
+          "manifestacoes": "Melhora gradual"
+        },
+        {
+          "tempo": ">30 dias",
+          "manifestacoes": "Insonia pode persistir"
+        }
+      ]
+    },
+    {
+      "id": "transtorno_por_uso_de_opioides",
+      "name": "Transtorno por Uso de Opioides",
+      "category": "FULL",
+      "estrutura_diagnostica": "polythetic_monocluster",
+      "render_structured_interview": true,
+      "ui_mode": "structured_full",
+      "criteria": [
+        "Dose/tempo maior que pretendido",
+        "Tentativas malsucedidas de reducao",
+        "Tempo gasto obtendo/usando",
+        "Fissura",
+        "Fracasso em obrigacoes",
+        "Uso apesar de problemas sociais",
+        "Abandono de atividades",
+        "Uso em situacoes perigosas",
+        "Uso apesar de problemas de saude",
+        "Tolerancia (doses maiores para mesmo efeito)",
+        "Abstinencia (sindrome caracteristica ou uso para aliviar)"
+      ],
+      "diagnostic_rule": "pelo menos 2 de 11 criterios em 12 meses",
+      "clusters": [
+        "Baixo Controle",
+        "Prejuizo Social",
+        "Uso Arriscado",
+        "Farmacologicos"
+      ],
+      "duration": "12 meses",
+      "age_onset": null,
+      "functional_impairment": "comprometimento clinicamente significativo",
+      "exclusions": [
+        "Uso adequado de opioides prescritos (sem compulsao, sem prejuizo funcional)",
+        "Dor cronica legitima (uso conforme prescricao, monitoramento medico)"
+      ],
+      "subtypes_presentations": [],
+      "specifiers": [
+        "Em terapia de manutencao",
+        "em remissao inicial",
+        "em remissao sustentada",
+        "em ambiente protegido"
+      ],
+      "operational_profiles": [],
+      "severity": {
+        "has_formal_severity": true,
+        "type": "contagem_sintomas_e_prejuizo",
+        "levels": [
+          "leve (2-3)",
+          "moderado (4-5)",
+          "grave (6+)"
+        ],
+        "assignment_rule": "numero de criterios preenchidos em 12 meses",
+        "domains": []
+      },
+      "critical_differentials": [
+        {
+          "condicao": "Uso adequado de opioides prescritos",
+          "diferenciador": "Sem compulsao, sem prejuizo funcional"
+        },
+        {
+          "condicao": "Dor cronica legitima",
+          "diferenciador": "Uso conforme prescricao, monitoramento medico"
+        },
+        {
+          "condicao": "Abstinencia de sedativos",
+          "diferenciador": "Pupilas DILATADAS em abstinencia de opioides; pupilas normais em sedativos"
+        },
+        {
+          "condicao": "Intoxicacao por alcool/sedativos",
+          "diferenciador": "Sem miose; sem resposta a naloxona"
+        }
+      ],
+      "key_questions": [
+        "Usou mais comprimidos ou injecoes do que planejava?",
+        "Ja tentou parar ou diminuir? Conseguiu? Por quanto tempo?",
+        "Quanto tempo gasta para conseguir opioides? Ja visitou varios medicos?",
+        "Sentiu necessidade intensa de usar?",
+        "Faltou ao trabalho ou negligenciou familia por causa dos opioides?",
+        "Continuou usando apesar de brigas ou perda de relacionamentos?",
+        "Deixou hobbies, esportes ou trabalho por causa do uso?",
+        "Usou em situacoes de risco (ex: dividindo agulhas, usando sozinho)?",
+        "Continua usando apesar de constipacao, overdoses previas ou infeccoes?",
+        "Precisa de doses maiores para aliviar a dor ou sentir efeito?",
+        "Quando para, sente calafrios, colicas, suores, ansiedade, vomitos?"
+      ],
+      "alerts": [
+        "Overdose: Miose + depressao respiratoria = emergencia. Naloxona reverte em minutos.",
+        "Risco de suicidio: TUO associado a 1,5-2% mortalidade/ano; overdose pode ser acidental ou deliberada.",
+        "Complicacoes medicas: HIV, hepatite C (ate 90% em usuarios IV), endocardite, tuberculose.",
+        "Sindrome neonatal: ~50% dos bebes de maes com TUO desenvolvem abstinencia neonatal.",
+        "Nota Critica: Tolerancia e abstinencia desconsiderados em individuos cujo uso se da UNICAMENTE sob supervisao medica adequada."
+      ],
+      "source_trace": {
+        "markdown_section": "## 7. TRANSTORNO POR USO DE OPIOIDES (TUO)",
+        "patches_applied": []
+      },
+      "perguntas_chave_por_criterio": {
+        "1": "Usou mais comprimidos ou injecoes do que planejava?",
+        "2": "Ja tentou parar ou diminuir? Conseguiu? Por quanto tempo?",
+        "3": "Quanto tempo gasta para conseguir opioides? Ja visitou varios medicos?",
+        "4": "Sentiu necessidade intensa de usar?",
+        "5": "Faltou ao trabalho ou negligenciou familia por causa dos opioides?",
+        "6": "Continuou usando apesar de brigas ou perda de relacionamentos?",
+        "7": "Deixou hobbies, esportes ou trabalho por causa do uso?",
+        "8": "Usou em situacoes de risco (ex: dividindo agulhas, usando sozinho)?",
+        "9": "Continua usando apesar de constipacao, overdoses previas ou infeccoes?",
+        "10": "Precisa de doses maiores para aliviar a dor ou sentir efeito?",
+        "11": "Quando para, sente calafrios, colicas, suores, ansiedade, vomitos?"
+      }
+    },
+    {
+      "id": "intoxicacao_por_opioides",
+      "name": "Intoxicacao por Opioides",
+      "category": "SHORT",
+      "estrutura_diagnostica": "etiologico_externo",
+      "render_structured_interview": true,
+      "ui_mode": "structured_compact",
+      "criteria": [
+        "A: Uso recente de opioide",
+        "B: Alteracoes comportamentais/psicologicas (euforia inicial -> apatia, disforia, agitacao/retardo psicomotor, julgamento prejudicado)",
+        "C: Miose (ou midriase por anoxia em overdose grave) + >=1 dos seguintes: torpor/coma, fala arrastada, prejuizo na atencao/memoria",
+        "D: Nao atribuivel a outra condicao"
+      ],
+      "diagnostic_rule": "A + B + C (miose + >=1 sinal) + D",
+      "clusters": [],
+      "duration": "horas",
+      "age_onset": null,
+      "functional_impairment": "alteracoes clinicamente significativas",
+      "exclusions": [],
+      "subtypes_presentations": [],
+      "specifiers": [
+        "Com perturbacoes da percepcao: Alucinacoes com teste de realidade intacto (raro)"
+      ],
+      "operational_profiles": [],
+      "severity": {
+        "has_formal_severity": false,
+        "type": "nao_aplica",
+        "levels": [],
+        "assignment_rule": null,
+        "domains": []
+      },
+      "critical_differentials": [],
+      "key_questions": [],
+      "alerts": [
+        "Miose + depressao respiratoria = Intoxicacao por opioides tipica",
+        "Midriase (anoxica) = Overdose grave com anoxia cerebral",
+        "Resposta a naloxona = Confirmacao diagnostica",
+        "Cicatrizes de agulha (track marks) = Uso por via intravenosa"
+      ],
+      "source_trace": {
+        "markdown_section": "## 8. INTOXICACAO POR OPIOIDES",
+        "patches_applied": []
+      }
+    },
+    {
+      "id": "abstinencia_de_opioides",
+      "name": "Abstinencia de Opioides",
+      "category": "SHORT",
+      "estrutura_diagnostica": "etiologico_externo",
+      "render_structured_interview": true,
+      "ui_mode": "structured_compact",
+      "criteria": [
+        "A: Cessacao/reducao do uso pesado prolongado (semanas+) OU administracao de antagonista (naloxona, naltrexona)",
+        "B: >=3 dos seguintes (minutos a dias apos A): 1) Humor disforico, 2) Nausea ou vomito, 3) Dores musculares, 4) Lacrimejamento ou rinorreia, 5) Midriase, piloereicao ou sudorese, 6) Diarreia, 7) Bocejos, 8) Febre, 9) Insonia",
+        "C: Sofrimento clinicamente significativo ou prejuizo funcional",
+        "D: Nao atribuivel a outra condicao"
+      ],
+      "diagnostic_rule": "A + B (>=3 sintomas) + C + D",
+      "clusters": [],
+      "duration": "minutos a dias",
+      "age_onset": null,
+      "functional_impairment": "sofrimento clinicamente significativo ou prejuizo funcional",
+      "exclusions": [],
+      "subtypes_presentations": [],
+      "specifiers": [],
+      "operational_profiles": [],
+      "severity": {
+        "has_formal_severity": false,
+        "type": "nao_aplica",
+        "levels": [],
+        "assignment_rule": null,
+        "domains": []
+      },
+      "critical_differentials": [],
+      "key_questions": [],
+      "alerts": [
+        "ALERTA: A abstinencia de opioides NAO e tipicamente fatal por si so (diferente do alcool), mas a desidratacao e complicacoes podem ser graves.",
+        "ALERTA CRITICO: A maior RISCO e de overdose apos recaida: tolerancia cai rapidamente, mas o usuario tenta usar a dose anterior."
+      ],
+      "source_trace": {
+        "markdown_section": "## 9. ABSTINENCIA DE OPIOIDES",
+        "patches_applied": []
+      },
+      "linha_do_tempo": [
+        {
+          "fase": "Antecipatoria",
+          "tempo": "Horas antes da ultima dose",
+          "sintomas": "Ansiedade, fissura, comportamento de busca"
+        },
+        {
+          "fase": "Aguda",
+          "tempo": "8-72h",
+          "sintomas": "Calafrios, suores, mialgia, colicas, nausea, vomito, diarreia, inquietacao"
+        },
+        {
+          "fase": "Pico",
+          "tempo": "36-72h",
+          "sintomas": "Sintomas maximos, insonia intensa"
+        },
+        {
+          "fase": "Declinio",
+          "tempo": "Dia 5-7",
+          "sintomas": "Melora gradual dos sintomas fisicos"
+        },
+        {
+          "fase": "Pos-aguda (PAWS)",
+          "tempo": "Semanas-meses",
+          "sintomas": "Disforia, anedonia, insonia, ansiedade, fissura"
+        }
+      ]
+    },
+    {
+      "id": "transtorno_por_uso_de_estimulantes",
+      "name": "Transtorno por Uso de Estimulantes",
+      "category": "FULL",
+      "estrutura_diagnostica": "polythetic_monocluster",
+      "render_structured_interview": true,
+      "ui_mode": "structured_full",
+      "criteria": [
+        "Dose/tempo excessivo",
+        "Tentativas de reducao",
+        "Tempo gasto",
+        "Fissura",
+        "Fracasso em obrigacoes",
+        "Problemas sociais",
+        "Abandono de atividades",
+        "Uso perigoso",
+        "Uso apesar de problemas de saude",
+        "Tolerancia",
+        "Abstinencia (fadiga excessiva, depressao, fome aumentada, pesadelos)"
+      ],
+      "diagnostic_rule": "pelo menos 2 de 11 criterios em 12 meses",
+      "clusters": [
+        "Baixo Controle",
+        "Prejuizo Social",
+        "Uso Arriscado",
+        "Farmacologicos"
+      ],
+      "duration": "12 meses",
+      "age_onset": null,
+      "functional_impairment": "comprometimento clinicamente significativo",
+      "exclusions": [
+        "Uso de estimulantes sob supervisao medica adequada (ex: TDAH, narcolepsia) - tolerancia e abstinencia desconsideradas"
+      ],
+      "subtypes_presentations": [
+        "Substancia tipo anfetamina (incl. metanfetamina)",
+        "Cocaina",
+        "Outro estimulante"
+      ],
+      "specifiers": [
+        "em remissao inicial",
+        "em remissao sustentada",
+        "em ambiente protegido"
+      ],
+      "operational_profiles": [],
+      "severity": {
+        "has_formal_severity": true,
+        "type": "contagem_sintomas_e_prejuizo",
+        "levels": [
+          "leve (2-3)",
+          "moderado (4-5)",
+          "grave (6+)"
+        ],
+        "assignment_rule": "numero de criterios preenchidos em 12 meses",
+        "domains": []
+      },
+      "critical_differentials": [],
+      "key_questions": [
+        "Usou mais cocaina/anfetamina do que pretendia? Ficou usando por dias sem parar (binges)?",
+        "Ja tentou parar ou controlar? Conseguiu?",
+        "Quanto tempo investe em conseguir ou usar?",
+        "Sentiu necessidade intensa de usar?",
+        "O uso atrapalhou trabalho, estudo ou responsabilidades?",
+        "Brigou ou perdeu amizades por causa do uso?",
+        "Deixou de fazer coisas importantes para usar?",
+        "Usou e dirigiu? Usou de formas perigosas (injeccao, desconhecidos)?",
+        "Continua usando apesar de dor no peito, perda de peso, problemas nasais?",
+        "Precisa de mais para sentir o mesmo efeito?",
+        "Quando para, sente fadiga excessiva, depressao, fome aumentada, pesadelos?"
+      ],
+      "alerts": [
+        "Complicacoes agudas: Infarto do miocardio, arritmias, morte subita",
+        "AVC, convulsoes",
+        "Pneumotorax (manobra Valsalva ao fumar)",
+        "Transtorno psicotico induzido (delirios paranoides, alucinacoes tateis)",
+        "Risco de suicidio durante abstinencia (repe)",
+        "Nota Critica: Criterios de tolerancia e abstinencia sao DESCONSIDERADOS em individuos cujo uso se da unicamente sob supervisao medica adequada."
+      ],
+      "source_trace": {
+        "markdown_section": "## 10. TRANSTORNO POR USO DE ESTIMULANTES (TUEst)",
+        "patches_applied": []
+      },
+      "perguntas_chave_por_criterio": {
+        "1": "Usou mais cocaina/anfetamina do que pretendia? Ficou usando por dias sem parar (binges)?",
+        "2": "Ja tentou parar ou controlar? Conseguiu?",
+        "3": "Quanto tempo investe em conseguir ou usar?",
+        "4": "Sentiu necessidade intensa de usar?",
+        "5": "O uso atrapalhou trabalho, estudo ou responsabilidades?",
+        "6": "Brigou ou perdeu amizades por causa do uso?",
+        "7": "Deixou de fazer coisas importantes para usar?",
+        "8": "Usou e dirigiu? Usou de formas perigosas (injeccao, desconhecidos)?",
+        "9": "Continua usando apesar de dor no peito, perda de peso, problemas nasais?",
+        "10": "Precisa de mais para sentir o mesmo efeito?",
+        "11": "Quando para, sente fadiga excessiva, depressao, fome aumentada, pesadelos?"
+      },
+      "padroes_de_uso": [
+        "Uso episodico (binges): Uso continuo de altas doses por horas/dias",
+        "Uso diario cronico: Doses altas ou baixas com aumento progressivo",
+        "Uso intranasal/oral: Progressao mais lenta (meses a anos)",
+        "Uso IV/fumado: Progressao rapida para grave (semanas a meses)"
+      ],
+      "gravidade_por_substancia": {
+        "cocaina": {
+          "leve": "305.60 (F14.10)",
+          "moderado": "304.20 (F14.20)",
+          "grave": "304.20 (F14.20)"
+        },
+        "anfetamina_outro": {
+          "leve": "305.70 (F15.10)",
+          "moderado": "304.40 (F15.20)",
+          "grave": "304.40 (F15.20)"
+        }
+      }
+    },
+    {
+      "id": "intoxicacao_por_estimulantes",
+      "name": "Intoxicacao por Estimulantes",
+      "category": "SHORT",
+      "estrutura_diagnostica": "etiologico_externo",
+      "render_structured_interview": true,
+      "ui_mode": "structured_compact",
+      "criteria": [
+        "A: Uso recente de estimulante (anfetamina, cocaina ou outro)",
+        "B: Alteracoes comportamentais/psicologicas clinicamente significativas (euforia, embotamento afetivo, alteracoes na sociabilidade, hipervigilancia, ansiedade, tensao, raiva, comportamentos estereotipados, julgamento prejudicado)",
+        "C: >=2 dos seguintes: taqui/bradicardia, midriase, PA elevada/diminuida, sudorese/calafrios, nausea/vomito, evidencias de perda de peso, agitacao/retardo psicomotor, fraqueza muscular/depressao respiratoria/dor toracica/arritmias, confusao/convulsoes/discinesias/distonia/coma",
+        "D: Nao atribuivel a outra condicao"
+      ],
+      "diagnostic_rule": "A + B + C (>=2 sinais) + D",
+      "clusters": [],
+      "duration": "horas",
+      "age_onset": null,
+      "functional_impairment": "alteracoes clinicamente significativas",
+      "exclusions": [],
+      "subtypes_presentations": [],
+      "specifiers": [
+        "Com perturbacoes da percepcao: Alucinacoes com teste de realidade intacto"
+      ],
+      "operational_profiles": [],
+      "severity": {
+        "has_formal_severity": false,
+        "type": "nao_aplica",
+        "levels": [],
+        "assignment_rule": null,
+        "domains": []
+      },
+      "critical_differentials": [
+        {
+          "condicao": "Intoxicacao por fenciclidina",
+          "diferenciador": "Detectavel por nistagmo, comportamento violento, ataxia"
+        },
+        {
+          "condicao": "Transtorno psicotico induzido por estimulantes",
+          "diferenciador": "Sintomas predominam e justificam atencao independente"
+        }
+      ],
+      "key_questions": [],
+      "alerts": [],
+      "source_trace": {
+        "markdown_section": "## 11. INTOXICACAO POR ESTIMULANTES",
+        "patches_applied": []
+      }
+    },
+    {
+      "id": "abstinencia_de_estimulantes",
+      "name": "Abstinencia de Estimulantes",
+      "category": "SHORT",
+      "estrutura_diagnostica": "etiologico_externo",
+      "render_structured_interview": true,
+      "ui_mode": "structured_compact",
+      "criteria": [
+        "A: Cessacao ou reducao do uso prolongado",
+        "B: Humor disforico + >=2 dos seguintes: 1) Fadiga, 2) Sonhos vividos e desagradaveis, 3) Insonia ou hipersonia, 4) Aumento do apetite, 5) Retardo ou agitacao psicomotora",
+        "C: Sofrimento ou prejuizo funcional",
+        "D: Nao atribuivel a outra condicao"
+      ],
+      "diagnostic_rule": "A + B (humor disforico + >=2 sintomas) + C + D",
+      "clusters": [],
+      "duration": "dias a semanas",
+      "age_onset": null,
+      "functional_impairment": "sofrimento ou prejuizo funcional",
+      "exclusions": [],
+      "subtypes_presentations": [],
+      "specifiers": [],
+      "operational_profiles": [],
+      "severity": {
+        "has_formal_severity": false,
+        "type": "nao_aplica",
+        "levels": [],
+        "assignment_rule": null,
+        "domains": []
+      },
+      "critical_differentials": [],
+      "key_questions": [],
+      "alerts": [
+        "ALERTA CRITICO DE RISCO DE SUICIDIO: A abstinencia de estimulantes e quando ocorrem os maiores riscos de suicidio.",
+        "A repe (crash) produz depressao intensa, anedonia, fadiga profunda e ideacao suicida.",
+        "Avalie RISCO DE SUICIDIO em TODO paciente em abstinencia de estimulantes."
+      ],
+      "source_trace": {
+        "markdown_section": "## 12. ABSTINENCIA DE ESTIMULANTES",
+        "patches_applied": []
+      }
+    },
+    {
+      "id": "transtorno_por_uso_de_tabaco",
+      "name": "Transtorno por Uso de Tabaco",
+      "category": "FULL",
+      "estrutura_diagnostica": "polythetic_monocluster",
+      "render_structured_interview": true,
+      "ui_mode": "structured_full",
+      "criteria": [
+        "Quantidade/tempo maior",
+        "Tentativas de reducao",
+        "Tempo gasto",
+        "Fissura",
+        "Fracasso em obrigacoes",
+        "Problemas sociais",
+        "Abandono de atividades",
+        "Uso perigoso",
+        "Uso apesar de problemas de saude",
+        "Tolerancia",
+        "Abstinencia (irritabilidade, ansiedade, dificuldade de concentracao, aumento do apetite)"
+      ],
+      "diagnostic_rule": "pelo menos 2 de 11 criterios em 12 meses",
+      "clusters": [
+        "Baixo Controle",
+        "Prejuizo Social",
+        "Uso Arriscado",
+        "Farmacologicos"
+      ],
+      "duration": "12 meses",
+      "age_onset": null,
+      "functional_impairment": "comprometimento clinicamente significativo",
+      "exclusions": [],
+      "subtypes_presentations": [],
+      "specifiers": [
+        "Em terapia de manutencao",
+        "em remissao inicial",
+        "em remissao sustentada",
+        "em ambiente protegido"
+      ],
+      "operational_profiles": [],
+      "severity": {
+        "has_formal_severity": true,
+        "type": "contagem_sintomas_e_prejuizo",
+        "levels": [
+          "leve (2-3)",
+          "moderado (4-5)",
+          "grave (6+)"
+        ],
+        "assignment_rule": "numero de criterios preenchidos em 12 meses",
+        "domains": []
+      },
+      "critical_differentials": [],
+      "key_questions": [
+        "Fuma mais do que pretendia? Tenta fumar menos e nao consegue?",
+        "Ja tentou parar? Quantas vezes? Por quanto tempo ficou?",
+        "Gasta muito tempo comprando cigarros ou organizando o momento de fumar?",
+        "Sente vontade intensa de fumar quando nao pode (ex: em reunioes, aviao)?",
+        "O tabaco ja causou problemas no trabalho ou em casa? (ex: faltar para comprar)",
+        "Brigou ou incomodou outros por causa da fumaca?",
+        "Evita lugares onde nao pode fumar?",
+        "Fuma na cama? Proximo a materiais inflamaveis?",
+        "Continua fumando apesar de problemas respiratorios, tosse, ou doenca?",
+        "O primeiro cigarro do dia e o que mais satisfaz? Precisa de mais?",
+        "Quando para de fumar, sente irritabilidade, ansiedade, dificuldade de concentracao, aumento do apetite?"
+      ],
+      "alerts": [
+        "Nota de codificacao: Tabaco NAO tem codigo leve com CID-10 para transtornos induzidos. Abstinencia de tabaco so ocorre com TUT moderado/grave."
+      ],
+      "source_trace": {
+        "markdown_section": "## 13. TRANSTORNO POR USO DE TABACO (TUT)",
+        "patches_applied": []
+      },
+      "perguntas_chave_por_criterio": {
+        "1": "Fuma mais do que pretendia? Tenta fumar menos e nao consegue?",
+        "2": "Ja tentou parar? Quantas vezes? Por quanto tempo ficou?",
+        "3": "Gasta muito tempo comprando cigarros ou organizando o momento de fumar?",
+        "4": "Sente vontade intensa de fumar quando nao pode (ex: em reunioes, aviao)?",
+        "5": "O tabaco ja causou problemas no trabalho ou em casa? (ex: faltar para comprar)",
+        "6": "Brigou ou incomodou outros por causa da fumaca?",
+        "7": "Evita lugares onde nao pode fumar?",
+        "8": "Fuma na cama? Proximo a materiais inflamaveis?",
+        "9": "Continua fumando apesar de problemas respiratorios, tosse, ou doenca?",
+        "10": "O primeiro cigarro do dia e o que mais satisfaz? Precisa de mais?",
+        "11": "Quando para de fumar, sente irritabilidade, ansiedade, dificuldade de concentracao, aumento do apetite?"
+      },
+      "marcadores_severidade": [
+        "Fumar nos primeiros 30 min apos acordar",
+        "Fumar >20 cigarros/dia",
+        "Acordar a noite para fumar",
+        "Fissura intensa apos poucas horas"
+      ]
+    },
+    {
+      "id": "abstinencia_de_tabaco",
+      "name": "Abstinencia de Tabaco",
+      "category": "SHORT",
+      "estrutura_diagnostica": "etiologico_externo",
+      "render_structured_interview": true,
+      "ui_mode": "structured_compact",
+      "criteria": [
+        "A: Uso diario por varias semanas",
+        "B: Cessacao abrupta ou reducao, seguida (em 24h) por >=4 dos seguintes: 1) Irritabilidade, frustracao ou raiva, 2) Ansiedade, 3) Dificuldade de concentracao, 4) Aumento do apetite, 5) Inquietacao, 6) Humor deprimido, 7) Insonia",
+        "C: Sofrimento ou prejuizo funcional",
+        "D: Nao atribuivel a outra condicao"
+      ],
+      "diagnostic_rule": "A + B (>=4 sintomas em 24h) + C + D",
+      "clusters": [],
+      "duration": "24h inicio; pico em 2-3 dias; resolucao em 2-3 semanas",
+      "age_onset": null,
+      "functional_impairment": "sofrimento ou prejuizo funcional",
+      "exclusions": [],
+      "subtypes_presentations": [],
+      "specifiers": [],
+      "operational_profiles": [],
+      "severity": {
+        "has_formal_severity": false,
+        "type": "nao_aplica",
+        "levels": [],
+        "assignment_rule": null,
+        "domains": []
+      },
+      "critical_differentials": [],
+      "key_questions": [],
+      "alerts": [
+        "~50% dos ex-fumantes em 2+ dias apresentam criterios",
+        "Aumento medio de peso: 2-3 kg no primeiro ano",
+        "Reducao da FC: 5-12 bpm nos primeiros dias",
+        "A reposicao de nicotina confirma o diagnostico (melhora dos sintomas)"
+      ],
+      "source_trace": {
+        "markdown_section": "## 14. ABSTINENCIA DE TABACO",
+        "patches_applied": []
+      },
+      "linha_do_tempo": [
+        {
+          "tempo": "24h",
+          "sintomas": "Inicio dos sintomas"
+        },
+        {
+          "tempo": "2-3 dias",
+          "sintomas": "Pico da abstinencia"
+        },
+        {
+          "tempo": "2-3 semanas",
+          "sintomas": "Resolucao da maioria dos sintomas"
+        },
+        {
+          ">1 mes": "Sintomas persistentes sao raros"
+        }
+      ]
+    },
+    {
+      "id": "transtorno_do_jogo",
+      "name": "Transtorno do Jogo",
+      "category": "FULL",
+      "estrutura_diagnostica": "polythetic_monocluster",
+      "render_structured_interview": true,
+      "ui_mode": "structured_full",
+      "criteria": [
+        "Tolerancia: apostas progressivamente maiores para excitacao desejada",
+        "Inquietacao/irritabilidade ao tentar reduzir/parar",
+        "Esforcos repetidos e malsucedidos para controlar",
+        "Preocupacao frequente com o jogo",
+        "Joga quando se sente angustiado",
+        "Recuperar o prejuizo: volta para ficar quite",
+        "Mente para esconder o envolvimento",
+        "Prejudicou relacionamentos, emprego ou oportunidades",
+        "Depende de outros para obter dinheiro"
+      ],
+      "diagnostic_rule": "pelo menos 4 de 9 criterios em 12 meses; B: Nao melhor explicado por episodio maniaco",
+      "clusters": [],
+      "duration": "12 meses",
+      "age_onset": null,
+      "functional_impairment": "comprometimento clinicamente significativo",
+      "exclusions": [
+        "Episodio maniaco (B: o comportamento de jogo NAO e mais bem explicado por episodio maniaco)"
+      ],
+      "subtypes_presentations": [],
+      "specifiers": [
+        "Episodico: Satisfaz criterios mais de uma vez, com periodos de remissao",
+        "Persistente: Sintomas continuos por varios anos",
+        "Em remissao inicial: 3-12 meses sem criterios",
+        "Em remissao sustentada: 12+ meses sem criterios"
+      ],
+      "operational_profiles": [],
+      "severity": {
+        "has_formal_severity": true,
+        "type": "contagem_sintomas_e_prejuizo",
+        "levels": [
+          "leve (4-5)",
+          "moderado (6-7)",
+          "grave (8-9)"
+        ],
+        "assignment_rule": "numero de criterios preenchidos de 9",
+        "domains": []
+      },
+      "critical_differentials": [
+        {
+          "condicao": "Jogo profissional",
+          "diferenciador": "Riscos limitados, disciplina, sem prejuizo"
+        },
+        {
+          "condicao": "Jogo social",
+          "diferenciador": "Perdas aceitaveis, periodo limitado, sem compulsao"
+        },
+        {
+          "condicao": "Episodio maniaco",
+          "diferenciador": "Jogo excessivo DURANTE mania; historia de jogo fora dos periodos maniacos = TdJ"
+        },
+        {
+          "condicao": "Personalidade antissocial",
+          "diferenciador": "Pode co-ocorrer; diagnosticar ambos se criterios satisfeitos"
+        },
+        {
+          "condicao": "Efeito colateral de dopaminergicos",
+          "diferenciador": "Se desaparece com reducao/interrupcao do medicamento, nao e TdJ"
+        }
+      ],
+      "key_questions": [
+        "Nos ultimos 12 meses, sentiu que precisava apostar quantias maiores para se sentir satisfeito?",
+        "Ficou inquieto ou irritado ao tentar reduzir ou parar de jogar?",
+        "Ja tentou parar de jogar e nao conseguiu?",
+        "Mentiu para esconder quanto joga ou quanto perde?",
+        "O jogo ja causou problemas financeiros serios?",
+        "Precisou pedir dinheiro emprestado por causa de dividas do jogo?"
+      ],
+      "alerts": [
+        "Risco de suicidio: Ate 50% dos pacientes em tratamento tem ideacao suicida; ~17% tentaram suicidio.",
+        "Distorcoes cognitivas: Negacao, supersticoes, sentimentos de controle sobre o acaso, excesso de confianca.",
+        "Co-ocorrencia: TdJ esta frequentemente associado a TUA (transtorno por uso de alcool), depressao, ansiedade e TPOC."
+      ],
+      "source_trace": {
+        "markdown_section": "## 15. TRANSTORNO DO JOGO (Jogo Patologico)",
+        "patches_applied": []
+      },
+      "perguntas_chave_por_criterio": {
+        "1": "Precisa apostar quantias cada vez maiores para se sentir empolgado?",
+        "2": "Fica irritado ou inquieto quando tenta parar ou diminuir de jogar?",
+        "3": "Ja tentou parar varias vezes sem conseguir?",
+        "4": "Passa muito tempo pensando em jogos passados ou planejando apostas?",
+        "5": "Joga quando esta ansioso, deprimido, culpado ou impotente?",
+        "6": "Apos perder, volta outro dia tentando recuperar o dinheiro?",
+        "7": "Mentiu para familiares ou terapeutas sobre quanto joga?",
+        "8": "Perdeu relacionamento, emprego ou oportunidade por causa do jogo?",
+        "9": "Pediu ajuda financeira a outras pessoas por causa das dividas do jogo?"
+      }
+    },
+    {
+      "id": "transtorno_por_uso_de_sedativos_hipnoticos_ansioliticos",
+      "name": "Transtorno por Uso de Sedativos, Hipnoticos ou Ansioliticos",
+      "category": "SHORT",
+      "estrutura_diagnostica": "polythetic_monocluster",
+      "render_structured_interview": true,
+      "ui_mode": "structured_compact",
+      "criteria": [
+        "Mesma estrutura de 11 criterios dos demais TUS. >=2 dos 11 criterios em 12 meses.",
+        "Critério 10 (Tolerancia): Doses progressivamente maiores para mesmo efeito (euforia, sedacao); tolerancia ao efeito depressor do tronco encefalico desenvolve-se mais lentamente -> risco de overdose",
+        "Critério 11 (Abstinencia): Similar ao alcool (autonomica, tremor, convulsoes, delirium); alivio com uso da mesma substancia ou alcool",
+        "Polifarmacia: Muito associado a TUA e uso de opioides (benzos usados para amenizar efeitos de estimulantes ou potencializar opioides)"
+      ],
+      "diagnostic_rule": "pelo menos 2 de 11 criterios em 12 meses",
+      "clusters": [
+        "Baixo Controle",
+        "Prejuizo Social",
+        "Uso Arriscado",
+        "Farmacologicos"
+      ],
+      "duration": "12 meses",
+      "age_onset": null,
+      "functional_impairment": "comprometimento clinicamente significativo",
+      "exclusions": [
+        "Uso adequado de benzodiazepínicos prescritos (sem compulsao, sem prejuizo funcional)",
+        "Transtorno por uso de alcool (sintomas farmacologicos muito similares)",
+        "Transtorno de ansiedade que precedeu o uso (tratar a ansiedade original)"
+      ],
+      "subtypes_presentations": [],
+      "specifiers": [
+        "em remissao inicial",
+        "em remissao sustentada",
+        "em ambiente protegido"
+      ],
+      "operational_profiles": [],
+      "severity": {
+        "has_formal_severity": true,
+        "type": "contagem_sintomas_e_prejuizo",
+        "levels": [
+          "leve (2-3)",
+          "moderado (4-5)",
+          "grave (6+)"
+        ],
+        "assignment_rule": "numero de criterios preenchidos em 12 meses",
+        "domains": []
+      },
+      "critical_differentials": [
+        {
+          "condicao": "Uso adequado de benzodiazepínicos prescritos",
+          "diferenciador": "Sem compulsao, sem prejuizo funcional"
+        },
+        {
+          "condicao": "Transtorno por uso de alcool",
+          "diferenciador": "Sintomas farmacologicos muito similares"
+        },
+        {
+          "condicao": "Transtorno de ansiedade que precedeu o uso",
+          "diferenciador": "Tratar a ansiedade original"
+        }
+      ],
+      "key_questions": [],
+      "alerts": [
+        "ALERTA CRITICO: Abstinencia de sedativos pode ser FATAL (similar ao alcool). Nunca interrompa benzodiazepínicos ou barbituricos de uso cronico sem supervisao medica. Estrategia: desmame gradual."
+      ],
+      "source_trace": {
+        "markdown_section": "## 16. TRANSTORNO POR USO DE SEDATIVOS, HIPNOTICOS OU ANSIOLITICOS (TUSHA)",
+        "patches_applied": []
+      },
+      "resumo_clinico": "Inclui benzodiazepínicos (diazepam, alprazolam, etc.), zolpidem, zaleplon, barbituricos, meprobamato. Criterios de tolerancia e abstinencia DESCONSIDERADOS se uso sob supervisao medica adequada.",
+      "substancias": [
+        "Benzodiazepínicos (diazepam, alprazolam, etc.)",
+        "Zolpidem",
+        "Zaleplon",
+        "Barbituricos",
+        "Meprobamato"
+      ]
+    },
+    {
+      "id": "intoxicacao_por_sedativos_hipnoticos_ansioliticos",
+      "name": "Intoxicacao por Sedativos, Hipnoticos ou Ansioliticos",
+      "category": "SHORT",
+      "estrutura_diagnostica": "etiologico_externo",
+      "render_structured_interview": true,
+      "ui_mode": "structured_compact",
+      "criteria": [
+        "A: Uso recente",
+        "B: Alteracoes comportamentais/psicologicas clinicamente significativas (comportamento sexual/agressivo inadequado, humor instavel, julgamento prejudicado)",
+        "C: >=1 dos seguintes: fala arrastada, incoordenacao, marcha instavel, nistagmo, comprometimento cognitivo, estupor/coma",
+        "D: Nao atribuivel a outra condicao"
+      ],
+      "diagnostic_rule": "A + B + C (>=1 sinal) + D",
+      "clusters": [],
+      "duration": "horas",
+      "age_onset": null,
+      "functional_impairment": "alteracoes clinicamente significativas",
+      "exclusions": [],
+      "subtypes_presentations": [],
+      "specifiers": [],
+      "operational_profiles": [],
+      "severity": {
+        "has_formal_severity": false,
+        "type": "nao_aplica",
+        "levels": [],
+        "assignment_rule": null,
+        "domains": []
+      },
+      "critical_differentials": [
+        {
+          "condicao": "Intoxicacao por alcool",
+          "diferenciador": "Sem odor de alcool"
+        },
+        {
+          "condicao": "Outras causas",
+          "diferenciador": "Detectavel em toxicologico (benzodiazepínicos, barbituricos)"
+        }
+      ],
+      "key_questions": [],
+      "alerts": [
+        "Combinados com alcool: risco letal de depressao respiratoria"
+      ],
+      "source_trace": {
+        "markdown_section": "## 17. INTOXICACAO POR SEDATIVOS, HIPNOTICOS OU ANSIOLITICOS",
+        "patches_applied": []
+      }
+    },
+    {
+      "id": "abstinencia_de_sedativos_hipnoticos_ansioliticos",
+      "name": "Abstinencia de Sedativos, Hipnoticos ou Ansioliticos",
+      "category": "SHORT",
+      "estrutura_diagnostica": "etiologico_externo",
+      "render_structured_interview": true,
+      "ui_mode": "structured_compact",
+      "criteria": [
+        "A: Cessacao/reducao do uso prolongado",
+        "B: >=2 dos seguintes (horas a dias): 1) Hiperatividade autonomica, 2) Maos tremidas, 3) Insonia, 4) Nausea/vomito, 5) Alucinacoes/ilusoes transitorias (visuais, tateis, auditivas), 6) Agitacao psicomotora, 7) Ansiedade, 8) Convulsoes tonico-clonicas generalizadas",
+        "C: Sofrimento ou prejuizo funcional",
+        "D: Nao atribuivel a outra condicao"
+      ],
+      "diagnostic_rule": "A + B (>=2 sintomas) + C + D",
+      "clusters": [],
+      "duration": "horas a dias; pico dia 2-3; risco de convulsoes nos primeiros 3-5 dias; sintomas podem persistir semanas",
+      "age_onset": null,
+      "functional_impairment": "sofrimento ou prejuizo funcional",
+      "exclusions": [],
+      "subtypes_presentations": [],
+      "specifiers": [
+        "Com perturbacoes da percepcao: Alucinacoes com teste de realidade intacto"
+      ],
+      "operational_profiles": [],
+      "severity": {
+        "has_formal_severity": false,
+        "type": "nao_aplica",
+        "levels": [],
+        "assignment_rule": null,
+        "domains": []
+      },
+      "critical_differentials": [],
+      "key_questions": [],
+      "alerts": [
+        "ALERTA: Abstinencia de sedativos pode ser FATAL (similar ao alcool). Nunca interrompa benzodiazepínicos ou barbituricos de uso cronico sem supervisao medica."
+      ],
+      "source_trace": {
+        "markdown_section": "## 18. ABSTINENCIA DE SEDATIVOS, HIPNOTICOS OU ANSIOLITICOS",
+        "patches_applied": []
+      }
+    },
+    {
+      "id": "intoxicacao_por_cafeina",
+      "name": "Intoxicacao por Cafeina",
+      "category": "SHORT",
+      "estrutura_diagnostica": "etiologico_externo",
+      "render_structured_interview": true,
+      "ui_mode": "structured_compact",
+      "criteria": [
+        "A: Consumo recente (geralmente >250 mg; doses menores em sensiveis)",
+        "B: >=5 dos seguintes (durante ou logo apos uso): 1) Inquietacao, 2) Nervosismo, 3) Excitacao, 4) Insonia, 5) Rubor facial, 6) Diurese, 7) Perturbacao gastrintestinal, 8) Abalos musculares, 9) Fluxo erratico do pensamento/discurso, 10) Taquicardia ou arritmia cardiaca, 11) Periodos de energia inesgotavel, 12) Agitacao psicomotora",
+        "C: Sofrimento ou prejuizo funcional",
+        "D: Nao atribuivel a outra condicao"
+      ],
+      "diagnostic_rule": "A + B (>=5 sintomas) + C + D",
+      "clusters": [],
+      "duration": "durante ou logo apos uso",
+      "age_onset": null,
+      "functional_impairment": "sofrimento ou prejuizo funcional",
+      "exclusions": [
+        "Transtorno de ansiedade (cafeina pode precipitar ou exacerbar)",
+        "Efeitos de outros estimulantes",
+        "Hipoglicemia",
+        "Hipertireoidismo"
+      ],
+      "subtypes_presentations": [],
+      "specifiers": [],
+      "operational_profiles": [],
+      "severity": {
+        "has_formal_severity": false,
+        "type": "nao_aplica",
+        "levels": [],
+        "assignment_rule": null,
+        "domains": []
+      },
+      "critical_differentials": [
+        {
+          "condicao": "Transtorno de ansiedade",
+          "diferenciador": "Cafeina pode precipitar ou exacerbar"
+        },
+        {
+          "condicao": "Efeitos de outros estimulantes",
+          "diferenciador": "Toxicologico diferencia"
+        },
+        {
+          "condicao": "Hipoglicemia",
+          "diferenciador": "Glicemia baixa"
+        },
+        {
+          "condicao": "Hipertireoidismo",
+          "diferenciador": "TSH alterado"
+        }
+      ],
+      "key_questions": [],
+      "alerts": [
+        "Nota: A cafeina e a substancia psicoativa mais usada mundialmente. Intoxicacao e subdiagnosticada.",
+        "NAO ha transtorno por uso de cafeina no DSM-5 (dados insuficientes)."
+      ],
+      "source_trace": {
+        "markdown_section": "## 19. INTOXICACAO POR CAFEINA",
+        "patches_applied": []
+      },
+      "fontes_comuns": [
+        "Cafe, cha, refrigerantes cola",
+        "Bebidas energeticas (Red Bull, etc.)",
+        "Analgesicos sem prescricao",
+        "Medicamentos para resfriado",
+        "Comprimidos energeticos/perda de peso",
+        "Chocolate"
+      ]
+    },
+    {
+      "id": "abstinencia_de_cafeina",
+      "name": "Abstinencia de Cafeina",
+      "category": "SHORT",
+      "estrutura_diagnostica": "etiologico_externo",
+      "render_structured_interview": true,
+      "ui_mode": "structured_compact",
+      "criteria": [
+        "A: Cessacao/reducao prolongada do uso diario",
+        "B: Cefaleia + >=1 dos seguintes: 1) Fadiga, 2) Sonolencia, 3) Humor disforico, 4) Dificuldade de concentracao, 5) Sintomas gripais (nausea, mialgia, rigidez)",
+        "C: Sofrimento ou prejuizo funcional",
+        "D: Nao atribuivel a outra condicao"
+      ],
+      "diagnostic_rule": "A + B (cefaleia + >=1 sintoma) + C + D",
+      "clusters": [],
+      "duration": "Inicio 12-24h apos ultima dose; pico 24-48h; duracao 2-9 dias (tipicamente)",
+      "age_onset": null,
+      "functional_impairment": "sofrimento ou prejuizo funcional",
+      "exclusions": [],
+      "subtypes_presentations": [],
+      "specifiers": [],
+      "operational_profiles": [],
+      "severity": {
+        "has_formal_severity": false,
+        "type": "nao_aplica",
+        "levels": [],
+        "assignment_rule": null,
+        "domains": []
+      },
+      "critical_differentials": [],
+      "key_questions": [],
+      "alerts": [
+        "Doses >100mg/dia por meses -> risco de abstinencia significativa"
+      ],
+      "source_trace": {
+        "markdown_section": "## 20. ABSTINENCIA DE CAFEINA",
+        "patches_applied": []
+      }
+    },
+    {
+      "id": "transtorno_por_uso_de_fenciclidina",
+      "name": "Transtorno por Uso de Fenciclidina",
+      "category": "SHORT",
+      "estrutura_diagnostica": "polythetic_monocluster",
+      "render_structured_interview": true,
+      "ui_mode": "structured_compact",
+      "criteria": [
+        "Estrutura de 10 criterios (NAO inclui abstinencia - nao documentada em humanos)",
+        ">=2 dos 10 criterios em 12 meses (mesma estrutura padrao, sem Criterio 11-abstinencia)"
+      ],
+      "diagnostic_rule": "pelo menos 2 de 10 criterios em 12 meses",
+      "clusters": [
+        "Baixo Controle",
+        "Prejuizo Social",
+        "Uso Arriscado",
+        "Farmacologicos"
+      ],
+      "duration": "12 meses",
+      "age_onset": null,
+      "functional_impairment": "comprometimento clinicamente significativo",
+      "exclusions": [],
+      "subtypes_presentations": [],
+      "specifiers": [],
+      "operational_profiles": [],
+      "severity": {
+        "has_formal_severity": true,
+        "type": "contagem_sintomas_e_prejuizo",
+        "levels": [
+          "leve (2-3)",
+          "moderado (4-5)",
+          "grave (6+)"
+        ],
+        "assignment_rule": "numero de criterios preenchidos de 10",
+        "domains": []
+      },
+      "critical_differentials": [],
+      "key_questions": [],
+      "alerts": [
+        "Comportamento violento em intoxicacao e comum. Risco de acidentes graves, brigas, lesoes.",
+        "Usuario pode acreditar estar sendo atacado.",
+        "Efeitos residuais podem assemelhar-se a esquizofrenia por semanas."
+      ],
+      "source_trace": {
+        "markdown_section": "## 21. TRANSTORNO POR USO DE FENCICLIDINA (PCP)",
+        "patches_applied": []
+      },
+      "resumo_clinico": "Substancias dissociativas (PCP, ketamina, quetamina). Intoxicacao: nistagmo, analgesia, hipertensao, comportamento violento/bizarro, ataxia. Detectavel na urina por ate 8 dias."
+    },
+    {
+      "id": "intoxicacao_por_fenciclidina",
+      "name": "Intoxicacao por Fenciclidina",
+      "category": "SHORT",
+      "estrutura_diagnostica": "etiologico_externo",
+      "render_structured_interview": true,
+      "ui_mode": "structured_compact",
+      "criteria": [
+        "A: Uso recente",
+        "B: Alteracoes comportamentais/psicologicas clinicamente significativas (beligerancia, agressividade, agitacao, alteracao do julgamento, despersonalizacao/desrealizacao, paranoia, labilidade emocional, euforia)",
+        "C (<=1h apos uso): >=2 dos seguintes: nistagmo (vertical ou horizontal), hipertensao ou taquicardia, desinibicao, analgesia, ataxia, disartria, fraqueza muscular, convulsoes, coma, hiperacusia",
+        "D: Nao atribuivel a outra condicao"
+      ],
+      "diagnostic_rule": "A + B + C (>=2 sinais <=1h) + D",
+      "clusters": [],
+      "duration": "horas",
+      "age_onset": null,
+      "functional_impairment": "alteracoes clinicamente significativas",
+      "exclusions": [],
+      "subtypes_presentations": [],
+      "specifiers": [],
+      "operational_profiles": [],
+      "severity": {
+        "has_formal_severity": false,
+        "type": "nao_aplica",
+        "levels": [],
+        "assignment_rule": null,
+        "domains": []
+      },
+      "critical_differentials": [],
+      "key_questions": [],
+      "alerts": [],
+      "source_trace": {
+        "markdown_section": "## 22. INTOXICACAO POR FENCICLIDINA",
+        "patches_applied": []
+      },
+      "sinais_diferenciadores": [
+        "Nistagmo vertical (especialmente caracteristico)",
+        "Comportamento violento/bizarro",
+        "Analgesia (paciente pode nao sentir lesoes graves)",
+        "Hipertensao proeminente",
+        "Detectavel na urina por ate 8 dias"
+      ]
+    },
+    {
+      "id": "transtorno_por_uso_de_outros_alucinogenos",
+      "name": "Transtorno por Uso de Outros Alucinogenos",
+      "category": "SHORT",
+      "estrutura_diagnostica": "polythetic_monocluster",
+      "render_structured_interview": true,
+      "ui_mode": "structured_compact",
+      "criteria": [
+        "Estrutura de 10 criterios (sem abstinencia formal no DSM-5, embora evidencias de abstinencia de MDMA existam)",
+        ">=2 dos 10 criterios em 12 meses (sem Criterio 11-abstinencia).",
+        "Tolerancia desenvolve-se rapidamente (uso por 3-4 dias seguidos ja produz tolerancia marcada)."
+      ],
+      "diagnostic_rule": "pelo menos 2 de 10 criterios em 12 meses",
+      "clusters": [
+        "Baixo Controle",
+        "Prejuizo Social",
+        "Uso Arriscado",
+        "Farmacologicos"
+      ],
+      "duration": "12 meses",
+      "age_onset": null,
+      "functional_impairment": "comprometimento clinicamente significativo",
+      "exclusions": [],
+      "subtypes_presentations": [
+        "LSD",
+        "Psilocibina",
+        "Mescalina",
+        "DMT",
+        "MDMA/ecstasy"
+      ],
+      "specifiers": [],
+      "operational_profiles": [],
+      "severity": {
+        "has_formal_severity": true,
+        "type": "contagem_sintomas_e_prejuizo",
+        "levels": [
+          "leve (2-3)",
+          "moderado (4-5)",
+          "grave (6+)"
+        ],
+        "assignment_rule": "numero de criterios preenchidos de 10",
+        "domains": []
+      },
+      "critical_differentials": [],
+      "key_questions": [],
+      "alerts": [
+        "Tolerancia desenvolve-se rapidamente (uso por 3-4 dias seguidos ja produz tolerancia marcada)."
+      ],
+      "source_trace": {
+        "markdown_section": "## 23. TRANSTORNO POR USO DE OUTROS ALUCINOGENOS",
+        "patches_applied": []
+      },
+      "resumo_clinico": "LSD, psilocibina, mescalina, DMT, MDMA/ecstasy. Estrutura de 10 criterios (sem abstinencia formal no DSM-5). Especificar a substancia."
+    },
+    {
+      "id": "intoxicacao_por_outros_alucinogenos",
+      "name": "Intoxicacao por Outros Alucinogenos",
+      "category": "SHORT",
+      "estrutura_diagnostica": "etiologico_externo",
+      "render_structured_interview": true,
+      "ui_mode": "structured_compact",
+      "criteria": [
+        "A: Uso recente (nao fenciclidina)",
+        "B: Alteracoes comportamentais/psicologicas clinicamente significativas (ansiedade/depressao acentuadas, ideias de referencia, medo de perder o juizo, ideacao paranoide, julgamento prejudicado)",
+        "C: Alteracoes da percepcao em plena vigilia (intensificacao subjetiva de percepcoes, despersonalizacao, desrealizacao, ilusoes, alucinacoes, sinestesias)",
+        "D: >=2 dos seguintes: midriase, taquicardia, sudorese, palpitacoes, visao borrada, tremores, incoordenacao",
+        "E: Nao atribuivel a outra condicao"
+      ],
+      "diagnostic_rule": "A + B + C + D (>=2 sinais) + E",
+      "clusters": [],
+      "duration": "Minutos (salvia) a horas (LSD, MDMA) ou mais",
+      "age_onset": null,
+      "functional_impairment": "alteracoes clinicamente significativas",
+      "exclusions": [],
+      "subtypes_presentations": [],
+      "specifiers": [],
+      "operational_profiles": [],
+      "severity": {
+        "has_formal_severity": false,
+        "type": "nao_aplica",
+        "levels": [],
+        "assignment_rule": null,
+        "domains": []
+      },
+      "critical_differentials": [],
+      "key_questions": [],
+      "alerts": [
+        "Teste de realidade geralmente intacto durante intoxicacao",
+        "Risco de acidentes, lesoes autoinfligidas, comportamento perigoso"
+      ],
+      "source_trace": {
+        "markdown_section": "## 24. INTOXICACAO POR OUTROS ALUCINOGENOS",
+        "patches_applied": []
+      }
+    },
+    {
+      "id": "transtorno_persistente_da_percepcao_induzido_por_alucinogenos",
+      "name": "Transtorno Persistente da Percepcao Induzido por Alucinogenos (flashbacks)",
+      "category": "SHORT",
+      "estrutura_diagnostica": "temporal_topografico",
+      "render_structured_interview": true,
+      "ui_mode": "structured_compact",
+      "criteria": [
+        "A: Apos cessacao do uso de alucinogeno, revivencia de >=1 dos sintomas perceptivos experimentados durante intoxicacao: alucinacoes geometricas, falsas percepcoes de movimento nos campos visuais perifericos, flashes coloridos, cores intensificadas, rastros de imagens em movimento, pos-imagens positivas, halos ao redor de objetos, macropsia/micropsia",
+        "B: Sofrimento ou prejuizo funcional",
+        "C: Nao atribuivel a outra condicao medica (ex: lesao cerebral, epilepsia visual) nem melhor explicado por outro transtorno mental"
+      ],
+      "diagnostic_rule": "A (>=1 sintoma perceptivo de revivencia) + B + C",
+      "clusters": [],
+      "duration": "Semanas, meses ou anos",
+      "age_onset": null,
+      "functional_impairment": "sofrimento ou prejuizo funcional",
+      "exclusions": [
+        "Lesao cerebral",
+        "Epilepsia visual",
+        "Outro transtorno mental"
+      ],
+      "subtypes_presentations": [],
+      "specifiers": [],
+      "operational_profiles": [],
+      "severity": {
+        "has_formal_severity": false,
+        "type": "nao_aplica",
+        "levels": [],
+        "assignment_rule": null,
+        "domains": []
+      },
+      "critical_differentials": [
+        {
+          "condicao": "Lesao cerebral",
+          "diferenciador": "Exames de imagem"
+        },
+        {
+          "condicao": "Epilepsia visual",
+          "diferenciador": "EEG, historia de crises"
+        }
+      ],
+      "key_questions": [],
+      "alerts": [
+        "Teste de realidade INTACTO (individuo sabe que e efeito residual da droga)",
+        "Duracao: semanas, meses ou anos",
+        "Pode ser precipitado por Cannabis, alcool ou estresse",
+        "Mais comum apos LSD, mas ocorre com outros alucinogenos",
+        "Prevalencia estimada: ~4,2% entre usuarios de alucinogenos"
+      ],
+      "source_trace": {
+        "markdown_section": "## 25. TRANSTORNO PERSISTENTE DA PERCEPCAO INDUZIDO POR ALUCINOGENOS",
+        "patches_applied": []
+      },
+      "caracteristicas": [
+        "Teste de realidade intacto",
+        "Duracao: semanas, meses ou anos",
+        "Pode ser precipitado por Cannabis, alcool ou estresse",
+        "Mais comum apos LSD",
+        "Prevalencia estimada: ~4,2% entre usuarios de alucinogenos"
+      ]
+    },
+    {
+      "id": "transtorno_por_uso_de_inalantes",
+      "name": "Transtorno por Uso de Inalantes",
+      "category": "SHORT",
+      "estrutura_diagnostica": "polythetic_monocluster",
+      "render_structured_interview": true,
+      "ui_mode": "structured_compact",
+      "criteria": [
+        "Sem abstinencia formal no DSM-5 (sintomas leves relatados em ~10%)",
+        ">=2 dos 10 criterios em 12 meses (sem Criterio 11)."
+      ],
+      "diagnostic_rule": "pelo menos 2 de 10 criterios em 12 meses",
+      "clusters": [
+        "Baixo Controle",
+        "Prejuizo Social",
+        "Uso Arriscado",
+        "Farmacologicos"
+      ],
+      "duration": "12 meses",
+      "age_onset": null,
+      "functional_impairment": "comprometimento clinicamente significativo",
+      "exclusions": [],
+      "subtypes_presentations": [
+        "Cola",
+        "Gasolina",
+        "Tintas",
+        "Solventes",
+        "Tolueno"
+      ],
+      "specifiers": [],
+      "operational_profiles": [],
+      "severity": {
+        "has_formal_severity": true,
+        "type": "contagem_sintomas_e_prejuizo",
+        "levels": [
+          "leve (2-3)",
+          "moderado (4-5)",
+          "grave (6+)"
+        ],
+        "assignment_rule": "numero de criterios preenchidos de 10",
+        "domains": []
+      },
+      "critical_differentials": [],
+      "key_questions": [],
+      "alerts": [
+        "ALERTA: Morte subita por inalacao: arritmia cardiaca pode ocorrer mesmo na primeira exposicao.",
+        "Morte por asfixia/aspiracao.",
+        "Toxicidade neurologica: leucoencefalopatia, deficits cognitivos persistentes.",
+        "Associacao com tentativas de suicidio em adultos."
+      ],
+      "source_trace": {
+        "markdown_section": "## 26. TRANSTORNO POR USO DE INALANTES",
+        "patches_applied": []
+      },
+      "resumo_clinico": "Hidrocarbonetos volateis (cola, gasolina, tintas, solventes, tolueno). Sem abstinencia formal no DSM-5. Mais comum em adolescentes; remissao espontanea comum na vida adulta.",
+      "substancias": [
+        "Cola",
+        "Gasolina",
+        "Tintas",
+        "Solventes",
+        "Tolueno"
+      ]
+    },
+    {
+      "id": "intoxicacao_por_inalantes",
+      "name": "Intoxicacao por Inalantes",
+      "category": "SHORT",
+      "estrutura_diagnostica": "etiologico_externo",
+      "render_structured_interview": true,
+      "ui_mode": "structured_compact",
+      "criteria": [
+        "A: Exposicao breve e recente a altas doses de hidrocarbonetos volateis",
+        "B: Alteracoes comportamentais/psicologicas clinicamente significativas (beligerancia, agressao, desinibicao, excitacao aguda, labilidade emocional, julgamento prejudicado)",
+        "C: >=2 dos seguintes: tontura, nistagmo, desinibicao, desinibicao psicomotora (retardo + tremores), fraqueza muscular, disartria, diplopia, visao borrada, ptose, desinibicao, euphoria, afetividade comprometida, estupor/coma",
+        "D: Nao atribuivel a outra condicao"
+      ],
+      "diagnostic_rule": "A + B + C (>=2 sinais) + D",
+      "clusters": [],
+      "duration": "minutos a horas",
+      "age_onset": null,
+      "functional_impairment": "alteracoes clinicamente significativas",
+      "exclusions": [],
+      "subtypes_presentations": [],
+      "specifiers": [],
+      "operational_profiles": [],
+      "severity": {
+        "has_formal_severity": false,
+        "type": "nao_aplica",
+        "levels": [],
+        "assignment_rule": null,
+        "domains": []
+      },
+      "critical_differentials": [],
+      "key_questions": [],
+      "alerts": [
+        "Morte subita por arritmia pode ocorrer mesmo na primeira exposicao"
+      ],
+      "source_trace": {
+        "markdown_section": "## 27. INTOXICACAO POR INALANTES",
+        "patches_applied": []
+      },
+      "sinais_de_uso": [
+        "Odor quimico nas roupas ou halito",
+        "Rash do cheirador de cola ao redor do nariz/boca",
+        "Bolsas ou recipientes com residuos",
+        "Episodios recorrentes de intoxicacao com toxicologico negativo"
+      ]
+    },
+    {
+      "id": "transtorno_por_uso_de_outra_substancia",
+      "name": "Transtorno por Uso de Outra Substancia",
+      "category": "SHORT",
+      "estrutura_diagnostica": "polythetic_monocluster",
+      "render_structured_interview": true,
+      "ui_mode": "structured_compact",
+      "criteria": [
+        "Mesma estrutura de 11 criterios dos demais TUS.",
+        ">=2 dos 11 criterios em 12 meses."
+      ],
+      "diagnostic_rule": "pelo menos 2 de 11 criterios em 12 meses",
+      "clusters": [
+        "Baixo Controle",
+        "Prejuizo Social",
+        "Uso Arriscado",
+        "Farmacologicos"
+      ],
+      "duration": "12 meses",
+      "age_onset": null,
+      "functional_impairment": "comprometimento clinicamente significativo",
+      "exclusions": [],
+      "subtypes_presentations": [],
+      "specifiers": [],
+      "operational_profiles": [],
+      "severity": {
+        "has_formal_severity": true,
+        "type": "contagem_sintomas_e_prejuizo",
+        "levels": [
+          "leve (2-3)",
+          "moderado (4-5)",
+          "grave (6+)"
+        ],
+        "assignment_rule": "numero de criterios preenchidos em 12 meses",
+        "domains": []
+      },
+      "critical_differentials": [],
+      "key_questions": [],
+      "alerts": [],
+      "source_trace": {
+        "markdown_section": "## 28. TRANSTORNO POR USO DE OUTRA SUBSTANCIA (OU SUBSTANCIA DESCONHECIDA)",
+        "patches_applied": []
+      },
+      "resumo_clinico": "Para substancias que nao se encaixam nas 9 classes. Aplica-se a mesma estrutura de 11 criterios. Especificar a substancia.",
+      "exemplos_substancias": [
+        "Esteroides anabolizantes",
+        "Oxido nitroso",
+        "Nitritos de amila/butila/isobutila",
+        "Laxantes/diureticos (em transtornos alimentares)",
+        "Medicamentos sem prescricao (anti-histaminicos, etc.)",
+        "Dextrometorfano",
+        "Kratom"
+      ]
+    }
+  ]
+}

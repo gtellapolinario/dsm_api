@@ -1,0 +1,351 @@
+{
+  "chapter_id": "02",
+  "chapter_name": "Espectro da Esquizofrenia e Outros Transtornos Psicoticos",
+  "source_markdown": "02_esquizofrenia_psicoticos_full_short.md",
+  "normalization_round": "2B",
+  "patch_count": 2,
+  "items": [
+    {
+      "id": "esquizofrenia",
+      "name": "ESQUIZOFRENIA",
+      "category": "FULL",
+      "estrutura_diagnostica": "polythetic_clusters_assimetricos",
+      "render_structured_interview": true,
+      "ui_mode": "structured_full",
+      "criteria": [],
+      "diagnostic_rule": "- Critério A (2+ sintomas, 1 sendo delírios/alucinações/discurso) **E**\n- Critério B (prejuízo funcional) **E**\n- Critério C (6 meses totais, incluindo 1 mês ativo) **E**\n- Critério D (excluir esquizoafetivo e humor psicótico) **E**\n- Critério E (excluir substância/condição médica) **E**\n- Critério F (regra para comorbidade com TEA)",
+      "clusters": [
+        "Psicóticos positivos",
+        "Desorganização",
+        "Sintomas negativos",
+        "**Total**"
+      ],
+      "duration": null,
+      "age_onset": null,
+      "functional_impairment": null,
+      "exclusions": [],
+      "subtypes_presentations": [],
+      "specifiers": [],
+      "operational_profiles": [],
+      "severity": {
+        "has_formal_severity": true,
+        "type": "ordinal_por_dominio",
+        "levels": [],
+        "assignment_rule": null,
+        "domains": []
+      },
+      "critical_differentials": [],
+      "key_questions": [
+        "Você já teve a experiência de acreditar em coisas que outras pessoas consideravam estranhas ou impossíveis?",
+        "Você já ouviu vozes ou sons que outras pessoas não conseguiam ouvir?",
+        "Você já sentiu que seus pensamentos estavam confusos ou que as palavras não saíam como deveriam?",
+        "Você já agiu de maneira que outras pessoas consideraram muito estranha ou incompreensível?",
+        "Você sente que expressa menos emoções do que antes?",
+        "Você perdeu o interesse ou a vontade de fazer coisas?",
+        "Como está seu funcionamento em comparação com antes do início desses sintomas?",
+        "Esses sintomas começaram há quanto tempo?",
+        "Houve períodos em que você teve humor anormalmente elevado ou deprimido que durou semanas?",
+        "Usa alguma substância ou faz algum tratamento médico que possa estar relacionado?"
+      ],
+      "alerts": [],
+      "source_trace": {
+        "markdown_section": "### ESQUIZOFRENIA",
+        "patches_applied": [
+          "gravidade.tem_gravidade_formal: Sim + tipo=ordinal_por_dominio + escala 0-4 (opcional) -> Sim (especificador dimensional OPCIONAL) + tipo=ordinal_por_dominio + escala 0-4 + USO_OPCIONAL=True"
+        ]
+      }
+    },
+    {
+      "id": "transtorno_esquizofreniforme",
+      "name": "TRANSTORNO ESQUIZOFRENIFORME",
+      "category": "FULL",
+      "estrutura_diagnostica": "polythetic_clusters_assimetricos",
+      "render_structured_interview": true,
+      "ui_mode": "structured_full",
+      "criteria": [],
+      "diagnostic_rule": "- Critério A (2+ sintomas, 1 obrigatório) **E** Critério B (1-6 meses) **E** Critério C (excluir humor) **E** Critério D (excluir substância/condição médica)",
+      "clusters": [],
+      "duration": null,
+      "age_onset": null,
+      "functional_impairment": null,
+      "exclusions": [],
+      "subtypes_presentations": [],
+      "specifiers": [
+        "**Com características de bom prognóstico**: requer ≥2 de:",
+        "Início de sintomas psicóticos proeminentes em ≤4 semanas da primeira mudança no comportamento",
+        "Confusão ou perplexidade",
+        "Bom funcionamento social/profissional pré-morbido",
+        "Ausência de afeto embotado ou plano",
+        "**Sem características de bom prognóstico**: se ≥2 das anteriores NÃO estiveram presentes",
+        "**Com catatonia**: código adicional 293.89 (F06.1)"
+      ],
+      "operational_profiles": [],
+      "severity": {
+        "has_formal_severity": false,
+        "type": "nao_aplica",
+        "levels": [],
+        "assignment_rule": null,
+        "domains": []
+      },
+      "critical_differentials": [],
+      "key_questions": [],
+      "alerts": [],
+      "source_trace": {
+        "markdown_section": "### TRANSTORNO ESQUIZOFRENIFORME",
+        "patches_applied": [
+          "gravidade: Mesma escala dimensional da esquizofrenia (0-4 por dominio) - uso opcional -> Sim (especificador dimensional OPCIONAL) + tipo=ordinal_por_dominio + escala 0-4 + USO_OPCIONAL=True"
+        ]
+      }
+    },
+    {
+      "id": "transtorno_delirante",
+      "name": "TRANSTORNO DELIRANTE",
+      "category": "FULL",
+      "estrutura_diagnostica": "monothetic_puro",
+      "render_structured_interview": true,
+      "ui_mode": "structured_full",
+      "criteria": [],
+      "diagnostic_rule": "- Delírios persistentes ≥1 mês **E** nunca teve critério A de esquizofrenia **E** funcionamento relativamente preservado **E** exclusões.",
+      "clusters": [],
+      "duration": null,
+      "age_onset": null,
+      "functional_impairment": null,
+      "exclusions": [],
+      "subtypes_presentations": [],
+      "specifiers": [
+        "**Com conteúdo bizarro**: Delírios claramente implausíveis, incompreensíveis, não originados de experiências comuns da vida.",
+        "**Especificadores de curso** (usar SOMENTE após 1 ano):",
+        "Primeiro episódio: agudo / remissão parcial / remissão completa",
+        "Episódios múltiplos: agudo / remissão parcial / remissão completa",
+        "Contínuo"
+      ],
+      "operational_profiles": [],
+      "severity": {
+        "has_formal_severity": false,
+        "type": "nao_aplica",
+        "levels": [],
+        "assignment_rule": null,
+        "domains": []
+      },
+      "critical_differentials": [],
+      "key_questions": [
+        "Você tem alguma crença forte que outras pessoas não compartilham ou consideram estranha?",
+        "Há quanto tempo você mantém essa crença?",
+        "Essa crença interfere em alguma área da sua vida?",
+        "Você já ouviu vozes ou teve outras experiências incomuns?",
+        "Já teve períodos de humor muito elevado ou muito deprimido?"
+      ],
+      "alerts": [],
+      "source_trace": {
+        "markdown_section": "### TRANSTORNO DELIRANTE",
+        "patches_applied": []
+      }
+    },
+    {
+      "id": "transtorno_esquizoafe_tivo",
+      "name": "TRANSTORNO ESQUIZOAFE TIVO",
+      "category": "FULL",
+      "estrutura_diagnostica": "polythetic_com_ancora",
+      "render_structured_interview": true,
+      "ui_mode": "structured_full",
+      "criteria": [],
+      "diagnostic_rule": "- Critério A (sobreposição humor + psicose) **E** Critério B (psicose isolada ≥2 semanas) **E** Critério C (humor dominante ao longo do tempo) **E** Critério D",
+      "clusters": [],
+      "duration": null,
+      "age_onset": null,
+      "functional_impairment": null,
+      "exclusions": [],
+      "subtypes_presentations": [
+        "Tipo bipolar",
+        "Tipo depressivo"
+      ],
+      "specifiers": [
+        "Com catatonia (código adicional 293.89 F06.1)",
+        "Especificadores de curso (mesmos da esquizofrenia; usar após 1 ano)",
+        "Gravidade dimensional (opcional)"
+      ],
+      "operational_profiles": [],
+      "severity": {
+        "has_formal_severity": true,
+        "type": "ordinal_por_dominio",
+        "levels": [],
+        "assignment_rule": "Escala dimensional 0-4 por dimensao (OPCIONAL)",
+        "domains": [
+          "delírios",
+          "alucinações",
+          "discurso desorganizado",
+          "comportamento psicomotor anormal",
+          "sintomas negativos"
+        ]
+      },
+      "critical_differentials": [],
+      "key_questions": [
+        "Você já teve períodos de humor muito deprimido ou muito elevado que duraram semanas?",
+        "Durante esses períodos, você também teve experiências estranhas (ouvir vozes, crenças incomuns)?",
+        "Já houve momentos em que você ouvia vozes ou tinha crenças estranhas SEM estar deprimido ou eufórico?",
+        "Ao longo de toda a doença, quanto tempo você passou com alterações de humor versus sem elas?"
+      ],
+      "alerts": [],
+      "source_trace": {
+        "markdown_section": "### TRANSTORNO ESQUIZOAFE TIVO",
+        "patches_applied": [
+          "gravidade.tem_gravidade_formal: adicionado USO_OPCIONAL=True"
+        ]
+      }
+    },
+    {
+      "id": "transtorno_psicótico_breve",
+      "name": "TRANSTORNO PSICÓTICO BREVE",
+      "category": "SHORT",
+      "estrutura_diagnostica": "temporal_topografico",
+      "render_structured_interview": true,
+      "ui_mode": "structured_compact",
+      "criteria": [],
+      "diagnostic_rule": "- Sintomas psicóticos + duração 1 dia a 1 mês + retorno completo ao funcionamento + exclusões",
+      "clusters": [],
+      "duration": null,
+      "age_onset": null,
+      "functional_impairment": null,
+      "exclusions": [],
+      "subtypes_presentations": [],
+      "specifiers": [
+        "Com estressor(es) evidente(s) (psicose reativa breve)",
+        "Sem estressor(es) evidente(s)",
+        "Com início no pós-parto (gestação ou até 4 semanas após parto)",
+        "Com catatonia (código adicional 293.89 F06.1)"
+      ],
+      "operational_profiles": [],
+      "severity": {
+        "has_formal_severity": false,
+        "type": "nao_aplica",
+        "levels": [],
+        "assignment_rule": null,
+        "domains": []
+      },
+      "critical_differentials": [],
+      "key_questions": [
+        "Quando esses sintomas começaram?",
+        "Já passaram? Voltou ao normal?",
+        "Houve algum evento estressante que precedeu o início?"
+      ],
+      "alerts": [],
+      "source_trace": {
+        "markdown_section": "### TRANSTORNO PSICÓTICO BREVE",
+        "patches_applied": []
+      }
+    },
+    {
+      "id": "transtorno_psicótico_induzido_por_substância_medicamento",
+      "name": "TRANSTORNO PSICÓTICO INDUZIDO POR SUBSTÂNCIA/MEDICAMENTO",
+      "category": "SHORT",
+      "estrutura_diagnostica": "etiologico_externo",
+      "render_structured_interview": true,
+      "ui_mode": "structured_compact",
+      "criteria": [],
+      "diagnostic_rule": "Criterios de TRANSTORNO PSICÓTICO INDUZIDO POR SUBSTÂNCIA/MEDICAMENTO atribuiveis a substancia, medicamento ou condicao medica; nexo causal obrigatorio",
+      "clusters": [],
+      "duration": null,
+      "age_onset": null,
+      "functional_impairment": null,
+      "exclusions": [],
+      "subtypes_presentations": [],
+      "specifiers": [
+        "Com início durante a intoxicação",
+        "Com início durante a abstinência",
+        "Classes: álcool, cannabis, fenciclidina, outro alucinógeno, inalante, sedativo/hipnótico/ansiolítico, anfetamina, cocaína, outra"
+      ],
+      "operational_profiles": [],
+      "severity": {
+        "has_formal_severity": false,
+        "type": "nao_aplica",
+        "levels": [],
+        "assignment_rule": null,
+        "domains": []
+      },
+      "critical_differentials": [],
+      "key_questions": [
+        "Quais substâncias você usa ou usou recentemente?",
+        "Os sintomas começaram durante ou logo após usar a substância?",
+        "Os sintomas persistiram após parar de usar? Por quanto tempo?"
+      ],
+      "alerts": [],
+      "source_trace": {
+        "markdown_section": "### TRANSTORNO PSICÓTICO INDUZIDO POR SUBSTÂNCIA/MEDICAMENTO",
+        "patches_applied": []
+      }
+    },
+    {
+      "id": "transtorno_psicótico_devido_a_outra_condição_médica",
+      "name": "TRANSTORNO PSICÓTICO DEVIDO A OUTRA CONDIÇÃO MÉDICA",
+      "category": "SHORT",
+      "estrutura_diagnostica": "etiologico_externo",
+      "render_structured_interview": true,
+      "ui_mode": "structured_compact",
+      "criteria": [],
+      "diagnostic_rule": "Criterios de TRANSTORNO PSICÓTICO DEVIDO A OUTRA CONDIÇÃO MÉDICA atribuiveis a substancia, medicamento ou condicao medica; nexo causal obrigatorio",
+      "clusters": [],
+      "duration": null,
+      "age_onset": null,
+      "functional_impairment": null,
+      "exclusions": [],
+      "subtypes_presentations": [],
+      "specifiers": [],
+      "operational_profiles": [],
+      "severity": {
+        "has_formal_severity": false,
+        "type": "nao_aplica",
+        "levels": [],
+        "assignment_rule": null,
+        "domains": []
+      },
+      "critical_differentials": [],
+      "key_questions": [
+        "Você tem alguma condição médica diagnosticada?",
+        "Os sintomas psicóticos começaram após o início ou piora dessa condição?",
+        "Há alguma associação temporal entre a condição médica e os sintomas?",
+        "Os sintomas são atípicos para um transtorno psicótico primário (ex: alucinações visuais)?"
+      ],
+      "alerts": [],
+      "source_trace": {
+        "markdown_section": "### TRANSTORNO PSICÓTICO DEVIDO A OUTRA CONDIÇÃO MÉDICA",
+        "patches_applied": []
+      }
+    },
+    {
+      "id": "catatonia_transtorno_catatônico",
+      "name": "CATATONIA / TRANSTORNO CATATÔNICO",
+      "category": "SHORT",
+      "estrutura_diagnostica": "qualitativo_descritivo",
+      "render_structured_interview": true,
+      "ui_mode": "structured_compact",
+      "criteria": [],
+      "diagnostic_rule": "Quadro clinico qualitativo conforme criterios descritivos",
+      "clusters": [],
+      "duration": null,
+      "age_onset": null,
+      "functional_impairment": null,
+      "exclusions": [],
+      "subtypes_presentations": [],
+      "specifiers": [],
+      "operational_profiles": [],
+      "severity": {
+        "has_formal_severity": false,
+        "type": "nao_aplica",
+        "levels": [],
+        "assignment_rule": null,
+        "domains": []
+      },
+      "critical_differentials": [],
+      "key_questions": [
+        "Você fica muito tempo sem se mover?",
+        "Alguém já notou que você repete movimentos ou palavras?",
+        "Você resiste quando alguém tenta mover seus braços/pernas?"
+      ],
+      "alerts": [],
+      "source_trace": {
+        "markdown_section": "### CATATONIA / TRANSTORNO CATATÔNICO",
+        "patches_applied": []
+      }
+    }
+  ]
+}

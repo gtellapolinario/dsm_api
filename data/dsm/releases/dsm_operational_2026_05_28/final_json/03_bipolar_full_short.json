@@ -1,0 +1,291 @@
+{
+  "chapter_id": "03",
+  "chapter_name": "Transtorno Bipolar e Transtornos Relacionados",
+  "source_markdown": "03_bipolar_full_short.md",
+  "normalization_round": "2B",
+  "patch_count": 1,
+  "items": [
+    {
+      "id": "transtorno_bipolar_tipo_i",
+      "name": "TRANSTORNO BIPOLAR TIPO I",
+      "category": "FULL",
+      "estrutura_diagnostica": "episodico_com_sintomas",
+      "render_structured_interview": true,
+      "ui_mode": "structured_full",
+      "criteria": [],
+      "diagnostic_rule": "**AND logico:** EpisodioManiaCompleto(A,B,C,D) AND ExclusaoPsicotico(B) AND NOT AtribuivelSubstanciaMedica(D)",
+      "clusters": [
+        "Humor alterado",
+        "Energia/Atividade",
+        "Sintomas maniacos B",
+        "Gravidade funcional"
+      ],
+      "duration": null,
+      "age_onset": "tipica:** Media ~18 anos",
+      "functional_impairment": null,
+      "exclusions": [
+        "Efeitos fisiologicos de substancia (alcool, drogas, medicamentos como corticosteroides, L-dopa, antidepressivos)",
+        "Outra condicao medica (hipertireoidismo, doenca de Cushing, esclerose multipla, AVC, lesao cerebral)",
+        "Transtornos do espectro da esquizofrenia",
+        "Efeitos colaterais de medicamentos psicotropicos (cautela: 1-2 sintomas nao especificos nao bastam)",
+        "Transtorno de deficit de atencao/hiperatividade (sintomas persistentes vs. episodio distinto)",
+        "Transtorno da personalidade borderline (mudanca de humor deve ser episodio distinto)",
+        "Transtorno disruptivo da desregulacao do humor (irritabilidade nao episodica persistente em criancas)"
+      ],
+      "subtypes_presentations": [],
+      "specifiers": [
+        "Tipo do episodio atual/mais recente: maniaco, hipomaniaco, depressivo",
+        "Com sintomas ansiosos (leve/moderado/moderado-grave/grave)",
+        "Com caracteristicas mistas",
+        "Com ciclagem rapida (4+ episodios de humor em 12 meses)",
+        "Com caracteristicas melancolicas",
+        "Com caracteristicas atipicas",
+        "Com caracteristicas psicoticas (congruentes ou incongruentes com humor)",
+        "Com catatonia",
+        "Com inicio no periparto",
+        "Com padrao sazonal",
+        "Estado de remissao: parcial/completa"
+      ],
+      "operational_profiles": [],
+      "severity": {
+        "has_formal_severity": true,
+        "type": "episodio_atual",
+        "levels": [
+          "leve",
+          "moderado",
+          "grave"
+        ],
+        "assignment_rule": null,
+        "domains": []
+      },
+      "critical_differentials": [
+        "----------",
+        "TB Tipo II",
+        "Transtorno Depressivo Maior",
+        "Transtorno Esquizoafetivo",
+        "TDAH",
+        "TP Borderline",
+        "TDDH (criancas)",
+        "Substancia induzida"
+      ],
+      "key_questions": [
+        "Voce ja teve um periodo de pelo menos uma semana em que se sentiu excessivamente bem, cheio de energia, ou extremamente irritavel, de forma diferente do seu normal?",
+        "Nesse periodo, voce dormiu muito menos do que o habitual mas se sentia descansado?",
+        "Voce falava mais que o normal ou sentia pressao para continuar falando sem parar?",
+        "Suas ideias pareciam correr muito rapido, ou voce tinha dificuldade de manter a atencao em uma coisa so?",
+        "Voce se envolveu em atividades de forma intensa (trabalho, social, sexual) ou ficava agitado sem conseguir parar?",
+        "Tomou decisoes arriscadas ou impulsivas que nao tomaria normalmente (gastar muito, comportamento sexual, investimentos)?",
+        "Esse periodo causou problemas graves no trabalho, nas relacoes, ou precisou de hospitalizacao?",
+        "Ja teve periodos de 4+ dias com energia e humor elevados, que outras pessoas notaram, mas que nao causaram problemas graves?",
+        "Ja teve periodos de pelo menos 2 semanas se sentindo deprimido ou sem interesse nas coisas, com mudancas de sono, apetite, energia ou pensamentos de morte?",
+        "Os sintomas de hiperatividade/impulsividade representam uma mudanca clara do comportamento habitual da crianca, ou sao persistentes ao longo do tempo?"
+      ],
+      "alerts": [],
+      "source_trace": {
+        "markdown_section": "### TRANSTORNO BIPOLAR TIPO I",
+        "patches_applied": []
+      }
+    },
+    {
+      "id": "transtorno_bipolar_tipo_ii",
+      "name": "TRANSTORNO BIPOLAR TIPO II",
+      "category": "FULL",
+      "estrutura_diagnostica": "episodico_com_sintomas",
+      "render_structured_interview": true,
+      "ui_mode": "structured_full",
+      "criteria": [],
+      "diagnostic_rule": "**AND logico:** EpisodioHipomaniaCompleto(A,B,C,D,E,F) AND EpisodioDepressivoMaior AND NUNCA_Mania(B) AND ExclusaoPsicotico(C) AND PrejuizoFuncional(D)",
+      "clusters": [
+        "Humor alterado (hipomania)",
+        "Energia/Atividade (hipomania)",
+        "Sintomas hipomaniacos B",
+        "Mudanca funcional",
+        "Sem gravidade maniaca",
+        "Episodio depressivo maior"
+      ],
+      "duration": null,
+      "age_onset": "tipica:** Media ~25 anos (mais tardio que TB I)",
+      "functional_impairment": null,
+      "exclusions": [
+        "**EPISODIO MANIACO na historia exclui TB II** (muda para TB I)",
+        "Efeitos fisiologicos de substancia/medicamento",
+        "Transtornos do espectro da esquizofrenia",
+        "TDAH (sintomas persistentes vs. episodio distinto)",
+        "TP Borderline"
+      ],
+      "subtypes_presentations": [],
+      "specifiers": [
+        "Episodio atual/mais recente: hipomaniaco ou depressivo",
+        "Com sintomas ansiosos",
+        "Com caracteristicas mistas",
+        "Com ciclagem rapida (4+ episodios em 12 meses)",
+        "Com caracteristicas psicoticas (somente em EDM)",
+        "Com catatonia",
+        "Com inicio no periparto",
+        "Com padrao sazonal (aplica-se ao padrao de EDM)",
+        "Remissao parcial/completa",
+        "Gravidade: leve/moderada/grave (para episodio atual)",
+        "**NAO ha codigos separados para gravidade/psicose no TB II (diferente do TB I)**"
+      ],
+      "operational_profiles": [],
+      "severity": {
+        "has_formal_severity": true,
+        "type": "episodio_atual",
+        "levels": [
+          "leve",
+          "moderado",
+          "grave"
+        ],
+        "assignment_rule": null,
+        "domains": []
+      },
+      "critical_differentials": [
+        "----------",
+        "TB Tipo I",
+        "Transtorno Depressivo Maior",
+        "Transtorno Ciclotimico",
+        "TDAH"
+      ],
+      "key_questions": [
+        "Alem dos periodos depressivos, voce ja teve periodos de pelo menos 4 dias em que se sentiu com muito mais energia, mais sociavel, ou mais produtivo que o normal, e outras pessoas notaram essa mudanca?",
+        "Nesses periodos, voce fazia mais coisas, falava mais, ou tinha ideias mais rapidas, sem que isso causasse problemas graves?",
+        "Voce ja teve que ser hospitalizado ou teve consequencias muito serias durante esses periodos de energia alta?",
+        "Na sua vida inteira, voce ja teve um periodo em que se sentiu tao cheio de energia que precisou de hospitalizacao, ou teve crencas exageradas sobre suas capacidades, ou fez coisas arriscadas que lhe causaram prejuizos graves?",
+        "Voce ja teve periodos de pelo menos 2 semanas se sentindo deprimido, sem vontade de fazer as coisas, com mudancas de sono, apetite ou energia?"
+      ],
+      "alerts": [],
+      "source_trace": {
+        "markdown_section": "### TRANSTORNO BIPOLAR TIPO II",
+        "patches_applied": []
+      }
+    },
+    {
+      "id": "transtorno_ciclotimico",
+      "name": "TRANSTORNO CICLOTIMICO",
+      "category": "SHORT",
+      "estrutura_diagnostica": "episodico_com_sintomas",
+      "render_structured_interview": true,
+      "ui_mode": "structured_compact",
+      "criteria": [],
+      "diagnostic_rule": "**AND logico:** A(sintomas_subclinicos_hipo+depress) AND B(>=50%_tempo_+_sem_gap>2m) AND C(nunca_EDM_nem_mania_nem_hipomania) AND D(ExclusaoPsicotico) AND E(ExclusaoSubstanciaMedica) AND F(Prejuizo)",
+      "clusters": [],
+      "duration": null,
+      "age_onset": "da vida adulta",
+      "functional_impairment": null,
+      "exclusions": [
+        "**QUALQUER** episodio maniaco, hipomaniaco ou EDM completo na historia exclui o diagnostico",
+        "Transtorno esquizoafetivo, esquizofrenia",
+        "Substancia/medicamento",
+        "Condicao medica (hipertireoidismo)",
+        "TP Borderline (ambos podem ser diagnosticados se criterios atendidos)"
+      ],
+      "subtypes_presentations": [],
+      "specifiers": [
+        "Com sintomas ansiosos"
+      ],
+      "operational_profiles": [],
+      "severity": {
+        "has_formal_severity": false,
+        "type": "nao_aplica",
+        "levels": [],
+        "assignment_rule": null,
+        "domains": []
+      },
+      "critical_differentials": [
+        "----------",
+        "TB Tipo II",
+        "TB Tipo I, ciclagem rapida",
+        "TP Borderline",
+        "Distimia/Transtorno Depressivo Persistente"
+      ],
+      "key_questions": [
+        "Ha quanto tempo seu humor muda frequentemente entre periodos de energia maior e periodos de baixo astral?",
+        "Essas mudancas de humor duram varios dias seguidos?",
+        "Alguma vez voce teve um periodo tao deprimido que poderia ser considerado depressao clinica, ou um periodo de tanta energia que parecia mania?",
+        "Voce fica sem sintomas de humor alterado por mais de 2 meses seguidos?",
+        "Essas oscilacoes de humor causam problemas em suas relacoes ou no trabalho ao longo do tempo?"
+      ],
+      "alerts": [],
+      "source_trace": {
+        "markdown_section": "### TRANSTORNO CICLOTIMICO",
+        "patches_applied": [
+          "estrutura_diagnostica: temporal_topografico -> episodico"
+        ]
+      }
+    },
+    {
+      "id": "transtorno_bipolar_e_relacionado_induzido_por_substancia_medicamento",
+      "name": "TRANSTORNO BIPOLAR E RELACIONADO INDUZIDO POR SUBSTANCIA/MEDICAMENTO",
+      "category": "SHORT",
+      "estrutura_diagnostica": "episodico_com_sintomas",
+      "render_structured_interview": true,
+      "ui_mode": "structured_compact",
+      "criteria": [],
+      "diagnostic_rule": "**AND logico:** A(HumorAlterado) AND B(EvidenciaSubstanciaCapaz+Temporal) AND C(ExclusaoBipolarPrimario) AND D(ExclusaoDelirium) AND E(Prejuizo)",
+      "clusters": [],
+      "duration": null,
+      "age_onset": null,
+      "functional_impairment": null,
+      "exclusions": [],
+      "subtypes_presentations": [],
+      "specifiers": [],
+      "operational_profiles": [],
+      "severity": {
+        "has_formal_severity": false,
+        "type": "nao_aplica",
+        "levels": [],
+        "assignment_rule": null,
+        "domains": []
+      },
+      "critical_differentials": [],
+      "key_questions": [
+        "Os sintomas de humor alterado comecaram durante ou logo apos o uso de alguma substancia ou medicamento?",
+        "A substancia envolvida e conhecida por causar esses tipos de sintomas?",
+        "Voce ja teve episodios similares antes de usar essa substancia?",
+        "Os sintomas persistiram por mais de um mes apos parar de usar a substancia?"
+      ],
+      "alerts": [],
+      "source_trace": {
+        "markdown_section": "### TRANSTORNO BIPOLAR E RELACIONADO INDUZIDO POR SUBSTANCIA/MEDICAMENTO",
+        "patches_applied": []
+      }
+    },
+    {
+      "id": "transtorno_bipolar_e_relacionado_devido_a_outra_condicao_medica",
+      "name": "TRANSTORNO BIPOLAR E RELACIONADO DEVIDO A OUTRA CONDICAO MEDICA",
+      "category": "SHORT",
+      "estrutura_diagnostica": "episodico_com_sintomas",
+      "render_structured_interview": true,
+      "ui_mode": "structured_compact",
+      "criteria": [],
+      "diagnostic_rule": "Criterios descritivos para TRANSTORNO BIPOLAR E RELACIONADO DEVIDO A OUTRA CONDICAO MEDICA conforme DSM-5",
+      "clusters": [],
+      "duration": null,
+      "age_onset": null,
+      "functional_impairment": null,
+      "exclusions": [],
+      "subtypes_presentations": [],
+      "specifiers": [],
+      "operational_profiles": [],
+      "severity": {
+        "has_formal_severity": false,
+        "type": "nao_aplica",
+        "levels": [],
+        "assignment_rule": null,
+        "domains": []
+      },
+      "critical_differentials": [],
+      "key_questions": [
+        "Os sintomas de humor alterado comecaram apos o diagnostico de uma condicao medica neurologica ou endocrina?",
+        "Ha uma relacao temporal clara entre o inicio/worsening da condicao medica e os sintomas?",
+        "Voce ja teve episodios similares antes dessa condicao medica?",
+        "A condicao medica e conhecida por afetar o sistema nervoso central?"
+      ],
+      "alerts": [],
+      "source_trace": {
+        "markdown_section": "### TRANSTORNO BIPOLAR E RELACIONADO DEVIDO A OUTRA CONDICAO MEDICA",
+        "patches_applied": []
+      }
+    }
+  ]
+}

@@ -1,0 +1,536 @@
+{
+  "chapter_id": "19",
+  "chapter_name": "Transtornos Parafilicos",
+  "source_markdown": "19_parafilicos_full_short.md",
+  "normalization_round": "2B",
+  "patch_count": 5,
+  "items": [
+    {
+      "id": "transtorno_pedofilico",
+      "name": "Transtorno Pedofilico",
+      "category": "FULL",
+      "estrutura_diagnostica": "qualitativo_descritivo",
+      "render_structured_interview": true,
+      "ui_mode": "structured_full",
+      "criteria": [
+        "A. Por >=6 meses: fantasias, impulsos ou comportamentos sexuais intensos e recorrentes envolvendo criancas pre-puberes (<=13 anos)",
+        "B. Atos com criancas OU sofrimento intenso/dificuldades interpessoais",
+        "C. Individuo >=16 anos E pelo menos 5 anos mais velho que a crianca"
+      ],
+      "diagnostic_rule": "A + B + C todos obrigatorios; NOTA: excluir adolescente no fim da adolescencia em relacionamento continuo com 12-13 anos",
+      "clusters": [
+        "Atracao sexual por criancas pre-puberes"
+      ],
+      "duration": ">=6 meses",
+      "age_onset": "consciencia tipicamente na puberdade",
+      "functional_impairment": "sofrimento intenso, dificuldades interpessoais, contato sexual com criancas",
+      "exclusions": [
+        "personalidade antissocial oportunista",
+        "TOC com obsessoes egodistonicas",
+        "relacionamento entre adolescentes proximos"
+      ],
+      "subtypes_presentations": [
+        {
+          "id": "tipo_exclusivo",
+          "name": "Tipo Exclusivo",
+          "description": "Atracao APENAS por criancas"
+        },
+        {
+          "id": "tipo_nao_exclusivo",
+          "name": "Tipo Nao Exclusivo",
+          "description": "Atracao por criancas E adultos"
+        }
+      ],
+      "specifiers": [
+        {
+          "id": "atraido_masculino",
+          "name": "Sexualmente atraido por individuos do sexo masculino"
+        },
+        {
+          "id": "atraido_feminino",
+          "name": "Sexualmente atraido por individuos do sexo feminino"
+        },
+        {
+          "id": "atraido_ambos",
+          "name": "Sexualmente atraido por ambos"
+        },
+        {
+          "id": "limitado_incesto",
+          "name": "Limitado a incesto"
+        }
+      ],
+      "operational_profiles": [],
+      "severity": {
+        "has_formal_severity": false,
+        "type": "nao_aplica",
+        "levels": [],
+        "assignment_rule": null,
+        "domains": []
+      },
+      "critical_differentials": [
+        "personalidade antissocial",
+        "TOC obsessoes egodistonicas",
+        "intoxicacao/alcoolismo",
+        "exibicionismo"
+      ],
+      "key_questions": [
+        "Atracao sexual por criancas? Com que intensidade?",
+        "Recorrente e persistente? Ha quanto tempo?",
+        "Idade tipica das criancas (<=13 anos)?",
+        "Atracao exclusiva ou tambem por adultos?",
+        "Sexo das criancas: masculino, feminino ou ambos?",
+        "Ja teve contato sexual com crianca?",
+        "Causa sofrimento ou problemas?",
+        "Idade atual (>=16)?",
+        "Vitimas pelo menos 5 anos mais novas?",
+        "Vitimas da familia?",
+        "Usa pornografia infantil?"
+      ],
+      "alerts": [
+        "Tipo exclusivo = maior intensidade da atracao",
+        "Comorbidade antissocial = maior risco de agir",
+        "Uso de pornografia infantil = marcador diagnostico e preditor de contato"
+      ],
+      "source_trace": {
+        "markdown_section": "## 8. TRANSTORNO PEDOFILICO - FULL",
+        "patches_applied": [
+          "LOW-VERIFY: unico FULL confirmado"
+        ]
+      }
+    },
+    {
+      "id": "transtorno_voyeurista",
+      "name": "Transtorno Voyeurista",
+      "category": "SHORT",
+      "estrutura_diagnostica": "qualitativo_descritivo",
+      "render_structured_interview": true,
+      "ui_mode": "structured_compact",
+      "criteria": [
+        "A. Por >=6 meses: excitacao sexual recorrente e intensa ao observar pessoa nua/despindo-se/em atividade sexual sem saber",
+        "B. Atos com nao-consentiente OU sofrimento/prejuizo",
+        "C. >=18 anos"
+      ],
+      "diagnostic_rule": "A + B + C todos obrigatorios",
+      "clusters": [],
+      "duration": ">=6 meses",
+      "age_onset": "consciencia geralmente na adolescencia",
+      "functional_impairment": "sofrimento, prejuizo psicossocial, observacao sem consentimento",
+      "exclusions": [
+        "curiosidade sexual da puberdade (<18)",
+        "conduta/personalidade antissocial",
+        "substancia"
+      ],
+      "subtypes_presentations": [],
+      "specifiers": [
+        {
+          "id": "ambiente_protegido",
+          "name": "Em ambiente protegido"
+        },
+        {
+          "id": "remissao_completa",
+          "name": "Em remissao completa (>=5 anos)"
+        }
+      ],
+      "operational_profiles": [],
+      "severity": {
+        "has_formal_severity": false,
+        "type": "nao_aplica",
+        "levels": [],
+        "assignment_rule": null,
+        "domains": []
+      },
+      "critical_differentials": [
+        "curiosidade sexual",
+        "conduta antissocial",
+        "hipersexualidade"
+      ],
+      "key_questions": [
+        "Excitacao ao observar pessoas nuas sem que saibam?",
+        "Ha quanto tempo?",
+        "Ja colocou em pratica?",
+        ">=18 anos?"
+      ],
+      "alerts": [],
+      "source_trace": {
+        "markdown_section": "## 1. TRANSTORNO VOYEURISTA",
+        "patches_applied": []
+      }
+    },
+    {
+      "id": "transtorno_exibicionista",
+      "name": "Transtorno Exibicionista",
+      "category": "SHORT",
+      "estrutura_diagnostica": "qualitativo_descritivo",
+      "render_structured_interview": true,
+      "ui_mode": "structured_compact",
+      "criteria": [
+        "A. Por >=6 meses: excitacao sexual recorrente e intensa ao expor genitais a pessoa nao-expectante",
+        "B. Atos com nao-consentiente OU sofrimento/prejuizo"
+      ],
+      "diagnostic_rule": "A + B ambos obrigatorios",
+      "clusters": [],
+      "duration": ">=6 meses",
+      "age_onset": null,
+      "functional_impairment": "sofrimento, prejuizo social/legal",
+      "exclusions": [
+        "conduta antissocial",
+        "substancia",
+        "pedofilico comorbido"
+      ],
+      "subtypes_presentations": [
+        {
+          "id": "excitado_pre_puberes",
+          "name": "Excitado por criancas pre-puberes"
+        },
+        {
+          "id": "excitado_adultos",
+          "name": "Excitado por adultos maduros"
+        },
+        {
+          "id": "excitado_ambos",
+          "name": "Excitado por ambos"
+        }
+      ],
+      "specifiers": [
+        {
+          "id": "ambiente_protegido",
+          "name": "Em ambiente protegido"
+        },
+        {
+          "id": "remissao_completa",
+          "name": "Em remissao completa (>=5 anos)"
+        }
+      ],
+      "operational_profiles": [],
+      "severity": {
+        "has_formal_severity": false,
+        "type": "nao_aplica",
+        "levels": [],
+        "assignment_rule": null,
+        "domains": []
+      },
+      "critical_differentials": [
+        "conduta antissocial",
+        "pedofilico comorbido"
+      ],
+      "key_questions": [
+        "Excitacao ao expor genitais a pessoas que nao esperam?",
+        "A quem prefere expor?",
+        "Causa sofrimento ou problemas legais?"
+      ],
+      "alerts": [
+        "Subtipo com criancas NAO exclui diagnostico comorbido de pedofilia"
+      ],
+      "source_trace": {
+        "markdown_section": "## 2. TRANSTORNO EXIBICIONISTA",
+        "patches_applied": []
+      }
+    },
+    {
+      "id": "transtorno_frotteurista",
+      "name": "Transtorno Frotteurista",
+      "category": "SHORT",
+      "estrutura_diagnostica": "qualitativo_descritivo",
+      "render_structured_interview": true,
+      "ui_mode": "structured_compact",
+      "criteria": [
+        "A. Por >=6 meses: excitacao sexual recorrente e intensa ao tocar/esfregar-se em pessoa nao-consentiente",
+        "B. Atos com nao-consentiente OU sofrimento/prejuizo"
+      ],
+      "diagnostic_rule": "A + B ambos obrigatorios",
+      "clusters": [],
+      "duration": ">=6 meses",
+      "age_onset": null,
+      "functional_impairment": "sofrimento, prejuizo legal",
+      "exclusions": [
+        "conduta",
+        "estimulantes",
+        "contato incidental"
+      ],
+      "subtypes_presentations": [],
+      "specifiers": [
+        {
+          "id": "ambiente_protegido",
+          "name": "Em ambiente protegido"
+        },
+        {
+          "id": "remissao_completa",
+          "name": "Em remissao completa (>=5 anos)"
+        }
+      ],
+      "operational_profiles": [],
+      "severity": {
+        "has_formal_severity": false,
+        "type": "nao_aplica",
+        "levels": [],
+        "assignment_rule": null,
+        "domains": []
+      },
+      "critical_differentials": [
+        "conduta",
+        "aglomeracao espontanea"
+      ],
+      "key_questions": [
+        "Excitacao ao tocar/esfregar em pessoas sem consentimento?",
+        "Onde ocorre? (tipicamente transporte publico)"
+      ],
+      "alerts": [],
+      "source_trace": {
+        "markdown_section": "## 3. TRANSTORNO FROTTEURISTA",
+        "patches_applied": []
+      }
+    },
+    {
+      "id": "transtorno_fetichista",
+      "name": "Transtorno Fetichista",
+      "category": "SHORT",
+      "estrutura_diagnostica": "qualitativo_descritivo",
+      "render_structured_interview": true,
+      "ui_mode": "structured_compact",
+      "criteria": [
+        "A. Por >=6 meses: excitacao sexual recorrente e intensa por objetos inanimados ou partes nao-genitais do corpo",
+        "B. Sofrimento/prejuizo",
+        "C. NAO se limita a artigos de cross-dressing nem dispositivos de estimulacao genital"
+      ],
+      "diagnostic_rule": "A + B + C todos obrigatorios; Criterio C = exclusao especifica de transvestismo e vibradores",
+      "clusters": [],
+      "duration": ">=6 meses",
+      "age_onset": "geralmente puberdade",
+      "functional_impairment": "sofrimento ou problemas com parceiros",
+      "exclusions": [
+        "transvestismo (roupas cross-dressing)",
+        "vibradores/dispositivos sexuais"
+      ],
+      "subtypes_presentations": [
+        {
+          "id": "parte_corpo",
+          "name": "Parte(s) do corpo (parcialismo)"
+        },
+        {
+          "id": "objeto_inanimado",
+          "name": "Objeto(s) inanimado(s)"
+        }
+      ],
+      "specifiers": [
+        {
+          "id": "ambiente_protegido",
+          "name": "Em ambiente protegido"
+        },
+        {
+          "id": "remissao_completa",
+          "name": "Em remissao completa (>=5 anos)"
+        }
+      ],
+      "operational_profiles": [],
+      "severity": {
+        "has_formal_severity": false,
+        "type": "nao_aplica",
+        "levels": [],
+        "assignment_rule": null,
+        "domains": []
+      },
+      "critical_differentials": [
+        "transvestismo",
+        "masoquismo com cenario de submissao"
+      ],
+      "key_questions": [
+        "Objeto ou parte do corpo especifica causa excitacao intensa?",
+        "Depende desse objeto para excitacao?",
+        "E roupa de cross-dressing? (exclusao)"
+      ],
+      "alerts": [],
+      "source_trace": {
+        "markdown_section": "## 4. TRANSTORNO FETICHISTA",
+        "patches_applied": []
+      }
+    },
+    {
+      "id": "transtorno_transvestico",
+      "name": "Transtorno Transvestico",
+      "category": "SHORT",
+      "estrutura_diagnostica": "qualitativo_descritivo",
+      "render_structured_interview": true,
+      "ui_mode": "structured_compact",
+      "criteria": [
+        "A. Por >=6 meses: excitacao sexual recorrente e intensa por cross-dressing",
+        "B. Sofrimento/prejuizo"
+      ],
+      "diagnostic_rule": "A + B ambos obrigatorios; cross-dressing SEM excitacao sexual NAO se qualifica (ex: identidade de genero)",
+      "clusters": [],
+      "duration": ">=6 meses",
+      "age_onset": "primeiros sinais na infancia; excitacao explicita na puberdade",
+      "functional_impairment": "sofrimento ou problemas sociais/profissionais",
+      "exclusions": [
+        "disforia de genero",
+        "expressao de genero"
+      ],
+      "subtypes_presentations": [],
+      "specifiers": [
+        {
+          "id": "com_fetichismo",
+          "name": "Com fetichismo",
+          "description": "Excitado por tecidos/materiais/pecas"
+        },
+        {
+          "id": "com_autoginefilia",
+          "name": "Com autoginefilia",
+          "description": "Excitado por pensamentos de si como mulher; aumenta risco de disforia de genero comorbida"
+        },
+        {
+          "id": "ambiente_protegido",
+          "name": "Em ambiente protegido"
+        },
+        {
+          "id": "remissao_completa",
+          "name": "Em remissao completa (>=5 anos)"
+        }
+      ],
+      "operational_profiles": [],
+      "severity": {
+        "has_formal_severity": false,
+        "type": "nao_aplica",
+        "levels": [],
+        "assignment_rule": null,
+        "domains": []
+      },
+      "critical_differentials": [
+        "disforia de genero",
+        "fetichista (roupa intima sem ideia de ser mulher)"
+      ],
+      "key_questions": [
+        "Vestir-se como sexo oposto causa excitacao sexual?",
+        "Fantasia em ser mulher ou so em vestir roupas?",
+        "Se sente mulher fora do contexto sexual? (rastrear disforia)"
+      ],
+      "alerts": [
+        "Autoginefilia aumenta probabilidade de disforia de genero comorbida"
+      ],
+      "source_trace": {
+        "markdown_section": "## 5. TRANSTORNO TRANSVESTICO",
+        "patches_applied": [
+          "LOW-VERIFY: especificadores confirmados"
+        ]
+      }
+    },
+    {
+      "id": "transtorno_masoquismo_sexual",
+      "name": "Transtorno do Masoquismo Sexual",
+      "category": "SHORT",
+      "estrutura_diagnostica": "qualitativo_descritivo",
+      "render_structured_interview": true,
+      "ui_mode": "structured_compact",
+      "criteria": [
+        "A. Por >=6 meses: excitacao sexual recorrente e intensa por ser humilhado/espancado/amarrado/sofrer",
+        "B. Sofrimento/prejuizo"
+      ],
+      "diagnostic_rule": "A + B ambos obrigatorios; praticas consensuais SEM prejuizo/distress NAO sao transtorno",
+      "clusters": [],
+      "duration": ">=6 meses",
+      "age_onset": "media ~19 anos",
+      "functional_impairment": "sofrimento ou prejuizo",
+      "exclusions": [
+        "praticas sado-masoquistas consensuais sem prejuizo"
+      ],
+      "subtypes_presentations": [],
+      "specifiers": [
+        {
+          "id": "com_asfixiofilia",
+          "name": "Com asfixiofilia",
+          "description": "Risco ELEVADO de morte accidental"
+        },
+        {
+          "id": "ambiente_protegido",
+          "name": "Em ambiente protegido"
+        },
+        {
+          "id": "remissao_completa",
+          "name": "Em remissao completa (>=5 anos)"
+        }
+      ],
+      "operational_profiles": [],
+      "severity": {
+        "has_formal_severity": false,
+        "type": "nao_aplica",
+        "levels": [],
+        "assignment_rule": null,
+        "domains": []
+      },
+      "critical_differentials": [
+        "praticas consensuais sem transtorno",
+        "sadismo (infligir vs receber)",
+        "autolesivo nao suicida"
+      ],
+      "key_questions": [
+        "Excitacao ao ser humilhado/amarrado/sofrer dor?",
+        "Praticas consensuais?",
+        "Restricao da respiracao? (asfixiofilia = RISCO MORTE)"
+      ],
+      "alerts": [
+        "ALERTA: asfixiofilia = risco ELEVADO de morte accidental"
+      ],
+      "source_trace": {
+        "markdown_section": "## 6. TRANSTORNO DO MASOQUISMO SEXUAL",
+        "patches_applied": [
+          "LOW-VERIFY: alerta asfixiofilia confirmado"
+        ]
+      }
+    },
+    {
+      "id": "transtorno_sadismo_sexual",
+      "name": "Transtorno do Sadismo Sexual",
+      "category": "SHORT",
+      "estrutura_diagnostica": "qualitativo_descritivo",
+      "render_structured_interview": true,
+      "ui_mode": "structured_compact",
+      "criteria": [
+        "A. Por >=6 meses: excitacao sexual recorrente e intensa por infligir sofrimento fisico/psicologico",
+        "B. Atos com nao-consentiente OU sofrimento/prejuizo proprio"
+      ],
+      "diagnostic_rule": "A + B ambos obrigatorios",
+      "clusters": [],
+      "duration": ">=6 meses",
+      "age_onset": "media ~19 anos",
+      "functional_impairment": "sofrimento ou prejuizo",
+      "exclusions": [
+        "praticas consensuais sem prejuizo",
+        "antissocial",
+        "conduta"
+      ],
+      "subtypes_presentations": [],
+      "specifiers": [
+        {
+          "id": "ambiente_protegido",
+          "name": "Em ambiente protegido"
+        },
+        {
+          "id": "remissao_completa",
+          "name": "Em remissao completa (>=5 anos)"
+        }
+      ],
+      "operational_profiles": [],
+      "severity": {
+        "has_formal_severity": false,
+        "type": "nao_aplica",
+        "levels": [],
+        "assignment_rule": null,
+        "domains": []
+      },
+      "critical_differentials": [
+        "praticas consensuais",
+        "masoquismo (receber vs infligir)",
+        "antissocial",
+        "pedofilia com componente sadico"
+      ],
+      "key_questions": [
+        "Excitacao ao infligir dor/sofrimento?",
+        "Consensual ou sem consentimento?",
+        "Envolvimento com criancas? (rastrear pedofilia)"
+      ],
+      "alerts": [],
+      "source_trace": {
+        "markdown_section": "## 7. TRANSTORNO DO SADISMO SEXUAL",
+        "patches_applied": []
+      }
+    }
+  ]
+}

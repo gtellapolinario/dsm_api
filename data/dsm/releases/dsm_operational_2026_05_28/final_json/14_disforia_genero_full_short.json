@@ -1,0 +1,183 @@
+{
+  "chapter_id": "14",
+  "chapter_name": "Disforia de Genero",
+  "source_markdown": "14_disforia_genero_full_short.md",
+  "normalization_round": "2B",
+  "patch_count": 0,
+  "items": [
+    {
+      "id": "disforia_genero_criancas",
+      "name": "Disforia de Genero em Criancas",
+      "category": "FULL",
+      "estrutura_diagnostica": "polythetic_com_ancora",
+      "render_structured_interview": true,
+      "ui_mode": "structured_full",
+      "criteria": [
+        "A. Incongruencia de genero: pelo menos 6 de 8 indicadores, com A1 obrigatorio (desejo de pertencer ao outro genero)",
+        "B. Sofrimento clinicamente significativo ou prejuizo funcional"
+      ],
+      "diagnostic_rule": "A1(obrigatorio) AND [≥5 de A2-A8] = total 6/8 AND duracao≥6meses AND B",
+      "clusters": [
+        "Identidade com outro genero (ancora A1)",
+        "Preferencias comportamentais",
+        "Disforia anatomica"
+      ],
+      "duration": "≥6 meses",
+      "age_onset": "2-4 anos (periodo de expressao de comportamentos de genero)",
+      "functional_impairment": "Rejeicao social, isolamento, recusa em ir a escola, problemas emocionais comorbidos",
+      "exclusions": [
+        "Nao conformidade com papéis de genero sem sofrimento",
+        "Transtorno do espectro autista (comorbidade)"
+      ],
+      "subtypes_presentations": [],
+      "specifiers": [
+        "Com transtorno do desenvolvimento sexual"
+      ],
+      "operational_profiles": [],
+      "severity": {
+        "has_formal_severity": false,
+        "type": "nao_aplica",
+        "levels": [],
+        "assignment_rule": null,
+        "domains": []
+      },
+      "critical_differentials": [
+        "Nao conformidade com papéis de genero",
+        "TEA",
+        "Transtornos de ansiedade"
+      ],
+      "key_questions": [
+        "A crianca insiste que e do outro genero?",
+        "Prefere brincar com brinquedos do outro genero?",
+        "Demonstra desconforto com anatomia sexual?",
+        "Esses sentimentos causam sofrimento?"
+      ],
+      "alerts": [
+        "Entrevista deve incluir crianca E pais/cuidadores separadamente",
+        "Avaliar suporte familiar — ambiente receptivo mitiga sofrimento",
+        "A1 e obrigatorio (ancora)"
+      ],
+      "source_trace": {
+        "markdown_section": "FICHA FULL-01: Disforia de Genero em Criancas",
+        "patches_applied": []
+      }
+    },
+    {
+      "id": "disforia_genero_adolescentes_adultos",
+      "name": "Disforia de Genero em Adolescentes e Adultos",
+      "category": "FULL",
+      "estrutura_diagnostica": "polythetic_monocluster",
+      "render_structured_interview": true,
+      "ui_mode": "structured_full",
+      "criteria": [
+        "A. Incongruencia de genero: pelo menos 2 de 6 indicadores",
+        "B. Sofrimento clinicamente significativo ou prejuizo funcional"
+      ],
+      "diagnostic_rule": "A(≥2/6) AND duracao≥6meses AND B",
+      "clusters": [
+        "Incongruencia com caracteristicas sexuais",
+        "Desejo por caracteristicas do outro genero",
+        "Desejo de pertencer ao outro genero",
+        "Desejo de ser tratado como outro genero",
+        "Conviccao de sentimentos do outro genero",
+        "Desejo de livrar-se das caracteristicas sexuais"
+      ],
+      "duration": "≥6 meses",
+      "age_onset": null,
+      "functional_impairment": "Ideacao suicida/tentativa (risco elevado), dificuldades de relacionamento, estigmatizacao, discriminacao",
+      "exclusions": [
+        "Transtorno transvestico",
+        "Transtorno dismorfico corporal",
+        "Esquizofrenia/psicose",
+        "Transtorno de identidade da integridade corporal"
+      ],
+      "subtypes_presentations": [],
+      "specifiers": [
+        "Com transtorno do desenvolvimento sexual",
+        "Pos-transicao"
+      ],
+      "operational_profiles": [],
+      "severity": {
+        "has_formal_severity": false,
+        "type": "nao_aplica",
+        "levels": [],
+        "assignment_rule": null,
+        "domains": []
+      },
+      "critical_differentials": [
+        "Nao conformidade com papéis de genero",
+        "Transtorno transvestico",
+        "DBC",
+        "Esquizofrenia"
+      ],
+      "key_questions": [
+        "Senta que seu genero nao corresponde ao designado ao nascer?",
+        "Ha quanto tempo se sente assim?",
+        "Deseja ter caracteristicas fisicas do outro genero?",
+        "Ja teve pensamentos de suicidio?"
+      ],
+      "alerts": [
+        "Avaliar risco de suicidio em TODOS os casos",
+        "Usar nome e pronome preferidos do paciente",
+        "Inicio tardio no sexo masc. nasc. requer avaliacao de autoginefilia vs disforia genuina"
+      ],
+      "source_trace": {
+        "markdown_section": "FICHA FULL-02: Disforia de Genero em Adolescentes e Adultos",
+        "patches_applied": []
+      }
+    },
+    {
+      "id": "disforia_genero_criterios_parcialmente_preenchidos",
+      "name": "Disforia de Genero - Apresentacao com Criterios Parcialmente Preenchidos",
+      "category": "SHORT",
+      "estrutura_diagnostica": "qualitativo_descritivo",
+      "render_structured_interview": true,
+      "ui_mode": "structured_compact",
+      "criteria": [
+        "Sintomas de disforia de genero presentes (incongruencia entre genero experimentado/expresso e designado)",
+        "Duracao insuficiente (<6 meses)",
+        "Sofrimento ou prejuizo clinicamente significativo",
+        "NAO atribuivel a transtorno psicotico, DBC, transtorno transvestico"
+      ],
+      "diagnostic_rule": "Sintomas consistentes com disforia AND duracao<6meses AND sofrimento/prejuizo AND NOT explicado por outro transtorno",
+      "clusters": [],
+      "duration": "<6 meses",
+      "age_onset": null,
+      "functional_impairment": "Sofrimento/prejuizo clinicamente significativo",
+      "exclusions": [
+        "Transtorno psicotico",
+        "DBC",
+        "Transtorno transvestico"
+      ],
+      "subtypes_presentations": [],
+      "specifiers": [],
+      "operational_profiles": [],
+      "severity": {
+        "has_formal_severity": false,
+        "type": "nao_aplica",
+        "levels": [],
+        "assignment_rule": null,
+        "domains": []
+      },
+      "critical_differentials": [
+        "Disforia de genero plena",
+        "Nao conformidade de genero sem disforia",
+        "Questionamento de genero em desenvolvimento"
+      ],
+      "key_questions": [
+        "Ha quanto tempo comecou a questionar o genero?",
+        "Os sintomas se intensificaram ou diminuiram?",
+        "Ha fatores recentes que desencadearam?"
+      ],
+      "alerts": [
+        "NAO e um diagnostico definitivo - usar para encaminhamento",
+        "Reavaliacao obrigatoria em 3-6 meses",
+        "Avaliar risco de suicidio mesmo em formas incipientes"
+      ],
+      "source_trace": {
+        "markdown_section": "FICHA SHORT-01: Apresentacao com Criterios Parcialmente Preenchidos",
+        "patches_applied": []
+      }
+    }
+  ]
+}

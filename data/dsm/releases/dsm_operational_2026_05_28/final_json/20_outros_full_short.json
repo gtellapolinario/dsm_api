@@ -1,0 +1,9 @@
+{
+  "chapter_id": "20",
+  "chapter_name": "Outros Transtornos Mentais",
+  "source_markdown": "20_outros_full_short.md",
+  "normalization_round": "2B",
+  "patch_count": 2,
+  "items": [],
+  "note": "Capitulo puramente residual/administrativo. Nenhum transtorno FULL ou SHORT. Categorias: 2 MINIMAL (Outro Transtorno Mental Especificado - com e sem condicao medica) + 2 EXCLUDE (Nao Especificado - com e sem condicao medica)"
+}

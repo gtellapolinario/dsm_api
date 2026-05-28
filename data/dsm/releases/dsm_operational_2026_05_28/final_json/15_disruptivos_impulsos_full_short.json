@@ -1,0 +1,370 @@
+{
+  "chapter_id": "15",
+  "chapter_name": "Transtornos Disruptivos, do Controle de Impulsos e da Conduta",
+  "source_markdown": "15_disruptivos_impulsos_full_short.md",
+  "normalization_round": "2B",
+  "patch_count": 3,
+  "items": [
+    {
+      "id": "transtorno_oposicao_desafiante",
+      "name": "Transtorno de Oposicao Desafiante",
+      "category": "FULL",
+      "estrutura_diagnostica": "polythetic_clusters_assimetricos",
+      "render_structured_interview": true,
+      "ui_mode": "structured_full",
+      "criteria": [
+        "A. Humor raivoso/irritavel (3 sintomas: perde calma, sensivel, raivoso)",
+        "B. Comportamento questionador/desafiante (4 sintomas: questiona autoridade, desafia regras, incomoda outros, culpa outros)",
+        "C. Indole vingativa (1 sintoma: malvado/vingativo >=2x/6meses)",
+        "D. Perturbacao causa sofrimento OU impactos negativos no funcionamento",
+        "E. Exclusoes: nao ocorre exclusivamente durante psicotico, uso de substancia, depressivo/bipolar, TODD"
+      ],
+      "diagnostic_rule": "A (>=4 sintomas de 8, distribuidos em 3 clusters) + B (sofrimento/prejuizo) + C (exclusoes); frequencia minima: <5 anos=na maioria dos dias, >=5 anos=1x/semana (exceto A8=2x/6meses)",
+      "clusters": [
+        "Humor Raivoso/Irritavel",
+        "Comportamento Questionador/Desafiante",
+        "Indole Vingativa"
+      ],
+      "duration": "6+ meses",
+      "age_onset": null,
+      "functional_impairment": "sofrimento para o individuo ou outros no contexto social, ou impactos negativos no funcionamento social, educacional, profissional",
+      "exclusions": [
+        "transtorno psicotico",
+        "uso de substancia",
+        "transtorno depressivo ou bipolar",
+        "transtorno disruptivo da desregulacao do humor (mutuamente exclusivo)"
+      ],
+      "subtypes_presentations": [],
+      "specifiers": [],
+      "operational_profiles": [],
+      "severity": {
+        "has_formal_severity": true,
+        "type": "pervasividade_contextual",
+        "levels": [
+          "leve",
+          "moderada",
+          "grave"
+        ],
+        "assignment_rule": "leve = 1 ambiente; moderada = 2 ambientes; grave = 3+ ambientes",
+        "domains": []
+      },
+      "critical_differentials": [
+        "transtorno da conduta",
+        "TDAH",
+        "transtorno depressivo/bipolar",
+        "transtorno disruptivo da desregulacao do humor",
+        "transtorno explosivo intermitente",
+        "deficiencia intelectual",
+        "transtorno de ansiedade social"
+      ],
+      "key_questions": [
+        "Com que frequencia perde a calma ou tem explosoes de raiva?",
+        "Frequentemente irritado, ressentido ou de mau humor?",
+        "Questiona regras, desafia adultos ou se recusa a obedecer?",
+        "Incomoda propositalmente outras pessoas? Culpa outros por erros?",
+        "Ja foi deliberadamente cruel ou vingativo?",
+        "Comportamentos em casa, escola, com colegas? (avaliar pervasividade)",
+        "Ha sofrimento significativo ou prejuizo no funcionamento?",
+        "Sintomas antes dos 5 anos (maioria dos dias) ou depois (1x/semana)?"
+      ],
+      "alerts": [
+        "nao confundir com transtorno da conduta - TOD nao viola direitos fundamentais",
+        "TOD e TODD sao mutuamente exclusivos"
+      ],
+      "source_trace": {
+        "markdown_section": "## 1. TRANSTORNO DE OPOSICAO DESAFIANTE (TOD) - FICHA FULL",
+        "patches_applied": [
+          "CRITICAL: gravidade.tipo ordinal_por_dominio→pervasividade_contextual"
+        ]
+      }
+    },
+    {
+      "id": "transtorno_explosivo_intermittente",
+      "name": "Transtorno Explosivo Intermitente",
+      "category": "FULL",
+      "estrutura_diagnostica": "polythetic_com_ancora",
+      "render_structured_interview": true,
+      "ui_mode": "structured_full",
+      "criteria": [
+        "A1. Agressao verbal ou fisica sem danos: media de 2x/semana durante 3 meses",
+        "A2. 3 explosoes com danos/destruicao de propriedade e/ou agressao fisica com lesoes em 12 meses",
+        "B. Magnitude desproporcional em relacao a provocacao",
+        "C. Explosoes nao premeditadas (impulsivas) e sem objetivo tangivel",
+        "D. Causam sofrimento acentuado OU prejuizo profissional/interpessoal OU consequencias financeiras/legais",
+        "E. Idade >= 6 anos",
+        "F. Exclusoes: nao melhor explicado por TDM, bipolar, psicose, TAS, borderline, condicao medica, substancia"
+      ],
+      "diagnostic_rule": "A(1 OU 2) + B(desproporcional) + C(impulsiva/nao instrumental) + D(sofrimento/prejuizo) + E(idade>=6) + F(exclusoes)",
+      "clusters": [
+        "Ancora Frequencia (A1)",
+        "Ancora Gravidade (A2)"
+      ],
+      "duration": "3 meses (A1) ou 12 meses acumulado (A2)",
+      "age_onset": ">= 6 anos (diagnostico); tipico fase final infancia/adolescencia; raro apos 40",
+      "functional_impairment": "sofrimento acentuado, prejuizo profissional/interpessoal, consequencias financeiras/legais",
+      "exclusions": [
+        "transtorno depressivo maior",
+        "transtorno bipolar",
+        "transtorno disruptivo da desregulacao do humor (mutuamente exclusivo)",
+        "transtorno psicotico",
+        "transtorno da personalidade antissocial",
+        "transtorno da personalidade borderline",
+        "condicao medica (TCC, Alzheimer, epilepsia)",
+        "efeitos fisiologicos de substancia/medicamento",
+        "transtorno de adaptacao (criancas 6-18 anos)"
+      ],
+      "subtypes_presentations": [],
+      "specifiers": [],
+      "operational_profiles": [
+        {
+          "id": "verbal_predominante",
+          "description": "A1: agressao verbal recorrente sem danos fisicos"
+        },
+        {
+          "id": "agressao_fisica_grave",
+          "description": "A2: explosoes com danos/destruicao ou lesoes"
+        },
+        {
+          "id": "misto",
+          "description": "Padrao A1 + A2 coexistentes"
+        }
+      ],
+      "severity": {
+        "has_formal_severity": false,
+        "type": "nao_aplica",
+        "levels": [],
+        "assignment_rule": null,
+        "domains": []
+      },
+      "critical_differentials": [
+        "TODD (desregulacao do humor)",
+        "transtorno da conduta",
+        "TAS/Borderline",
+        "substancia",
+        "TDAH/TEA/TOD"
+      ],
+      "key_questions": [
+        "Com que frequencia tem explosoes de raiva?",
+        "Explosoes sao desproporcionais a situacao?",
+        "Consegue controlar a raiva antes de explodir?",
+        "Sao impulsivas ou planeja agredir?",
+        "Ja causou danos a propriedade ou lesoes?",
+        "Causaram problemas no trabalho, relacionamentos ou justica?",
+        "Idade do inicio foi antes dos 6 anos? (exclusao)",
+        "Explosoes ocorrem apenas quando intoxicado? (exclusao)",
+        "Humor negativo persistente quase todos os dias entre explosoes? (diferenciar TODD)"
+      ],
+      "alerts": [
+        "Mutuamente exclusivo com TODD",
+        "Pode ser diagnostico adicional a TDAH, TC, TOD ou TEA se explosoes excedem as normalmente observadas"
+      ],
+      "source_trace": {
+        "markdown_section": "## 2. TRANSTORNO EXPLOSIVO INTERMITENTE (TEI) - FICHA FULL",
+        "patches_applied": [
+          "HIGH: subtipos movidos para perfis_operacionais (nao aplicado - apply_automatically=false)"
+        ]
+      }
+    },
+    {
+      "id": "transtorno_da_conduta",
+      "name": "Transtorno da Conduta",
+      "category": "FULL",
+      "estrutura_diagnostica": "polythetic_clusters_assimetricos",
+      "render_structured_interview": true,
+      "ui_mode": "structured_full",
+      "criteria": [
+        "A1-A7. Agressao a Pessoas e Animais (7 criterios)",
+        "A8-A9. Destruicao de Propriedade (2 criterios)",
+        "A10-A12. Falsidade ou Furto (3 criterios)",
+        "A13-A15. Violacoes Graves de Regras (3 criterios)",
+        "B. Perturbacao comportamental causa prejuizos clinicamente significativos",
+        "C. Se >=18 anos, criterios para TPA NAO preenchidos"
+      ],
+      "diagnostic_rule": "A (>=3 de 15, sendo >=1 nos ultimos 6 meses) + B(prejuizo) + C(idade>=18 -> nao TAS)",
+      "clusters": [
+        "Agressao a Pessoas e Animais",
+        "Destruicao de Propriedade",
+        "Falsidade ou Furto",
+        "Violacoes Graves de Regras"
+      ],
+      "duration": "12 meses (janela de avaliacao); >=1 sintoma nos ultimos 6 meses",
+      "age_onset": "subtipo inicio infancia: >=1 sintoma antes dos 10 anos; subtipo inicio adolescencia: nenhum antes dos 10",
+      "functional_impairment": "prejuizos clinicamente significativos no funcionamento social, academico ou profissional",
+      "exclusions": [
+        "transtorno da personalidade antissocial (se >=18 anos)"
+      ],
+      "subtypes_presentations": [
+        {
+          "id": "inicio_infancia",
+          "name": "Inicio na Infancia",
+          "criterion": ">=1 sintoma antes dos 10 anos"
+        },
+        {
+          "id": "inicio_adolescencia",
+          "name": "Inicio na Adolescencia",
+          "criterion": "nenhum sintoma antes dos 10 anos"
+        },
+        {
+          "id": "inicio_nao_especificado",
+          "name": "Inicio Nao Especificado",
+          "criterion": "informacoes insuficientes"
+        }
+      ],
+      "specifiers": [
+        {
+          "id": "emocoes_pro_sociais_limitadas",
+          "name": "Com Emocoes Pro-Sociais Limitadas",
+          "criterion": ">=2 caracteristicas persistentes por >=12 meses: ausencia de remorso, insensivel/falta de empata, despreocupado com desempenho, afeto superficial"
+        }
+      ],
+      "operational_profiles": [],
+      "severity": {
+        "has_formal_severity": true,
+        "type": "contagem_sintomas_e_prejuizo",
+        "levels": [
+          "leve",
+          "moderada",
+          "grave"
+        ],
+        "assignment_rule": "leve: poucos problemas alem do necessario, danos relativamente pequenos; moderada: numero de problemas entre leve e grave; grave: muitos problemas, danos consideraveis",
+        "domains": []
+      },
+      "critical_differentials": [
+        "TOD",
+        "TDAH",
+        "TDM/Bipolar",
+        "transtorno de adaptacao",
+        "TEI"
+      ],
+      "key_questions": [
+        "Ja iniciou brigas fisicas? Com que frequencia?",
+        "Ja usou arma, foi cruel com animais ou pessoas?",
+        "Ja roubou confrontando vitima? Forcou alguem a atividade sexual?",
+        "Ja destruiu propriedade ou provocou incendios?",
+        "Ja invadiu casa/carro? Trapaceou ou furtou?",
+        "Fica fora a noite sem permissao? Faltou as aulas? Fugiu de casa?",
+        "Quando esses comportamentos comecaram? (subtipo)",
+        "Ha prejuizo significativo na escola, familia ou comunidade?",
+        "Demonstra remorso? Preocupa-se com sentimentos dos outros? (especificador pro-social)"
+      ],
+      "alerts": [
+        "Pior prognostico associado ao subtipo de inicio na infancia",
+        "Requer multiplas fontes de informacao; nao se basear apenas em autorrelato para especificador pro-social"
+      ],
+      "source_trace": {
+        "markdown_section": "## 3. TRANSTORNO DA CONDUTA (TC) - FICHA FULL",
+        "patches_applied": []
+      }
+    },
+    {
+      "id": "piromania",
+      "name": "Piromania",
+      "category": "SHORT",
+      "estrutura_diagnostica": "monothetic_puro",
+      "render_structured_interview": true,
+      "ui_mode": "structured_compact",
+      "criteria": [
+        "A. Incendio provocado deliberadamente em >1 ocasiao",
+        "B. Tensao ou excitacao afetiva antes do ato",
+        "C. Fascinacao, interesse, curiosidade ou atracao pelo fogo",
+        "D. Prazer, gratificacao ou alivio ao provocar/testemunhar incendios",
+        "E. NAO e por fins monetarios, ideologia, ocultar crimes, raiva, delirio",
+        "F. NAO melhor explicada por TC, episodio maniaco ou TAS"
+      ],
+      "diagnostic_rule": "A + B + C + D + E + F (todos obrigatorios)",
+      "clusters": [],
+      "duration": null,
+      "age_onset": null,
+      "functional_impairment": null,
+      "exclusions": [
+        "TC, mania, TAS, delirios, deficiencia intelectual, intoxicacao"
+      ],
+      "subtypes_presentations": [],
+      "specifiers": [],
+      "operational_profiles": [],
+      "severity": {
+        "has_formal_severity": false,
+        "type": "nao_aplica",
+        "levels": [],
+        "assignment_rule": null,
+        "domains": []
+      },
+      "critical_differentials": [
+        "incendios comuns (lucro, sabotagem, vinganca, terrorismo)",
+        "TC, mania, TAS, delirios, deficiencia intelectual, intoxicacao"
+      ],
+      "key_questions": [
+        "Ja provocou incendios mais de uma vez propositalmente?",
+        "Sentiu tensao ou excitacao antes de provocar o fogo?",
+        "Tem fascinacao especial pelo fogo, bombeiros, equipamentos?",
+        "Sentiu prazer ou alivio ao ver o incendio?",
+        "O incendio foi para lucro, vinganca ou ocultar crime? (exclusao)"
+      ],
+      "alerts": [
+        "Risco de reincidencia criminal; avaliar impulsividade subjacente"
+      ],
+      "source_trace": {
+        "markdown_section": "## 4. PIROMANIA - FICHA SHORT",
+        "patches_applied": [
+          "HIGH: estrutura=monothetic_puro (verificado)"
+        ]
+      }
+    },
+    {
+      "id": "cleptomania",
+      "name": "Cleptomania",
+      "category": "SHORT",
+      "estrutura_diagnostica": "monothetic_puro",
+      "render_structured_interview": true,
+      "ui_mode": "structured_compact",
+      "criteria": [
+        "A. Falha recorrente em resistir a impulsos de roubar objetos nao necessarios",
+        "B. Sensacao crescente de tensao imediatamente antes do furto",
+        "C. Prazer, gratificacao ou alivio no momento do furto",
+        "D. NAO e para expressar raiva ou vinganca, nem em resposta a delirio/alucinacao",
+        "E. NAO melhor explicada por TC, episodio maniaco ou TAS"
+      ],
+      "diagnostic_rule": "A + B + C + D + E (todos obrigatorios)",
+      "clusters": [],
+      "duration": null,
+      "age_onset": null,
+      "functional_impairment": null,
+      "exclusions": [
+        "TC, TAS, mania, psicose, neurocognitivo"
+      ],
+      "subtypes_presentations": [],
+      "specifiers": [],
+      "operational_profiles": [],
+      "severity": {
+        "has_formal_severity": false,
+        "type": "nao_aplica",
+        "levels": [],
+        "assignment_rule": null,
+        "domains": []
+      },
+      "critical_differentials": [
+        "furtos comuns (motivados por utilidade/valor)",
+        "furto por ousadia/rebeldia/rito de passagem (adolescentes)",
+        "simulacao (para evitar condenacao criminal)",
+        "TC, TAS, mania, psicose, neurocognitivo"
+      ],
+      "key_questions": [
+        "Ja sentiu tensao crescente antes de furtar?",
+        "Os objetos eram necessarios ou tinham valor monetario?",
+        "Sentiu prazer ou alivio no momento do furto?",
+        "Os furtos eram para raiva ou vinganca? (exclusao)",
+        "Planejava os furtos ou eram impulsivos?"
+      ],
+      "alerts": [
+        "Distinguir de furto instrumental (Cleptomania = impulsivo, nao planejado)"
+      ],
+      "source_trace": {
+        "markdown_section": "## 5. CLEPTOMANIA - FICHA SHORT",
+        "patches_applied": [
+          "HIGH: estrutura=monothetic_puro (verificado)",
+          "MEDIUM: gravidade.tipo=nao_aplica (verificado)"
+        ]
+      }
+    }
+  ]
+}

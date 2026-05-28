@@ -1,0 +1,634 @@
+{
+  "chapter_id": "01",
+  "chapter_name": "Transtornos do Neurodesenvolvimento",
+  "source_markdown": "01_neurodesenvolvimento_full_short.md",
+  "normalization_round": "2B",
+  "patch_count": 5,
+  "items": [
+    {
+      "id": "deficiencia_intelectual",
+      "name": "Deficiencia Intelectual",
+      "category": "FULL",
+      "estrutura_diagnostica": "monothetic_tripartite",
+      "render_structured_interview": true,
+      "ui_mode": "structured_full",
+      "criteria": [
+        "A. Deficits em funcoes intelectuais (raciocinio, solucao de problemas, planejamento, pensamento abstrato, juizo, aprendizagem academica, aprendizagem pela experiencia) confirmados por avaliacao clinica e testes de inteligencia padronizados individualizados.",
+        "B. Deficits em funcoes adaptativas que resultam em fracasso para atingir padroes de desenvolvimento e socioculturais em relacao a independencia pessoal e responsabilidade social. Sem apoio continuado, os deficits limitam o funcionamento em uma ou mais atividades diarias (comunicacao, participacao social, vida independente) em multiplos ambientes (casa, escola, trabalho, comunidade).",
+        "C. Inicio dos deficits intelectuais e adaptativos durante o periodo do desenvolvimento."
+      ],
+      "diagnostic_rule": "Todos os criterios A, B e C sao obrigatorios (estrutura monotetica tripartite). O diagnostico e clinico, baseado em sintese de avaliacao clinica e testes padronizados. O funcionamento intelectual e tipicamente ~2DP abaixo da media (QI ~65-75 em testes com DP=15, media=100, com margem de erro de medida).",
+      "clusters": [],
+      "duration": null,
+      "age_onset": "** Durante a infancia ou adolescencia; formas graves identificaveis nos primeiros 2 anos; formas leves podem passar despercebidas ate a idade escolar",
+      "functional_impairment": "- Funcionamento adaptativo prejudicado em pelo menos 1 dos 3 dominios (conceitual, social, pratico) - Necessidade de apoio continuado para desempenho adequado em 1+ locais (escola, trabalho, casa, comunidade) - Deficits adaptativos devem estar diretamente relacionados aos prejuizos intelectuais do Criterio A",
+      "exclusions": [
+        "Transtornos neurocognitivos (inicio tardio/perda de funcao)",
+        "Transtornos da comunicacao e aprendizagem (sem deficits globais intelectual/adaptativo)",
+        "Transtorno do espectro autista (avaliar discrepancia entre habilidades sociais e nao-verbais)"
+      ],
+      "subtypes_presentations": [],
+      "specifiers": [
+        "Com comprometimento intelectual / sem comprometimento intelectual concomitante",
+        "Com comprometimento da linguagem / sem comprometimento da linguagem concomitante",
+        "Associado a condicao medica ou genetica conhecida ou fator ambiental",
+        "Associado a outro transtorno do neurodesenvolvimento, mental ou comportamental",
+        "Com catatonia"
+      ],
+      "operational_profiles": [],
+      "severity": {
+        "has_formal_severity": true,
+        "type": "funcionamento_adaptativo",
+        "levels": [
+          "Profunda",
+          "Grave",
+          "Leve",
+          "Moderada"
+        ],
+        "assignment_rule": null,
+        "domains": []
+      },
+      "critical_differentials": [],
+      "key_questions": [
+        "A crianca atingiu os marcos do desenvolvimento (motor, linguistico, social) na epoca esperada?",
+        "Ha dificuldades de aprendizagem academica que exigem apoio especial?",
+        "A pessoa consegue realizar atividades de autocuidado adequadas a idade?",
+        "Ha independencia na comunicacao, participacao social e vida diaria?",
+        "Os deficits estao presentes desde a infancia/periodo do desenvolvimento?",
+        "Ha historia de QI testado abaixo de 70-75?",
+        "Ha necessidade de apoio continuado em casa, escola, trabalho ou comunidade?"
+      ],
+      "alerts": [],
+      "source_trace": {
+        "markdown_section": "### Deficiencia Intelectual",
+        "patches_applied": []
+      }
+    },
+    {
+      "id": "espectro_autista",
+      "name": "Transtorno do Espectro Autista",
+      "category": "FULL",
+      "estrutura_diagnostica": "polythetic_com_ancora",
+      "render_structured_interview": true,
+      "ui_mode": "structured_full",
+      "criteria": [
+        "A. Deficits persistentes na comunicacao social e na interacao social em multiplos contextos, conforme manifestado por TODOS os seguintes (atualmente ou por historia previa):",
+        "B. Padroes restritos e repetitivos de comportamento, interesses ou atividades, conforme manifestado por PELO MENOS 2 dos seguintes (atualmente ou por historia previa):",
+        "C. Inicio precoce no periodo do desenvolvimento (sintomas podem nao se manifestar plenamente ate demandas sociais excederem capacidades).",
+        "D. Prejuizo clinicamente significativo no funcionamento social, profissional ou em outras areas.",
+        "E. Nao melhor explicado por deficiencia intelectual ou atraso global do desenvolvimento. DI e TEA podem ser comorbidos; para isso, comunicacao social deve estar abaixo do esperado para o nivel geral de desenvolvimento."
+      ],
+      "diagnostic_rule": "Criterio A (todos os 3 subitens) + Criterio B (pelo menos 2 dos 4 subitens) + Criterios C, D, E = ANCORA obrigatoria (A completo) + cluster polietico (B, minimo 2/4). Historia retrospectiva valida se houver preenchimento no passado, mesmo que mascarado atualmente.",
+      "clusters": [],
+      "duration": null,
+      "age_onset": "** Tipicamente reconhecido no 2o ano de vida (12-24 meses); pode ser antes dos 12 meses se deficits graves; pode ser apos 24 meses se sintomas sutis",
+      "functional_impairment": "- Prejuizo clinicamente significativo no funcionamento social, profissional ou outras areas importantes ATUALMENTE",
+      "exclusions": [],
+      "subtypes_presentations": [],
+      "specifiers": [
+        "Com / sem comprometimento intelectual concomitante",
+        "Com / sem comprometimento da linguagem concomitante (com nivel atual: sem fala inteligivel / fala telegrafica / frases completas / fala fluente)",
+        "Associado a condicao medica ou genetica conhecida ou fator ambiental",
+        "Associado a outro transtorno do neurodesenvolvimento, mental ou comportamental",
+        "Com catatonia (codigo adicional 293.89 [F06.1])",
+        "Idade da primeira preocupacao",
+        "Com / sem perda de habilidades estabelecidas"
+      ],
+      "operational_profiles": [],
+      "severity": {
+        "has_formal_severity": true,
+        "type": "necessidade_suporte_por_dominio",
+        "levels": [
+          "Nivel 3 - Apoio muito substancial",
+          "Nivel 1 - Apoio",
+          "Nivel 2 - Apoio substancial"
+        ],
+        "assignment_rule": null,
+        "domains": []
+      },
+      "critical_differentials": [],
+      "key_questions": [
+        "A crianca/initcia interacoes sociais? Compartilha interesses, emocoes, brincadeiras?",
+        "Ha contato visual adequado? Usa gestos (apontar, mostrar) espontaneamente?",
+        "Ha interesse por outras criancas/pares? Consegue fazer/manter amizades?",
+        "Ha comportamentos repetitivos (abanar maos, alinhar brinquedos, ecolalia)?",
+        "Ha insistencia em rotinas, dificuldade com mudancas, rituais?",
+        "Ha interesses muito restritos/fixos que sao anormais em intensidade?",
+        "Ha hipersensibilidade ou hipossensibilidade sensorial (sons, texturas, luzes, dor)?",
+        "Os sintomas comecaram na primeira infancia?",
+        "Ha prejuizo atual no funcionamento (social, escolar, profissional)?"
+      ],
+      "alerts": [],
+      "source_trace": {
+        "markdown_section": "### Transtorno do Espectro Autista",
+        "patches_applied": []
+      }
+    },
+    {
+      "id": "deficit_de_atencao_hiperatividade",
+      "name": "Transtorno de Deficit de Atencao/Hiperatividade",
+      "category": "FULL",
+      "estrutura_diagnostica": "polythetic_clusters_simetricos",
+      "render_structured_interview": true,
+      "ui_mode": "structured_full",
+      "criteria": [
+        "A. Padrao persistente de desatencao e/ou hiperatividade-impulsividade que interfere no funcionamento e desenvolvimento:",
+        "B. Varios sintomas de desatencao ou hiperatividade-impulsividade presentes antes dos 12 anos de idade.",
+        "C. Varios sintomas presentes em DOIS ou mais ambientes (casa, escola, trabalho, com amigos/parentes).",
+        "D. Evidencias claras de que os sintomas interferem no funcionamento social, academico ou profissional, ou reduzem qualidade de vida.",
+        "E. Sintomas nao ocorrem exclusivamente durante esquizofrenia ou outro transtorno psicotico, e nao sao melhor explicados por outro transtorno mental."
+      ],
+      "diagnostic_rule": "(A1 com >=6 sintomas [>=5 para 17+ anos] OU A2 com >=6 sintomas [>=5 para 17+ anos]) + B + C + D + E. Para apresentacao combinada, A1 E A2 ambos preenchidos. Sintomas em mais de 1 ambiente.",
+      "clusters": [],
+      "duration": null,
+      "age_onset": "** Varios sintomas antes dos 12 anos",
+      "functional_impairment": "- Interferencia no funcionamento social, academico ou profissional, ou reducao da qualidade de vida",
+      "exclusions": [],
+      "subtypes_presentations": [],
+      "specifiers": [
+        "**Em remissao parcial:** Critérios preenchidos no passado, nem todos nos ultimos 6 meses, sintomas ainda causam prejuizo"
+      ],
+      "operational_profiles": [],
+      "severity": {
+        "has_formal_severity": true,
+        "type": "contagem_sintomas_e_prejuizo",
+        "levels": [
+          "Grave",
+          "Leve",
+          "Moderada"
+        ],
+        "assignment_rule": null,
+        "domains": []
+      },
+      "critical_differentials": [],
+      "key_questions": [
+        "Ha dificuldade em manter atencao em tarefas? Comete erros por descuido?",
+        "Esquece de fazer tarefas, perde objetos, e distraido facilmente?",
+        "Tem dificuldade para organizar tarefas e atividades?",
+        "Evita tarefas que exigem esforco mental prolongado?",
+        "E inquieto, nao consegue ficar parado, remexe maos/pes?",
+        "Fala demais, interrompe, tem dificuldade para esperar a vez?",
+        "Age impulsivamente (intromete-se, responde antes da pergunta acabar)?",
+        "Esses sintomas comecaram antes dos 12 anos?",
+        "Estao presentes em pelo menos 2 ambientes (casa, escola, trabalho)?",
+        "Causam prejuizo no funcionamento atual?"
+      ],
+      "alerts": [],
+      "source_trace": {
+        "markdown_section": "### Transtorno de Deficit de Atencao/Hiperatividade",
+        "patches_applied": []
+      }
+    },
+    {
+      "id": "transtorno_especifico_da_aprendizagem",
+      "name": "Transtorno Especifico da Aprendizagem",
+      "category": "FULL",
+      "estrutura_diagnostica": "polythetic_monocluster",
+      "render_structured_interview": true,
+      "ui_mode": "structured_full",
+      "criteria": [
+        "A. Dificuldades na aprendizagem e no uso de habilidades academicas, com pelo menos 1 dos seguintes sintomas por pelo menos 6 meses, apesar de intervencoes:",
+        "B. Habilidades academicas afetadas substancial e quantitativamente abaixo do esperado para a idade, causando interferencia significativa no desempenho academico/profissional ou atividades diarias, confirmado por medidas padronizadas e avaliacao clinica. (Para 17+ anos, historia documentada pode substituir avaliacao padronizada.)",
+        "C. Dificuldades iniciam-se durante os anos escolares (podem nao se manifestar ate demandas excederem capacidades).",
+        "D. Dificuldades NAO explicadas por: deficiencia intelectual, acuidade visual/auditiva nao corrigida, outros transtornos mentais/neurologicos, adversidade psicossocial, falta de proficiencia na lingua de instrucao, ou instrucao educacional inadequada."
+      ],
+      "diagnostic_rule": ">=1 sintoma do Criterio A (A1-A6) + B + C + D. Todos os 4 criterios obrigatorios. Síntese clinica baseada em historia, relatos escolares e avaliacao psicoeducacional.",
+      "clusters": [],
+      "duration": null,
+      "age_onset": null,
+      "functional_impairment": null,
+      "exclusions": [],
+      "subtypes_presentations": [],
+      "specifiers": [],
+      "operational_profiles": [],
+      "severity": {
+        "has_formal_severity": true,
+        "type": "ordinal_por_dominio",
+        "levels": [
+          "Grave",
+          "Leve",
+          "Moderada"
+        ],
+        "assignment_rule": null,
+        "domains": []
+      },
+      "critical_differentials": [],
+      "key_questions": [
+        "Ha dificuldades persistentes em ler (precisao, fluencia, compreensao)?",
+        "Ha dificuldades de ortografia/escrita (erros gramaticais, organizacao fraca)?",
+        "Ha dificuldades com numeros, calculos, matematica?",
+        "O desempenho esta substancialmente abaixo do esperado para a idade?",
+        "As dificuldades comecaram nos anos escolares?",
+        "Ha evidencia de testes padronizados confirmando desempenho baixo?",
+        "As dificuldades persistem apesar de intervencoes adequadas?",
+        "Nao sao explicadas por QI baixo, problemas sensoriais, ou falta de educacao?"
+      ],
+      "alerts": [],
+      "source_trace": {
+        "markdown_section": "### Transtorno Especifico da Aprendizagem",
+        "patches_applied": []
+      }
+    },
+    {
+      "id": "transtorno_da_linguagem",
+      "name": "Transtorno da Linguagem",
+      "category": "FULL",
+      "estrutura_diagnostica": "polythetic_monocluster",
+      "render_structured_interview": true,
+      "ui_mode": "structured_full",
+      "criteria": [
+        "A. Dificuldades persistentes na aquisicao e uso da linguagem (falada, escrita, sinais) devido a deficits na compreensao ou producao:",
+        "B. Capacidades linguisticas substancial e quantificavelmente abaixo do esperado para a idade, resultando em limitacoes funcionais na comunicacao efetiva, participacao social, sucesso academico ou desempenho profissional.",
+        "C. Inicio precoce no periodo do desenvolvimento.",
+        "D. Dificuldades NAO atribuiveis a: deficiencia auditiva/outro prejuizo sensorial, disfuncao motora, outra condicao medica/neurologica, deficiencia intelectual ou atraso global do desenvolvimento."
+      ],
+      "diagnostic_rule": ">=1 dos 3 subitens de A + B + C + D. Avaliar capacidades expressiva E receptiva (podem diferir em gravidade).",
+      "clusters": [],
+      "duration": null,
+      "age_onset": null,
+      "functional_impairment": "- Limitacoes na comunicacao efetiva, participacao social, sucesso academico ou desempenho profissional",
+      "exclusions": [],
+      "subtypes_presentations": [],
+      "specifiers": [],
+      "operational_profiles": [],
+      "severity": {
+        "has_formal_severity": false,
+        "type": "nao_aplica",
+        "levels": [],
+        "assignment_rule": null,
+        "domains": []
+      },
+      "critical_differentials": [],
+      "key_questions": [
+        "Houve atraso na aquisicao das primeiras palavras/combinacoes de palavras?",
+        "O vocabulario e reduzido ou menos variado que o dos pares?",
+        "As frases sao mais curtas, menos complexas, com erros gramaticais?",
+        "Ha dificuldades para compreender instrucoes (especialmente com multiplas etapas)?",
+        "Ha prejuizo no discurso (narrar, explicar, conversar)?",
+        "Ha diferenca entre compreensao (receptiva) e fala (expressiva)?",
+        "As dificuldades causam limitacoes funcionais (social, academico, profissional)?",
+        "Os sintomas comecaram precoce no desenvolvimento?"
+      ],
+      "alerts": [],
+      "source_trace": {
+        "markdown_section": "### Transtorno da Linguagem",
+        "patches_applied": []
+      }
+    },
+    {
+      "id": "transtorno_da_fala",
+      "name": "Transtorno da Fala",
+      "category": "FULL",
+      "estrutura_diagnostica": "qualitativo_descritivo",
+      "render_structured_interview": true,
+      "ui_mode": "structured_full",
+      "criteria": [
+        "A. Dificuldade persistente para producao da fala que interfere na inteligibilidade ou impede comunicacao verbal de mensagens.",
+        "B. Perturbacao causa limitacoes na comunicacao efetiva, interferindo na participacao social, sucesso academico ou desempenho profissional.",
+        "C. Inicio precoce no periodo do desenvolvimento.",
+        "D. Dificuldades NAO atribuiveis a: paralisia cerebral, fenda palatina, surdez/perda auditiva, lesao cerebral traumatica ou outras condicoes medicas/neurologicas."
+      ],
+      "diagnostic_rule": "A + B + C + D. Fala nao ocorre como esperado para idade/estagio de desenvolvimento; nao consequencia de prejuizo fisico, estrutural, neurologico ou auditivo. Aos 4 anos, fala geral deve ser inteligivel.",
+      "clusters": [],
+      "duration": null,
+      "age_onset": null,
+      "functional_impairment": null,
+      "exclusions": [],
+      "subtypes_presentations": [],
+      "specifiers": [],
+      "operational_profiles": [],
+      "severity": {
+        "has_formal_severity": false,
+        "type": "nao_aplica",
+        "levels": [],
+        "assignment_rule": null,
+        "domains": []
+      },
+      "critical_differentials": [],
+      "key_questions": [
+        "A fala e dificil de entender? Quanto da fala e inteligivel para ouvintes desconhecidos?",
+        "Ha dificuldades na articulacao de sons especificos?",
+        "A crianca usa processos imaturos de simplificacao fonologica alem da idade esperada?",
+        "Ha historia de atraso nas habilidades que usam articuladores (mastigacao, assoar nariz)?",
+        "Ha dificuldades de coordenacao motora geral associadas?",
+        "A fala interfere na participacao social ou academica?",
+        "Os sintomas comecaram precoce e nao sao explicados por causas fisicas/neurologicas?"
+      ],
+      "alerts": [],
+      "source_trace": {
+        "markdown_section": "### Transtorno da Fala",
+        "patches_applied": []
+      }
+    },
+    {
+      "id": "transtorno_da_fluencia_com_inicio_na_infancia",
+      "name": "Transtorno da Fluencia com Inicio na Infancia",
+      "category": "FULL",
+      "estrutura_diagnostica": "polythetic_monocluster",
+      "render_structured_interview": true,
+      "ui_mode": "structured_full",
+      "criteria": [
+        "A. Perturbacoes na fluencia normal e no padrao temporal da fala inapropriadas para idade/linguistica, persistentes, com ocorrencias frequentes e marcantes de 1+ dos seguintes:",
+        "B. Perturbacao causa ansiedade em relacao a fala OU limitacoes na comunicacao efetiva, participacao social ou desempenho academico/profissional.",
+        "C. Inicio precoce no periodo do desenvolvimento.",
+        "D. NAO atribuivel a: deficit motor da fala/sensorial, disfluencia por lesao neurologica, outra condicao medica, nem melhor explicada por outro transtorno mental."
+      ],
+      "diagnostic_rule": ">=1 dos 7 subitens de A + B + C + D. Perturbacao deve ser frequente e marcante (nao apenas disfluencias ocasionais).",
+      "clusters": [],
+      "duration": null,
+      "age_onset": null,
+      "functional_impairment": null,
+      "exclusions": [],
+      "subtypes_presentations": [],
+      "specifiers": [],
+      "operational_profiles": [],
+      "severity": {
+        "has_formal_severity": false,
+        "type": "nao_aplica",
+        "levels": [],
+        "assignment_rule": null,
+        "domains": []
+      },
+      "critical_differentials": [],
+      "key_questions": [
+        "Ha repeticoes de sons/silabas, prolongamentos, bloqueios na fala?",
+        "A pessoa evita certas palavras ou situacoes de fala?",
+        "Ha ansiedade em relacao a fala?",
+        "Ha movimentos motores associados (piscar, tiques faciais) durante a fala?",
+        "Os sintomas comecaram na infancia (antes da adolescencia)?",
+        "A disfluencia interfere na comunicacao, socializacao ou desempenho academico?"
+      ],
+      "alerts": [],
+      "source_trace": {
+        "markdown_section": "### Transtorno da Fluencia com Inicio na Infancia",
+        "patches_applied": []
+      }
+    },
+    {
+      "id": "transtorno_da_comunicacao_social",
+      "name": "Transtorno da Comunicacao Social",
+      "category": "FULL",
+      "estrutura_diagnostica": "monothetic_puro",
+      "render_structured_interview": true,
+      "ui_mode": "structured_full",
+      "criteria": [
+        "A. Dificuldades persistentes no uso social da comunicacao verbal e nao-verbal, com TODOS os seguintes:",
+        "B. Deficits resultam em limitacoes funcionais na comunicacao efetiva, participacao social, relacoes sociais, sucesso academico ou desempenho profissional.",
+        "C. Inicio precoce no periodo inicial do desenvolvimento (deficits podem nao se manifestar plenamente ate demandas de comunicacao social excederem capacidades).",
+        "D. NAO atribuivel a: outra condicao medica/neurologica, baixas capacidades na estrutura da palavra/gramatica, nem melhor explicado por TEA, DI, atraso global do desenvolvimento ou outro transtorno mental."
+      ],
+      "diagnostic_rule": "TODOS os 4 subitens de A + B + C + D. Estrutura monotetica pura para o criterio A.",
+      "clusters": [],
+      "duration": null,
+      "age_onset": null,
+      "functional_impairment": null,
+      "exclusions": [],
+      "subtypes_presentations": [],
+      "specifiers": [],
+      "operational_profiles": [],
+      "severity": {
+        "has_formal_severity": false,
+        "type": "nao_aplica",
+        "levels": [],
+        "assignment_rule": null,
+        "domains": []
+      },
+      "critical_differentials": [],
+      "key_questions": [
+        "A pessoa tem dificuldade em usar comunicacao para fins sociais (saudar, compartilhar)?",
+        "Adapta a forma de falar ao contexto (diferente com crianca vs. adulto, escola vs. parque)?",
+        "Consegue seguir regras de conversa (esperar vez, reconstituir, regular interacao)?",
+        "Compreende humor, metaforas, expressoes idiomaticas, inferencias?",
+        "Ha historia de padroes restritos/repetitivos de comportamento no passado? (SE SIM = TEA)",
+        "Os deficits causam prejuizo funcional na comunicacao/socializacao?"
+      ],
+      "alerts": [],
+      "source_trace": {
+        "markdown_section": "### Transtorno da Comunicacao Social",
+        "patches_applied": []
+      }
+    },
+    {
+      "id": "movimento_estereotipado",
+      "name": "Transtorno do Movimento Estereotipado",
+      "category": "FULL",
+      "estrutura_diagnostica": "qualitativo_descritivo",
+      "render_structured_interview": true,
+      "ui_mode": "structured_full",
+      "criteria": [
+        "A. Comportamento motor repetitivo, aparentemente direcionado e sem proposito (ex: apertar/abanar maos, balancar corpo, bater cabeca, morder-se, golpear proprio corpo).",
+        "B. Comportamento interfere em atividades sociais, academicas ou outras; pode resultar em autolesao.",
+        "C. Inicio precoce no periodo do desenvolvimento.",
+        "D. NAO atribuivel a: efeitos fisiologicos de substancia, condicao neurologica, nem melhor explicado por outro transtorno do neurodesenvolvimento ou mental (ex: tricotilomania, TOC)."
+      ],
+      "diagnostic_rule": "A + B + C + D. Comportamentos repetitivos, aparentemente dirigidos, sem proposito, com interferencia funcional.",
+      "clusters": [],
+      "duration": null,
+      "age_onset": null,
+      "functional_impairment": null,
+      "exclusions": [],
+      "subtypes_presentations": [],
+      "specifiers": [
+        "| Comportamento que resulta em lesao (quando nao usadas medidas preventivas) |",
+        "| Sem lesao resultante |",
+        "| Ex: sindrome de Lesch-Nyhan, DI, exposicao intrauterina ao alcool |"
+      ],
+      "operational_profiles": [],
+      "severity": {
+        "has_formal_severity": true,
+        "type": "ordinal_simples",
+        "levels": [
+          "Grave",
+          "Leve",
+          "Moderada"
+        ],
+        "assignment_rule": null,
+        "domains": []
+      },
+      "critical_differentials": [],
+      "key_questions": [
+        "Ha comportamentos motores repetitivos (abanar maos, balancar corpo, bater cabeca)?",
+        "Os comportamentos interferem nas atividades diarias ou sociais?",
+        "Ha autolesao resultante desses comportamentos?",
+        "Os movimentos comecaram na primeira infancia?",
+        "Sao facilmente interrompidos por distração? (se sim = mais leve)",
+        "Ha necessidade de medidas protetivas ou monitoracao continua?"
+      ],
+      "alerts": [],
+      "source_trace": {
+        "markdown_section": "### Transtorno do Movimento Estereotipado",
+        "patches_applied": []
+      }
+    },
+    {
+      "id": "tourette",
+      "name": "Transtorno de Tourette",
+      "category": "SHORT",
+      "estrutura_diagnostica": "temporal_topografico",
+      "render_structured_interview": true,
+      "ui_mode": "structured_compact",
+      "criteria": [
+        "A. Multiplos tiques motores E um ou mais tiques vocais estiveram presentes em algum momento (nao necessariamente ao mesmo tempo).",
+        "B. Tiques persistiram por MAIS DE 1 ANO desde o inicio do primeiro tique (podem aumentar/diminuir em frequencia; periodos livres de tiques sao aceitaveis).",
+        "C. Inicio antes dos 18 anos de idade.",
+        "D. NAO atribuivel a efeitos fisiologicos de substancia ou outra condicao medica (doenca de Huntington, encefalite pos-viral)."
+      ],
+      "diagnostic_rule": "A + B + C + D. Tiques motores multiplos + tiques vocais + duracao >1 ano + inicio <18 anos.",
+      "clusters": [],
+      "duration": null,
+      "age_onset": "** Antes dos 18 anos (tipicamente 4-6 anos)",
+      "functional_impairment": null,
+      "exclusions": [],
+      "subtypes_presentations": [],
+      "specifiers": [],
+      "operational_profiles": [],
+      "severity": {
+        "has_formal_severity": false,
+        "type": "nao_aplica",
+        "levels": [],
+        "assignment_rule": null,
+        "domains": []
+      },
+      "critical_differentials": [],
+      "key_questions": [
+        "Ha multiplos tiques motores (piscar, encolher ombros, etc.)?",
+        "Ha tiques vocais (limpar garganta, grunhir, palavras)?",
+        "Os tiques comecaram antes dos 18 anos?",
+        "Estao presentes ha mais de 1 ano?",
+        "Ha sensacao premonitoria (coceira/tensao) antes do tique?",
+        "Os tiques podem ser suprimidos voluntariamente por periodos?"
+      ],
+      "alerts": [],
+      "source_trace": {
+        "markdown_section": "### Transtorno de Tourette",
+        "patches_applied": []
+      }
+    },
+    {
+      "id": "tique_motor_ou_vocal_persistente",
+      "name": "Transtorno de Tique Motor ou Vocal Persistente",
+      "category": "SHORT",
+      "estrutura_diagnostica": "temporal_topografico",
+      "render_structured_interview": true,
+      "ui_mode": "structured_compact",
+      "criteria": [
+        "A. Tiques motores OU vocais (unicos ou multiplos), mas NAO ambos.",
+        "B. Tiques persistiram por MAIS DE 1 ANO desde o inicio do primeiro tique.",
+        "C. Inicio antes dos 18 anos.",
+        "D. NAO atribuivel a substancia ou condicao medica.",
+        "E. CRITERIOS PARA TOURETTE NUNCA PREENCHIDOS."
+      ],
+      "diagnostic_rule": "(A motores OU vocais, mas NAO ambos) + B + C + D + E.",
+      "clusters": [],
+      "duration": null,
+      "age_onset": null,
+      "functional_impairment": null,
+      "exclusions": [],
+      "subtypes_presentations": [],
+      "specifiers": [],
+      "operational_profiles": [],
+      "severity": {
+        "has_formal_severity": false,
+        "type": "nao_aplica",
+        "levels": [],
+        "assignment_rule": null,
+        "domains": []
+      },
+      "critical_differentials": [],
+      "key_questions": [
+        "Ha apenas tiques motores OU apenas tiques vocais (nao ambos)?",
+        "Duracao >1 ano desde o primeiro tique?",
+        "Inicio antes dos 18 anos?",
+        "Nunca preencheu criterios para Tourette?"
+      ],
+      "alerts": [],
+      "source_trace": {
+        "markdown_section": "### Transtorno de Tique Motor ou Vocal Persistente",
+        "patches_applied": []
+      }
+    },
+    {
+      "id": "tique_transitorio",
+      "name": "Transtorno de Tique Transitorio",
+      "category": "SHORT",
+      "estrutura_diagnostica": "temporal_topografico",
+      "render_structured_interview": true,
+      "ui_mode": "structured_compact",
+      "criteria": [
+        "A. Tiques motores e/ou vocais (unicos ou multiplos).",
+        "B. Tiques presentes por MENOS DE 1 ano desde o inicio do primeiro tique.",
+        "C. Inicio antes dos 18 anos.",
+        "D. NAO atribuivel a substancia ou condicao medica.",
+        "E. CRITERIOS PARA TOURETTE OU TIQUE PERSISTENTE NUNCA PREENCHIDOS."
+      ],
+      "diagnostic_rule": "A + B + C + D + E. Tiques por menos de 1 ano desde o inicio do primeiro tique, sem criterios para Tourette ou tique persistente. **NOTA IMPORTANTE:** O diagnostico transitorio/provisorio exige duracao inferior a 1 ano desde o inicio do primeiro tique. A diferenca para os diagnosticos hierarquicamente superiores e a duracao mais curta.",
+      "clusters": [],
+      "duration": "menos de 1 ano desde o inicio do primeiro tique",
+      "age_onset": null,
+      "functional_impairment": null,
+      "exclusions": [],
+      "subtypes_presentations": [],
+      "specifiers": [],
+      "operational_profiles": [],
+      "severity": {
+        "has_formal_severity": false,
+        "type": "nao_aplica",
+        "levels": [],
+        "assignment_rule": null,
+        "domains": []
+      },
+      "critical_differentials": [],
+      "key_questions": [],
+      "alerts": [],
+      "source_trace": {
+        "markdown_section": "### Transtorno de Tique Transitorio",
+        "patches_applied": [
+          "duracao: pelo menos 1 ano -> menos de 1 ano (CRITICAL)"
+        ]
+      }
+    },
+    {
+      "id": "desenvolvimento_da_coordenacao",
+      "name": "Transtorno do Desenvolvimento da Coordenacao",
+      "category": "SHORT",
+      "estrutura_diagnostica": "qualitativo_descritivo",
+      "render_structured_interview": true,
+      "ui_mode": "structured_compact",
+      "criteria": [
+        "A. Aquisicao e execucao de habilidades motoras coordenadas substancialmente abaixo do esperado para idade. Dificuldades: falta de jeito (derrubar/bater em objetos), lentidao, imprecisao (apanhar objetos, usar tesouras/facas, escrever a mao, andar de bicicleta).",
+        "B. Deficit interfere significativa e persistentemente em atividades cotidianas (autocuidado, produtividade academica, lazer/brincadeiras).",
+        "C. Inicio precoce no periodo do desenvolvimento.",
+        "D. Deficits NAO mais bem explicados por deficiencia intelectual, deficiencia visual, ou condicao neurologica (paralisia cerebral, distrofia muscular, doenca degenerativa)."
+      ],
+      "diagnostic_rule": "A + B + C + D. Diagnostico por sintese clinica (historia, exame fisico, testes padronizados).",
+      "clusters": [],
+      "duration": null,
+      "age_onset": null,
+      "functional_impairment": null,
+      "exclusions": [],
+      "subtypes_presentations": [],
+      "specifiers": [],
+      "operational_profiles": [],
+      "severity": {
+        "has_formal_severity": false,
+        "type": "nao_aplica",
+        "levels": [],
+        "assignment_rule": null,
+        "domains": []
+      },
+      "critical_differentials": [],
+      "key_questions": [
+        "Ha falta de jeito (derrubar coisas, bater em objetos)?",
+        "Ha lentidao ou imprecisao em atividades motoras (escrever, esportes, usar utensilios)?",
+        "Ha prejuizo significativo nas atividades diarias, academicas ou lazer?",
+        "Os sintomas comecaram na primeira infancia?",
+        "Nao sao explicados por problemas neurologicos, visuais ou intelectuais?"
+      ],
+      "alerts": [],
+      "source_trace": {
+        "markdown_section": "### Transtorno do Desenvolvimento da Coordenacao",
+        "patches_applied": []
+      }
+    }
+  ]
+}

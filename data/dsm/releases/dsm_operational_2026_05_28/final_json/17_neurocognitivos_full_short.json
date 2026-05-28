@@ -1,0 +1,357 @@
+{
+  "chapter_id": "17",
+  "chapter_name": "Transtornos Neurocognitivos",
+  "source_markdown": "17_neurocognitivos_full_short.md",
+  "normalization_round": "2B",
+  "patch_count": 4,
+  "items": [
+    {
+      "id": "delirium",
+      "name": "Delirium",
+      "category": "FULL",
+      "estrutura_diagnostica": "etiologico_externo",
+      "render_structured_interview": true,
+      "ui_mode": "structured_full",
+      "criteria": [
+        "A. Perturbacao da atencao E da consciencia",
+        "B. Desenvolvimento em periodo breve (horas a poucos dias), com oscilacao",
+        "C. Perturbacao adicional na cognicao (memoria, desorientacao, linguagem, visuoespacial)",
+        "D. Nao melhor explicada por outro TNC preexistente; nao ocorre em coma",
+        "E. Evidencias de consequencia fisiologica direta (condicao medica, intoxicacao, abstinencia, toxina, multiplas etiologias)"
+      ],
+      "diagnostic_rule": "Todos A, B, C, D, E obrigatorios",
+      "clusters": [],
+      "duration": "horas a dias (agudo) ou semanas/meses (persistente)",
+      "age_onset": null,
+      "functional_impairment": "oscilacao do nivel de consciencia, deficit cognitivo, prejuizo funcional significativo",
+      "exclusions": [
+        "TNC preexistente",
+        "coma"
+      ],
+      "subtypes_presentations": [
+        {
+          "id": "intoxicacao_substancia",
+          "name": "Delirium por intoxicacao por substancia"
+        },
+        {
+          "id": "abstinencia_substancia",
+          "name": "Delirium por abstinencia de substancia"
+        },
+        {
+          "id": "medicamento",
+          "name": "Delirium induzido por medicamento"
+        },
+        {
+          "id": "condicao_medica",
+          "name": "Delirium devido a outra condicao medica"
+        },
+        {
+          "id": "multiplas_etio",
+          "name": "Delirium devido a multiplas etiologias"
+        }
+      ],
+      "specifiers": [
+        {
+          "id": "agudo",
+          "name": "Agudo"
+        },
+        {
+          "id": "persistente",
+          "name": "Persistente"
+        },
+        {
+          "id": "hiperativo",
+          "name": "Hiperativo"
+        },
+        {
+          "id": "hipoativo",
+          "name": "Hipoativo"
+        },
+        {
+          "id": "misto",
+          "name": "Nivel misto de atividade"
+        }
+      ],
+      "operational_profiles": [],
+      "severity": {
+        "has_formal_severity": false,
+        "type": "nao_aplica",
+        "levels": [],
+        "assignment_rule": null,
+        "domains": []
+      },
+      "critical_differentials": [
+        "TNC Maior (demencia)",
+        "transtornos psicoticos",
+        "transtorno de estresse agudo"
+      ],
+      "key_questions": [
+        "Mudanca aguda no estado mental nas ultimas horas ou dias?",
+        "Ha oscilacao do nivel de consciencia ao longo do dia?",
+        "Consegue manter a atencao em uma conversa?",
+        "Ha desorientacao para tempo, lugar ou pessoa?",
+        "Ha evidencias de alucinacoes ou ilusoes (especialmente visuais)?",
+        "Historia de infeccao, novo medicamento, abstinencia, toxina?"
+      ],
+      "alerts": [
+        "NAO diagnosticar delirium no contexto de coma",
+        "Avaliacao diaria recomendada; usar CAM ou 4AT",
+        "Requer investigacao etiologica sistematica"
+      ],
+      "source_trace": {
+        "markdown_section": "## FICHA 17.1: DELIRIUM",
+        "patches_applied": []
+      }
+    },
+    {
+      "id": "tnc_maior",
+      "name": "Transtorno Neurocognitivo Maior",
+      "category": "FULL",
+      "estrutura_diagnostica": "polythetic_monocluster",
+      "render_structured_interview": true,
+      "ui_mode": "structured_full",
+      "criteria": [
+        "A1. Preocupacao sobre declinio significativo + A2. Prejuizo substancial documentado (2+ DP abaixo, <percentil 3)",
+        "B. Deficits interferem na independencia em AVDs (AIVDs complexas comprometidas)",
+        "C. Nao ocorre exclusivamente durante delirium",
+        "D. Nao melhor explicado por outro transtorno mental"
+      ],
+      "diagnostic_rule": "A1+A2 + B + C + D todos obrigatorios; limiar neuropsicologico: <percentil 3 ou 2+ DP abaixo",
+      "clusters": [
+        "Atencao complexa",
+        "Funcao executiva",
+        "Aprendizagem e memoria",
+        "Linguagem",
+        "Perceptomotor",
+        "Cognicao social"
+      ],
+      "duration": "cronico, progressivo",
+      "age_onset": null,
+      "functional_impairment": "dependencia parcial a total em AIVDs complexas (financas, medicamentos) e/ou ABVDs",
+      "exclusions": [
+        "delirium",
+        "depressao maior",
+        "esquizofrenia"
+      ],
+      "subtypes_presentations": [
+        {
+          "id": "alzheimer",
+          "name": "Doenca de Alzheimer"
+        },
+        {
+          "id": "frontotemporal",
+          "name": "Degeneracao Lobar Frontotemporal"
+        },
+        {
+          "id": "lewy",
+          "name": "Doenca com Corpos de Lewy"
+        },
+        {
+          "id": "vascular",
+          "name": "Doenca Vascular"
+        },
+        {
+          "id": "lct",
+          "name": "Lesao Cerebral Traumatica"
+        },
+        {
+          "id": "substancia",
+          "name": "Induzido por Substancia/Medicamento"
+        },
+        {
+          "id": "hiv",
+          "name": "Infeccao por HIV"
+        },
+        {
+          "id": "prion",
+          "name": "Doenca do Prion"
+        },
+        {
+          "id": "parkinson",
+          "name": "Doenca de Parkinson"
+        },
+        {
+          "id": "huntington",
+          "name": "Doenca de Huntington"
+        },
+        {
+          "id": "outra_medica",
+          "name": "Outra Condicao Medica"
+        },
+        {
+          "id": "multiplas_etio",
+          "name": "Multiplas Etiologias"
+        }
+      ],
+      "specifiers": [
+        {
+          "id": "sem_perturbacao",
+          "name": "Sem perturbacao comportamental"
+        },
+        {
+          "id": "com_perturbacao",
+          "name": "Com perturbacao comportamental"
+        }
+      ],
+      "operational_profiles": [],
+      "severity": {
+        "has_formal_severity": true,
+        "type": "funcionamento_adaptativo",
+        "levels": [
+          "leve",
+          "moderada",
+          "grave"
+        ],
+        "assignment_rule": "leve: dificuldades com AIVDs complexas; moderada: dificuldades com ABVDs; grave: totalmente dependente",
+        "domains": [
+          "AIVDs complexas",
+          "ABVDs"
+        ]
+      },
+      "critical_differentials": [
+        "TNC Leve",
+        "delirium",
+        "transtorno depressivo maior (pseudodemencia)",
+        "transtorno do neurodesenvolvimento"
+      ],
+      "key_questions": [
+        "Paciente ou familiares notaram piora na memoria?",
+        "Dificuldade para lembrar eventos recentes, nomes, compromissos?",
+        "Precisa de mais tempo para tarefas que fazia com facilidade?",
+        "Dificuldade para encontrar palavras, se expressar?",
+        "Mudancas no julgamento, planejamento ou decisoes?",
+        "Consegue gerenciar financas, pagar contas, controlar medicamentos sozinho?",
+        "Precisa de ajuda para se alimentar, vestir ou higienizar?",
+        "Declinio foi gradual ou abrupto? Historia de AVC ou trauma?"
+      ],
+      "alerts": [
+        "Doenca com Corpos de Lewy: sensibilidade neuroleptica FATAL - evitar neurolépticos",
+        "Avaliacao funcional e obrigatoria para distinguir Maior de Leve"
+      ],
+      "source_trace": {
+        "markdown_section": "## FICHA 17.2: TRANSTORNO NEUROCOGNITIVO MAIOR",
+        "patches_applied": [
+          "HIGH: gravidade.tipo→funcionamento_adaptativo"
+        ]
+      }
+    },
+    {
+      "id": "tnc_leve",
+      "name": "Transtorno Neurocognitivo Leve",
+      "category": "SHORT",
+      "estrutura_diagnostica": "polythetic_monocluster",
+      "render_structured_interview": true,
+      "ui_mode": "structured_compact",
+      "criteria": [
+        "A1. Preocupacao sobre declinio + A2. Prejuizo pequeno documentado (1-2 DP abaixo, percentil 3-16)",
+        "B. Deficits NAO interferem na independencia em AVDs",
+        "C. Nao ocorre exclusivamente durante delirium",
+        "D. Nao melhor explicado por outro transtorno mental"
+      ],
+      "diagnostic_rule": "A1+A2 + B + C + D todos obrigatorios; limiar: 1-2 DP abaixo (percentil 3-16)",
+      "clusters": [],
+      "duration": "cronico",
+      "age_onset": null,
+      "functional_impairment": "independencia preservada (com esforco adicional ou estrategias compensatorias)",
+      "exclusions": [
+        "delirium",
+        "depressao maior",
+        "envelhecimento normal"
+      ],
+      "subtypes_presentations": [
+        {
+          "id": "alzheimer",
+          "name": "Doenca de Alzheimer"
+        },
+        {
+          "id": "frontotemporal",
+          "name": "Frontotemporal"
+        },
+        {
+          "id": "lewy",
+          "name": "Corpos de Lewy"
+        },
+        {
+          "id": "vascular",
+          "name": "Vascular"
+        },
+        {
+          "id": "lct",
+          "name": "Lesao Cerebral Traumatica"
+        },
+        {
+          "id": "substancia",
+          "name": "Substancia"
+        },
+        {
+          "id": "hiv",
+          "name": "HIV"
+        },
+        {
+          "id": "prion",
+          "name": "Prion"
+        },
+        {
+          "id": "parkinson",
+          "name": "Parkinson"
+        },
+        {
+          "id": "huntington",
+          "name": "Huntington"
+        },
+        {
+          "id": "outra",
+          "name": "Outra"
+        },
+        {
+          "id": "multiplas",
+          "name": "Multiplas Etiologias"
+        }
+      ],
+      "specifiers": [
+        {
+          "id": "sem_perturbacao",
+          "name": "Sem perturbacao comportamental"
+        },
+        {
+          "id": "com_perturbacao",
+          "name": "Com perturbacao comportamental"
+        }
+      ],
+      "operational_profiles": [],
+      "severity": {
+        "has_formal_severity": true,
+        "type": "funcionamento_adaptativo",
+        "levels": [
+          "leve",
+          "moderada",
+          "grave"
+        ],
+        "assignment_rule": "Baseada em nivel de funcionamento adaptativo e desempenho cognitivo",
+        "domains": [
+          "AIVDs complexas",
+          "ABVDs"
+        ]
+      },
+      "critical_differentials": [
+        "envelhecimento normal",
+        "transtorno depressivo maior",
+        "delirium"
+      ],
+      "key_questions": [
+        "Dificuldade para lembrar coisas que antes lembrava?",
+        "Necessidade de listas ou lembretes mais frequentes?",
+        "Tarefas complexas exigem mais esforco?",
+        "Evita situacoes que exigem processamento rapido?",
+        "Independencia funcional preservada?"
+      ],
+      "alerts": [
+        "Reavaliacao longitudinal recomendada; monitorar progressao para TNC Maior"
+      ],
+      "source_trace": {
+        "markdown_section": "## FICHA 17.3: TRANSTORNO NEUROCOGNITIVO LEVE",
+        "patches_applied": []
+      }
+    }
+  ]
+}

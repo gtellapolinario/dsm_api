@@ -1,0 +1,484 @@
+{
+  "chapter_id": "21",
+  "chapter_name": "Transtornos do Movimento Induzidos por Medicamentos e Outros Efeitos Adversos",
+  "source_markdown": "21_movimento_medicamentos_full_short.md",
+  "normalization_round": "2B",
+  "patch_count": 3,
+  "items": [
+    {
+      "id": "parkinsonismo_induzido_neuroleptico",
+      "name": "Parkinsonismo Induzido por Neuroleptico",
+      "category": "SHORT",
+      "estrutura_diagnostica": "etiologico_externo",
+      "render_structured_interview": true,
+      "ui_mode": "structured_compact",
+      "criteria": [
+        "Tremor de Parkinson, rigidez, acinesia/bradicinesia",
+        "Desenvolvimento em poucas semanas do inicio/aumento de neuroléptico"
+      ],
+      "diagnostic_rule": "Sintomas nucleares + relacao temporal com exposicao a neuroléptico",
+      "clusters": [],
+      "duration": "poucas semanas apos inicio/aumento",
+      "age_onset": null,
+      "functional_impairment": "limitacao motora significativa",
+      "exclusions": [
+        "Parkinson idiopatico",
+        "parkinsonismo atipico"
+      ],
+      "subtypes_presentations": [],
+      "specifiers": [],
+      "operational_profiles": [],
+      "severity": {
+        "has_formal_severity": false,
+        "type": "nao_aplica",
+        "levels": [],
+        "assignment_rule": null,
+        "domains": []
+      },
+      "critical_differentials": [
+        "Parkinson idiopatico"
+      ],
+      "key_questions": [
+        "Tomando antipsicotico? Quando comecou?",
+        "Tremor/rigidez/lentidao comecou quando em relacao ao medicamento?"
+      ],
+      "alerts": [
+        "Muito comum com neurolépticos 1a geracao; 2a geracao tem risco menor mas NAO zero"
+      ],
+      "source_trace": {
+        "markdown_section": "## 21.SHORT.001 - Parkinsonismo Induzido por Neuroléptico",
+        "patches_applied": []
+      }
+    },
+    {
+      "id": "parkinsonismo_induzido_outro_medicamento",
+      "name": "Parkinsonismo Induzido por Outro Medicamento",
+      "category": "SHORT",
+      "estrutura_diagnostica": "etiologico_externo",
+      "render_structured_interview": true,
+      "ui_mode": "structured_compact",
+      "criteria": [
+        "Identico ao de neuroléptico, mas causado por medicamentos NAO neurolépticos"
+      ],
+      "diagnostic_rule": "Sintomas nucleares + relacao temporal + medicamento nao-neuroléptico",
+      "clusters": [],
+      "duration": "poucas semanas",
+      "age_onset": null,
+      "functional_impairment": "limitacao motora",
+      "exclusions": [
+        "Parkinson idiopatico"
+      ],
+      "subtypes_presentations": [],
+      "specifiers": [],
+      "operational_profiles": [],
+      "severity": {
+        "has_formal_severity": false,
+        "type": "nao_aplica",
+        "levels": [],
+        "assignment_rule": null,
+        "domains": []
+      },
+      "critical_differentials": [],
+      "key_questions": [],
+      "alerts": [],
+      "source_trace": {
+        "markdown_section": "## 21.SHORT.002 - Parkinsonismo Induzido por Outro Medicamento",
+        "patches_applied": []
+      }
+    },
+    {
+      "id": "sindrome_neuroleptica_maligna",
+      "name": "Sindrome Neuroleptica Maligna",
+      "category": "SHORT",
+      "estrutura_diagnostica": "etiologico_externo",
+      "render_structured_interview": true,
+      "ui_mode": "structured_compact",
+      "criteria": [
+        "Exposicao a antagonista dopaminérgico nas ultimas 72h",
+        "Hipertermia >38°C + diaforese",
+        "Rigidez generalizada ('cano de chumbo')",
+        "Alteracao mental (delirium/estupor/coma)",
+        "Instabilidade autonômica",
+        "CK >= 4x limite superior"
+      ],
+      "diagnostic_rule": "Exposicao + hipertermia + rigidez + alteracao mental; autonômica + CK suportam",
+      "clusters": [
+        "Exposicao",
+        "Hipertermia",
+        "Rigidez",
+        "Neurologico",
+        "Autonômico"
+      ],
+      "duration": "horas a dias; recuperacao media 7-10 dias",
+      "age_onset": null,
+      "functional_impairment": "EMERGENCIA MEDICA; mortalidade 10-20% sem tratamento",
+      "exclusions": [
+        "sindrome serotonergica",
+        "catatonia maligna",
+        "hipertermia maligna",
+        "intoxicacao atropinica"
+      ],
+      "subtypes_presentations": [],
+      "specifiers": [],
+      "operational_profiles": [],
+      "severity": {
+        "has_formal_severity": false,
+        "type": "nao_aplica",
+        "levels": [],
+        "assignment_rule": null,
+        "domains": []
+      },
+      "critical_differentials": [
+        "sindrome serotonergica",
+        "catatonia maligna",
+        "hipertermia maligna"
+      ],
+      "key_questions": [
+        "Tomando antipsicotico? Qual, dose, via, quando comecou?",
+        "Temperatura >38°C nas ultimas 24-72h?",
+        "Rigidez aumentada?",
+        "Confuso, sonolento ou alteracao de consciencia?",
+        "Taquicardia, suor excessivo, pressao alta?",
+        "CK solicitada? Qual valor?"
+      ],
+      "alerts": [
+        "EMERGENCIA MEDICA - internacao e manejo agressivo",
+        "Mortalidade 10-20% quando nao reconhecida",
+        "Suspender imediatamente o antipsicotico",
+        "Pode ocorrer em QUALQUER pessoa exposta a antagonistas dopaminérgicos"
+      ],
+      "source_trace": {
+        "markdown_section": "## 21.SHORT.003 - SNM",
+        "patches_applied": [
+          "LOW-VERIFY: urgencia medica confirmada"
+        ]
+      }
+    },
+    {
+      "id": "distonia_aguda_induzida_medicamento",
+      "name": "Distonia Aguda Induzida por Medicamento",
+      "category": "SHORT",
+      "estrutura_diagnostica": "etiologico_externo",
+      "render_structured_interview": true,
+      "ui_mode": "structured_compact",
+      "criteria": [
+        "Contracao anormal prolongada de musculos",
+        "Surge em poucos dias do inicio/elevacao de neuroléptico"
+      ],
+      "diagnostic_rule": "Sintomas nucleares + relacao temporal com neuroléptico",
+      "clusters": [],
+      "duration": "poucos dias",
+      "age_onset": null,
+      "functional_impairment": "dor, limitacao motora, sofrimento intenso",
+      "exclusions": [],
+      "subtypes_presentations": [],
+      "specifiers": [],
+      "operational_profiles": [],
+      "severity": {
+        "has_formal_severity": false,
+        "type": "nao_aplica",
+        "levels": [],
+        "assignment_rule": null,
+        "domains": []
+      },
+      "critical_differentials": [],
+      "key_questions": [
+        "Começou antipsicotico recentemente?",
+        "Torcicolo, torcao do pescoço?",
+        "Olhos fixos (crise oculogírica)?"
+      ],
+      "alerts": [
+        "Mais comum em jovens homens e idosos; pode ocorrer apos primeira dose; tratar com biperideno IM"
+      ],
+      "source_trace": {
+        "markdown_section": "## 21.SHORT.004 - Distonia Aguda",
+        "patches_applied": []
+      }
+    },
+    {
+      "id": "acatisia_aguda_induzida_medicamento",
+      "name": "Acatisia Aguda Induzida por Medicamento",
+      "category": "SHORT",
+      "estrutura_diagnostica": "etiologico_externo",
+      "render_structured_interview": true,
+      "ui_mode": "structured_compact",
+      "criteria": [
+        "Inquietacao intensa subjetiva",
+        "Movimentos excessivos objetivos",
+        "Desenvolvimento em poucas semanas do inicio/aumento de neuroléptico"
+      ],
+      "diagnostic_rule": "Sintomas subjetivos + objetivos + relacao temporal",
+      "clusters": [],
+      "duration": "poucas semanas apos inicio/aumento",
+      "age_onset": null,
+      "functional_impairment": "intolerabilidade subjetiva extrema; pode levar ao suicidio",
+      "exclusions": [
+        "ansiedade",
+        "agitacao psicomotora primaria",
+        "sindrome pernas inquietas"
+      ],
+      "subtypes_presentations": [],
+      "specifiers": [],
+      "operational_profiles": [],
+      "severity": {
+        "has_formal_severity": false,
+        "type": "nao_aplica",
+        "levels": [],
+        "assignment_rule": null,
+        "domains": []
+      },
+      "critical_differentials": [
+        "ansiedade",
+        "agitacao psicomotora primaria",
+        "pernas inquietas"
+      ],
+      "key_questions": [
+        "Sensacao de inquietacao desde o medicamento?",
+        "Dificuldade para ficar sentado/parado?",
+        "Andando sem conseguir parar?"
+      ],
+      "alerts": [
+        "Pode levar ao suicidio por intolerabilidade; origem farmacologica, nao psiquiatrica"
+      ],
+      "source_trace": {
+        "markdown_section": "## 21.SHORT.005 - Acatisia Aguda",
+        "patches_applied": []
+      }
+    },
+    {
+      "id": "discinesia_tardia",
+      "name": "Discinesia Tardia",
+      "category": "SHORT",
+      "estrutura_diagnostica": "etiologico_externo",
+      "render_structured_interview": true,
+      "ui_mode": "structured_compact",
+      "criteria": [
+        "Movimentos atetoides ou coreiformes involuntários",
+        "Geralmente lingua, face inferior, mandibula; tambem extremidades",
+        "Duracao minima: algumas semanas",
+        "Uso de neuroléptico durante pelo menos poucos meses"
+      ],
+      "diagnostic_rule": "Movimentos involuntários + topografia caracteristica + duracao + exposicao a neuroléptico",
+      "clusters": [],
+      "duration": "algumas semanas a persistente; pode ser irreversivel",
+      "age_onset": null,
+      "functional_impairment": "impacto estético, funcional e social significativo",
+      "exclusions": [
+        "discinesia emergente por retirada (<4-8 semanas)"
+      ],
+      "subtypes_presentations": [],
+      "specifiers": [],
+      "operational_profiles": [],
+      "severity": {
+        "has_formal_severity": false,
+        "type": "nao_aplica",
+        "levels": [],
+        "assignment_rule": null,
+        "domains": []
+      },
+      "critical_differentials": [
+        "discinesia emergente por retirada"
+      ],
+      "key_questions": [
+        "Movimentos involuntarios com lingua, boca, mandibula?",
+        "Ha quanto tempo?",
+        "Quanto tempo de antipsicotico?"
+      ],
+      "alerts": [
+        "Pode ser irreversivel mesmo apos suspensao; avaliar com AIMS; prevenir com menor dose efetiva"
+      ],
+      "source_trace": {
+        "markdown_section": "## 21.SHORT.006 - Discinesia Tardia",
+        "patches_applied": [
+          "LOW-VERIFY: distincao emergente vs tardia confirmada"
+        ]
+      }
+    },
+    {
+      "id": "distonia_tardia",
+      "name": "Distonia Tardia",
+      "category": "SHORT",
+      "estrutura_diagnostica": "etiologico_externo",
+      "render_structured_interview": true,
+      "ui_mode": "structured_compact",
+      "criteria": [
+        "Distonia (contracoes sustentadas/anormais)",
+        "Surge posteriormente no curso do tratamento",
+        "Persiste meses a anos"
+      ],
+      "diagnostic_rule": "Distonia + temporalidade tardia + persistencia",
+      "clusters": [],
+      "duration": "meses a anos",
+      "age_onset": null,
+      "functional_impairment": "limitacao motora significativa",
+      "exclusions": [
+        "distonia aguda"
+      ],
+      "subtypes_presentations": [],
+      "specifiers": [],
+      "operational_profiles": [],
+      "severity": {
+        "has_formal_severity": false,
+        "type": "nao_aplica",
+        "levels": [],
+        "assignment_rule": null,
+        "domains": []
+      },
+      "critical_differentials": [
+        "distonia aguda"
+      ],
+      "key_questions": [],
+      "alerts": [],
+      "source_trace": {
+        "markdown_section": "## 21.SHORT.007 - Distonia Tardia",
+        "patches_applied": []
+      }
+    },
+    {
+      "id": "acatisia_tardia",
+      "name": "Acatisia Tardia",
+      "category": "SHORT",
+      "estrutura_diagnostica": "etiologico_externo",
+      "render_structured_interview": true,
+      "ui_mode": "structured_compact",
+      "criteria": [
+        "Acatisia (inquietacao motora)",
+        "Surge posteriormente no curso do tratamento",
+        "Persiste meses a anos"
+      ],
+      "diagnostic_rule": "Acatisia + temporalidade tardia + persistencia",
+      "clusters": [],
+      "duration": "meses a anos",
+      "age_onset": null,
+      "functional_impairment": "sofrimento intenso, inquietacao persistente",
+      "exclusions": [
+        "acatisia aguda"
+      ],
+      "subtypes_presentations": [],
+      "specifiers": [],
+      "operational_profiles": [],
+      "severity": {
+        "has_formal_severity": false,
+        "type": "nao_aplica",
+        "levels": [],
+        "assignment_rule": null,
+        "domains": []
+      },
+      "critical_differentials": [
+        "acatisia aguda"
+      ],
+      "key_questions": [],
+      "alerts": [],
+      "source_trace": {
+        "markdown_section": "## 21.SHORT.008 - Acatisia Tardia",
+        "patches_applied": []
+      }
+    },
+    {
+      "id": "tremor_postural_induzido_medicamento",
+      "name": "Tremor Postural Induzido por Medicamento",
+      "category": "SHORT",
+      "estrutura_diagnostica": "etiologico_externo",
+      "render_structured_interview": true,
+      "ui_mode": "structured_compact",
+      "criteria": [
+        "Tremor fino (8-12 Hz)",
+        "Ocorre durante postura mantida",
+        "Relacao causal com medicamento"
+      ],
+      "diagnostic_rule": "Tremor fino postural + relacao temporal com medicamento (litio, valproato, antidepressivos)",
+      "clusters": [],
+      "duration": "persiste enquanto medicamento em uso",
+      "age_onset": null,
+      "functional_impairment": "impacto funcional variavel",
+      "exclusions": [
+        "tremor essencial",
+        "tremor parkinsoniano"
+      ],
+      "subtypes_presentations": [],
+      "specifiers": [],
+      "operational_profiles": [],
+      "severity": {
+        "has_formal_severity": false,
+        "type": "nao_aplica",
+        "levels": [],
+        "assignment_rule": null,
+        "domains": []
+      },
+      "critical_differentials": [
+        "tremor essencial",
+        "tremor parkinsoniano",
+        "cafeina"
+      ],
+      "key_questions": [
+        "Tomando litio, valproato ou antidepressivos?",
+        "Tremor fino ao manter bracos estendidos?",
+        "Comecou apos inicio do medicamento?"
+      ],
+      "alerts": [
+        "Litio: tremor + nausea + ataxia + confusao = possivel toxicidade; monitorar niveis sericos"
+      ],
+      "source_trace": {
+        "markdown_section": "## 21.SHORT.009 - Tremor Postural",
+        "patches_applied": []
+      }
+    },
+    {
+      "id": "sindrome_descontinuacao_antidepressivos",
+      "name": "Sindrome da Descontinuacao de Antidepressivos",
+      "category": "SHORT",
+      "estrutura_diagnostica": "etiologico_externo",
+      "render_structured_interview": true,
+      "ui_mode": "structured_compact",
+      "criteria": [
+        "Cessacao repentina ou reducao acentuada de antidepressivo",
+        "Uso continuo por pelo menos 1 mes",
+        "Inicio em 2-4 dias apos ultima dose",
+        "Sintomas sensoriais (choques eletricos, flashs de luz)",
+        "Sintomas cognitivo-emocionais (ansiedade, temor)",
+        "Reversibilidade: alivio com reinicio do mesmo/similar"
+      ],
+      "diagnostic_rule": "Cessacao/reducao + uso >=1 mes + inicio 2-4 dias + sintomas especificos + reversibilidade + exclusoes",
+      "clusters": [],
+      "duration": "2-9 dias tipicamente; varia por meia-vida do medicamento",
+      "age_onset": null,
+      "functional_impairment": "sofrimento significativo, ansiedade intensa",
+      "exclusions": [
+        "retorno dos sintomas depressivos originais",
+        "abstinencia de substancia",
+        "mania"
+      ],
+      "subtypes_presentations": [],
+      "specifiers": [],
+      "operational_profiles": [],
+      "severity": {
+        "has_formal_severity": false,
+        "type": "nao_aplica",
+        "levels": [],
+        "assignment_rule": null,
+        "domains": []
+      },
+      "critical_differentials": [
+        "retorno sintomas depressivos",
+        "abstinencia substancia",
+        "mania"
+      ],
+      "key_questions": [
+        "Reduziu ou parou antidepressivo recentemente?",
+        "Quanto tempo tomava?",
+        "Sintomas comecaram 2-4 dias apos ultima dose?",
+        "Choques eletricos na cabeca? Flashs de luz?",
+        "Reinicio melhora os sintomas?"
+      ],
+      "alerts": [
+        "NAO e abstinencia de substancia - antidepressivos nao tem efeitos de reforco",
+        "Paroxetina = agente MAIS comumente associado (meia-vida curta)",
+        "Manejo: reducao gradual; fluoxetina como ponte"
+      ],
+      "source_trace": {
+        "markdown_section": "## 21.SHORT.010 - Sindrome da Descontinuacao",
+        "patches_applied": []
+      }
+    }
+  ]
+}

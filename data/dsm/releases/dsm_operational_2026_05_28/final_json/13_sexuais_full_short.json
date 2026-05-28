@@ -1,0 +1,515 @@
+{
+  "chapter_id": "13",
+  "chapter_name": "Disfuncoes Sexuais",
+  "source_markdown": "13_sexuais_full_short.md",
+  "normalization_round": "2B",
+  "patch_count": 2,
+  "items": [
+    {
+      "id": "transtorno_desejo_sexual_hipoativo_masculino",
+      "name": "Transtorno do Desejo Sexual Hipoativo (Masculino)",
+      "category": "FULL",
+      "estrutura_diagnostica": "polythetic_monocluster",
+      "render_structured_interview": true,
+      "ui_mode": "structured_full",
+      "criteria": [
+        "A. Pensamentos/fantasias sexuais e desejo para atividade sexual deficientes ou ausentes de forma persistente/recorrente",
+        "B. Sintomas persistem por ≥6 meses",
+        "C. Sofrimento clinicamente significativo",
+        "D. NAO melhor explicado por transtorno mental, perturbacao de relacionamento, estressores, substancia ou condicao medica"
+      ],
+      "diagnostic_rule": "A+B+C+D todos obrigatorios",
+      "clusters": [
+        "Desejo sexual reduzido/ausente"
+      ],
+      "duration": "≥6 meses",
+      "age_onset": null,
+      "functional_impairment": "Sofrimento clinicamente significativo; autoestima diminuida",
+      "exclusions": [
+        "TDM",
+        "Substancia",
+        "Hipogonadismo",
+        "Assexualidade",
+        "Relacionamento ruim"
+      ],
+      "subtypes_presentations": [
+        "Ao longo da vida",
+        "Adquirido",
+        "Generalizado",
+        "Situacional"
+      ],
+      "specifiers": [],
+      "operational_profiles": [],
+      "severity": {
+        "has_formal_severity": true,
+        "type": "ordinal_simples",
+        "levels": [
+          "Leve",
+          "Moderada",
+          "Grave"
+        ],
+        "assignment_rule": "Julgamento clinico do nivel de sofrimento",
+        "domains": [
+          "Sofrimento subjetivo"
+        ]
+      },
+      "critical_differentials": [
+        "TDM",
+        "Disfuncao eretil",
+        "Ejaculacao precoce",
+        "Hipogonadismo",
+        "Assexualidade"
+      ],
+      "key_questions": [
+        "Com que frequencia tem pensamentos/fantasias sexuais?",
+        "Senta desejo para atividade sexual?",
+        "Causa sofrimento?"
+      ],
+      "alerts": [],
+      "source_trace": {
+        "markdown_section": "1. TRANSTORNO DO DESEJO SEXUAL HIPOATIVO (MASCULINO)",
+        "patches_applied": []
+      }
+    },
+    {
+      "id": "transtorno_interesse_excitacao_sexual_feminino",
+      "name": "Transtorno do Interesse/Excitacao Sexual Feminino",
+      "category": "FULL",
+      "estrutura_diagnostica": "polythetic_clusters_assimetricos",
+      "render_structured_interview": true,
+      "ui_mode": "structured_full",
+      "criteria": [
+        "A. Ausencia/reducao do interesse ou excitacao sexual (≥3 de 6 indicadores)",
+        "B. Sintomas persistem por ≥6 meses",
+        "C. Sofrimento clinicamente significativo",
+        "D. NAO melhor explicado por transtorno mental, perturbacao de relacionamento, estressores, substancia ou condicao medica"
+      ],
+      "diagnostic_rule": "A(≥3/6) AND B(≥6meses) AND C AND D",
+      "clusters": [
+        "Interesse/desire (1-3)",
+        "Excitacao/responsividade (4-6)"
+      ],
+      "duration": "≥6 meses",
+      "age_onset": null,
+      "functional_impairment": "Sofrimento clinicamente significativo",
+      "exclusions": [
+        "TDM",
+        "Dispareunia",
+        "Menopausa",
+        "Assexualidade",
+        "Estimulos inadequados"
+      ],
+      "subtypes_presentations": [
+        "Ao longo da vida",
+        "Adquirido",
+        "Generalizado",
+        "Situacional"
+      ],
+      "specifiers": [],
+      "operational_profiles": [],
+      "severity": {
+        "has_formal_severity": true,
+        "type": "ordinal_simples",
+        "levels": [
+          "Leve",
+          "Moderada",
+          "Grave"
+        ],
+        "assignment_rule": "Julgamento clinico do sofrimento",
+        "domains": []
+      },
+      "critical_differentials": [
+        "TDM",
+        "Dispareunia",
+        "Menopausa",
+        "Assexualidade"
+      ],
+      "key_questions": [
+        "Tem interesse/pensamentos sobre sexo?",
+        "Sente excitacao/prazer durante a relacao?",
+        "Se excita com estimulos eroticos?"
+      ],
+      "alerts": [],
+      "source_trace": {
+        "markdown_section": "2. TRANSTORNO DO INTERESSE/EXCITACAO SEXUAL FEMININO",
+        "patches_applied": []
+      }
+    },
+    {
+      "id": "disfuncao_eretil",
+      "name": "Disfuncao Eretil",
+      "category": "FULL",
+      "estrutura_diagnostica": "polythetic_monocluster",
+      "render_structured_interview": true,
+      "ui_mode": "structured_full",
+      "criteria": [
+        "A. Pelo menos 1 de 3 em 75-100% das ocasioes: dificuldade obter erecao, manter erecao, diminuicao da rigidez",
+        "B. Sintomas persistem por ≥6 meses",
+        "C. Sofrimento clinicamente significativo",
+        "D. NAO melhor explicado por transtorno mental, perturbacao de relacionamento, estressores, substancia ou condicao medica"
+      ],
+      "diagnostic_rule": "A(≥1/3 em 75-100%) AND B AND C AND D",
+      "clusters": [
+        "Ereção (obter, manter, rigidez)"
+      ],
+      "duration": "≥6 meses",
+      "age_onset": null,
+      "functional_impairment": "Sofrimento significativo; baixa autoestima",
+      "exclusions": [
+        "TDM",
+        "Diabetes/doenca vascular",
+        "Medicamentos (SSRI, anti-hipertensivos)",
+        "Ansiedade de performance"
+      ],
+      "subtypes_presentations": [
+        "Ao longo da vida",
+        "Adquirido",
+        "Generalizado",
+        "Situacional"
+      ],
+      "specifiers": [],
+      "operational_profiles": [],
+      "severity": {
+        "has_formal_severity": true,
+        "type": "ordinal_simples",
+        "levels": [
+          "Leve",
+          "Moderada",
+          "Grave"
+        ],
+        "assignment_rule": "Julgamento clinico do sofrimento",
+        "domains": []
+      },
+      "critical_differentials": [
+        "TDM",
+        "Diabetes",
+        "SSRI",
+        "Ansiedade de performance"
+      ],
+      "key_questions": [
+        "Tem dificuldade para obter/mantaner erecao?",
+        "Em que proporcao das vezes?",
+        "Tem erecoes noturnas?"
+      ],
+      "alerts": [],
+      "source_trace": {
+        "markdown_section": "3. DISFUNCAO ERETIL",
+        "patches_applied": []
+      }
+    },
+    {
+      "id": "transtorno_orgasmo_feminino",
+      "name": "Transtorno do Orgasmo Feminino",
+      "category": "FULL",
+      "estrutura_diagnostica": "polythetic_monocluster",
+      "render_structured_interview": true,
+      "ui_mode": "structured_full",
+      "criteria": [
+        "A. Pelo menos 1 de 2 em 75-100% das ocasioes: retardo/infrequencia/ausencia de orgasmo, intensidade muito reduzida",
+        "B. Sintomas persistem por ≥6 meses",
+        "C. Sofrimento clinicamente significativo",
+        "D. NAO melhor explicado"
+      ],
+      "diagnostic_rule": "A(≥1/2 em 75-100%) AND B AND C AND D",
+      "clusters": [
+        "Orgasmo (atraso/falta/intensidade)"
+      ],
+      "duration": "≥6 meses",
+      "age_onset": null,
+      "functional_impairment": "Sofrimento significativo",
+      "exclusions": [
+        "SSRI",
+        "Estimulacao inadequada",
+        "Interesse/excitacao baixa",
+        "Dispareunia"
+      ],
+      "subtypes_presentations": [
+        "Ao longo da vida",
+        "Adquirido",
+        "Generalizado",
+        "Situacional"
+      ],
+      "specifiers": [
+        "Nunca experimentou orgasmo em nenhuma situacao"
+      ],
+      "operational_profiles": [],
+      "severity": {
+        "has_formal_severity": true,
+        "type": "ordinal_simples",
+        "levels": [
+          "Leve",
+          "Moderada",
+          "Grave"
+        ],
+        "assignment_rule": "Julgamento clinico",
+        "domains": []
+      },
+      "critical_differentials": [
+        "SSRI",
+        "Estimulacao inadequada",
+        "Interesse/excitacao baixa",
+        "Dispareunia"
+      ],
+      "key_questions": [
+        "Consegue atingir orgasmo?",
+        "Ja teve orgasmo em alguma situacao?",
+        "Toma antidepressivos?"
+      ],
+      "alerts": [],
+      "source_trace": {
+        "markdown_section": "4. TRANSTORNO DO ORGASMO FEMININO",
+        "patches_applied": []
+      }
+    },
+    {
+      "id": "ejaculacao_precoce",
+      "name": "Ejaculacao Precoce",
+      "category": "FULL",
+      "estrutura_diagnostica": "temporal_topografico",
+      "render_structured_interview": true,
+      "ui_mode": "structured_full",
+      "criteria": [
+        "A. Padrao persistente/recorrente de ejaculacao dentro de aproximadamente 1 minuto apos penetracao vaginal",
+        "B. Presente por ≥6 meses e em 75-100% das ocasioes",
+        "C. Sofrimento clinicamente significativo",
+        "D. NAO melhor explicado"
+      ],
+      "diagnostic_rule": "A(≤1min) AND B(≥6meses_75-100%) AND C AND D",
+      "clusters": [
+        "Latencia ejaculatoria"
+      ],
+      "duration": "≥6 meses",
+      "age_onset": null,
+      "functional_impairment": "Sofrimento significativo; autoestima diminuida",
+      "exclusions": [
+        "Latencias normais",
+        "Ejaculacao episodica rapida",
+        "Retirada de opioides"
+      ],
+      "subtypes_presentations": [
+        "Ao longo da vida",
+        "Adquirido",
+        "Generalizado",
+        "Situacional"
+      ],
+      "specifiers": [],
+      "operational_profiles": [],
+      "severity": {
+        "has_formal_severity": true,
+        "type": "marcador_biometrico",
+        "levels": [
+          "Leve (30s-1min)",
+          "Moderada (15-30s)",
+          "Grave (≤15s ou antes/inicio)"
+        ],
+        "assignment_rule": "Medida da latencia ejaculatoria intravaginal estimada (cronometro)",
+        "domains": [
+          "Tempo de latencia"
+        ]
+      },
+      "critical_differentials": [
+        "Latencia normal desejada maior",
+        "Disfuncao eretil",
+        "Retirada de opioides"
+      ],
+      "key_questions": [
+        "Quanto tempo leva para ejacular apos penetracao?",
+        "Ocorre em praticamente todas as relacoes?",
+        "Ha sofrimento?"
+      ],
+      "alerts": [
+        "[PATCH R2B-13-01] UNICA disfuncao sexual com gravidade por marcador biometrico (tempo)"
+      ],
+      "source_trace": {
+        "markdown_section": "5. EJACULACAO PRECOCE",
+        "patches_applied": [
+          "R2B-13-01: gravidade.tipo ordinal_simples → marcador_biometrico"
+        ]
+      }
+    },
+    {
+      "id": "ejaculacao_retardada",
+      "name": "Ejaculacao Retardada (Transtorno Orgasmico Masculino)",
+      "category": "FULL",
+      "estrutura_diagnostica": "polythetic_monocluster",
+      "render_structured_interview": true,
+      "ui_mode": "structured_full",
+      "criteria": [
+        "A. Retardo acentuado na ejaculacao ou baixa frequencia/ausencia de ejaculacao em 75-100% das ocasioes",
+        "B. Sintomas persistem por ≥6 meses",
+        "C. Sofrimento clinicamente significativo",
+        "D. NAO melhor explicado"
+      ],
+      "diagnostic_rule": "A(≥1/2 em 75-100%) AND B AND C AND D",
+      "clusters": [
+        "Ejaculacao (retardo/ausencia)"
+      ],
+      "duration": "≥6 meses",
+      "age_onset": null,
+      "functional_impairment": "Dificuldades na concepcao, exaustao genital",
+      "exclusions": [
+        "SSRI",
+        "Neuropatia diabetica",
+        "Ejaculacao retrograda",
+        "Anedonia ejaculatoria"
+      ],
+      "subtypes_presentations": [
+        "Ao longo da vida",
+        "Adquirido",
+        "Generalizado",
+        "Situacional"
+      ],
+      "specifiers": [],
+      "operational_profiles": [],
+      "severity": {
+        "has_formal_severity": true,
+        "type": "ordinal_simples",
+        "levels": [
+          "Leve",
+          "Moderada",
+          "Grave"
+        ],
+        "assignment_rule": "Julgamento clinico",
+        "domains": []
+      },
+      "critical_differentials": [
+        "SSRI (principal causa)",
+        "Neuropatia diabetica",
+        "Ejaculacao retrograda"
+      ],
+      "key_questions": [
+        "Consegue ejaculacao durante relacao sexual?",
+        "Ha demora muito grande?",
+        "Toma antidepressivos?"
+      ],
+      "alerts": [],
+      "source_trace": {
+        "markdown_section": "6. EJACULACAO RETARDADA",
+        "patches_applied": []
+      }
+    },
+    {
+      "id": "transtorno_dor_genito_pelvica_penetracao",
+      "name": "Transtorno da Dor Genito-pelvica/Penetracao",
+      "category": "FULL",
+      "estrutura_diagnostica": "polythetic_clusters_assimetricos",
+      "render_structured_interview": true,
+      "ui_mode": "structured_full",
+      "criteria": [
+        "A. Dificuldades persistentes/recorrentes com ≥1 de 4: penetracao vaginal, dor vulvovaginal/pelvica intensa, medo/ansiedade intensa de dor, tensao/contracao do assoalho pelvico",
+        "B. Sintomas persistem por ≥6 meses",
+        "C. Sofrimento clinicamente significativo",
+        "D. NAO melhor explicado"
+      ],
+      "diagnostic_rule": "A(≥1/4) AND B AND C AND D",
+      "clusters": [
+        "Dificuldade de penetracao",
+        "Dor genito-pelvica",
+        "Medo/ansiedade",
+        "Tensao pelvic floor"
+      ],
+      "duration": "≥6 meses",
+      "age_onset": null,
+      "functional_impairment": "Interferencia na satisfacao do relacionamento, evitacao de exames ginecologicos",
+      "exclusions": [
+        "Endometriose",
+        "Atrofia vulvovaginal",
+        "Liquen escleroso",
+        "Infeccao vaginal"
+      ],
+      "subtypes_presentations": [
+        "Ao longo da vida",
+        "Adquirido",
+        "Generalizado",
+        "Situacional"
+      ],
+      "specifiers": [],
+      "operational_profiles": [],
+      "severity": {
+        "has_formal_severity": true,
+        "type": "ordinal_simples",
+        "levels": [
+          "Leve",
+          "Moderada",
+          "Grave"
+        ],
+        "assignment_rule": "Julgamento clinico",
+        "domains": []
+      },
+      "critical_differentials": [
+        "Endometriose",
+        "Atrofia vulvovaginal (menopausa)",
+        "Violencia sexual"
+      ],
+      "key_questions": [
+        "Consegue ter penetracao vaginal?",
+        "Sente dor durante relacao?",
+        "Tem medo de penetracao?"
+      ],
+      "alerts": [],
+      "source_trace": {
+        "markdown_section": "7. TRANSTORNO DA DOR GENITO-PELVICA/PENETRACAO",
+        "patches_applied": []
+      }
+    },
+    {
+      "id": "disfuncao_sexual_induzida_substancia",
+      "name": "Disfuncao Sexual Induzida por Substancia/Medicamento",
+      "category": "SHORT",
+      "estrutura_diagnostica": "etiologico_externo",
+      "render_structured_interview": true,
+      "ui_mode": "structured_compact",
+      "criteria": [
+        "A. Perturbacao clinicamente significativa na funcao sexual predominante",
+        "B. Evidencias de que sintomas se desenvolveram durante intoxicacao/abstinencia de substancia ou medicamento",
+        "C. NAO melhor explicada por disfuncao sexual independente",
+        "D. NAO ocorre exclusivamente durante delirium",
+        "E. Causa sofrimento clinicamente significativo"
+      ],
+      "diagnostic_rule": "A AND B AND C AND D AND E",
+      "clusters": [],
+      "duration": null,
+      "age_onset": null,
+      "functional_impairment": "Sofrimento/prejuizo funcional",
+      "exclusions": [
+        "Disfuncao sexual primaria (sintomas precedem uso)",
+        "Delirium"
+      ],
+      "subtypes_presentations": [],
+      "specifiers": [
+        "Com inicio durante intoxicacao",
+        "Com inicio durante abstinencia",
+        "Com inicio apos uso de medicamento"
+      ],
+      "operational_profiles": [],
+      "severity": {
+        "has_formal_severity": true,
+        "type": "frequencia_eventos",
+        "levels": [
+          "Leve (25-50% das ocasioes)",
+          "Moderada (50-75%)",
+          "Grave (≥75%)"
+        ],
+        "assignment_rule": "Porcentagem de ocorrencia em ocasioes de atividade sexual",
+        "domains": []
+      },
+      "critical_differentials": [
+        "Disfuncao sexual primaria"
+      ],
+      "key_questions": [
+        "A disfuncao comecou apos iniciar algum medicamento?",
+        "Qual a cronologia exata?",
+        "Melhora com mudancas de dose?"
+      ],
+      "alerts": [
+        "[PATCH R2B-13-02] gravidade.tipo: ordinal_por_frequencia → frequencia_eventos"
+      ],
+      "source_trace": {
+        "markdown_section": "8. DISFUNCAO SEXUAL INDUZIDA POR SUBSTANCIA/MEDICAMENTO",
+        "patches_applied": [
+          "R2B-13-02: gravidade.tipo ordinal_por_frequencia → frequencia_eventos"
+        ]
+      }
+    }
+  ]
+}

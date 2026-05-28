@@ -1,0 +1,371 @@
+{
+  "chapter_id": "10",
+  "chapter_name": "Transtornos Alimentares",
+  "source_markdown": "10_alimentares_full_short.md",
+  "normalization_round": "2B",
+  "patch_count": 0,
+  "items": [
+    {
+      "id": "anorexia_nervosa",
+      "name": "Anorexia Nervosa",
+      "category": "FULL",
+      "estrutura_diagnostica": "monothetic_tripartite",
+      "render_structured_interview": true,
+      "ui_mode": "structured_full",
+      "criteria": [
+        "A. Restricao calorica com peso corporal significativamente baixo (IMC < 17 ou abaixo do 5o percentil em criancas)",
+        "B. Medo intenso de ganhar peso ou engordar, ou comportamento persistente que interfere no ganho de peso",
+        "C. Dismorfia/perturbacao da imagem corporal: influencia indevida do peso/forma na autoavaliacao ou ausencia de reconhecimento da gravidade do baixo peso"
+      ],
+      "diagnostic_rule": "A AND B AND C (todos obrigatorios)",
+      "clusters": [],
+      "duration": null,
+      "age_onset": "Adolescencia ou idade adulta jovem",
+      "functional_impairment": "Potencialmente fatal; complicacoes medicas; prejuizo social/occupacional",
+      "exclusions": [
+        "Condicoes medicas",
+        "TDM",
+        "Esquizofrenia",
+        "Substancias",
+        "ARFID",
+        "Bulimia nervosa",
+        "Pica"
+      ],
+      "subtypes_presentations": [
+        "Tipo restritivo",
+        "Tipo compulsao alimentar purgativa"
+      ],
+      "specifiers": [
+        "Remissao parcial",
+        "Remissao completa"
+      ],
+      "operational_profiles": [],
+      "severity": {
+        "has_formal_severity": true,
+        "type": "marcador_biometrico",
+        "levels": [
+          "Leve (IMC ≥ 17)",
+          "Moderada (IMC 16-16.99)",
+          "Grave (IMC 15-15.99)",
+          "Extrema (IMC < 15)"
+        ],
+        "assignment_rule": "Baseado no IMC do adulto; criancas/adolescentes usar percentil do IMC por idade",
+        "domains": [
+          "IMC"
+        ]
+      },
+      "critical_differentials": [
+        "ARFID",
+        "TDM com perda de peso",
+        "Condicao medica",
+        "Bulimia nervosa"
+      ],
+      "key_questions": [
+        "Qual e seu peso atual?",
+        "Voce tem medo de ganhar peso?",
+        "Como voce se ve?"
+      ],
+      "alerts": [
+        "Condicao potencialmente fatal",
+        "Calculadora de IMC obrigatoria"
+      ],
+      "source_trace": {
+        "markdown_section": "1. ANOREXIA NERVOSA",
+        "patches_applied": []
+      }
+    },
+    {
+      "id": "bulimia_nervosa",
+      "name": "Bulimia Nervosa",
+      "category": "FULL",
+      "estrutura_diagnostica": "monothetic_tripartite",
+      "render_structured_interview": true,
+      "ui_mode": "structured_full",
+      "criteria": [
+        "A. Episodios recorrentes de compulsao alimentar (quantidade excessiva + perda de controle)",
+        "B. Comportamentos compensatorios inapropriados recorrentes (vomito, laxantes, diureticos, jejum, exercicio excessivo)",
+        "C. Frequencia minima: ≥1x/semana durante 3 meses",
+        "D. Autoavaliacao indevidamente influenciada por peso/forma",
+        "E. NAO ocorre exclusivamente durante anorexia nervosa"
+      ],
+      "diagnostic_rule": "A AND B AND C(≥1x/semana_3meses) AND D AND E",
+      "clusters": [],
+      "duration": "≥3 meses de frequencia ≥1x/semana",
+      "age_onset": "Adolescencia ou idade adulta jovem",
+      "functional_impairment": "Complicacoes eletroliticas possiveis; prejuizo funcional significativo",
+      "exclusions": [
+        "Anorexia nervosa (quando AN ativa)",
+        "Sindrome de Kleine-Levin",
+        "TDM atipico"
+      ],
+      "subtypes_presentations": [],
+      "specifiers": [
+        "Remissao parcial",
+        "Remissao completa"
+      ],
+      "operational_profiles": [],
+      "severity": {
+        "has_formal_severity": true,
+        "type": "frequencia_eventos",
+        "levels": [
+          "Leve (1-3 episodios/semana)",
+          "Moderada (4-7)",
+          "Grave (8-13)",
+          "Extrema (≥14)"
+        ],
+        "assignment_rule": "Baseado na frequencia de comportamentos compensatorios por semana",
+        "domains": []
+      },
+      "critical_differentials": [
+        "Anorexia tipo compulsao-purgativa",
+        "TCA",
+        "TDM atipico"
+      ],
+      "key_questions": [
+        "Ja teve momentos de comer muito com perda de controle?",
+        "Faz algo para compensar?",
+        "Qual seu peso atual?"
+      ],
+      "alerts": [
+        "Complicacoes eletroliticas possiveis",
+        "Mutuamente exclusivo com Anorexia"
+      ],
+      "source_trace": {
+        "markdown_section": "2. BULIMIA NERVOSA",
+        "patches_applied": []
+      }
+    },
+    {
+      "id": "transtorno_compulsao_alimentar",
+      "name": "Transtorno de Compulsao Alimentar (TCA)",
+      "category": "FULL",
+      "estrutura_diagnostica": "monothetic_tripartite",
+      "render_structured_interview": true,
+      "ui_mode": "structured_full",
+      "criteria": [
+        "A. Episodios recorrentes de compulsao alimentar (quantidade excessiva + perda de controle)",
+        "B. Caracteristicas associadas (≥3 de 5): comer rapido, ate desconforto, sem fome, sozinho por vergonha, sentir-se desgostoso/culpado",
+        "C. Sofrimento marcante",
+        "D. Frequencia minima: ≥1x/semana durante 3 meses",
+        "E. Sem compensacao inapropriada recorrente"
+      ],
+      "diagnostic_rule": "A AND B(≥3/5) AND C AND D(≥1x/semana_3meses) AND E",
+      "clusters": [],
+      "duration": "≥3 meses de frequencia ≥1x/semana",
+      "age_onset": "Adolescencia ou idade adulta jovem",
+      "functional_impairment": "Associado a sobrepeso/obesidade; prejuizo funcional significativo",
+      "exclusions": [
+        "Bulimia nervosa",
+        "Anorexia nervosa",
+        "Obesidade",
+        "TDM atipico"
+      ],
+      "subtypes_presentations": [],
+      "specifiers": [
+        "Remissao parcial",
+        "Remissao completa"
+      ],
+      "operational_profiles": [],
+      "severity": {
+        "has_formal_severity": true,
+        "type": "frequencia_eventos",
+        "levels": [
+          "Leve (1-3 episodios/semana)",
+          "Moderada (4-7)",
+          "Grave (8-13)",
+          "Extrema (≥14)"
+        ],
+        "assignment_rule": "Baseado na frequencia de episodios de compulsao por semana",
+        "domains": []
+      },
+      "critical_differentials": [
+        "Bulimia",
+        "Obesidade",
+        "TDM atipico"
+      ],
+      "key_questions": [
+        "Come rapido ate ficar desconfortavelmente cheio?",
+        "Come sozinho por vergonha?",
+        "Faz algo para compensar?"
+      ],
+      "alerts": [
+        "Verificar compensacao obrigatorio (diferenciar de Bulimia)"
+      ],
+      "source_trace": {
+        "markdown_section": "3. TRANSTORNO DE COMPULSAO ALIMENTAR (TCA)",
+        "patches_applied": []
+      }
+    },
+    {
+      "id": "transtorno_alimentar_restritivo_evitativo",
+      "name": "Transtorno Alimentar Restritivo/Evitativo (ARFID)",
+      "category": "FULL",
+      "estrutura_diagnostica": "polythetic_monocluster",
+      "render_structured_interview": true,
+      "ui_mode": "structured_full",
+      "criteria": [
+        "A. Perturbacao alimentar com fracasso nutricional (≥1 consequencia: perda de peso, deficiencia nutricional, dependencia de sonda/suplementos, interferencia psicossocial marcante)",
+        "B. NAO explicada por indisponibilidade de alimento ou pratica culturalmente aceita",
+        "C. NAO ocorre exclusivamente durante anorexia/bulimia; NAO ha evidencia de perturbacao na vivencia de peso/forma",
+        "D. NAO atribuivel a condicao medica concomitante"
+      ],
+      "diagnostic_rule": "A(≥1 consequencia) AND B AND C AND D",
+      "clusters": [
+        "Consequencias nutricionais/funcionais"
+      ],
+      "duration": null,
+      "age_onset": "Fase de lactente, primeira infancia ou qualquer idade",
+      "functional_impairment": "Desnutricao potencialmente fatal; prejuizo psicossocial marcante",
+      "exclusions": [
+        "Anorexia nervosa",
+        "Bulimia nervosa",
+        "Indisponibilidade de alimento",
+        "Pratica cultural",
+        "Condicao medica explicativa"
+      ],
+      "subtypes_presentations": [
+        "Evitacao baseada em sensorial",
+        "Falta de interesse",
+        "Preocupacao com consequencias aversivas"
+      ],
+      "specifiers": [
+        "Em remissao"
+      ],
+      "operational_profiles": [],
+      "severity": {
+        "has_formal_severity": false,
+        "type": "nao_aplica",
+        "levels": [],
+        "assignment_rule": null,
+        "domains": []
+      },
+      "critical_differentials": [
+        "Anorexia nervosa",
+        "Crianca exigente",
+        "Condicao medica",
+        "TEA"
+      ],
+      "key_questions": [
+        "Tem dificuldade com alimentacao?",
+        "Perdeu peso recentemente?",
+        "Tem medo de ganhar peso?"
+      ],
+      "alerts": [
+        "Desnutricao potencialmente fatal",
+        "Excluir Anorexia obrigatorio"
+      ],
+      "source_trace": {
+        "markdown_section": "4. TRANSTORNO ALIMENTAR RESTRITIVO/EVITATIVO (ARFID)",
+        "patches_applied": []
+      }
+    },
+    {
+      "id": "pica",
+      "name": "Pica",
+      "category": "SHORT",
+      "estrutura_diagnostica": "qualitativo_descritivo",
+      "render_structured_interview": true,
+      "ui_mode": "structured_compact",
+      "criteria": [
+        "A. Ingestao persistente de substancias nao nutritivas durante periodo minimo de 1 mes",
+        "B. Ingestao e inapropriada ao estagio de desenvolvimento",
+        "C. Nao faz parte de pratica culturalmente aceita",
+        "D. Se ocorrer no contexto de outro transtorno/condicao medica, e suficientemente grave para necessitar atencao clinica adicional"
+      ],
+      "diagnostic_rule": "A(≥1_mes) AND B AND C AND D(se_aplicavel)",
+      "clusters": [],
+      "duration": "≥1 mes",
+      "age_onset": null,
+      "functional_impairment": "Risco de obstrucao, intoxicacao, infeccao",
+      "exclusions": [
+        "Pratica culturalmente aceita",
+        "Anorexia nervosa (quando usada para controle de peso)",
+        "Transtorno facticio",
+        "Autolesao"
+      ],
+      "subtypes_presentations": [],
+      "specifiers": [
+        "Em remissao"
+      ],
+      "operational_profiles": [],
+      "severity": {
+        "has_formal_severity": false,
+        "type": "nao_aplica",
+        "levels": [],
+        "assignment_rule": null,
+        "domains": []
+      },
+      "critical_differentials": [
+        "Comportamento exploratorio normal",
+        "Pratica cultural"
+      ],
+      "key_questions": [
+        "Come ou ingere coisas que nao sao alimento?",
+        "Ha quanto tempo?",
+        "Ja causou problemas de saude?"
+      ],
+      "alerts": [
+        "Risco de obstrucao, intoxicacao, infeccao"
+      ],
+      "source_trace": {
+        "markdown_section": "5. PICA",
+        "patches_applied": []
+      }
+    },
+    {
+      "id": "transtorno_de_rumincao",
+      "name": "Transtorno de Ruminacao",
+      "category": "SHORT",
+      "estrutura_diagnostica": "qualitativo_descritivo",
+      "render_structured_interview": true,
+      "ui_mode": "structured_compact",
+      "criteria": [
+        "A. Regurgitacao repetida de alimento durante periodo minimo de 1 mes",
+        "B. NAO atribuivel a condicao gastrointestinal ou outra condicao medica",
+        "C. NAO ocorre exclusivamente durante anorexia, bulimia, TCA ou ARFID",
+        "D. Se ocorrer no contexto de outro transtorno mental, e suficientemente grave para justificar atencao clinica adicional"
+      ],
+      "diagnostic_rule": "A(≥1_mes) AND B AND C AND D(se_aplicavel)",
+      "clusters": [],
+      "duration": "≥1 mes",
+      "age_onset": null,
+      "functional_impairment": "Desnutricao potencialmente fatal em lactentes",
+      "exclusions": [
+        "Refluxo gastroesofagico",
+        "Estenose do piloro",
+        "Gastroparesia",
+        "Hernia de hiato",
+        "Sindrome de Sandifer"
+      ],
+      "subtypes_presentations": [],
+      "specifiers": [
+        "Em remissao"
+      ],
+      "operational_profiles": [],
+      "severity": {
+        "has_formal_severity": false,
+        "type": "nao_aplica",
+        "levels": [],
+        "assignment_rule": null,
+        "domains": []
+      },
+      "critical_differentials": [
+        "GERD",
+        "Vomito de Bulimia",
+        "Anorexia/Bulimia"
+      ],
+      "key_questions": [
+        "Traz o alimento de volta a boca depois de comer?",
+        "Ha nausea ou ansia de vomito antes?",
+        "Ja foi avaliado gastricamente?"
+      ],
+      "alerts": [
+        "Desnutricao fatal em lactentes"
+      ],
+      "source_trace": {
+        "markdown_section": "6. TRANSTORNO DE RUMINACAO",
+        "patches_applied": []
+      }
+    }
+  ]
+}

@@ -1,0 +1,277 @@
+{
+  "chapter_id": "04",
+  "chapter_name": "Transtornos Depressivos",
+  "source_markdown": "04_depressivos_full_short.md",
+  "normalization_round": "2B",
+  "patch_count": 1,
+  "items": [
+    {
+      "id": "transtorno_disruptivo_da_desregulação_do_humor_tddc",
+      "name": "Transtorno DISRUPTIVO DA DESREGULAÇÃO DO HUMOR (TDDC)",
+      "category": "FULL",
+      "estrutura_diagnostica": "polythetic_monocluster",
+      "render_structured_interview": true,
+      "ui_mode": "structured_full",
+      "criteria": [],
+      "diagnostic_rule": "- Critérios A (explosões) + B (desproporção) + C (≥3x/semana) + D (humor irritável) + E (≥12 meses) + F (≥2 ambientes) + G (6-18 anos) + H (início <10 anos) + I (sem mania) + J (excluir outros TM) + K (excluir substância/condição médica)",
+      "clusters": [],
+      "duration": null,
+      "age_onset": null,
+      "functional_impairment": null,
+      "exclusions": [],
+      "subtypes_presentations": [],
+      "specifiers": [],
+      "operational_profiles": [],
+      "severity": {
+        "has_formal_severity": false,
+        "type": "nao_aplica",
+        "levels": [],
+        "assignment_rule": null,
+        "domains": []
+      },
+      "critical_differentials": [],
+      "key_questions": [
+        "A criança tem birras ou explosões de raiva frequentes? Com que frequência?",
+        "Essas explosões são desproporcionais ao que aconteceu?",
+        "Como é o humor dela entre as explosões? Fica irritada/zangada a maior parte do tempo?",
+        "Há quanto tempo isso vem acontecendo? Houve algum período de 3 meses sem esses problemas?",
+        "Isso acontece em casa, na escola e com os amigos?",
+        "A criança tem idade entre 6 e 18 anos? Os sintomas começaram antes dos 10?",
+        "Já teve algum período de mais de 1 dia em que o humor estava muito elevado, com energia aumentada e pouca necessidade de sono?",
+        "Os problemas acontecem SÓ quando ela está deprimida ou ansiosa?"
+      ],
+      "alerts": [],
+      "source_trace": {
+        "markdown_section": "### Transtorno DISRUPTIVO DA DESREGULAÇÃO DO HUMOR (TDDC)",
+        "patches_applied": []
+      }
+    },
+    {
+      "id": "transtorno_depressivo_maior_tdm",
+      "name": "Transtorno DEPRESSIVO MAIOR (TDM)",
+      "category": "FULL",
+      "estrutura_diagnostica": "polythetic_monocluster",
+      "render_structured_interview": true,
+      "ui_mode": "structured_full",
+      "criteria": [],
+      "diagnostic_rule": "- Critério A (≥5 de 9 sintomas + 1 obrigatório) **E** Critério B (prejuízo/sofrimento) **E** Critério C (excluir substância/condição médica) **E** Critério D (excluir psicose) **E** Critério E (excluir bipolar)",
+      "clusters": [],
+      "duration": null,
+      "age_onset": null,
+      "functional_impairment": null,
+      "exclusions": [],
+      "subtypes_presentations": [],
+      "specifiers": [
+        "| ≥2 de: nervoso/tenso, inquieto, dificuldade de concentração por preocupações, temor, perda de controle. Gravidade: leve=2, moderada=3, moderada-grave=4-5, grave=4-5+agitação |",
+        "| ≥3 de: humor elevado, autoestima inflada, mais loquaz, fuga de ideias, aumento de energia, envolvimento em atividades de risco, redução da necessidade de sono. Não satisfaz critérios de mania. |",
+        "| A: perda de prazer em quase tudo OU falta de reatividade; B: ≥3 de: humor distinto (prostração), pior pela manhã, despertar precoce ≥2h, agitação/retardo psicomotor, anorexia/perda de peso, culpa excessiva |",
+        "| A: reatividade de humor; B: ≥2 de: ganho de peso/aumento do apetite, hipersonia, paralisia de chumbo, sensibilidade à rejeição interpessoal. NÃO satisfaz critérios melancólicos ou catatonia. |",
+        "| Delírios e/ou alucinações presentes. Especificar: congruentes com humor (culpa, doença, morte) OU incongruentes |",
+        "| Critérios de catatonia presentes durante maior parte do episódio. Código adicional 293.89 (F06.1) |",
+        "| Início durante gravidez ou até 4 semanas após parto. Episódios psicóticos no pós-parto: 1 em 500 a 1 em 1.000 partos |",
+        "| SÓ episódio recorrente. Relação temporal regular com estação (ex: outono/inverno) por ≥2 anos; remissão em época característica; episódios sazonais superam não-sazonais |"
+      ],
+      "operational_profiles": [],
+      "severity": {
+        "has_formal_severity": true,
+        "type": "episodio_atual",
+        "levels": [
+          "leve",
+          "moderado",
+          "grave"
+        ],
+        "assignment_rule": "Baseada no numero de sintomas, gravidade e incapacitacao funcional do episodio atual",
+        "domains": []
+      },
+      "critical_differentials": [],
+      "key_questions": [
+        "Nas últimas 2 semanas, você se sentiu deprimido, triste ou sem esperança na maior parte do tempo?",
+        "Perdeu o interesse ou prazer em atividades que costumava gostar?",
+        "Teve mudanças no apetite ou peso? Dormiu mais ou menos do que o habitual?",
+        "Tem se sentido inquieto e agitado, ou muito lento?",
+        "Tem se sentido cansado ou sem energia?",
+        "Tem se sentido inútil ou com culpa excessiva?",
+        "Tem tido dificuldade para se concentrar ou tomar decisões?",
+        "Tem tido pensamentos sobre morte ou de ferir a si mesmo?",
+        "Isso tem causado problemas no trabalho, nas relações ou em outras áreas?",
+        "Já teve algum período de humor anormalmente elevado com energia aumentada?"
+      ],
+      "alerts": [],
+      "source_trace": {
+        "markdown_section": "### Transtorno DEPRESSIVO MAIOR (TDM)",
+        "patches_applied": [
+          "gravidade.tipo: ordinal_simples -> episodio_atual (CRITICAL aprovado)"
+        ]
+      }
+    },
+    {
+      "id": "transtorno_depressivo_persistente_distimia",
+      "name": "Transtorno DEPRESSIVO PERSISTENTE (DISTIMIA)",
+      "category": "FULL",
+      "estrutura_diagnostica": "polythetic_monocluster",
+      "render_structured_interview": true,
+      "ui_mode": "structured_full",
+      "criteria": [],
+      "diagnostic_rule": "- A (humor deprimido ≥2 anos) + B (≥2 de 6 sintomas) + C (sem remissão >2 meses) + D-H (exclusões)",
+      "clusters": [],
+      "duration": null,
+      "age_onset": null,
+      "functional_impairment": null,
+      "exclusions": [],
+      "subtypes_presentations": [],
+      "specifiers": [],
+      "operational_profiles": [],
+      "severity": {
+        "has_formal_severity": true,
+        "type": "ordinal_simples",
+        "levels": [
+          "leve",
+          "moderado",
+          "grave"
+        ],
+        "assignment_rule": "Mesma escala do TDM",
+        "domains": []
+      },
+      "critical_differentials": [],
+      "key_questions": [
+        "Você se sente deprimido ou desanimado na maior parte do tempo há quanto tempo?",
+        "Nesse período, houve algum intervalo de mais de 2 meses sem se sentir assim?",
+        "Nos últimos 2 anos, houve períodos em que os sintomas foram muito piores?",
+        "Já teve algum período de humor anormalmente elevado?",
+        "Como isso afeta seu funcionamento diário?"
+      ],
+      "alerts": [],
+      "source_trace": {
+        "markdown_section": "### Transtorno DEPRESSIVO PERSISTENTE (DISTIMIA)",
+        "patches_applied": []
+      }
+    },
+    {
+      "id": "transtorno_disfórico_pré_menstrual_tdpm",
+      "name": "Transtorno DISFÓRICO PRÉ-MENSTRUAL (TDPM)",
+      "category": "FULL",
+      "estrutura_diagnostica": "polythetic_clusters_assimetricos",
+      "render_structured_interview": true,
+      "ui_mode": "structured_full",
+      "criteria": [],
+      "diagnostic_rule": "- A (padrão temporal) + B (≥1 sintoma afetivo) + C (≥1 adicional; total B+C ≥5) + D (prejuízo) + E (não exacerbação) + F (confirmação prospectiva 2 ciclos) + G (exclusão)",
+      "clusters": [],
+      "duration": null,
+      "age_onset": null,
+      "functional_impairment": null,
+      "exclusions": [],
+      "subtypes_presentations": [],
+      "specifiers": [],
+      "operational_profiles": [],
+      "severity": {
+        "has_formal_severity": false,
+        "type": "nao_aplica",
+        "levels": [],
+        "assignment_rule": null,
+        "domains": []
+      },
+      "critical_differentials": [],
+      "key_questions": [
+        "Você nota mudanças no humor ou comportimento na semana antes da menstruação?",
+        "Essas mudanças melhoram após a menstruação começar?",
+        "Você fica mais irritável, ansiosa ou deprimida nesse período?",
+        "Tem algum período do mês em que se sente completamente bem?",
+        "Isso interfere no trabalho, nas relações ou em outras atividades?",
+        "Você registrou seus sintomas diariamente por pelo menos 2 meses?",
+        "Os sintomas são muito piores do que o normal para você ou do que outras mulheres?"
+      ],
+      "alerts": [],
+      "source_trace": {
+        "markdown_section": "### Transtorno DISFÓRICO PRÉ-MENSTRUAL (TDPM)",
+        "patches_applied": []
+      }
+    },
+    {
+      "id": "transtorno_depressivo_induzido_por_substância_medicamento",
+      "name": "Transtorno DEPRESSIVO INDUZIDO POR SUBSTÂNCIA/MEDICAMENTO",
+      "category": "SHORT",
+      "estrutura_diagnostica": "etiologico_externo",
+      "render_structured_interview": true,
+      "ui_mode": "structured_compact",
+      "criteria": [],
+      "diagnostic_rule": "Criterios de Transtorno DEPRESSIVO INDUZIDO POR SUBSTÂNCIA/MEDICAMENTO atribuiveis a substancia, medicamento ou condicao medica; nexo causal obrigatorio",
+      "clusters": [],
+      "duration": null,
+      "age_onset": null,
+      "functional_impairment": null,
+      "exclusions": [],
+      "subtypes_presentations": [],
+      "specifiers": [
+        "Com início durante a intoxicação",
+        "Com início durante a abstinência",
+        "Classes: álcool, fenciclidina, outro alucinógeno, inalante, opioide, sedativo/hipnótico/ansiolítico, anfetamina, cocaína, outra"
+      ],
+      "operational_profiles": [],
+      "severity": {
+        "has_formal_severity": false,
+        "type": "nao_aplica",
+        "levels": [],
+        "assignment_rule": null,
+        "domains": []
+      },
+      "critical_differentials": [],
+      "key_questions": [
+        "Quais substâncias ou medicamentos você usa?",
+        "Quando os sintomas depressivos começaram em relação ao uso da substância?",
+        "Os sintomas persistiram após parar de usar? Por quanto tempo?",
+        "Já teve episódios depressivos sem uso de substâncias?"
+      ],
+      "alerts": [],
+      "source_trace": {
+        "markdown_section": "### Transtorno DEPRESSIVO INDUZIDO POR SUBSTÂNCIA/MEDICAMENTO",
+        "patches_applied": []
+      }
+    },
+    {
+      "id": "transtorno_depressivo_devido_a_outra_condição_médica",
+      "name": "Transtorno DEPRESSIVO DEVIDO A OUTRA CONDIÇÃO MÉDICA",
+      "category": "SHORT",
+      "estrutura_diagnostica": "etiologico_externo",
+      "render_structured_interview": true,
+      "ui_mode": "structured_compact",
+      "criteria": [],
+      "diagnostic_rule": "Criterios de Transtorno DEPRESSIVO DEVIDO A OUTRA CONDIÇÃO MÉDICA atribuiveis a substancia, medicamento ou condicao medica; nexo causal obrigatorio",
+      "clusters": [],
+      "duration": null,
+      "age_onset": null,
+      "functional_impairment": null,
+      "exclusions": [],
+      "subtypes_presentations": [],
+      "specifiers": [
+        "Com sintomas depressivos: com humor depressivo predominantemente / com perda de interesse predominantemente",
+        "Pode ser especificado como episódio único ou recorrente"
+      ],
+      "operational_profiles": [],
+      "severity": {
+        "has_formal_severity": true,
+        "type": "episodio_atual",
+        "levels": [
+          "leve",
+          "moderado",
+          "grave"
+        ],
+        "assignment_rule": null,
+        "domains": []
+      },
+      "critical_differentials": [],
+      "key_questions": [
+        "Você tem alguma condição médica diagnosticada?",
+        "Os sintomas depressivos começaram após o diagnóstico ou piora dessa condição?",
+        "Faz algum tratamento que possa causar depressão como efeito colateral?",
+        "Os sintomas depressivos melhoram quando a condição médica é tratada?"
+      ],
+      "alerts": [],
+      "source_trace": {
+        "markdown_section": "### Transtorno DEPRESSIVO DEVIDO A OUTRA CONDIÇÃO MÉDICA",
+        "patches_applied": [
+          "gravidade.tipo: ordinal_simples -> episodio_atual (CRITICAL)"
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,189 @@
+{
+  "chapter_id": "07",
+  "chapter_name": "Transtornos Relacionados a Trauma e Estressores",
+  "source_markdown": "07_trauma_estressores_full_short.md",
+  "normalization_round": "2B",
+  "patch_count": 0,
+  "items": [
+    {
+      "id": "estresse_pos_traumatico_tept_30981_f4310",
+      "name": "TRANSTORNO DE ESTRESSE POS-TRAUMATICO (TEPT) - 309.81 (F43.10)",
+      "category": "FULL",
+      "estrutura_diagnostica": "polythetic_clusters_assimetricos",
+      "render_structured_interview": true,
+      "ui_mode": "structured_full",
+      "criteria": [],
+      "diagnostic_rule": "A ≥ 1 AND B ≥ 1 AND C ≥ 1 AND D ≥ 2 AND E ≥ 2 AND F > 1_mes AND G = true AND H = true",
+      "clusters": [],
+      "duration": null,
+      "age_onset": null,
+      "functional_impairment": null,
+      "exclusions": [
+        "Efeito fisiologico de substancia/medicamento",
+        "Outra condicao medica (ex: lesao cerebral traumatica)",
+        "Transtorno de estresse agudo (duracao < 1 mes)",
+        "Transtorno de adaptacao (estressor nao atende criterio A)",
+        "TOC (obsessoes nao ligadas a trauma + compulsoes presentes)",
+        "Transtorno depressivo maior (nao inclui sintomas dos criterios B ou C do TEPT)",
+        "Transtornos da personalidade (dificuldades pre-existentes ao trauma)",
+        "Transtornos dissociativos (amnesia dissociativa sem outros sintomas de TEPT)",
+        "Transtorno conversivo",
+        "Transtornos psicoticos (distinguir flashbacks de delirios/alucinacoes)",
+        "Lesao cerebral traumatica (desorientacao/confusao persistente mais especifica de LCT)"
+      ],
+      "subtypes_presentations": [],
+      "specifiers": [],
+      "operational_profiles": [],
+      "severity": {
+        "has_formal_severity": false,
+        "type": "nao_aplica",
+        "levels": [],
+        "assignment_rule": null,
+        "domains": []
+      },
+      "critical_differentials": [],
+      "key_questions": [],
+      "alerts": [],
+      "source_trace": {
+        "markdown_section": "### TRANSTORNO DE ESTRESSE POS-TRAUMATICO (TEPT) - 309.81 (F43.10)",
+        "patches_applied": []
+      }
+    },
+    {
+      "id": "estresse_agudo_3083_f430",
+      "name": "TRANSTORNO DE ESTRESSE AGUDO - 308.3 (F43.0)",
+      "category": "FULL",
+      "estrutura_diagnostica": "polythetic_monocluster",
+      "render_structured_interview": true,
+      "ui_mode": "structured_full",
+      "criteria": [],
+      "diagnostic_rule": "A ≥ 1 AND B ≥ 9_de_14 AND C ∈ [3_dias, 1_mes] AND D = true AND E = true",
+      "clusters": [],
+      "duration": null,
+      "age_onset": null,
+      "functional_impairment": null,
+      "exclusions": [
+        "Substancia/condicao medica",
+        "Transtorno psicotico breve (melhor explicacao)",
+        "Se durar >1 mes → TEPT"
+      ],
+      "subtypes_presentations": [],
+      "specifiers": [],
+      "operational_profiles": [],
+      "severity": {
+        "has_formal_severity": false,
+        "type": "nao_aplica",
+        "levels": [],
+        "assignment_rule": null,
+        "domains": []
+      },
+      "critical_differentials": [],
+      "key_questions": [],
+      "alerts": [],
+      "source_trace": {
+        "markdown_section": "### TRANSTORNO DE ESTRESSE AGUDO - 308.3 (F43.0)",
+        "patches_applied": []
+      }
+    },
+    {
+      "id": "ajustamento_varios_codigos_f432x",
+      "name": "TRANSTORNO DE AJUSTAMENTO - Varios codigos (F43.2x)",
+      "category": "FULL",
+      "estrutura_diagnostica": "etiologico_externo",
+      "render_structured_interview": true,
+      "ui_mode": "structured_full",
+      "criteria": [],
+      "diagnostic_rule": "A = estressor_identificado AND inicio_dentro_3_meses AND B ≥ 1 AND C = true AND D = true AND E = true",
+      "clusters": [],
+      "duration": null,
+      "age_onset": null,
+      "functional_impairment": null,
+      "exclusions": [],
+      "subtypes_presentations": [],
+      "specifiers": [],
+      "operational_profiles": [],
+      "severity": {
+        "has_formal_severity": false,
+        "type": "nao_aplica",
+        "levels": [],
+        "assignment_rule": null,
+        "domains": []
+      },
+      "critical_differentials": [],
+      "key_questions": [],
+      "alerts": [],
+      "source_trace": {
+        "markdown_section": "### TRANSTORNO DE AJUSTAMENTO - Varios codigos (F43.2x)",
+        "patches_applied": []
+      }
+    },
+    {
+      "id": "apego_reativo_31389_f941",
+      "name": "TRANSTORNO DE APEGO REATIVO - 313.89 (F94.1)",
+      "category": "SHORT",
+      "estrutura_diagnostica": "etiologico_externo",
+      "render_structured_interview": true,
+      "ui_mode": "structured_compact",
+      "criteria": [],
+      "diagnostic_rule": "A = 2/2 AND B ≥ 2/3 AND C ≥ 1/3 AND D = true AND E = false(TEA) AND F = true(<5anos) AND G = true(≥9meses)",
+      "clusters": [],
+      "duration": null,
+      "age_onset": null,
+      "functional_impairment": null,
+      "exclusions": [],
+      "subtypes_presentations": [],
+      "specifiers": [],
+      "operational_profiles": [],
+      "severity": {
+        "has_formal_severity": true,
+        "type": "ordinal_simples",
+        "levels": [
+          "grave"
+        ],
+        "assignment_rule": "todos os sintomas presentes, cada um em niveis relativamente elevados",
+        "domains": []
+      },
+      "critical_differentials": [],
+      "key_questions": [],
+      "alerts": [],
+      "source_trace": {
+        "markdown_section": "### TRANSTORNO DE APEGO REATIVO - 313.89 (F94.1)",
+        "patches_applied": []
+      }
+    },
+    {
+      "id": "interacao_social_desinibida_31389_f942",
+      "name": "TRANSTORNO DE INTERACAO SOCIAL DESINIBIDA - 313.89 (F94.2)",
+      "category": "SHORT",
+      "estrutura_diagnostica": "etiologico_externo",
+      "render_structured_interview": true,
+      "ui_mode": "structured_compact",
+      "criteria": [],
+      "diagnostic_rule": "A ≥ 2/4 AND B = true AND C ≥ 1/3 AND D = true AND E = true(≥9meses)",
+      "clusters": [],
+      "duration": null,
+      "age_onset": null,
+      "functional_impairment": null,
+      "exclusions": [],
+      "subtypes_presentations": [],
+      "specifiers": [],
+      "operational_profiles": [],
+      "severity": {
+        "has_formal_severity": true,
+        "type": "ordinal_simples",
+        "levels": [
+          "grave"
+        ],
+        "assignment_rule": "todos os sintomas presentes, cada um em niveis relativamente elevados",
+        "domains": []
+      },
+      "critical_differentials": [],
+      "key_questions": [],
+      "alerts": [],
+      "source_trace": {
+        "markdown_section": "### TRANSTORNO DE INTERACAO SOCIAL DESINIBIDA - 313.89 (F94.2)",
+        "patches_applied": []
+      }
+    }
+  ]
+}

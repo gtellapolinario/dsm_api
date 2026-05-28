@@ -1,0 +1,373 @@
+{
+  "chapter_id": "09",
+  "chapter_name": "Transtornos de Sintomas Somaticos e Relacionados",
+  "source_markdown": "09_somaticos_full_short.md",
+  "normalization_round": "2B",
+  "patch_count": 2,
+  "items": [
+    {
+      "id": "transtorno_sintomas_somaticos",
+      "name": "Transtorno de Sintomas Somaticos",
+      "category": "FULL",
+      "estrutura_diagnostica": "polythetic_monocluster",
+      "render_structured_interview": true,
+      "ui_mode": "structured_full",
+      "criteria": [
+        "A. Um ou mais sintomas somaticos que causam aflicao ou perturbacao significativa da vida diaria",
+        "B. Pensamentos, sentimentos ou comportamentos excessivos relacionados aos sintomas (≥1 de 3: B1-pensamentos desproporcionais, B2-ansiedade elevada, B3-tempo/energia excessivos)",
+        "C. Condicao sintomatica persistente (geralmente mais de 6 meses)"
+      ],
+      "diagnostic_rule": "A(1+ sintoma) + B(≥1 de 3 manifestacoes excessivas) + C(≥6 meses)",
+      "clusters": [
+        "Sintomas somaticos perturbadores",
+        "Resposta excessiva a sintomas",
+        "Persistencia"
+      ],
+      "duration": "≥6 meses (geralmente)",
+      "age_onset": null,
+      "functional_impairment": "Aflicao significativa ou perturbacao significativa da vida diaria",
+      "exclusions": [
+        "Sintomas ocorrem APENAS durante episodios depressivos maiores",
+        "Criterios para outro transtorno mental sao melhor explicacao"
+      ],
+      "subtypes_presentations": [],
+      "specifiers": [
+        "Com dor predominante",
+        "Persistente"
+      ],
+      "operational_profiles": [],
+      "severity": {
+        "has_formal_severity": true,
+        "type": "contagem_sintomas_e_prejuizo",
+        "levels": [
+          "Leve",
+          "Moderada",
+          "Grave"
+        ],
+        "assignment_rule": "1 criterio B=leve; ≥2 criterios B=moderada; ≥2 B+multiplas queixas somaticas (ou 1 muito grave)=grave",
+        "domains": []
+      },
+      "critical_differentials": [
+        "Condicao medica",
+        "Transtorno de ansiedade de doenca",
+        "Transtorno conversivo",
+        "Transtorno de panico",
+        "TAG",
+        "Transtorno dismorfico corporal",
+        "Transtorno delirante",
+        "TOC"
+      ],
+      "key_questions": [
+        "Quais sintomas fisicos voce tem sentido ultimamente?",
+        "Voce fica muito preocupado com a gravidade desses sintomas?",
+        "Sente ansiedade constante sobre sua saude?",
+        "Quanto tempo e energia dedica a esses sintomas?",
+        "Esses sintomas persistem ha mais de 6 meses?"
+      ],
+      "alerts": [],
+      "source_trace": {
+        "markdown_section": "1. TRANSTORNO DE SINTOMAS SOMATICOS - FICHA FULL",
+        "patches_applied": [
+          "R2B-09-01: gravidade.tipo → contagem_sintomas_e_prejuizo"
+        ]
+      }
+    },
+    {
+      "id": "transtorno_ansiedade_doenca",
+      "name": "Transtorno de Ansiedade de Doenca",
+      "category": "FULL",
+      "estrutura_diagnostica": "monothetic_tripartite",
+      "render_structured_interview": true,
+      "ui_mode": "structured_full",
+      "criteria": [
+        "A. Preocupacao com ter ou contrair uma doenca grave",
+        "B. Sintomas somaticos NAO presentes ou de intensidade apenas leve; ou preocupacao excessiva se condicao medica presente",
+        "C. Alto nivel de ansiedade com relacao a saude; facilmente alarmado",
+        "D. Comportamentos excessivos relacionados a saude OU evitacao mal-adaptativa",
+        "E. Preocupacao relacionada a doenca presente ha pelo menos 6 meses",
+        "F. NAO melhor explicada por TSS, panico, TAG, DBC, TOC ou transtorno delirante tipo somatico"
+      ],
+      "diagnostic_rule": "A + B + C + D + E(≥6 meses) + F(exclusoes)",
+      "clusters": [],
+      "duration": "≥6 meses",
+      "age_onset": null,
+      "functional_impairment": "Comprometimento funcional substancial; perdas no funcionamento fisico e qualidade de vida",
+      "exclusions": [
+        "TSS",
+        "Panico",
+        "TAG",
+        "DBC",
+        "TOC",
+        "Transtorno delirante tipo somatico"
+      ],
+      "subtypes_presentations": [
+        "Tipo busca de cuidado",
+        "Tipo evitacao de cuidado"
+      ],
+      "specifiers": [],
+      "operational_profiles": [],
+      "severity": {
+        "has_formal_severity": false,
+        "type": "nao_aplica",
+        "levels": [],
+        "assignment_rule": null,
+        "domains": []
+      },
+      "critical_differentials": [
+        "TSS",
+        "TAG",
+        "Panico",
+        "TOC",
+        "TDM",
+        "Transtornos psicoticos",
+        "Condicao medica",
+        "Transtorno de adaptacao"
+      ],
+      "key_questions": [
+        "Voce teme ter ou contrair alguma doenca grave?",
+        "Ha quanto tempo essa preocupacao dura?",
+        "Voce sente sintomas fisicos significativos?",
+        "Verifica o corpo repetidamente?",
+        "Evita consultas medicas ou busca excessivamente?"
+      ],
+      "alerts": [],
+      "source_trace": {
+        "markdown_section": "2. TRANSTORNO DE ANSIEDADE DE DOENCA - FICHA FULL",
+        "patches_applied": []
+      }
+    },
+    {
+      "id": "transtorno_conversivo",
+      "name": "Transtorno Conversivo (Transtorno de Sintomas Neurologicos Funcionais)",
+      "category": "FULL",
+      "estrutura_diagnostica": "qualitativo_descritivo",
+      "render_structured_interview": true,
+      "ui_mode": "structured_full",
+      "criteria": [
+        "A. Um ou mais sintomas de funcao motora ou sensorial alterada",
+        "B. Achados fisicos evidenciam incompatibilidade entre o sintoma e condicoes neurologicas conhecidas",
+        "C. NAO e melhor explicado por outro transtorno mental ou medico",
+        "D. O sintoma causa sofrimento clinicamente significativo OU prejuizo funcional OU requer avaliacao medica"
+      ],
+      "diagnostic_rule": "A(sintoma motor/sensorial) + B(incompatibilidade neurologica) + C(exclusoes) + D(sofrimento/prejuizo/avaliacao)",
+      "clusters": [],
+      "duration": null,
+      "age_onset": null,
+      "functional_impairment": "Sofrimento clinicamente significativo ou prejuizo funcional",
+      "exclusions": [
+        "Doenca neurologica explicativa",
+        "Facticio/simulacao com evidencias definitivas"
+      ],
+      "subtypes_presentations": [
+        "Com fraqueza ou paralisia",
+        "Com movimento anormal",
+        "Com sintomas de degluticao",
+        "Com sintoma de fala",
+        "Com ataques ou convulsoes",
+        "Com anestesia ou perda sensorial",
+        "Com sintoma sensorial especial",
+        "Com sintomas mistos"
+      ],
+      "specifiers": [
+        "Episodio agudo (<6 meses)",
+        "Persistente (≥6 meses)",
+        "Com estressor psicologico",
+        "Sem estressor psicologico"
+      ],
+      "operational_profiles": [],
+      "severity": {
+        "has_formal_severity": false,
+        "type": "nao_aplica",
+        "levels": [],
+        "assignment_rule": null,
+        "domains": []
+      },
+      "critical_differentials": [
+        "Doenca neurologica",
+        "TSS",
+        "Transtorno facticio/simulacao",
+        "Transtornos dissociativos",
+        "DBC",
+        "Panico",
+        "Transtornos depressivos"
+      ],
+      "key_questions": [
+        "Que tipo de alteracao voce notou no movimento ou sensacao?",
+        "Os sintomas sao consistentes?",
+        "Ja houve exame neurologico?",
+        "Os sintomas mudam quando voce esta distraido?"
+      ],
+      "alerts": [
+        "Requer avaliacao neurologica previa; diagnostico por incompatibilidade, nao por exames normais"
+      ],
+      "source_trace": {
+        "markdown_section": "3. TRANSTORNO CONVERSIVO - FICHA FULL",
+        "patches_applied": []
+      }
+    },
+    {
+      "id": "transtorno_facticio_autoimposto",
+      "name": "Transtorno Facticio Autoimposto",
+      "category": "FULL",
+      "estrutura_diagnostica": "monothetic_tripartite",
+      "render_structured_interview": true,
+      "ui_mode": "structured_full",
+      "criteria": [
+        "A. Falsificacao de sinais ou sintomas fisicos/psicologicos ou inducao de lesao/doenca, associada a fraude identificada",
+        "B. Individuo se apresenta como doente, incapacitado ou lesionado",
+        "C. Comportamento fraudulento evidente mesmo na ausencia de recompensas externas obvias",
+        "D. NAO melhor explicado por outro transtorno mental (delirante, psicotico)"
+      ],
+      "diagnostic_rule": "A(falsificacao+fraude) + B(apresentacao_como_doente) + C(sem_recompensa_externa) + D(exclusoes_psicoticas)",
+      "clusters": [],
+      "duration": null,
+      "age_onset": null,
+      "functional_impairment": "Prejuizo significativo; multiplas hospitalizacoes",
+      "exclusions": [
+        "Simulacao (ganho externo obvio)",
+        "Delirios",
+        "Transtorno psicotico"
+      ],
+      "subtypes_presentations": [],
+      "specifiers": [
+        "Episodio unico",
+        "Episodios recorrentes"
+      ],
+      "operational_profiles": [],
+      "severity": {
+        "has_formal_severity": false,
+        "type": "nao_aplica",
+        "levels": [],
+        "assignment_rule": null,
+        "domains": []
+      },
+      "critical_differentials": [
+        "Simulacao",
+        "TSS",
+        "Transtorno conversivo",
+        "Borderline",
+        "Condicao medica verdadeira"
+      ],
+      "key_questions": [
+        "Ha evidencia objetiva de falsificacao de sintomas?",
+        "Ha ganho externo obvio?",
+        "Ha historia de hospitalizacoes frequentes com quadros atipicos?"
+      ],
+      "alerts": [
+        "Diagnostico baseia-se em identificacao objetiva de FRAUDE, nao em inferencia sobre motivacao"
+      ],
+      "source_trace": {
+        "markdown_section": "4. TRANSTORNO FACTICIO AUTOIMPOSTO - FICHA FULL",
+        "patches_applied": []
+      }
+    },
+    {
+      "id": "transtorno_facticio_imposto_outro",
+      "name": "Transtorno Facticio Imposto a Outro (Munchausen by Proxy)",
+      "category": "FULL",
+      "estrutura_diagnostica": "monothetic_tripartite",
+      "render_structured_interview": true,
+      "ui_mode": "structured_full",
+      "criteria": [
+        "A. Falsificacao de sinais/sintomas ou inducao de lesao/doenca em outro, associada a fraude identificada",
+        "B. Individuo apresenta a vitima a terceiros como doente, incapacitada ou lesionada",
+        "C. Comportamento fraudulento evidente na ausencia de recompensas externas obvias",
+        "D. NAO melhor explicado por outro transtorno mental"
+      ],
+      "diagnostic_rule": "A(falsificacao_em_outro+fraude) + B(apresentacao_vitima_como_doente) + C(sem_recompensa_externa) + D(exclusoes_psicoticas)",
+      "clusters": [],
+      "duration": null,
+      "age_onset": null,
+      "functional_impairment": "Prejuizo a vitima; possivel abuso",
+      "exclusions": [
+        "Abuso sem fraude extensiva",
+        "Transtorno de ansiedade do cuidador",
+        "Doenca real da crianca"
+      ],
+      "subtypes_presentations": [],
+      "specifiers": [
+        "Episodio unico",
+        "Episodios recorrentes"
+      ],
+      "operational_profiles": [],
+      "severity": {
+        "has_formal_severity": false,
+        "type": "nao_aplica",
+        "levels": [],
+        "assignment_rule": null,
+        "domains": []
+      },
+      "critical_differentials": [
+        "Abuso sem fraude extensiva",
+        "Transtorno de ansiedade do cuidador",
+        "Doenca real da crianca"
+      ],
+      "key_questions": [
+        "Ha evidencia de que o cuidador falsificou sintomas ou induziu lesao?",
+        "A vitima melhora quando separada do cuidador?",
+        "Ha ganho externo obvio para o cuidador?"
+      ],
+      "alerts": [
+        "Diagnostico do AGENTE; vitima pode receber diagnostico de abuso. Possivel obrigatoriedade de notificacao"
+      ],
+      "source_trace": {
+        "markdown_section": "5. TRANSTORNO FACTICIO IMPOSTO A OUTRO - FICHA FULL",
+        "patches_applied": []
+      }
+    },
+    {
+      "id": "fatores_psicologicos_afetam_condicoes_medicas",
+      "name": "Fatores Psicologicos que Afetam Outras Condicoes Medicas",
+      "category": "SHORT",
+      "estrutura_diagnostica": "etiologico_externo",
+      "render_structured_interview": true,
+      "ui_mode": "structured_compact",
+      "criteria": [
+        "A. Um sintoma ou condicao medica (outra que nao transtorno mental) esta presente",
+        "B. Fatores psicologicos/comportamentais afetam adversamente a condicao medica (≥1 de 4 formas)",
+        "C. Fatores NAO sao melhor explicados por um transtorno mental"
+      ],
+      "diagnostic_rule": "A(condicao_medica) + B(≥1 de 4 formas de efeito adverso) + C(NAO_transtorno_mental)",
+      "clusters": [],
+      "duration": null,
+      "age_onset": null,
+      "functional_impairment": "Afetacao adversa da condicao medica subjacente",
+      "exclusions": [
+        "Transtorno mental explicativo"
+      ],
+      "subtypes_presentations": [],
+      "specifiers": [],
+      "operational_profiles": [],
+      "severity": {
+        "has_formal_severity": true,
+        "type": "ordinal_simples",
+        "levels": [
+          "Leve",
+          "Moderada",
+          "Grave",
+          "Extrema"
+        ],
+        "assignment_rule": "Classificacao por julgamento clinico do impacto",
+        "domains": []
+      },
+      "critical_differentials": [
+        "Transtorno mental devido a condicao medica",
+        "Transtorno de adaptacao",
+        "TSS",
+        "TAD"
+      ],
+      "key_questions": [
+        "Ha uma condicao medica diagnosticada presente?",
+        "Fatores psicologicos pioram a condicao medica?",
+        "O paciente segue o tratamento medico adequadamente?"
+      ],
+      "alerts": [],
+      "source_trace": {
+        "markdown_section": "6. FATORES PSICOLOGICOS QUE AFETAM OUTRAS CONDICOES MEDICAS - FICHA SHORT",
+        "patches_applied": [
+          "R2B-09-02: gravidade.tipo → ordinal_simples"
+        ]
+      }
+    }
+  ]
+}

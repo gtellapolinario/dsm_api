@@ -1,0 +1,703 @@
+{
+  "chapter_id": "12",
+  "chapter_name": "Transtornos do Sono-Vigilia",
+  "source_markdown": "12_sono_vigilia_full_short.md",
+  "normalization_round": "2B",
+  "patch_count": 3,
+  "items": [
+    {
+      "id": "transtorno_de_insonia",
+      "name": "Transtorno de Insonia",
+      "category": "FULL",
+      "estrutura_diagnostica": "monothetic_tripartite",
+      "render_structured_interview": true,
+      "ui_mode": "structured_full",
+      "criteria": [
+        "A. Queixa de insatisfacao com quantidade ou qualidade do sono (pelo menos 1: dificuldade iniciar sono, manter sono, ou despertar precoce)",
+        "B. Sofrimento clinicamente significativo ou prejuizo funcional",
+        "C. Ocorre pelo menos 3 noites por semana",
+        "D. Persiste durante pelo menos 3 meses",
+        "E. Ocorre a despeito de oportunidades adequadas para dormir",
+        "F. NAO e melhor explicada por narcolepsia, transtorno do sono relacionado a respiracao, transtorno do ritmo circadiano ou parassonia",
+        "G. NAO e atribuida a substancia",
+        "H. Coexistencia de transtornos mentais/condicoes medicas NAO explica adequadamente a queixa predominante"
+      ],
+      "diagnostic_rule": "A AND B AND C(≥3noites/semana) AND D(≥3meses) AND E AND F AND G AND H",
+      "clusters": [],
+      "duration": "≥3 meses",
+      "age_onset": "Qualquer idade; mais comum em adultos jovens",
+      "functional_impairment": "Fadiga diurna, prejuizos cognitivos, perturbacoes de humor, risco de acidentes",
+      "exclusions": [
+        "Narcolepsia",
+        "Apneia do sono",
+        "Ritmo circadiano",
+        "Parassonias",
+        "Substancia"
+      ],
+      "subtypes_presentations": [],
+      "specifiers": [
+        "Com comorbidade mental",
+        "Com comorbidade medica",
+        "Com outro transtorno do sono",
+        "Episodico",
+        "Persistente",
+        "Recorrente"
+      ],
+      "operational_profiles": [],
+      "severity": {
+        "has_formal_severity": false,
+        "type": "nao_aplica",
+        "levels": [],
+        "assignment_rule": null,
+        "domains": []
+      },
+      "critical_differentials": [
+        "Variacao normal de sono",
+        "Privacao de sono",
+        "Ritmo circadiano",
+        "SPI",
+        "Apneia",
+        "Narcolepsia"
+      ],
+      "key_questions": [
+        "Com que frequencia tem dificuldade para pegar no sono?",
+        "Acorda varias vezes?",
+        "Ha quanto tempo?"
+      ],
+      "alerts": [],
+      "source_trace": {
+        "markdown_section": "1. TRANSTORNO DE INSONIA",
+        "patches_applied": []
+      }
+    },
+    {
+      "id": "transtorno_de_hipersonolencia",
+      "name": "Transtorno de Hipersonolencia",
+      "category": "FULL",
+      "estrutura_diagnostica": "monothetic_tripartite",
+      "render_structured_interview": true,
+      "ui_mode": "structured_full",
+      "criteria": [
+        "A. Sonolencia excessiva apesar de sono noturno ≥7 horas (pelo menos 1: periodos recorrentes de sono, sono principal prolongado não reparador, dificuldade de estar totalmente acordado)",
+        "B. Ocorre pelo menos 3 vezes por semana durante pelo menos 3 meses",
+        "C. Sofrimento significativo ou prejuizo funcional",
+        "D. NAO melhor explicada por narcolepsia, apneia, ritmo circadiano ou parassonia",
+        "E. NAO atribuida a substancia",
+        "F. Coexistencia de transtornos/condicoes medicas NAO explica adequadamente"
+      ],
+      "diagnostic_rule": "A(≥7h sono+1sintoma) AND B(≥3x/semana_3meses) AND C AND D AND E AND F",
+      "clusters": [],
+      "duration": "≥3 meses (persistente); 1 mes (subagudo); <1 mes (agudo)",
+      "age_onset": "17-24 anos",
+      "functional_impairment": "Eficiencia reduzida, risco de acidentes, inercia do sono",
+      "exclusions": [
+        "Narcolepsia",
+        "Apneia",
+        "Ritmo circadiano",
+        "Parassonias",
+        "Substancia",
+        "TDM",
+        "Privacao de sono"
+      ],
+      "subtypes_presentations": [],
+      "specifiers": [
+        "Com transtorno mental",
+        "Com condicao medica",
+        "Com outro transtorno do sono",
+        "Agudo",
+        "Subagudo",
+        "Persistente"
+      ],
+      "operational_profiles": [],
+      "severity": {
+        "has_formal_severity": true,
+        "type": "ordinal_simples",
+        "levels": [
+          "Leve (1-2 dias/semana)",
+          "Moderada (3-4 dias/semana)",
+          "Grave (5-7 dias/semana)"
+        ],
+        "assignment_rule": "Baseado no grau de dificuldade para manter alerta durante o dia",
+        "domains": []
+      },
+      "critical_differentials": [
+        "Privacao de sono",
+        "Apneia",
+        "Narcolepsia",
+        "Ritmo circadiano",
+        "TDM"
+      ],
+      "key_questions": [
+        "Quanto tempo dorme a noite?",
+        "Tem periodos recorrentes de sono durante o dia?",
+        "Dorme mais de 9h e nao se sente descansado?"
+      ],
+      "alerts": [],
+      "source_trace": {
+        "markdown_section": "2. TRANSTORNO DE HIPERSONOLENCIA",
+        "patches_applied": []
+      }
+    },
+    {
+      "id": "narcolepsia",
+      "name": "Narcolepsia",
+      "category": "FULL",
+      "estrutura_diagnostica": "polythetic_com_ancora",
+      "render_structured_interview": true,
+      "ui_mode": "structured_full",
+      "criteria": [
+        "A. Periodos recorrentes de necessidade irresistivel de dormir/cair no sono (≥3x/semana nos ultimos 3 meses)",
+        "B. Pelo menos 1 dos 3: B1-Cataplexia, B2-Deficiencia de hipocretina, B3-Resultado positivo polissonografia/TLMS"
+      ],
+      "diagnostic_rule": "A(ancora_obrigatoria) AND (B1 OR B2 OR B3)",
+      "clusters": [
+        "Sonolencia diurna excessiva",
+        "Marcadores auxiliares"
+      ],
+      "duration": "≥3 meses",
+      "age_onset": "15-25 anos",
+      "functional_impairment": "Incapacidade de dirigir/trabalhar em seguranca, risco de lesoes, isolamento social",
+      "exclusions": [
+        "Privacao de sono",
+        "Apneia",
+        "TDM/TBD"
+      ],
+      "subtypes_presentations": [
+        "Sem cataplexia com deficiencia de hipocretina",
+        "Com cataplexia sem deficiencia de hipocretina"
+      ],
+      "specifiers": [],
+      "operational_profiles": [],
+      "severity": {
+        "has_formal_severity": true,
+        "type": "ordinal_simples",
+        "levels": [
+          "Leve",
+          "Moderada",
+          "Grave"
+        ],
+        "assignment_rule": "Baseado na frequencia de cataplexia, numero de cochilos e fragmentacao do sono",
+        "domains": []
+      },
+      "critical_differentials": [
+        "Hipersonolencia",
+        "Privacao de sono",
+        "Apneia",
+        "TDM",
+        "Transtorno conversivo"
+      ],
+      "key_questions": [
+        "Tem ataques irresistiveis de sono durante o dia?",
+        "Ja teve fraqueza muscular ao rir?",
+        "Ja fez polissonografia?"
+      ],
+      "alerts": [
+        ">50% dos casos com cataplexia associam a sinucleinopatia - monitorar"
+      ],
+      "source_trace": {
+        "markdown_section": "3. NARCOLEPSIA",
+        "patches_applied": []
+      }
+    },
+    {
+      "id": "apneia_hipopneia_obstrutiva_sono",
+      "name": "Apneia e Hipopneia Obstrutivas do Sono",
+      "category": "FULL",
+      "estrutura_diagnostica": "etiologico_externo",
+      "render_structured_interview": true,
+      "ui_mode": "structured_full",
+      "criteria": [
+        "Alternativa 1: Polissonografia ≥5 apneias/hipopneias obstrutivas por hora + pelo menos 1 sintoma (ronco/pausas respiratorias ou sonolencia diurna)",
+        "Alternativa 2: Polissonografia ≥15 eventos/hora independente de sintomas"
+      ],
+      "diagnostic_rule": "(Alt1: polissonografia≥5eventos/h+1sintoma) OR (Alt2: polissonografia≥15eventos/h)",
+      "clusters": [],
+      "duration": null,
+      "age_onset": "40-60 anos (adultos); 3-8 anos (criancas)",
+      "functional_impairment": "Sonolencia diurna, risco de acidentes de transito 7x maior, hipertensao",
+      "exclusions": [
+        "Ronco primario",
+        "Apneia central",
+        "Narcolepsia"
+      ],
+      "subtypes_presentations": [],
+      "specifiers": [],
+      "operational_profiles": [],
+      "severity": {
+        "has_formal_severity": true,
+        "type": "marcador_biometrico",
+        "levels": [
+          "Leve (IAH<15)",
+          "Moderada (IAH 15-30)",
+          "Grave (IAH>30)"
+        ],
+        "assignment_rule": "Baseado no Indice de Apneia-Hipopneia (IAH) por hora de sono",
+        "domains": [
+          "IAH"
+        ]
+      },
+      "critical_differentials": [
+        "Ronco primario",
+        "Apneia central",
+        "Narcolepsia",
+        "Hipersonolencia"
+      ],
+      "key_questions": [
+        "Ronca fortemente?",
+        "Alguem observou pausas na respiracao?",
+        "Ja fez polissonografia?"
+      ],
+      "alerts": [
+        "Risco de acidentes de transito 7x maior",
+        "Polissonografia obrigatoria"
+      ],
+      "source_trace": {
+        "markdown_section": "4. APNEIA E HIPOPNEIA OBSTRUTIVAS DO SONO",
+        "patches_applied": []
+      }
+    },
+    {
+      "id": "transtorno_comportamental_sono_rem",
+      "name": "Transtorno Comportamental do Sono REM",
+      "category": "FULL",
+      "estrutura_diagnostica": "qualitativo_descritivo",
+      "render_structured_interview": true,
+      "ui_mode": "structured_full",
+      "criteria": [
+        "A. Episodios repetidos de despertar durante sono associados a vocalizacao e/ou comportamentos complexos",
+        "B. Comportamentos surgem durante sono REM (>90 min apos inicio, porcoes finais do sono)",
+        "C. Ao acordar: completamente desperto, alerta, sem confusao",
+        "D. Sono REM sem atonia polissonografica OU historia sugestiva + sinucleinopatia estabelecida",
+        "E. Sofrimento clinicamente significativo ou prejuizo funcional",
+        "F. NAO atribuido a substancia",
+        "G. Coexistencia de transtornos/condicoes medicas NAO explica os episodios"
+      ],
+      "diagnostic_rule": "A AND B AND C AND D AND E AND F AND G",
+      "clusters": [],
+      "duration": null,
+      "age_onset": ">50 anos (homens)",
+      "functional_impairment": "Risco de lesoes significativas, isolamento social",
+      "exclusions": [
+        "Despertar confusional/sonambulismo",
+        "Convulsoes noturnas",
+        "Apneia",
+        "Simulacao"
+      ],
+      "subtypes_presentations": [],
+      "specifiers": [],
+      "operational_profiles": [],
+      "severity": {
+        "has_formal_severity": false,
+        "type": "nao_aplica",
+        "levels": [],
+        "assignment_rule": null,
+        "domains": []
+      },
+      "critical_differentials": [
+        "Sonambulismo",
+        "Convulsoes noturnas",
+        "Apneia",
+        "Simulacao"
+      ],
+      "key_questions": [
+        "Fala, grita ou se move muito durante o sono?",
+        "Ja se machucou durante o sono?",
+        "Tem tremores/rigidez (Parkinson)?"
+      ],
+      "alerts": [
+        ">50% dos casos inicialmente idiopaticos desenvolvem sinucleinopatia"
+      ],
+      "source_trace": {
+        "markdown_section": "5. TRANSTORNO COMPORTAMENTAL DO SONO REM",
+        "patches_applied": []
+      }
+    },
+    {
+      "id": "sindrome_pernas_inquietas",
+      "name": "Sindrome das Pernas Inquietas",
+      "category": "FULL",
+      "estrutura_diagnostica": "qualitativo_descritivo",
+      "render_structured_interview": true,
+      "ui_mode": "structured_full",
+      "criteria": [
+        "A. Necessidade de movimentar as pernas com sensacoes desconfortaveis (TODAS: A1-inicia/agrava em repouso, A2-aliviada pelo movimento, A3-maior no fim da tarde/noite)",
+        "B. Pelo menos 3 vezes por semana por no minimo 3 meses",
+        "C. Sofrimento significativo ou prejuizo funcional",
+        "D. NAO atribuivel a outra condicao medica",
+        "E. NAO atribuivel a substancia"
+      ],
+      "diagnostic_rule": "A1 AND A2 AND A3 AND B AND C AND D AND E",
+      "clusters": [],
+      "duration": "≥3 meses",
+      "age_onset": "2a-3a decada (casos familiares)",
+      "functional_impairment": "Retardo no inicio do sono, fragmentacao do sono, sonolencia diurna",
+      "exclusions": [
+        "Caimbras",
+        "Desconforto postural",
+        "Artrite",
+        "Acatisia"
+      ],
+      "subtypes_presentations": [],
+      "specifiers": [],
+      "operational_profiles": [],
+      "severity": {
+        "has_formal_severity": false,
+        "type": "nao_aplica",
+        "levels": [],
+        "assignment_rule": null,
+        "domains": []
+      },
+      "critical_differentials": [
+        "Caimbras",
+        "Acatisia",
+        "Neuropatia periferica"
+      ],
+      "key_questions": [
+        "Sente necessidade de mexer as pernas ao deitar?",
+        "Melhora quando se levanta?",
+        "E pior no final da tarde?",
+        "Alguem na familia tem?"
+      ],
+      "alerts": [
+        "Avaliar anemia/ferro (fator precipitante comum)"
+      ],
+      "source_trace": {
+        "markdown_section": "6. SINDROME DAS PERNAS INQUIETAS",
+        "patches_applied": []
+      }
+    },
+    {
+      "id": "transtorno_sono_vigilia_ritmo_circadiano",
+      "name": "Transtorno do Sono-Vigilia do Ritmo Circadiano",
+      "category": "SHORT",
+      "estrutura_diagnostica": "temporal_topografico",
+      "render_structured_interview": true,
+      "ui_mode": "structured_compact",
+      "criteria": [
+        "A. Padrao persistente ou recorrente de interrupcao do sono devido a alteracao no sistema circadiano",
+        "B. Interrupcao leva a sonolencia excessiva ou insonia, ou ambas",
+        "C. Sofrimento clinicamente significativo ou prejuizo funcional"
+      ],
+      "diagnostic_rule": "A AND B AND C",
+      "clusters": [],
+      "duration": null,
+      "age_onset": null,
+      "functional_impairment": "Prejuizo funcional significativo",
+      "exclusions": [],
+      "subtypes_presentations": [
+        "Tipo fase do sono atrasada",
+        "Tipo fase do sono avancada",
+        "Tipo sono-vigilia irregular",
+        "Tipo sono-vigilia nao de 24h",
+        "Tipo trabalho em turnos",
+        "Tipo nao especificado"
+      ],
+      "specifiers": [
+        "Episodico",
+        "Persistente",
+        "Recorrente"
+      ],
+      "operational_profiles": [],
+      "severity": {
+        "has_formal_severity": false,
+        "type": "nao_aplica",
+        "levels": [],
+        "assignment_rule": null,
+        "domains": []
+      },
+      "critical_differentials": [
+        "Insonia",
+        "Privacao de sono"
+      ],
+      "key_questions": [
+        "Qual seu horario habitual de deitar e acordar?",
+        "Trabalha em turnos?",
+        "Seu padrao de sono e regular?"
+      ],
+      "alerts": [],
+      "source_trace": {
+        "markdown_section": "7. TRANSTORNO DO SONO-VIGILIA DO RITMO CIRCADIANO",
+        "patches_applied": []
+      }
+    },
+    {
+      "id": "transtornos_despertar_sono_nao_rem",
+      "name": "Transtornos de Despertar do Sono Nao REM (Sonambulismo/Terrores)",
+      "category": "SHORT",
+      "estrutura_diagnostica": "qualitativo_descritivo",
+      "render_structured_interview": true,
+      "ui_mode": "structured_compact",
+      "criteria": [
+        "A. Episodios recorrentes de despertares incompletos durante primeiro terco do sono (sonambulismo OU terrores)",
+        "B. Pouca ou nenhuma lembranca de imagens oniricas",
+        "C. Amnesia em relacao ao episodio",
+        "D. Sofrimento clinicamente significativo ou prejuizo funcional",
+        "E. NAO atribuido a substancia",
+        "F. Coexistencia de outros transtornos NAO explica os episodios"
+      ],
+      "diagnostic_rule": "A AND B AND C AND D AND E AND F",
+      "clusters": [],
+      "duration": null,
+      "age_onset": "Infancia (mais comum)",
+      "functional_impairment": "Risco de violencia ou lesoes",
+      "exclusions": [
+        "Pesadelo",
+        "Transtorno dissociativo relacionado ao sono",
+        "Apneia"
+      ],
+      "subtypes_presentations": [
+        "Sonambulismo",
+        "Terror no sono"
+      ],
+      "specifiers": [],
+      "operational_profiles": [],
+      "severity": {
+        "has_formal_severity": false,
+        "type": "nao_aplica",
+        "levels": [],
+        "assignment_rule": null,
+        "domains": []
+      },
+      "critical_differentials": [
+        "Pesadelo",
+        "Transtorno dissociativo do sono",
+        "Apneia",
+        "Convulsoes"
+      ],
+      "key_questions": [
+        "Anda ou faz coisas durante o sono sem se lembrar?",
+        "Acorda gritando?",
+        "Em que horario da noite ocorrem?"
+      ],
+      "alerts": [
+        "Potencial para violencia ou lesoes = gravidade alta"
+      ],
+      "source_trace": {
+        "markdown_section": "8. TRANSTORNOS DE DESPERTAR DO SONO NAO REM",
+        "patches_applied": []
+      }
+    },
+    {
+      "id": "transtorno_do_pesadelo",
+      "name": "Transtorno do Pesadelo",
+      "category": "SHORT",
+      "estrutura_diagnostica": "qualitativo_descritivo",
+      "render_structured_interview": true,
+      "ui_mode": "structured_compact",
+      "criteria": [
+        "A. Ocorrencias repetidas de sonhos prolongados, extremamente disforicos e bem lembrados (tipicamente na segunda metade do sono)",
+        "B. Ao despertar: rapidamente orientado e alerta",
+        "C. Sofrimento clinicamente significativo ou prejuizo funcional",
+        "D. NAO atribuivel a substancia",
+        "E. Coexistencia de transtornos/condicoes medicas NAO explica"
+      ],
+      "diagnostic_rule": "A AND B AND C AND D AND E",
+      "clusters": [],
+      "duration": null,
+      "age_onset": null,
+      "functional_impairment": "Sofrimento significativo; prejuizo funcional",
+      "exclusions": [
+        "Terrores do sono",
+        "Transtorno dissociativo do sono"
+      ],
+      "subtypes_presentations": [],
+      "specifiers": [
+        "Agudo (≤1 mes)",
+        "Subagudo (>1 e <6 meses)",
+        "Persistente (≥6 meses)"
+      ],
+      "operational_profiles": [],
+      "severity": {
+        "has_formal_severity": true,
+        "type": "frequencia_eventos",
+        "levels": [
+          "Leve (<1 episodio/semana)",
+          "Moderada (≥1/semana mas <todas as noites)",
+          "Grave (todas as noites)"
+        ],
+        "assignment_rule": "Baseado na frequencia de episodios por semana",
+        "domains": []
+      },
+      "critical_differentials": [
+        "Terrores do sono",
+        "Transtorno dissociativo do sono",
+        "TEPT com pesadelos"
+      ],
+      "key_questions": [
+        "Tem sonhos muito ruins que lembra bem ao acordar?",
+        "Acorda orientado?",
+        "Com que frequencia?"
+      ],
+      "alerts": [],
+      "source_trace": {
+        "markdown_section": "9. TRANSTORNO DO PESADELO",
+        "patches_applied": []
+      }
+    },
+    {
+      "id": "apneia_central_sono",
+      "name": "Apneia Central do Sono",
+      "category": "SHORT",
+      "estrutura_diagnostica": "etiologico_externo",
+      "render_structured_interview": true,
+      "ui_mode": "structured_compact",
+      "criteria": [
+        "A. Polissonografia com ≥5 apneias centrais por hora de sono",
+        "B. NAO melhor explicada por outro transtorno do sono"
+      ],
+      "diagnostic_rule": "A(≥5apneias_centrais/h) AND B",
+      "clusters": [],
+      "duration": null,
+      "age_onset": null,
+      "functional_impairment": "Sonolencia diurna, insonia",
+      "exclusions": [
+        "Apneia obstrutiva",
+        "Hipoventilacao"
+      ],
+      "subtypes_presentations": [
+        "Tipo idiopatica",
+        "Respiracao de Cheyne-Stokes",
+        "Comorbida com opioides"
+      ],
+      "specifiers": [],
+      "operational_profiles": [],
+      "severity": {
+        "has_formal_severity": false,
+        "type": "nao_aplica",
+        "levels": [],
+        "assignment_rule": null,
+        "domains": []
+      },
+      "critical_differentials": [
+        "Apneia obstrutiva",
+        "Insuficiencia cardiaca"
+      ],
+      "key_questions": [
+        "Ja fez polissonografia?",
+        "Tem insuficiencia cardiaca?",
+        "Usa opioides cronicamente?"
+      ],
+      "alerts": [
+        "[PATCH R2B-12-02] Gravidade nao formal no DSM-5 para apneia central"
+      ],
+      "source_trace": {
+        "markdown_section": "10. APNEIA CENTRAL DO SONO",
+        "patches_applied": [
+          "R2B-12-02: gravidade.tipo marcador_biometrico → nao_aplica"
+        ]
+      }
+    },
+    {
+      "id": "hipoventilacao_relacionada_sono",
+      "name": "Hipoventilacao Relacionada ao Sono",
+      "category": "SHORT",
+      "estrutura_diagnostica": "etiologico_externo",
+      "render_structured_interview": true,
+      "ui_mode": "structured_compact",
+      "criteria": [
+        "A. Polissonografia mostra episodios de respiracao reduzida com niveis elevados de CO2",
+        "B. NAO melhor explicada por outro transtorno do sono"
+      ],
+      "diagnostic_rule": "A(respiracao_reduzida+CO2_elevado) AND B",
+      "clusters": [],
+      "duration": null,
+      "age_onset": null,
+      "functional_impairment": "Hipoxemia, hipercarbia, alteracoes em orgaos terminais",
+      "exclusions": [
+        "Apneia obstrutiva",
+        "Apneia central"
+      ],
+      "subtypes_presentations": [
+        "Idiopatica",
+        "Alveolar central congenita",
+        "Comorbida"
+      ],
+      "specifiers": [],
+      "operational_profiles": [],
+      "severity": {
+        "has_formal_severity": false,
+        "type": "nao_aplica",
+        "levels": [],
+        "assignment_rule": null,
+        "domains": []
+      },
+      "critical_differentials": [
+        "Apneia obstrutiva",
+        "Doenca pulmonar"
+      ],
+      "key_questions": [
+        "Ja fez polissonografia?",
+        "Tem doenca pulmonar ou obesidade?"
+      ],
+      "alerts": [
+        "[PATCH R2B-12-03] Gravidade nao formal no DSM-5 para hipoventilacao"
+      ],
+      "source_trace": {
+        "markdown_section": "11. HIPOVENTILACAO RELACIONADA AO SONO",
+        "patches_applied": [
+          "R2B-12-03: gravidade.tipo marcador_biometrico → nao_aplica"
+        ]
+      }
+    },
+    {
+      "id": "transtorno_sono_induzido_substancia",
+      "name": "Transtorno do Sono Induzido por Substancia/Medicamento",
+      "category": "SHORT",
+      "estrutura_diagnostica": "etiologico_externo",
+      "render_structured_interview": true,
+      "ui_mode": "structured_compact",
+      "criteria": [
+        "A. Transtorno do sono proeminente e grave",
+        "B. Evidencia de que sintoma se desenvolveu durante intoxicacao/descontinuacao de substancia ou medicamento",
+        "C. NAO melhor explicado por transtorno do sono independente",
+        "D. NAO ocorre exclusivamente durante delirium",
+        "E. Causa sofrimento clinicamente significativo ou prejuizo funcional"
+      ],
+      "diagnostic_rule": "A AND B AND C AND D AND E",
+      "clusters": [],
+      "duration": null,
+      "age_onset": null,
+      "functional_impairment": "Sofrimento/prejuizo funcional",
+      "exclusions": [
+        "Transtorno do sono independente",
+        "Delirium"
+      ],
+      "subtypes_presentations": [
+        "Tipo insonia",
+        "Tipo sonolencia diurna",
+        "Tipo parassonia",
+        "Tipo misto"
+      ],
+      "specifiers": [
+        "Com inicio durante intoxicacao",
+        "Com inicio durante abstinencia",
+        "Com inicio apos uso de medicamento"
+      ],
+      "operational_profiles": [],
+      "severity": {
+        "has_formal_severity": false,
+        "type": "nao_aplica",
+        "levels": [],
+        "assignment_rule": null,
+        "domains": []
+      },
+      "critical_differentials": [
+        "Transtorno do sono primario"
+      ],
+      "key_questions": [
+        "Quando comecaram os problemas de sono?",
+        "Usa alguma substancia ou medicamento?",
+        "Os sintomas persistem quando para de usar?"
+      ],
+      "alerts": [
+        "[PATCH R2B-12-01] Correcao typo nao_applica → nao_aplica"
+      ],
+      "source_trace": {
+        "markdown_section": "12. TRANSTORNO DO SONO INDUZIDO POR SUBSTANCIA/MEDICAMENTO",
+        "patches_applied": [
+          "R2B-12-01: typo nao_applica → nao_aplica"
+        ]
+      }
+    }
+  ]
+}

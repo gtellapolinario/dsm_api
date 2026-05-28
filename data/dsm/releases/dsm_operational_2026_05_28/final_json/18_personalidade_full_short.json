@@ -1,0 +1,779 @@
+{
+  "chapter_id": "18",
+  "chapter_name": "Transtornos da Personalidade",
+  "source_markdown": "18_personalidade_full_short.md",
+  "normalization_round": "2B",
+  "patch_count": 5,
+  "items": [
+    {
+      "id": "transtorno_personalidade_paranoide",
+      "name": "Transtorno da Personalidade Paranoide",
+      "category": "FULL",
+      "estrutura_diagnostica": "polythetic_monocluster",
+      "render_structured_interview": true,
+      "ui_mode": "structured_full",
+      "criteria": [
+        "A1. Suspeita sem embasamento de ser explorado/maltratado/enganado",
+        "A2. Preocupacao com duvidas sobre lealdade/confiabilidade",
+        "A3. Relutancia em confiar devido a medo infundado",
+        "A4. Percepcao de significados ocultos humilhantes/ameacadores",
+        "A5. Guarda rancores persistentes",
+        "A6. Percebe ataques ao carater nao percebidos por outros",
+        "A7. Suspeitas recorrentes sobre fidelidade do conjuge"
+      ],
+      "diagnostic_rule": "Criterios gerais de TP (A-F) + >=4 de 7 criterios especificos + exclusao",
+      "clusters": [
+        "Desconfianca e Suspeita"
+      ],
+      "duration": "padrao persistente, estavel, de longa duracao",
+      "age_onset": "inicio vida adulta (desde adolescencia/inicio adulto)",
+      "functional_impairment": "problemas nos relacionamentos interpessoais; isolamento social; implicacoes legais",
+      "exclusions": [
+        "esquizofrenia",
+        "transtorno bipolar/depressivo com psicotico",
+        "condicao medica"
+      ],
+      "subtypes_presentations": [],
+      "specifiers": [],
+      "operational_profiles": [],
+      "severity": {
+        "has_formal_severity": false,
+        "type": "nao_aplica",
+        "levels": [],
+        "assignment_rule": null,
+        "domains": []
+      },
+      "critical_differentials": [
+        "transtorno delirante",
+        "esquizotipica",
+        "esquizoide",
+        "borderline",
+        "evitativa",
+        "antissocial",
+        "narcisista"
+      ],
+      "key_questions": [
+        "Desde a juventude, desconfia das intencoes das pessoas sem motivo?",
+        "Dificil confiar por medo de informacoes serem usadas contra voce?",
+        "Encontra significados ocultos em comentarios normais?",
+        "Dificuldade em perdoar quando se sente desrespeitado?",
+        "Sente que carater/reputacao sao atacados?",
+        "Duvidas sobre fidelidade sem evidencias?"
+      ],
+      "alerts": [
+        "Nao confundir desconfianca justificada por contexto sociocultural com paranoia patologica"
+      ],
+      "source_trace": {
+        "markdown_section": "## 1. Transtorno da Personalidade Paranoide (TPP)",
+        "patches_applied": []
+      }
+    },
+    {
+      "id": "transtorno_personalidade_esquizoide",
+      "name": "Transtorno da Personalidade Esquizoide",
+      "category": "FULL",
+      "estrutura_diagnostica": "polythetic_monocluster",
+      "render_structured_interview": true,
+      "ui_mode": "structured_full",
+      "criteria": [
+        "A1. Nao deseja nem desfruta de relacoes intimas",
+        "A2. Quase sempre opta por atividades solitarias",
+        "A3. Pouco ou nenhum interesse em experiencias sexuais",
+        "A4. Tem prazer em poucas atividades",
+        "A5. Nao tem amigos proximos (exceto familiares 1o grau)",
+        "A6. Indiferente a elogio ou critica",
+        "A7. Frieza emocional, distanciamento ou embotamento afetivo"
+      ],
+      "diagnostic_rule": "Criterios gerais de TP (A-F) + >=4 de 7 criterios + exclusao",
+      "clusters": [
+        "Distanciamento Social",
+        "Restricao Afetiva"
+      ],
+      "duration": "padrao persistente e estavel",
+      "age_onset": "inicio vida adulta",
+      "functional_impairment": "isolamento social profundo; poucos relacionamentos intimos; funcionamento profissional pode ser preservado em trabalho isolado",
+      "exclusions": [
+        "esquizofrenia",
+        "transtorno bipolar/depressivo com psicotico",
+        "TEA",
+        "condicao medica"
+      ],
+      "subtypes_presentations": [],
+      "specifiers": [],
+      "operational_profiles": [],
+      "severity": {
+        "has_formal_severity": false,
+        "type": "nao_aplica",
+        "levels": [],
+        "assignment_rule": null,
+        "domains": []
+      },
+      "critical_differentials": [
+        "esquizotipica",
+        "paranoide",
+        "evitativa",
+        "TOC personalidade",
+        "depressao maior"
+      ],
+      "key_questions": [
+        "Prefere passar o tempo sozinho?",
+        "Sente pouco prazer nas coisas?",
+        "Pouco interesse em relacionamentos intimos ou sexuais?",
+        "Criticas ou elogios nao o afetam?",
+        "Se descreve como frio ou distante emocionalmente?",
+        "Tem amigos proximos alem de familia?"
+      ],
+      "alerts": [
+        "Distinguir isolamento preferido (TPEsq) de isolamento por medo (evitativa)"
+      ],
+      "source_trace": {
+        "markdown_section": "## 2. Transtorno da Personalidade Esquizoide (TPEsq)",
+        "patches_applied": []
+      }
+    },
+    {
+      "id": "transtorno_personalidade_esquizotipica",
+      "name": "Transtorno da Personalidade Esquizotipica",
+      "category": "FULL",
+      "estrutura_diagnostica": "polythetic_monocluster",
+      "render_structured_interview": true,
+      "ui_mode": "structured_full",
+      "criteria": [
+        "A1. Ideias de referencia (excluindo delirios)",
+        "A2. Crencas estranhas ou pensamento magico",
+        "A3. Experiencias perceptivas incomuns (ilusoes corporais)",
+        "A4. Pensamento/discurso estranho (vago, circunstancial)",
+        "A5. Desconfianca ou ideacao paranoide",
+        "A6. Afeto inadequado ou constrito",
+        "A7. Comportamento/aparencia estranha, excentrica",
+        "A8. Ausencia de amigos proximos (exceto parentes 1o grau)",
+        "A9. Ansiedade social excessiva que NAO diminui com convivio"
+      ],
+      "diagnostic_rule": "Criterios gerais de TP (A-F) + >=5 de 9 criterios + exclusao",
+      "clusters": [
+        "Deficits Sociais",
+        "Distorcoes Cognitivo-Perceptivas",
+        "Comportamento Excentrico"
+      ],
+      "duration": "padrao relativamente estavel",
+      "age_onset": "inicio vida adulta",
+      "functional_impairment": "deficits interpessoais marcados; isolamento social; ansiedade social persistente",
+      "exclusions": [
+        "esquizofrenia",
+        "transtorno bipolar/depressivo com psicotico",
+        "TEA"
+      ],
+      "subtypes_presentations": [],
+      "specifiers": [],
+      "operational_profiles": [],
+      "severity": {
+        "has_formal_severity": false,
+        "type": "nao_aplica",
+        "levels": [],
+        "assignment_rule": null,
+        "domains": []
+      },
+      "critical_differentials": [
+        "paranoide",
+        "esquizoide",
+        "evitativa",
+        "borderline",
+        "narcisista"
+      ],
+      "key_questions": [
+        "Eventos cotidianos tem significado especial so para voce?",
+        "Crencas que outros consideram estranhas?",
+        "Experiencias incomuns (presenca, ouvir nome)?",
+        "Jeito de falar ou se vestir e estranho/excentrico?",
+        "Desconforto social diminui quando conhece melhor as pessoas? [nao = favorece TPET]"
+      ],
+      "alerts": [
+        "Pequena proporcao pode evoluir para esquizofrenia; avaliar contexto cultural para pensamento magico"
+      ],
+      "source_trace": {
+        "markdown_section": "## 3. Transtorno da Personalidade Esquizotipica (TPET)",
+        "patches_applied": []
+      }
+    },
+    {
+      "id": "transtorno_personalidade_antissocial",
+      "name": "Transtorno da Personalidade Antissocial",
+      "category": "FULL",
+      "estrutura_diagnostica": "polythetic_monocluster",
+      "render_structured_interview": true,
+      "ui_mode": "structured_full",
+      "criteria": [
+        "A1. Fracasso em ajustar-se as normas sociais/legais",
+        "A2. Tendencia a falsidade (mentiras, trapaça)",
+        "A3. Impulsividade ou fracasso em fazer planos",
+        "A4. Irritabilidade e agressividade",
+        "A5. Descaso pela seguranca de si ou outros",
+        "A6. Irresponsabilidade reiterada",
+        "A7. Ausencia de remorso",
+        "B. No minimo 18 anos",
+        "C. Evidencias de TC com inicio anterior aos 15 anos",
+        "D. Nao exclusivamente durante esquizofrenia ou bipolar"
+      ],
+      "diagnostic_rule": "Criterios gerais de TP (A-F) + >=3 de 7 (A) + B(>=18) + C(TC pre-15) + D(exclusao)",
+      "clusters": [
+        "Desconsideracao",
+        "Violacao de Direitos"
+      ],
+      "duration": "curso cronico; tende a atenuar com envelhecimento (especialmente apos 40)",
+      "age_onset": "inicio vida adulta (diagnostico); sintomas desde infancia/adolescencia (TC pre-15 obrigatorio)",
+      "functional_impairment": "problemas legais, profissionais, relacionamentais graves; possivel encarceramento",
+      "exclusions": [
+        "esquizofrenia",
+        "transtorno bipolar",
+        "TC (em >=18 TPA supera TC)"
+      ],
+      "subtypes_presentations": [],
+      "specifiers": [],
+      "operational_profiles": [
+        {
+          "id": "tracos_psicopaticos",
+          "description": "Com tracos psicopaticos (referencia conceitual, nao especificador formal DSM-5)"
+        }
+      ],
+      "severity": {
+        "has_formal_severity": false,
+        "type": "nao_aplica",
+        "levels": [],
+        "assignment_rule": null,
+        "domains": []
+      },
+      "critical_differentials": [
+        "transtorno da conduta",
+        "substancia",
+        "borderline",
+        "histriônica",
+        "comportamento criminoso sem tracos de personalidade"
+      ],
+      "key_questions": [
+        "Antes dos 15 anos: problemas com brigas, bullying, roubo, fugas? (TC pre-15)",
+        "Ja foi detido ou preso? Com que frequencia?",
+        "Mentir ou usar trapaça para conseguir o que quer?",
+        "Dificuldade em manter emprego ou honrar dividas?",
+        "Brigas fisicas repetidas?",
+        "Feriu/roubou sem sentir culpa ou remorso?"
+      ],
+      "alerts": [
+        "Historia de TC pre-15 anos obrigatoria - sem evidencia nao e TPA",
+        "Nao diagnosticar <18 anos (regra DSM-5)",
+        "Comportamento antissocial deve preexistir ao uso de substancia",
+        "Contexto socioeconomico: comportamentos podem ser estrategias de sobrevivencia"
+      ],
+      "source_trace": {
+        "markdown_section": "## 4. Transtorno da Personalidade Antissocial (TPA)",
+        "patches_applied": [
+          "MEDIUM-BLOCKED: nota tecnica vinculacao Cap 15"
+        ]
+      }
+    },
+    {
+      "id": "transtorno_personalidade_borderline",
+      "name": "Transtorno da Personalidade Borderline",
+      "category": "FULL",
+      "estrutura_diagnostica": "polythetic_monocluster",
+      "render_structured_interview": true,
+      "ui_mode": "structured_full",
+      "criteria": [
+        "1. Esforcos desesperados para evitar abandono real ou imaginado",
+        "2. Relacionamentos instaveis com alternancia entre idealizacao e desvalorizacao",
+        "3. Instabilidade acentuada da autoimagem",
+        "4. Impulsividade em 2+ areas autodestrutivas",
+        "5. Recorrencia de comportamento suicida ou automutilacao",
+        "6. Instabilidade afetiva (reatividade de humor, duracao horas)",
+        "7. Sentimentos cronicos de vazio",
+        "8. Raiva intensa e inapropriada",
+        "9. Ideacao paranoide transitoria ou sintomas dissociativos"
+      ],
+      "diagnostic_rule": "Criterios gerais de TP (A-F) + >=5 de 9 criterios; exclusao interna: criterios 1 e 4 excluem suicida/automutilador (contado apenas no 5)",
+      "clusters": [
+        "Instabilidade Relacional",
+        "Instabilidade Identitaria",
+        "Impulsividade",
+        "Disfregulacao Afetiva"
+      ],
+      "duration": "instabilidade cronica; melhora com envelhecimento (30-50 anos); ate 50% nao mais atende criterios apos ~10 anos",
+      "age_onset": "inicio vida adulta",
+      "functional_impairment": "prejuizo interpessoal grave; recorrente perda de empregos; separacoes; risco de suicidio 8-10%; automutilacao",
+      "exclusions": [
+        "transtornos depressivo/bipolar",
+        "histriônica",
+        "dependente",
+        "narcisista",
+        "TEP"
+      ],
+      "subtypes_presentations": [],
+      "specifiers": [],
+      "operational_profiles": [
+        {
+          "id": "descontrolado",
+          "description": "Variante com afeto/impulsividade predominantes"
+        },
+        {
+          "id": "quiet_borderline",
+          "description": "Variante com retencao, evitacao"
+        }
+      ],
+      "severity": {
+        "has_formal_severity": false,
+        "type": "nao_aplica",
+        "levels": [],
+        "assignment_rule": null,
+        "domains": []
+      },
+      "critical_differentials": [
+        "transtorno bipolar",
+        "histriônica",
+        "dependente",
+        "narcisista",
+        "TEP"
+      ],
+      "key_questions": [
+        "Esforcos desesperados para evitar abandono?",
+        "Relacionamentos intensos e instaveis (maravilhosa/terrivel)?",
+        "Autoimagem muda muito?",
+        "Impulsividade em areas autodestrutivas?",
+        "Automutilacao ou gestos/ameacas suicidas?",
+        "Humor muda rapidamente (horas)?",
+        "Vazio persistente?",
+        "Raiva intensa, brigas fisicas?",
+        "Sob estresse: sentiu que coisas nao eram reais?"
+      ],
+      "alerts": [
+        "ALTO RISCO DE SUICIDIO (8-10%); avaliar automutilacao em TODA entrevista",
+        "Instabilidade afetiva TPB = horas; bipolar = semanas/meses",
+        "Melhora com idade mas fase inicial de risco elevado"
+      ],
+      "source_trace": {
+        "markdown_section": "## 5. Transtorno da Personalidade Borderline (TPB)",
+        "patches_applied": [
+          "LOW-VERIFY: risco suicidio confirmado"
+        ]
+      }
+    },
+    {
+      "id": "transtorno_personalidade_histrionica",
+      "name": "Transtorno da Personalidade Histrionica",
+      "category": "FULL",
+      "estrutura_diagnostica": "polythetic_monocluster",
+      "render_structured_interview": true,
+      "ui_mode": "structured_full",
+      "criteria": [
+        "1. Desconforto quando nao e centro das atencoes",
+        "2. Interacao sexualmente sedutor/provocativa inadequada",
+        "3. Mudancas rapidas e expressao superficial das emocoes",
+        "4. Usa aparencia fisica para atrair atencao",
+        "5. Discurso excessivamente impressionista, carente de detalhes",
+        "6. Autodramatizacao, teatralidade",
+        "7. Suggestionavel",
+        "8. Considera relacoes mais intimas do que sao"
+      ],
+      "diagnostic_rule": "Criterios gerais de TP (A-F) + >=5 de 8 criterios",
+      "clusters": [
+        "Emocionalidade Excessiva",
+        "Busca de Atencao"
+      ],
+      "duration": "padrao persistente e estavel",
+      "age_onset": "inicio vida adulta",
+      "functional_impairment": "dificuldade em intimidade emocional; relacionamentos superficiais",
+      "exclusions": [
+        "borderline",
+        "antissocial",
+        "narcisista",
+        "dependente"
+      ],
+      "subtypes_presentations": [],
+      "specifiers": [],
+      "operational_profiles": [],
+      "severity": {
+        "has_formal_severity": false,
+        "type": "nao_aplica",
+        "levels": [],
+        "assignment_rule": null,
+        "domains": []
+      },
+      "critical_differentials": [
+        "borderline",
+        "narcisista",
+        "dependente"
+      ],
+      "key_questions": [
+        "Desconfortavel quando nao esta no centro das atencoes?",
+        "Comportamento sedutor/provocativo sem interesse romantico?",
+        "Emocoes mudam rapidamente e parecem superficiais?",
+        "Usa aparencia para chamar atencao?",
+        "Dramatico, teatral, exagera nas emocoes?",
+        "Facilmente influenciado?",
+        "Relacionamentos mais intimos do que as outras pessoas pensam?"
+      ],
+      "alerts": [
+        "Nao confundir extroversao ou estilo comunicativo com TPHist; contexto cultural essencial"
+      ],
+      "source_trace": {
+        "markdown_section": "## 6. Transtorno da Personalidade Histrionica (TPHist)",
+        "patches_applied": []
+      }
+    },
+    {
+      "id": "transtorno_personalidade_narcisista",
+      "name": "Transtorno da Personalidade Narcisista",
+      "category": "FULL",
+      "estrutura_diagnostica": "polythetic_monocluster",
+      "render_structured_interview": true,
+      "ui_mode": "structured_full",
+      "criteria": [
+        "1. Sensacao grandiosa da propria importancia",
+        "2. Fantasias de sucesso ilimitado, poder, brilho",
+        "3. Acredita ser 'especial' e unico",
+        "4. Demanda admiracao excessiva",
+        "5. Sentimento de possuir direitos",
+        "6. Explorador em relacoes interpessoais",
+        "7. Carece de empatia",
+        "8. Frequentemente invejoso",
+        "9. Comportamentos ou atitudes arrogantes"
+      ],
+      "diagnostic_rule": "Criterios gerais de TP (A-F) + >=5 de 9 criterios",
+      "clusters": [
+        "Grandiosidade",
+        "Necessidade de Admiracao",
+        "Falta de Empatia"
+      ],
+      "duration": "padrao persistente",
+      "age_onset": "inicio vida adulta",
+      "functional_impairment": "relacionamentos prejudicados; trabalho prejudicado; reacoes de furia a feridas narcisicas",
+      "exclusions": [
+        "mania/hipomania",
+        "antissocial",
+        "borderline",
+        "TOC personalidade"
+      ],
+      "subtypes_presentations": [],
+      "specifiers": [],
+      "operational_profiles": [
+        {
+          "id": "narcisismo_grandioso",
+          "description": "Variante grandiosa (nao formal DSM-5)"
+        },
+        {
+          "id": "narcisismo_vulneravel",
+          "description": "Variante vulneravel (nao formal DSM-5)"
+        }
+      ],
+      "severity": {
+        "has_formal_severity": false,
+        "type": "nao_aplica",
+        "levels": [],
+        "assignment_rule": null,
+        "domains": []
+      },
+      "critical_differentials": [
+        "mania",
+        "antissocial",
+        "borderline",
+        "paranoide",
+        "esquizotipica"
+      ],
+      "key_questions": [
+        "Se considera especial ou superior?",
+        "Exagera conquistas ou espera reconhecimento sem merecer?",
+        "Fantasia sobre sucesso, poder, beleza?",
+        "Precisa constantemente de elogios?",
+        "Espera tratamento especial?",
+        "Tira vantagem de outras pessoas?",
+        "Dificuldade em se colocar no lugar dos outros?",
+        "Arrogante ou insolente?"
+      ],
+      "alerts": [
+        "Nao confundir alta autoestima, ambicao ou lideranca com TPN; adolescentes podem ter tracos narcisistas normais"
+      ],
+      "source_trace": {
+        "markdown_section": "## 7. Transtorno da Personalidade Narcisista (TPN)",
+        "patches_applied": []
+      }
+    },
+    {
+      "id": "transtorno_personalidade_evitativa",
+      "name": "Transtorno da Personalidade Evitativa",
+      "category": "FULL",
+      "estrutura_diagnostica": "polythetic_monocluster",
+      "render_structured_interview": true,
+      "ui_mode": "structured_full",
+      "criteria": [
+        "1. Evita atividades com contato interpessoal por medo de critica",
+        "2. Nao se dispoe a envolver-se sem certeza de recepcao positiva",
+        "3. Reservado em relacionamentos intimos por medo de vergonha",
+        "4. Preocupa-se com criticas ou rejeicao",
+        "5. Inibe-se em situacoes novas por inadequacao",
+        "6. Ve a si mesmo como socialmente incapaz/inferior",
+        "7. Reluta em assumir riscos por medo de constrangimento"
+      ],
+      "diagnostic_rule": "Criterios gerais de TP (A-F) + >=4 de 7 criterios",
+      "clusters": [
+        "Inibicao Social",
+        "Sentimentos de Inadequacao",
+        "Hipersensibilidade a Avaliacao"
+      ],
+      "duration": "tende a persistir; pode atenuar com envelhecimento",
+      "age_onset": "inicio vida adulta",
+      "functional_impairment": "isolamento social; rede de apoio restrita; funcionamento profissional prejudicado",
+      "exclusions": [
+        "fobia social",
+        "agorafobia",
+        "dependente",
+        "esquizoide",
+        "esquizotipica"
+      ],
+      "subtypes_presentations": [],
+      "specifiers": [],
+      "operational_profiles": [],
+      "severity": {
+        "has_formal_severity": false,
+        "type": "nao_aplica",
+        "levels": [],
+        "assignment_rule": null,
+        "domains": []
+      },
+      "critical_differentials": [
+        "fobia social",
+        "esquizoide",
+        "dependente",
+        "borderline"
+      ],
+      "key_questions": [
+        "Evita atividades no trabalho por medo de ser criticado?",
+        "So se aproxima se tiver certeza de gentileza?",
+        "Reservado em intimidade por medo de vergonha?",
+        "Preocupado com criticas antes de situacoes sociais?",
+        "Inibido por se sentir inadequado?",
+        "Ve-se como socialmente incapaz ou inferior?",
+        "Evita riscos por medo de constrangimento?"
+      ],
+      "alerts": [
+        "Desejo de relacionamentos deve estar presente (diferencial chave de esquizoide)"
+      ],
+      "source_trace": {
+        "markdown_section": "## 8. Transtorno da Personalidade Evitativa (TPEv)",
+        "patches_applied": []
+      }
+    },
+    {
+      "id": "transtorno_personalidade_dependente",
+      "name": "Transtorno da Personalidade Dependente",
+      "category": "FULL",
+      "estrutura_diagnostica": "polythetic_monocluster",
+      "render_structured_interview": true,
+      "ui_mode": "structured_full",
+      "criteria": [
+        "1. Dificuldade em tomar decisoes sem conselhos excessivos",
+        "2. Precisa que outros assumam responsabilidade",
+        "3. Dificuldade em discordar por medo de perder apoio",
+        "4. Dificuldade em iniciar projetos por falta de autoconfianca",
+        "5. Vai a extremos para obter carinho e apoio",
+        "6. Desconfortavel/desamparado quando sozinho",
+        "7. Busca urgentemente outro relacionamento apos termino",
+        "8. Preocupacoes irreais com medo de abandono"
+      ],
+      "diagnostic_rule": "Criterios gerais de TP (A-F) + >=5 de 8 criterios",
+      "clusters": [
+        "Necessidade Excessiva de Cuidado",
+        "Submissao",
+        "Medo de Abandono"
+      ],
+      "duration": "padrao persistente",
+      "age_onset": "inicio vida adulta",
+      "functional_impairment": "funcionamento profissional prejudicado; relacoes limitadas; vulnerabilidade a relacionamentos abusivos",
+      "exclusions": [
+        "borderline",
+        "evitativa",
+        "histriônica",
+        "TOC personalidade",
+        "depressao"
+      ],
+      "subtypes_presentations": [],
+      "specifiers": [],
+      "operational_profiles": [],
+      "severity": {
+        "has_formal_severity": false,
+        "type": "nao_aplica",
+        "levels": [],
+        "assignment_rule": null,
+        "domains": []
+      },
+      "critical_differentials": [
+        "borderline",
+        "evitativa",
+        "histriônica",
+        "depressao"
+      ],
+      "key_questions": [
+        "Dificuldade em tomar decisoes simples sem conselho?",
+        "Depende que outros decidam por voce?",
+        "Dificuldade em discordar por medo de perder pessoas?",
+        "Evita comecar projetos por falta de autoconfianca?",
+        "Fez coisas desagradaveis so para agradar e manter alguem?",
+        "Ansioso/desamparado quando sozinho?",
+        "Busca desesperadamente outro relacionamento apos termino?",
+        "Medo excessivo de ser abandonado?"
+      ],
+      "alerts": [
+        "Nao confundir submissao a abusador por medo real de retaliacao com traco dependente; contexto cultural e essencial"
+      ],
+      "source_trace": {
+        "markdown_section": "## 9. Transtorno da Personalidade Dependente (TPDep)",
+        "patches_applied": []
+      }
+    },
+    {
+      "id": "transtorno_personalidade_obsessivo_compulsiva",
+      "name": "Transtorno da Personalidade Obsessivo-Compulsiva",
+      "category": "FULL",
+      "estrutura_diagnostica": "polythetic_monocluster",
+      "render_structured_interview": true,
+      "ui_mode": "structured_full",
+      "criteria": [
+        "1. Preocupado com detalhes, regras, listas, ordem",
+        "2. Perfeccionismo que interfere na conclusao",
+        "3. Excessivamente dedicado ao trabalho em detrimento de lazer",
+        "4. Consciencioso, escrupuloso, inflexivel quanto a moralidade",
+        "5. Incapaz de descartar objetos sem valor",
+        "6. Reluta em delegar a menos que submetam a sua forma",
+        "7. Estilo miseravel de gastos",
+        "8. Rigidez e teimosia"
+      ],
+      "diagnostic_rule": "Criterios gerais de TP (A-F) + >=4 de 8 criterios",
+      "clusters": [
+        "Preocupacao com Ordem",
+        "Perfeccionismo",
+        "Controle Mental e Interpessoal"
+      ],
+      "duration": "padrao persistente; tende a se tornar menos evidente com envelhecimento",
+      "age_onset": "inicio vida adulta",
+      "functional_impairment": "dificuldade em tomar decisoes; relacionamentos formais/artificiais; sofrimento quando exige flexibilidade",
+      "exclusions": [
+        "TOC",
+        "transtorno de acumulacao",
+        "narcisista",
+        "esquizoide"
+      ],
+      "subtypes_presentations": [],
+      "specifiers": [],
+      "operational_profiles": [],
+      "severity": {
+        "has_formal_severity": false,
+        "type": "nao_aplica",
+        "levels": [],
+        "assignment_rule": null,
+        "domains": []
+      },
+      "critical_differentials": [
+        "TOC propriamente dito",
+        "acumulacao",
+        "narcisista",
+        "esquizoide"
+      ],
+      "key_questions": [
+        "Tao envolvido com detalhes que perde o objetivo?",
+        "Dificuldade em terminar tarefas por perfeccionismo?",
+        "Dedica tanto tempo ao trabalho que negligencia lazer?",
+        "Excessivamente rigido com moralidade alem da cultura/religiao?",
+        "Dificuldade em jogar fora coisas sem valor?",
+        "Dificuldade em deixar outros fazerem do jeito deles?",
+        "Poupado/mesquinho demais?",
+        "Rigido ou teimoso demais?"
+      ],
+      "alerts": [
+        "Distinguir de TOC: TPOC NAO tem obsessoes nem compulsoes ritualizadas",
+        "Contexto cultural/religioso: normativa nao e patologica",
+        "Tracos moderados podem ser adaptativos; patologia = inflexibilidade"
+      ],
+      "source_trace": {
+        "markdown_section": "## 10. Transtorno da Personalidade Obsessivo-Compulsiva (TPOC)",
+        "patches_applied": []
+      }
+    },
+    {
+      "id": "mudanca_personalidade_condicao_medica",
+      "name": "Mudanca de Personalidade Devido a Outra Condicao Medica",
+      "category": "SHORT",
+      "estrutura_diagnostica": "etiologico_externo",
+      "render_structured_interview": true,
+      "ui_mode": "structured_compact",
+      "criteria": [
+        "A. Mudanca persistente do padrao caracteristico previo (>=1 ano em criancas)",
+        "B. Evidencia de consequencia fisiopatologica direta de condicao medica",
+        "C. Nao melhor explicada por outro transtorno mental",
+        "D. Nao ocorre exclusivamente durante delirium",
+        "E. Causa sofrimento ou prejuizo funcional"
+      ],
+      "diagnostic_rule": "A+B+C+D+E todos obrigatorios; mudanca em relacao ao padrao previo e diferencial chave",
+      "clusters": [],
+      "duration": "persistente",
+      "age_onset": null,
+      "functional_impairment": "significativo em funcionamento social, profissional ou outras areas",
+      "exclusions": [
+        "delirium",
+        "outro transtorno mental",
+        "TP primario"
+      ],
+      "subtypes_presentations": [
+        {
+          "id": "tipo_labil",
+          "name": "Tipo Labil"
+        },
+        {
+          "id": "tipo_desinibido",
+          "name": "Tipo Desinibido"
+        },
+        {
+          "id": "tipo_agressivo",
+          "name": "Tipo Agressivo"
+        },
+        {
+          "id": "tipo_apatico",
+          "name": "Tipo Apatico"
+        },
+        {
+          "id": "tipo_paranoide",
+          "name": "Tipo Paranoide"
+        },
+        {
+          "id": "tipo_combinado",
+          "name": "Tipo Combinado"
+        }
+      ],
+      "specifiers": [],
+      "operational_profiles": [],
+      "severity": {
+        "has_formal_severity": false,
+        "type": "nao_aplica",
+        "levels": [],
+        "assignment_rule": null,
+        "domains": []
+      },
+      "critical_differentials": [
+        "TP primario",
+        "delirium",
+        "transtornos por uso de substancia",
+        "demencia"
+      ],
+      "key_questions": [
+        "Pessoas proximas dizem que 'nao e mais o mesmo'?",
+        "Lesao na cabeca, doenca neurologica ou condicao medica?",
+        "Exames mostram alteracoes cerebrais?",
+        "Mudancas comecaram apos evento medico especifico?"
+      ],
+      "alerts": [
+        "Deve haver mudanca de padrao previo (nao e traco de longa data); etiologia fisiopatologica direta deve ser demonstravel"
+      ],
+      "source_trace": {
+        "markdown_section": "## 11. Mudanca de Personalidade Devido a Outra Condicao Medica",
+        "patches_applied": [
+          "LOW-VERIFY: classificacao SHORT etiologico_externo confirmada"
+        ]
+      }
+    }
+  ]
+}
