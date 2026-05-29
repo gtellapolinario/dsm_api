@@ -29,6 +29,9 @@ class Settings(BaseSettings):
     graphify_enabled: bool = False
     graphify_cli_path: str | None = None
     graph_export_dir: str = "graph_exports"
+    agents_enabled: bool = False
+    agent_model: str = "openai:gpt-4.1-mini"
+    graph_agent_enabled: bool = True
 
     @property
     def cors_origin_list(self) -> list[str]:

@@ -10,7 +10,7 @@
     header { padding: 16px 20px; background: #172033; color: white; }
     main { padding: 16px; display: grid; grid-template-columns: 360px 1fr; gap: 16px; }
     label { display: block; font-size: 12px; font-weight: 700; margin-top: 10px; color: #334155; }
-    input, select { box-sizing: border-box; width: 100%; padding: 8px; border: 1px solid #cbd5e1; border-radius: 8px; }
+    input, select, textarea { box-sizing: border-box; width: 100%; padding: 8px; border: 1px solid #cbd5e1; border-radius: 8px; }
     button { margin: 6px 4px 0 0; padding: 8px 10px; border: 0; border-radius: 8px; background: #2563eb; color: white; cursor: pointer; font-weight: 700; }
     button.secondary { background: #64748b; }
     button.danger { background: #dc2626; }
@@ -44,6 +44,10 @@
     <button onclick="searchNodes()">Search Nodes</button>
     <button onclick="getRelated()">Get Related</button>
     <button class="danger" onclick="clearAll()">Clear</button>
+    <h2>Graph Agents</h2>
+    <label>Pergunta</label><textarea id="agentQuery" rows="4" placeholder="quais transtornos têm gravidade por funcionamento adaptativo?"></textarea>
+    <label>agent_type</label><select id="agentType"><option value="traversal">traversal</option><option value="clinical_relations">clinical_relations</option><option value="audit">audit</option><option value="query_planner">query_planner</option></select>
+    <button onclick="runGraphAgent()">Run Agent</button>
   </section>
   <section>
     <div class="card"><h2>Status</h2><div id="status" class="status">Ready.</div></div>
@@ -51,6 +55,10 @@
     <div class="grid">
       <div class="card"><h2>Selected Node</h2><pre id="selectedNode">{}</pre></div>
       <div class="card"><h2>Raw JSON Response</h2><pre id="rawJson">{}</pre></div>
+      <div class="card"><h2>Agent Answer</h2><pre id="agentAnswer">{}</pre></div>
+      <div class="card"><h2>Used Nodes</h2><pre id="agentUsedNodes">[]</pre></div>
+      <div class="card"><h2>Used Edges</h2><pre id="agentUsedEdges">[]</pre></div>
+      <div class="card"><h2>Raw Agent JSON</h2><pre id="agentRawJson">{}</pre></div>
     </div>
   </section>
 </main>
@@ -109,6 +117,46 @@ async function getRelated() {
   const params = new URLSearchParams({ version_id: value('versionId') || 'active', depth: value('depth') || '1', limit: value('limit') || '100' });
   if (value('edgeType')) params.set('edge_type', value('edgeType'));
   try { const data = await apiFetch(`/api/dsm/graph/related/${encodeURIComponent(nodeId)}?${params}`); renderGraph(data); renderRaw(data); } catch (e) { renderRaw(e.data || e); }
+}
+
+
+async function runGraphAgent() {
+  const agentType = value('agentType');
+  const versionId = value('versionId') || 'active';
+  const limit = Number(value('limit') || '20');
+  const query = value('agentQuery') || value('query') || 'status do grafo';
+  const pathByType = {
+    traversal: '/api/dsm/graph/agents/ask',
+    clinical_relations: '/api/dsm/graph/agents/clinical-relations',
+    audit: '/api/dsm/graph/agents/audit',
+    query_planner: '/api/dsm/graph/agents/plan-query'
+  };
+  const body = agentType === 'audit'
+    ? { version_id: versionId }
+    : { query, version_id: versionId, limit, allow_hybrid_search: true };
+  try {
+    const data = await apiFetch(pathByType[agentType], { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body) });
+    renderAgent(data);
+    if (data.used_nodes && network) highlightUsedNodes(data.used_nodes.map(node => node.id));
+  } catch (e) { renderAgent(e.data || e); }
+}
+
+function renderAgent(data) {
+  document.getElementById('agentAnswer').textContent = data.answer || data.status || JSON.stringify(data, null, 2);
+  document.getElementById('agentUsedNodes').textContent = JSON.stringify(data.used_nodes || [], null, 2);
+  document.getElementById('agentUsedEdges').textContent = JSON.stringify(data.used_edges || [], null, 2);
+  document.getElementById('agentRawJson').textContent = JSON.stringify(data, null, 2);
+}
+
+function highlightUsedNodes(nodeIds) {
+  if (!network || !nodeIds.length) return;
+  const nodes = network.body.data.nodes;
+  const highlighted = new Set(nodeIds);
+  nodes.update(nodes.get().map(node => highlighted.has(node.id)
+    ? { ...node, borderWidth: 4, color: { background: '#fef08a', border: '#f97316' } }
+    : node
+  ));
+  network.selectNodes(nodeIds.filter(id => currentNodes.has(id)));
 }
 
 function normalizeForVis(graph) {

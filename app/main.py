@@ -7,6 +7,7 @@ from app.api.routes import (
     dsm_agents,
     dsm_documents,
     dsm_graph,
+    dsm_graph_agents,
     dsm_rag,
     dsm_registry,
     dsm_search,
@@ -38,6 +39,7 @@ def create_app() -> FastAPI:
     app.include_router(dsm_agents.router)
     app.include_router(dsm_rag.router)
     app.include_router(dsm_graph.router)
+    app.include_router(dsm_graph_agents.router)
     app.include_router(ingestion.router)
     app.mount("/static", StaticFiles(directory="static"), name="static")
     return app

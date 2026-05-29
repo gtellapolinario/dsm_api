@@ -156,3 +156,44 @@ A exportação local pode alimentar ferramentas PydanticAI como uma lente estrut
 - `Graphify CLI not configured`: esperado quando `GRAPHIFY_ENABLED=false` ou `GRAPHIFY_CLI_PATH` vazio.
 - `graph_exports` vazio: rode rebuild via API ou o script CLI com `--persist`.
 - HTML sem grafo: confirme `API Base URL`, CORS e se `/api/dsm/graph/status` responde.
+
+## Graph Agents / PydanticAI
+
+The DSM graph agent layer is optional and evidence-bound. Agents use controlled tools backed by `DsmGraphService` and, for clinical relation fallback only, `HybridSearchService`. They never access SQL directly, never mutate graph/database state, never rebuild graph exports, and never treat LLM output as canonical DSM content.
+
+Configuration:
+
+```env
+AGENTS_ENABLED=false
+AGENT_MODEL=openai:gpt-4.1-mini
+GRAPH_AGENT_ENABLED=true
+```
+
+If graph agents are disabled, the agent endpoints return `{"detail":"Agents are disabled."}`.
+
+Endpoints under `/api/dsm/graph/agents`:
+
+- `POST /ask` → `GraphTraversalAgent` for structural graph questions.
+- `POST /clinical-relations` → `GraphClinicalRelationAgent` for relation exploration with optional chunk search fallback.
+- `POST /audit` → `GraphAuditAgent` for deterministic consistency checks.
+- `POST /plan-query` → `GraphQueryPlannerAgent` for natural-language to graph-plan conversion.
+
+Examples:
+
+```bash
+curl -X POST http://localhost:8000/api/dsm/graph/agents/ask \
+  -H "Content-Type: application/json" \
+  -d '{
+    "query": "quais transtornos têm gravidade por funcionamento adaptativo?",
+    "version_id": "active",
+    "limit": 20
+  }'
+```
+
+```bash
+curl -X POST http://localhost:8000/api/dsm/graph/agents/audit \
+  -H "Content-Type: application/json" \
+  -d '{"version_id":"active"}'
+```
+
+The browser test page `static/graph_test.html` has a **Graph Agents** panel for running these endpoints and highlighting returned `used_nodes` in the visualization.

@@ -95,3 +95,13 @@ async def get_registry_item(deps: DsmAgentDeps, item_id: str) -> dict[str, Any] 
         "reason": item.reason,
         "document": item.document,
     }
+
+
+@dataclass
+class GraphAgentDeps:
+    """Services exposed to graph agents through controlled graph tools only."""
+
+    session: AsyncSession
+    version_id: str
+    graph_service: Any
+    search_service: Any | None = None
