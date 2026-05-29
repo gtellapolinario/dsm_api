@@ -1,4 +1,5 @@
-"""Test helpers for async tests when pytest-asyncio is unavailable."""
+
+from __future__ import annotations
 import asyncio
 import inspect
 

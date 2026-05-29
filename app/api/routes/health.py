@@ -8,8 +8,7 @@ from app.core.database import get_session
 router = APIRouter(prefix="/api", tags=["health"])
 
 
-@router.get("/health")
-async def health(session: AsyncSession = Depends(get_session)) -> dict[str, str]:
+async def _db_status(session: AsyncSession) -> dict[str, str]:
     database = "ok"
     pgvector = "ok"
     try:
@@ -19,4 +18,29 @@ async def health(session: AsyncSession = Depends(get_session)) -> dict[str, str]
     except Exception:
         database = "unavailable"
         pgvector = "unknown"
-    return {"status": "ok", "database": database, "pgvector": pgvector}
+    return {"database": database, "pgvector": pgvector}
+
+
+@router.get("/health")
+async def health(session: AsyncSession = Depends(get_session)) -> dict[str, str]:
+    status = await _db_status(session)
+    return {"status": "ok", **status}
+
+
+@router.get("/health/db")
+async def health_db(session: AsyncSession = Depends(get_session)) -> dict[str, str]:
+    status = await _db_status(session)
+    return {"status": "ok" if status["database"] == "ok" else "unavailable", "database": status["database"]}
+
+
+@router.get("/health/vector")
+async def health_vector(session: AsyncSession = Depends(get_session)) -> dict[str, str]:
+    status = await _db_status(session)
+    return {"status": "ok" if status["pgvector"] == "ok" else "degraded", "pgvector": status["pgvector"]}
+
+
+@router.get("/health/readiness")
+async def readiness(session: AsyncSession = Depends(get_session)) -> dict[str, str]:
+    status = await _db_status(session)
+    ready = status["database"] == "ok" and status["pgvector"] == "ok"
+    return {"status": "ready" if ready else "not_ready", **status}

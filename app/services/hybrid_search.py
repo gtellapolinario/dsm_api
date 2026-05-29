@@ -1,4 +1,6 @@
 """Hybrid full-text and vector search service."""
+import logging
+import time
 from collections import defaultdict
 from typing import Any
 
@@ -11,6 +13,8 @@ from app.repositories.dsm_versions import DsmVersionRepository
 from app.schemas.search import DsmSearchRequest, DsmSearchResult, DsmSearchResultItem
 from app.services.embeddings import EmbeddingService
 
+logger = logging.getLogger(__name__)
+
 
 class HybridSearchService:
     def __init__(self, session: AsyncSession):
@@ -21,6 +25,7 @@ class HybridSearchService:
         self.embeddings = EmbeddingService(self.settings)
 
     async def search(self, request: DsmSearchRequest) -> DsmSearchResult:
+        started = time.perf_counter()
         version_id = await self._resolve_version(request.version_id)
         rows_by_id: dict[str, dict[str, Any]] = {}
         scores: dict[str, dict[str, float | None]] = defaultdict(lambda: {"text_score": None, "vector_score": None})
@@ -46,10 +51,14 @@ class HybridSearchService:
                         key = str(row["chunk_id"])
                         rows_by_id[key] = row
                         scores[key]["vector_score"] = float(row.get("vector_score") or 0)
+        max_text = max((score["text_score"] or 0 for score in scores.values()), default=0) or 1
+        max_vector = max((score["vector_score"] or 0 for score in scores.values()), default=0) or 1
         items: list[DsmSearchResultItem] = []
         for key, row in rows_by_id.items():
-            text_score = scores[key]["text_score"]
-            vector_score = scores[key]["vector_score"]
+            raw_text_score = scores[key]["text_score"]
+            raw_vector_score = scores[key]["vector_score"]
+            text_score = None if raw_text_score is None else min(1.0, max(0.0, raw_text_score / max_text))
+            vector_score = None if raw_vector_score is None else min(1.0, max(0.0, raw_vector_score / max_vector))
             hybrid = (0.55 * (vector_score or 0)) + (0.45 * (text_score or 0))
             if vector_score is None:
                 hybrid = text_score or 0
@@ -64,6 +73,7 @@ class HybridSearchService:
                 )
             )
         items.sort(key=lambda item: item.hybrid_score, reverse=True)
+        logger.info("dsm_search_completed", extra={"duration_ms": round((time.perf_counter() - started) * 1000, 2)})
         return DsmSearchResult(query=request.query, version_id=version_id, results=items[: request.top_k])
 
     async def _resolve_version(self, version_id: str) -> str:

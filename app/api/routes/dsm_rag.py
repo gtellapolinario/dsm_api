@@ -3,6 +3,7 @@ from fastapi import APIRouter, Depends
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from app.core.database import get_session
+from app.core.security import rate_limit_dependency
 from app.schemas.rag import DsmRagRequest, DsmRagResponse
 from app.services.rag_service import DsmRagService
 
@@ -14,6 +15,6 @@ async def retrieve(request: DsmRagRequest, session: AsyncSession = Depends(get_s
     return await DsmRagService(session).retrieve(request)
 
 
-@router.post("/answer", response_model=DsmRagResponse)
+@router.post("/answer", response_model=DsmRagResponse, dependencies=[Depends(rate_limit_dependency("dsm_rag_answer"))])
 async def answer(request: DsmRagRequest, session: AsyncSession = Depends(get_session)):
     return await DsmRagService(session).answer(request)

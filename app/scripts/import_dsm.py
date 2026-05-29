@@ -3,11 +3,16 @@
 import argparse
 import asyncio
 import json
+import sys
 from pathlib import Path
 
-from app.core.database import AsyncSessionLocal
-from app.schemas.ingestion import DsmImportRequest
-from app.services.dsm_ingestion import DsmIngestionService
+ROOT = Path(__file__).resolve().parents[2]
+if str(ROOT) not in sys.path:
+    sys.path.insert(0, str(ROOT))
+
+from app.core.database import AsyncSessionLocal  # noqa: E402
+from app.schemas.ingestion import DsmImportRequest  # noqa: E402
+from app.services.dsm_ingestion import DsmIngestionService  # noqa: E402
 
 
 def parse_args() -> argparse.Namespace:
