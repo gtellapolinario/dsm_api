@@ -25,6 +25,10 @@ class Settings(BaseSettings):
     llm_provider: str = "openai"
     llm_model: str = "gpt-4.1-mini"
     fts_language: str = Field(default="portuguese", pattern="^[a-zA-Z_]+$")
+    graph_enabled: bool = True
+    graphify_enabled: bool = False
+    graphify_cli_path: str | None = None
+    graph_export_dir: str = "graph_exports"
 
     @property
     def cors_origin_list(self) -> list[str]:
