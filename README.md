@@ -353,3 +353,54 @@ http://localhost:8000/static/graph_test.html
 ```
 
 Documentação completa: [`docs/graphify_integration.md`](docs/graphify_integration.md).
+
+## Graph Agents / PydanticAI
+
+Graph agents are an optional read-only layer over the DSM Knowledge Graph. They do not replace PostgreSQL, `DsmGraphService`, or the DSM source tables as the canonical source. The runtime path is:
+
+```txt
+PostgreSQL → GraphService → controlled graph tools → PydanticAI-style agents → structured response
+```
+
+Configuration:
+
+```env
+AGENTS_ENABLED=false
+AGENT_MODEL=openai:gpt-4.1-mini
+GRAPH_AGENT_ENABLED=true
+```
+
+When `AGENTS_ENABLED=false` or `GRAPH_AGENT_ENABLED=false`, `/api/dsm/graph/agents/*` returns:
+
+```json
+{"detail":"Agents are disabled."}
+```
+
+Available graph agents:
+
+- `GraphTraversalAgent`: answers structural graph questions with `used_nodes` and `used_edges` evidence.
+- `GraphClinicalRelationAgent`: explores relation questions using graph traversal and optional hybrid/FTS chunk search when explicit graph evidence is insufficient.
+- `GraphAuditAgent`: runs deterministic graph consistency checks and returns `PASS`, `PASS_WITH_WARNINGS`, or `BLOCKED`.
+- `GraphQueryPlannerAgent`: converts natural-language questions into a typed graph query plan; it does not provide clinical answers.
+
+Example traversal request:
+
+```bash
+curl -X POST http://localhost:8000/api/dsm/graph/agents/ask \
+  -H "Content-Type: application/json" \
+  -d '{
+    "query": "quais transtornos têm gravidade por funcionamento adaptativo?",
+    "version_id": "active",
+    "limit": 20
+  }'
+```
+
+Example audit request:
+
+```bash
+curl -X POST http://localhost:8000/api/dsm/graph/agents/audit \
+  -H "Content-Type: application/json" \
+  -d '{"version_id":"active"}'
+```
+
+The test UI at `static/graph_test.html` includes a **Graph Agents** section with agent selection, answer panels, evidence panels, and used-node highlighting when a graph is loaded.
