@@ -3,6 +3,7 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
 from app.api.routes import (
+    dsm_agents,
     dsm_documents,
     dsm_rag,
     dsm_registry,
@@ -32,6 +33,7 @@ def create_app() -> FastAPI:
     app.include_router(dsm_documents.router)
     app.include_router(dsm_registry.router)
     app.include_router(dsm_search.router)
+    app.include_router(dsm_agents.router)
     app.include_router(dsm_rag.router)
     app.include_router(ingestion.router)
     return app
