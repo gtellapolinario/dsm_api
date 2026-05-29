@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>DSM Knowledge Graph Test</title>
+  <script src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
+  <style>
+    body { margin: 0; font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background: #f6f8fb; color: #172033; }
+    header { padding: 16px 20px; background: #172033; color: white; }
+    main { padding: 16px; display: grid; grid-template-columns: 360px 1fr; gap: 16px; }
+    label { display: block; font-size: 12px; font-weight: 700; margin-top: 10px; color: #334155; }
+    input, select { box-sizing: border-box; width: 100%; padding: 8px; border: 1px solid #cbd5e1; border-radius: 8px; }
+    button { margin: 6px 4px 0 0; padding: 8px 10px; border: 0; border-radius: 8px; background: #2563eb; color: white; cursor: pointer; font-weight: 700; }
+    button.secondary { background: #64748b; }
+    button.danger { background: #dc2626; }
+    .card { background: white; border: 1px solid #e2e8f0; border-radius: 14px; padding: 14px; box-shadow: 0 4px 14px rgba(15,23,42,.06); }
+    .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 16px; }
+    #network { height: 620px; border: 1px solid #cbd5e1; border-radius: 12px; background: white; }
+    pre { white-space: pre-wrap; word-break: break-word; max-height: 280px; overflow: auto; background: #0f172a; color: #e2e8f0; padding: 12px; border-radius: 10px; }
+    .status { font-size: 13px; background: #ecfeff; border: 1px solid #67e8f9; padding: 8px; border-radius: 8px; min-height: 20px; }
+  </style>
+</head>
+<body>
+<header><h1>DSM Knowledge Graph / Graphify Experimental Test</h1></header>
+<main>
+  <section class="card">
+    <h2>Configuração</h2>
+    <label>API Base URL</label><input id="apiBase" value="http://localhost:8000" />
+    <label>Version ID</label><input id="versionId" value="active" />
+    <label>Admin Token</label><input id="adminToken" placeholder="usado só no rebuild" />
+    <h2>Filtros</h2>
+    <label>node_type</label><select id="nodeType"><option value="">any</option><option>Disorder</option><option>Chapter</option><option>RegistryItem</option><option>SeverityType</option><option>StructureType</option><option>Chunk</option><option>Criterion</option><option>Differential</option></select>
+    <label>edge_type</label><input id="edgeType" placeholder="HAS_SEVERITY_TYPE" />
+    <label>query</label><input id="query" placeholder="autismo" />
+    <label>node_id</label><input id="nodeId" placeholder="disorder:..." />
+    <label>depth</label><input id="depth" type="number" min="0" max="5" value="1" />
+    <label>limit</label><input id="limit" type="number" min="1" max="1000" value="100" />
+    <h2>Ações</h2>
+    <button onclick="checkStatus()">Check Graph Status</button>
+    <button onclick="rebuildGraph()">Rebuild Graph</button>
+    <button onclick="loadFullGraph()">Load Full Graph</button>
+    <button onclick="loadDisorders()">Load Disorders</button>
+    <button onclick="searchNodes()">Search Nodes</button>
+    <button onclick="getRelated()">Get Related</button>
+    <button class="danger" onclick="clearAll()">Clear</button>
+  </section>
+  <section>
+    <div class="card"><h2>Status</h2><div id="status" class="status">Ready.</div></div>
+    <div class="card" style="margin-top:16px"><h2>Graph Visualization</h2><div id="network"></div></div>
+    <div class="grid">
+      <div class="card"><h2>Selected Node</h2><pre id="selectedNode">{}</pre></div>
+      <div class="card"><h2>Raw JSON Response</h2><pre id="rawJson">{}</pre></div>
+    </div>
+  </section>
+</main>
+<script>
+let network = null;
+let currentNodes = new Map();
+
+function value(id) { return document.getElementById(id).value.trim(); }
+function setStatus(message, isError = false) {
+  const el = document.getElementById('status');
+  el.textContent = message;
+  el.style.background = isError ? '#fee2e2' : '#ecfeff';
+  el.style.borderColor = isError ? '#fca5a5' : '#67e8f9';
+}
+
+async function apiFetch(path, options = {}) {
+  const base = value('apiBase').replace(/\/$/, '');
+  const response = await fetch(base + path, options);
+  const text = await response.text();
+  let data;
+  try { data = text ? JSON.parse(text) : null; } catch (_) { data = { raw: text }; }
+  setStatus(`HTTP ${response.status} ${response.statusText}` + (response.ok ? '' : ' - erro'), !response.ok);
+  if (!response.ok) throw { response, data };
+  return data;
+}
+
+async function checkStatus() {
+  try { const data = await apiFetch('/api/dsm/graph/status'); renderRaw(data); } catch (e) { renderRaw(e.data || e); }
+}
+
+async function rebuildGraph() {
+  const headers = { 'Content-Type': 'application/json' };
+  if (value('adminToken')) headers['X-Admin-Token'] = value('adminToken');
+  const body = JSON.stringify({ version_id: value('versionId') || 'active', persist: true, send_to_graphify: false });
+  try { const data = await apiFetch('/api/dsm/graph/rebuild', { method: 'POST', headers, body }); renderRaw(data); } catch (e) { renderRaw(e.data || e); }
+}
+
+async function loadFullGraph() {
+  try { const data = await apiFetch(`/api/dsm/graph/export?version_id=${encodeURIComponent(value('versionId') || 'active')}`); renderGraph(data); renderRaw(data); } catch (e) { renderRaw(e.data || e); }
+}
+
+async function loadDisorders() {
+  try { const data = await apiFetch(`/api/dsm/graph/nodes?version_id=${encodeURIComponent(value('versionId') || 'active')}&type=Disorder&limit=${encodeURIComponent(value('limit') || '100')}`); const graph = { nodes: data, edges: [] }; renderGraph(graph); renderRaw(data); } catch (e) { renderRaw(e.data || e); }
+}
+
+async function searchNodes() {
+  const params = new URLSearchParams({ version_id: value('versionId') || 'active', limit: value('limit') || '100' });
+  if (value('nodeType')) params.set('type', value('nodeType'));
+  if (value('query')) params.set('q', value('query'));
+  try { const data = await apiFetch(`/api/dsm/graph/nodes?${params}`); renderGraph({ nodes: data, edges: [] }); renderRaw(data); } catch (e) { renderRaw(e.data || e); }
+}
+
+async function getRelated() {
+  const nodeId = value('nodeId');
+  if (!nodeId) { setStatus('Informe ou clique em um node_id primeiro.', true); return; }
+  const params = new URLSearchParams({ version_id: value('versionId') || 'active', depth: value('depth') || '1', limit: value('limit') || '100' });
+  if (value('edgeType')) params.set('edge_type', value('edgeType'));
+  try { const data = await apiFetch(`/api/dsm/graph/related/${encodeURIComponent(nodeId)}?${params}`); renderGraph(data); renderRaw(data); } catch (e) { renderRaw(e.data || e); }
+}
+
+function normalizeForVis(graph) {
+  const palette = { Disorder: '#3b82f6', Chapter: '#22c55e', SeverityType: '#a855f7', StructureType: '#f97316', Chunk: '#94a3b8', RegistryItem: '#ef4444', Criterion: '#eab308', Differential: '#ec4899', Version: '#111827', UiMode: '#14b8a6' };
+  currentNodes = new Map();
+  const nodes = (graph.nodes || []).map(node => {
+    currentNodes.set(node.id, node);
+    return { id: node.id, label: node.label || node.id, title: `${node.type}: ${node.id}`, color: palette[node.type] || '#cbd5e1', shape: node.type === 'Disorder' ? 'dot' : 'box' };
+  });
+  const nodeIds = new Set(nodes.map(n => n.id));
+  const edges = (graph.edges || []).filter(edge => nodeIds.has(edge.source) && nodeIds.has(edge.target)).map(edge => ({ id: edge.id, from: edge.source, to: edge.target, label: edge.type, arrows: 'to', font: { size: 9 }, color: '#64748b' }));
+  return { nodes, edges };
+}
+
+function renderGraph(graph) {
+  const normalized = normalizeForVis(graph);
+  const container = document.getElementById('network');
+  network = new vis.Network(container, { nodes: new vis.DataSet(normalized.nodes), edges: new vis.DataSet(normalized.edges) }, { physics: { stabilization: false }, interaction: { hover: true }, nodes: { font: { size: 13 } } });
+  network.on('click', params => {
+    if (params.nodes.length) {
+      const id = params.nodes[0];
+      document.getElementById('nodeId').value = id;
+      renderSelectedNode(currentNodes.get(id) || { id });
+    }
+  });
+}
+
+function renderRaw(data) { document.getElementById('rawJson').textContent = JSON.stringify(data, null, 2); }
+function renderSelectedNode(node) { document.getElementById('selectedNode').textContent = JSON.stringify(node, null, 2); }
+function clearAll() { renderRaw({}); renderSelectedNode({}); if (network) network.destroy(); setStatus('Cleared.'); }
+
+checkStatus();
+</script>
+</body>
+</html>

@@ -1,10 +1,12 @@
 """FastAPI application factory."""
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.staticfiles import StaticFiles
 
 from app.api.routes import (
     dsm_agents,
     dsm_documents,
+    dsm_graph,
     dsm_rag,
     dsm_registry,
     dsm_search,
@@ -35,7 +37,9 @@ def create_app() -> FastAPI:
     app.include_router(dsm_search.router)
     app.include_router(dsm_agents.router)
     app.include_router(dsm_rag.router)
+    app.include_router(dsm_graph.router)
     app.include_router(ingestion.router)
+    app.mount("/static", StaticFiles(directory="static"), name="static")
     return app
 
 

@@ -320,3 +320,36 @@ O workflow executa ruff, pytest, Alembic, validação da release, importação e
 ## Limitações clínicas e regulatórias
 
 Esta API é infraestrutura de dados. Ela não valida diagnóstico, não substitui profissional habilitado e não deve ser apresentada a usuários finais como ferramenta diagnóstica sem governança clínica, auditoria, revisão de conteúdo e avaliação regulatória aplicável.
+
+## Knowledge Graph / Graphify experimental
+
+A API inclui uma camada experimental de Knowledge Graph derivada das tabelas canônicas `diagnostic_versions`, `diagnostic_documents`, `diagnostic_registry` e `diagnostic_chunks`. Graphify é opcional: por padrão, a API gera exports locais em JSON e continua funcionando sem Graphify instalado.
+
+Configuração básica:
+
+```env
+GRAPH_ENABLED=true
+GRAPHIFY_ENABLED=false
+GRAPHIFY_CLI_PATH=
+GRAPH_EXPORT_DIR=graph_exports
+```
+
+Gerar grafo local:
+
+```bash
+python -m app.scripts.export_dsm_graph --version-id active --persist
+```
+
+Validar export:
+
+```bash
+python -m app.scripts.validate_dsm_graph graph_exports/<version_id>/graph.json
+```
+
+Testar visualmente:
+
+```txt
+http://localhost:8000/static/graph_test.html
+```
+
+Documentação completa: [`docs/graphify_integration.md`](docs/graphify_integration.md).
