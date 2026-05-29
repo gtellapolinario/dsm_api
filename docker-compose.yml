@@ -21,6 +21,9 @@ services:
       DATABASE_URL: postgresql+asyncpg://dsm:dsm_password@postgres:5432/dsm_api
       ADMIN_TOKEN: change-me
       EMBEDDINGS_ENABLED: "false"
+      EMBEDDINGS_REQUIRED: "false"
+      DSM_RELEASE_ROOT: /app/data/dsm/releases
+      CORS_ORIGINS: http://localhost:3000,http://localhost:5173
     ports:
       - "8000:8000"
     depends_on:

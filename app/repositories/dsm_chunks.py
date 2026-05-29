@@ -6,6 +6,8 @@ from sqlalchemy.ext.asyncio import AsyncSession
 
 from app.models import DiagnosticChunk
 
+ALLOWED_FTS_LANGUAGES = {"simple", "portuguese", "english", "spanish"}
+
 
 class DsmChunkRepository:
     def __init__(self, session: AsyncSession):
@@ -27,16 +29,19 @@ class DsmChunkRepository:
         category: str | None = None,
         chunk_types: list[str] | None = None,
     ) -> list[dict[str, Any]]:
-        sql = """
+        language = fts_language.lower()
+        if language not in ALLOWED_FTS_LANGUAGES:
+            language = "portuguese"
+        sql = f"""
         SELECT c.id AS chunk_id, c.document_item_id, d.name AS document_name, c.chapter_id,
                c.chunk_type, c.chunk_title, c.chunk_text, c.metadata,
-               ts_rank_cd(c.search_vector, plainto_tsquery(:lang, :query)) AS text_score
+               ts_rank_cd(c.search_vector, plainto_tsquery('{language}'::regconfig, :query)) AS text_score
         FROM diagnostic_chunks c
         LEFT JOIN diagnostic_documents d ON d.version_id = c.version_id AND d.item_id = c.document_item_id
         WHERE c.version_id = :version_id
-          AND c.search_vector @@ plainto_tsquery(:lang, :query)
+          AND c.search_vector @@ plainto_tsquery('{language}'::regconfig, :query)
         """
-        params: dict[str, Any] = {"version_id": version_id, "query": query, "lang": fts_language, "top_k": top_k}
+        params: dict[str, Any] = {"version_id": version_id, "query": query, "top_k": top_k}
         if chapter_id:
             sql += " AND c.chapter_id = :chapter_id"
             params["chapter_id"] = chapter_id
@@ -45,7 +50,7 @@ class DsmChunkRepository:
             params["item_id"] = item_id
         if category:
             sql += " AND d.category = :category"
-            params["category"] = category
+            params["category"] = category.upper()
         if chunk_types:
             sql += " AND c.chunk_type = ANY(:chunk_types)"
             params["chunk_types"] = chunk_types
@@ -56,7 +61,7 @@ class DsmChunkRepository:
         sql = """
         SELECT c.id AS chunk_id, c.document_item_id, d.name AS document_name, c.chapter_id,
                c.chunk_type, c.chunk_title, c.chunk_text, c.metadata,
-               1 - (c.embedding <=> :embedding) AS vector_score
+               greatest(0, least(1, 1 - (c.embedding <=> :embedding))) AS vector_score
         FROM diagnostic_chunks c
         LEFT JOIN diagnostic_documents d ON d.version_id = c.version_id AND d.item_id = c.document_item_id
         WHERE c.version_id = :version_id AND c.embedding IS NOT NULL
@@ -70,12 +75,23 @@ class DsmChunkRepository:
             params["item_id"] = filters["item_id"]
         if filters.get("category"):
             sql += " AND d.category = :category"
-            params["category"] = filters["category"]
+            params["category"] = filters["category"].upper()
         if filters.get("chunk_types"):
             sql += " AND c.chunk_type = ANY(:chunk_types)"
             params["chunk_types"] = filters["chunk_types"]
         sql += " ORDER BY c.embedding <=> :embedding LIMIT :top_k"
         return [dict(row._mapping) for row in (await self.session.execute(text(sql), params)).all()]
+
+    async def explain_core_queries(self, version_id: str) -> list[str]:
+        sql = """
+        EXPLAIN ANALYZE SELECT c.id
+        FROM diagnostic_chunks c
+        JOIN diagnostic_documents d ON d.version_id = c.version_id AND d.item_id = c.document_item_id
+        WHERE c.version_id = :version_id
+        ORDER BY c.document_item_id, c.chunk_type
+        LIMIT 25
+        """
+        return [row[0] for row in (await self.session.execute(text(sql), {"version_id": version_id})).all()]
 
     async def list_by_version(self, version_id: str) -> list[DiagnosticChunk]:
         return list((await self.session.scalars(select(DiagnosticChunk).where(DiagnosticChunk.version_id == version_id))).all())

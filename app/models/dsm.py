@@ -9,6 +9,7 @@ from sqlalchemy import (
     CheckConstraint,
     DateTime,
     ForeignKey,
+    ForeignKeyConstraint,
     Integer,
     Text,
     UniqueConstraint,
@@ -99,9 +100,19 @@ class DiagnosticRegistry(Base):
 
 class DiagnosticChunk(Base):
     __tablename__ = "diagnostic_chunks"
+    __table_args__ = (
+        ForeignKeyConstraint(
+            ["version_id", "document_item_id"],
+            ["diagnostic_documents.version_id", "diagnostic_documents.item_id"],
+            ondelete="CASCADE",
+            name="fk_chunks_document_version_item",
+        ),
+        CheckConstraint("chunk_type <> ''", name="ck_chunks_type_not_empty"),
+        CheckConstraint("char_length(chunk_text) > 0", name="ck_chunks_text_not_empty"),
+    )
 
     id: Mapped[UUID] = mapped_column(PG_UUID(as_uuid=True), primary_key=True, server_default=func.gen_random_uuid())
-    version_id: Mapped[str] = mapped_column(ForeignKey("diagnostic_versions.id", ondelete="CASCADE"), nullable=False)
+    version_id: Mapped[str] = mapped_column(Text, nullable=False)
     document_item_id: Mapped[str] = mapped_column(Text, nullable=False)
     chapter_id: Mapped[str] = mapped_column(Text, nullable=False)
     chunk_type: Mapped[str] = mapped_column(Text, nullable=False)
@@ -112,3 +123,26 @@ class DiagnosticChunk(Base):
     embedding: Mapped[list[float] | None] = mapped_column(Vector(settings.embedding_dimensions))
     token_count: Mapped[int | None] = mapped_column(Integer)
     created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), server_default=func.now())
+
+
+class DiagnosticIngestionRun(Base):
+    __tablename__ = "diagnostic_ingestion_runs"
+    __table_args__ = (
+        CheckConstraint("status IN ('started', 'validation_failed', 'failed', 'imported_draft', 'imported_and_activated')", name="ck_ingestion_runs_status"),
+    )
+
+    id: Mapped[UUID] = mapped_column(PG_UUID(as_uuid=True), primary_key=True, server_default=func.gen_random_uuid())
+    version_id: Mapped[str] = mapped_column(Text, nullable=False)
+    status: Mapped[str] = mapped_column(Text, nullable=False, default="started")
+    source_package: Mapped[str | None] = mapped_column(Text)
+    final_json_path: Mapped[str | None] = mapped_column(Text)
+    registry_path: Mapped[str | None] = mapped_column(Text)
+    documents_imported: Mapped[int] = mapped_column(Integer, nullable=False, default=0)
+    registry_minimal: Mapped[int] = mapped_column(Integer, nullable=False, default=0)
+    registry_excluded: Mapped[int] = mapped_column(Integer, nullable=False, default=0)
+    chunks_generated: Mapped[int] = mapped_column(Integer, nullable=False, default=0)
+    embeddings_generated: Mapped[int] = mapped_column(Integer, nullable=False, default=0)
+    report: Mapped[dict[str, Any]] = mapped_column(JSONB, nullable=False, default=dict)
+    errors: Mapped[dict[str, Any]] = mapped_column(JSONB, nullable=False, default=dict)
+    started_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), server_default=func.now())
+    finished_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True))

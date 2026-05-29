@@ -1,10 +1,15 @@
 """RAG retrieval and answer service."""
+import logging
+import time
+
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from app.core.config import get_settings
-from app.schemas.rag import DsmRagRequest, DsmRagResponse
+from app.schemas.rag import DsmRagCitation, DsmRagRequest, DsmRagResponse
 from app.schemas.search import DsmSearchRequest
 from app.services.hybrid_search import HybridSearchService
+
+logger = logging.getLogger(__name__)
 
 
 class DsmRagService:
@@ -13,13 +18,24 @@ class DsmRagService:
         self.search = HybridSearchService(session)
 
     async def retrieve(self, request: DsmRagRequest) -> DsmRagResponse:
+        started = time.perf_counter()
         result = await self.search.search(self._to_search_request(request))
-        return DsmRagResponse(question=request.question, version_id=result.version_id, chunks=result.results)
+        citations = [
+            DsmRagCitation(
+                document_item_id=item.document_item_id,
+                chunk_id=str(item.chunk_id),
+                chunk_type=item.chunk_type,
+                chunk_title=item.chunk_title,
+            )
+            for item in result.results
+        ]
+        logger.info("dsm_rag_retrieve_completed", extra={"duration_ms": round((time.perf_counter() - started) * 1000, 2)})
+        return DsmRagResponse(question=request.question, version_id=result.version_id, chunks=result.results, citations=citations)
 
     async def answer(self, request: DsmRagRequest) -> DsmRagResponse:
         response = await self.retrieve(request)
         if not response.chunks:
-            response.message = "No retrieval evidence found."
+            response.message = "Sem evidência recuperada suficiente; a API não gera resposta sem chunks citados."
             return response
         if not self.settings.rag_answer_enabled:
             response.message = "RAG answer disabled. Retrieval results returned."
