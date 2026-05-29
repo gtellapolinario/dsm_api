@@ -1,0 +1,1793 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "DSM Operational API",
+    "version": "0.1.0"
+  },
+  "paths": {
+    "/api/health": {
+      "get": {
+        "tags": [
+          "health"
+        ],
+        "summary": "Health",
+        "operationId": "health_api_health_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "additionalProperties": {
+                    "type": "string"
+                  },
+                  "type": "object",
+                  "title": "Response Health Api Health Get"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/health/db": {
+      "get": {
+        "tags": [
+          "health"
+        ],
+        "summary": "Health Db",
+        "operationId": "health_db_api_health_db_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "additionalProperties": {
+                    "type": "string"
+                  },
+                  "type": "object",
+                  "title": "Response Health Db Api Health Db Get"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/health/vector": {
+      "get": {
+        "tags": [
+          "health"
+        ],
+        "summary": "Health Vector",
+        "operationId": "health_vector_api_health_vector_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "additionalProperties": {
+                    "type": "string"
+                  },
+                  "type": "object",
+                  "title": "Response Health Vector Api Health Vector Get"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/health/readiness": {
+      "get": {
+        "tags": [
+          "health"
+        ],
+        "summary": "Readiness",
+        "operationId": "readiness_api_health_readiness_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "additionalProperties": {
+                    "type": "string"
+                  },
+                  "type": "object",
+                  "title": "Response Readiness Api Health Readiness Get"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/dsm/versions": {
+      "get": {
+        "tags": [
+          "dsm-versions"
+        ],
+        "summary": "List Versions",
+        "operationId": "list_versions_api_dsm_versions_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "items": {
+                    "$ref": "#/components/schemas/DsmVersionRead"
+                  },
+                  "type": "array",
+                  "title": "Response List Versions Api Dsm Versions Get"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/dsm/versions/current": {
+      "get": {
+        "tags": [
+          "dsm-versions"
+        ],
+        "summary": "Current Version",
+        "operationId": "current_version_api_dsm_versions_current_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DsmVersionRead"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/dsm/versions/{version_id}/activate": {
+      "post": {
+        "tags": [
+          "dsm-versions"
+        ],
+        "summary": "Activate Version",
+        "operationId": "activate_version_api_dsm_versions__version_id__activate_post",
+        "parameters": [
+          {
+            "name": "version_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Version Id"
+            }
+          },
+          {
+            "name": "x-admin-token",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "X-Admin-Token"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DsmVersionRead"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/dsm/documents": {
+      "get": {
+        "tags": [
+          "dsm-documents"
+        ],
+        "summary": "List Documents",
+        "operationId": "list_documents_api_dsm_documents_get",
+        "parameters": [
+          {
+            "name": "version_id",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": "active",
+              "title": "Version Id"
+            }
+          },
+          {
+            "name": "chapter_id",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Chapter Id"
+            }
+          },
+          {
+            "name": "category",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Category"
+            }
+          },
+          {
+            "name": "estrutura_diagnostica",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Estrutura Diagnostica"
+            }
+          },
+          {
+            "name": "ui_mode",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Ui Mode"
+            }
+          },
+          {
+            "name": "severity_type",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Severity Type"
+            }
+          },
+          {
+            "name": "active",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "boolean"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": true,
+              "title": "Active"
+            }
+          },
+          {
+            "name": "q",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Q"
+            }
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "maximum": 500,
+              "minimum": 1,
+              "default": 100,
+              "title": "Limit"
+            }
+          },
+          {
+            "name": "offset",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "minimum": 0,
+              "default": 0,
+              "title": "Offset"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/DsmDocumentListItem"
+                  },
+                  "title": "Response List Documents Api Dsm Documents Get"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/dsm/documents/{item_id}": {
+      "get": {
+        "tags": [
+          "dsm-documents"
+        ],
+        "summary": "Get Document",
+        "operationId": "get_document_api_dsm_documents__item_id__get",
+        "parameters": [
+          {
+            "name": "item_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Item Id"
+            }
+          },
+          {
+            "name": "version_id",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "default": "active",
+              "title": "Version Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DsmDocumentRead"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/dsm/chapters": {
+      "get": {
+        "tags": [
+          "dsm-documents"
+        ],
+        "summary": "List Chapters",
+        "operationId": "list_chapters_api_dsm_chapters_get",
+        "parameters": [
+          {
+            "name": "version_id",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "default": "active",
+              "title": "Version Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/dsm/registry": {
+      "get": {
+        "tags": [
+          "dsm-registry"
+        ],
+        "summary": "List Registry",
+        "operationId": "list_registry_api_dsm_registry_get",
+        "parameters": [
+          {
+            "name": "version_id",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "default": "active",
+              "title": "Version Id"
+            }
+          },
+          {
+            "name": "category",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Category"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/DsmRegistryRead"
+                  },
+                  "title": "Response List Registry Api Dsm Registry Get"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/dsm/registry/minimal": {
+      "get": {
+        "tags": [
+          "dsm-registry"
+        ],
+        "summary": "List Minimal",
+        "operationId": "list_minimal_api_dsm_registry_minimal_get",
+        "parameters": [
+          {
+            "name": "version_id",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "default": "active",
+              "title": "Version Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/DsmRegistryRead"
+                  },
+                  "title": "Response List Minimal Api Dsm Registry Minimal Get"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/dsm/registry/excluded": {
+      "get": {
+        "tags": [
+          "dsm-registry"
+        ],
+        "summary": "List Excluded",
+        "operationId": "list_excluded_api_dsm_registry_excluded_get",
+        "parameters": [
+          {
+            "name": "version_id",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "default": "active",
+              "title": "Version Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/DsmRegistryRead"
+                  },
+                  "title": "Response List Excluded Api Dsm Registry Excluded Get"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/dsm/search": {
+      "post": {
+        "tags": [
+          "dsm-search"
+        ],
+        "summary": "Search Dsm",
+        "operationId": "search_dsm_api_dsm_search_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DsmSearchRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DsmSearchResult"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/dsm/rag/retrieve": {
+      "post": {
+        "tags": [
+          "dsm-rag"
+        ],
+        "summary": "Retrieve",
+        "operationId": "retrieve_api_dsm_rag_retrieve_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DsmRagRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DsmRagResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/dsm/rag/answer": {
+      "post": {
+        "tags": [
+          "dsm-rag"
+        ],
+        "summary": "Answer",
+        "operationId": "answer_api_dsm_rag_answer_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DsmRagRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DsmRagResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/dsm/ingest": {
+      "post": {
+        "tags": [
+          "dsm-ingestion"
+        ],
+        "summary": "Ingest",
+        "operationId": "ingest_api_dsm_ingest_post",
+        "parameters": [
+          {
+            "name": "x-admin-token",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "X-Admin-Token"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DsmImportRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DsmImportResult"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "DsmDocumentListItem": {
+        "properties": {
+          "id": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "uuid"
+              },
+              {
+                "type": "string"
+              }
+            ],
+            "title": "Id"
+          },
+          "version_id": {
+            "type": "string",
+            "title": "Version Id"
+          },
+          "item_id": {
+            "type": "string",
+            "title": "Item Id"
+          },
+          "chapter_id": {
+            "type": "string",
+            "title": "Chapter Id"
+          },
+          "chapter_name": {
+            "type": "string",
+            "title": "Chapter Name"
+          },
+          "name": {
+            "type": "string",
+            "title": "Name"
+          },
+          "category": {
+            "type": "string",
+            "title": "Category"
+          },
+          "estrutura_diagnostica": {
+            "type": "string",
+            "title": "Estrutura Diagnostica"
+          },
+          "ui_mode": {
+            "type": "string",
+            "title": "Ui Mode"
+          },
+          "render_structured_interview": {
+            "type": "boolean",
+            "title": "Render Structured Interview"
+          },
+          "has_formal_severity": {
+            "type": "boolean",
+            "title": "Has Formal Severity"
+          },
+          "severity_type": {
+            "type": "string",
+            "title": "Severity Type"
+          },
+          "active": {
+            "type": "boolean",
+            "title": "Active"
+          }
+        },
+        "type": "object",
+        "required": [
+          "id",
+          "version_id",
+          "item_id",
+          "chapter_id",
+          "chapter_name",
+          "name",
+          "category",
+          "estrutura_diagnostica",
+          "ui_mode",
+          "render_structured_interview",
+          "has_formal_severity",
+          "severity_type",
+          "active"
+        ],
+        "title": "DsmDocumentListItem"
+      },
+      "DsmDocumentRead": {
+        "properties": {
+          "id": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "uuid"
+              },
+              {
+                "type": "string"
+              }
+            ],
+            "title": "Id"
+          },
+          "version_id": {
+            "type": "string",
+            "title": "Version Id"
+          },
+          "item_id": {
+            "type": "string",
+            "title": "Item Id"
+          },
+          "chapter_id": {
+            "type": "string",
+            "title": "Chapter Id"
+          },
+          "chapter_name": {
+            "type": "string",
+            "title": "Chapter Name"
+          },
+          "name": {
+            "type": "string",
+            "title": "Name"
+          },
+          "category": {
+            "type": "string",
+            "title": "Category"
+          },
+          "estrutura_diagnostica": {
+            "type": "string",
+            "title": "Estrutura Diagnostica"
+          },
+          "ui_mode": {
+            "type": "string",
+            "title": "Ui Mode"
+          },
+          "render_structured_interview": {
+            "type": "boolean",
+            "title": "Render Structured Interview"
+          },
+          "has_formal_severity": {
+            "type": "boolean",
+            "title": "Has Formal Severity"
+          },
+          "severity_type": {
+            "type": "string",
+            "title": "Severity Type"
+          },
+          "active": {
+            "type": "boolean",
+            "title": "Active"
+          },
+          "document": {
+            "additionalProperties": true,
+            "type": "object",
+            "title": "Document"
+          }
+        },
+        "type": "object",
+        "required": [
+          "id",
+          "version_id",
+          "item_id",
+          "chapter_id",
+          "chapter_name",
+          "name",
+          "category",
+          "estrutura_diagnostica",
+          "ui_mode",
+          "render_structured_interview",
+          "has_formal_severity",
+          "severity_type",
+          "active",
+          "document"
+        ],
+        "title": "DsmDocumentRead"
+      },
+      "DsmImportRequest": {
+        "properties": {
+          "final_json_path": {
+            "type": "string",
+            "title": "Final Json Path"
+          },
+          "registry_path": {
+            "type": "string",
+            "title": "Registry Path"
+          },
+          "version_id": {
+            "type": "string",
+            "title": "Version Id"
+          },
+          "label": {
+            "type": "string",
+            "title": "Label"
+          },
+          "source_package": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Source Package"
+          },
+          "activate": {
+            "type": "boolean",
+            "title": "Activate",
+            "default": false
+          },
+          "generate_embeddings": {
+            "type": "boolean",
+            "title": "Generate Embeddings",
+            "default": false
+          },
+          "notes": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Notes"
+          }
+        },
+        "type": "object",
+        "required": [
+          "final_json_path",
+          "registry_path",
+          "version_id",
+          "label"
+        ],
+        "title": "DsmImportRequest",
+        "examples": [
+          {
+            "activate": true,
+            "final_json_path": "data/dsm/releases/dsm5_operational_2026_05_28/final_json",
+            "generate_embeddings": false,
+            "label": "DSM-5 Operational Reduction v2C",
+            "registry_path": "data/dsm/releases/dsm5_operational_2026_05_28/normalized_registry",
+            "version_id": "dsm5_operational_2026_05_28"
+          }
+        ]
+      },
+      "DsmImportResult": {
+        "properties": {
+          "version_id": {
+            "type": "string",
+            "title": "Version Id"
+          },
+          "documents_imported": {
+            "type": "integer",
+            "title": "Documents Imported",
+            "default": 0
+          },
+          "registry_minimal": {
+            "type": "integer",
+            "title": "Registry Minimal",
+            "default": 0
+          },
+          "registry_excluded": {
+            "type": "integer",
+            "title": "Registry Excluded",
+            "default": 0
+          },
+          "chunks_generated": {
+            "type": "integer",
+            "title": "Chunks Generated",
+            "default": 0
+          },
+          "embeddings_generated": {
+            "type": "integer",
+            "title": "Embeddings Generated",
+            "default": 0
+          },
+          "warnings": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Warnings"
+          },
+          "errors": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Errors"
+          },
+          "status": {
+            "type": "string",
+            "title": "Status"
+          }
+        },
+        "type": "object",
+        "required": [
+          "version_id",
+          "status"
+        ],
+        "title": "DsmImportResult"
+      },
+      "DsmRagCitation": {
+        "properties": {
+          "document_item_id": {
+            "type": "string",
+            "title": "Document Item Id"
+          },
+          "chunk_id": {
+            "type": "string",
+            "title": "Chunk Id"
+          },
+          "chunk_type": {
+            "type": "string",
+            "title": "Chunk Type"
+          },
+          "chunk_title": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Chunk Title"
+          }
+        },
+        "type": "object",
+        "required": [
+          "document_item_id",
+          "chunk_id",
+          "chunk_type"
+        ],
+        "title": "DsmRagCitation"
+      },
+      "DsmRagRequest": {
+        "properties": {
+          "question": {
+            "type": "string",
+            "minLength": 1,
+            "title": "Question",
+            "example": "Quais evidências diferenciam TDAH de ansiedade?"
+          },
+          "version_id": {
+            "type": "string",
+            "title": "Version Id",
+            "default": "active"
+          },
+          "chapter_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Chapter Id"
+          },
+          "item_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Item Id"
+          },
+          "chunk_types": {
+            "anyOf": [
+              {
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Chunk Types"
+          },
+          "top_k": {
+            "type": "integer",
+            "maximum": 30.0,
+            "minimum": 1.0,
+            "title": "Top K",
+            "default": 8
+          },
+          "use_vector": {
+            "type": "boolean",
+            "title": "Use Vector",
+            "default": true
+          },
+          "use_fts": {
+            "type": "boolean",
+            "title": "Use Fts",
+            "default": true
+          },
+          "allow_fallback": {
+            "type": "boolean",
+            "title": "Allow Fallback",
+            "default": true
+          }
+        },
+        "type": "object",
+        "required": [
+          "question"
+        ],
+        "title": "DsmRagRequest",
+        "examples": [
+          {
+            "question": "Quais evidências diferenciam TDAH de ansiedade?",
+            "top_k": 5,
+            "version_id": "active"
+          }
+        ]
+      },
+      "DsmRagResponse": {
+        "properties": {
+          "question": {
+            "type": "string",
+            "title": "Question"
+          },
+          "version_id": {
+            "type": "string",
+            "title": "Version Id"
+          },
+          "answer": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Answer"
+          },
+          "message": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Message"
+          },
+          "chunks": {
+            "items": {
+              "$ref": "#/components/schemas/DsmSearchResultItem"
+            },
+            "type": "array",
+            "title": "Chunks"
+          },
+          "citations": {
+            "items": {
+              "$ref": "#/components/schemas/DsmRagCitation"
+            },
+            "type": "array",
+            "title": "Citations"
+          }
+        },
+        "type": "object",
+        "required": [
+          "question",
+          "version_id",
+          "chunks"
+        ],
+        "title": "DsmRagResponse"
+      },
+      "DsmRegistryRead": {
+        "properties": {
+          "id": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "uuid"
+              },
+              {
+                "type": "string"
+              }
+            ],
+            "title": "Id"
+          },
+          "version_id": {
+            "type": "string",
+            "title": "Version Id"
+          },
+          "item_id": {
+            "type": "string",
+            "title": "Item Id"
+          },
+          "name": {
+            "type": "string",
+            "title": "Name"
+          },
+          "chapter_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Chapter Id"
+          },
+          "chapter_name": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Chapter Name"
+          },
+          "category": {
+            "type": "string",
+            "title": "Category"
+          },
+          "registry_type": {
+            "type": "string",
+            "title": "Registry Type"
+          },
+          "render_structured_interview": {
+            "type": "boolean",
+            "title": "Render Structured Interview"
+          },
+          "show_in_main_picker": {
+            "type": "boolean",
+            "title": "Show In Main Picker"
+          },
+          "show_in_residual_panel": {
+            "type": "boolean",
+            "title": "Show In Residual Panel"
+          },
+          "canonical_chapter_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Canonical Chapter Id"
+          },
+          "canonical_chapter_name": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Canonical Chapter Name"
+          },
+          "reason": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Reason"
+          },
+          "document": {
+            "additionalProperties": true,
+            "type": "object",
+            "title": "Document"
+          },
+          "active": {
+            "type": "boolean",
+            "title": "Active"
+          }
+        },
+        "type": "object",
+        "required": [
+          "id",
+          "version_id",
+          "item_id",
+          "name",
+          "category",
+          "registry_type",
+          "render_structured_interview",
+          "show_in_main_picker",
+          "show_in_residual_panel",
+          "document",
+          "active"
+        ],
+        "title": "DsmRegistryRead"
+      },
+      "DsmSearchRequest": {
+        "properties": {
+          "query": {
+            "type": "string",
+            "minLength": 1,
+            "title": "Query",
+            "example": "critérios para transtorno de pânico"
+          },
+          "version_id": {
+            "type": "string",
+            "title": "Version Id",
+            "default": "active"
+          },
+          "chapter_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Chapter Id"
+          },
+          "item_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Item Id"
+          },
+          "category": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Category"
+          },
+          "chunk_types": {
+            "anyOf": [
+              {
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Chunk Types"
+          },
+          "top_k": {
+            "type": "integer",
+            "maximum": 50.0,
+            "minimum": 1.0,
+            "title": "Top K",
+            "default": 8
+          },
+          "use_vector": {
+            "type": "boolean",
+            "title": "Use Vector",
+            "default": true
+          },
+          "use_fts": {
+            "type": "boolean",
+            "title": "Use Fts",
+            "default": true
+          },
+          "allow_fallback": {
+            "type": "boolean",
+            "title": "Allow Fallback",
+            "default": true
+          }
+        },
+        "type": "object",
+        "required": [
+          "query"
+        ],
+        "title": "DsmSearchRequest",
+        "examples": [
+          {
+            "query": "critérios para transtorno de pânico",
+            "top_k": 8,
+            "use_fts": true,
+            "use_vector": false,
+            "version_id": "active"
+          }
+        ]
+      },
+      "DsmSearchResult": {
+        "properties": {
+          "query": {
+            "type": "string",
+            "title": "Query"
+          },
+          "version_id": {
+            "type": "string",
+            "title": "Version Id"
+          },
+          "results": {
+            "items": {
+              "$ref": "#/components/schemas/DsmSearchResultItem"
+            },
+            "type": "array",
+            "title": "Results"
+          }
+        },
+        "type": "object",
+        "required": [
+          "query",
+          "version_id",
+          "results"
+        ],
+        "title": "DsmSearchResult"
+      },
+      "DsmSearchResultItem": {
+        "properties": {
+          "chunk_id": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "uuid"
+              },
+              {
+                "type": "string"
+              }
+            ],
+            "title": "Chunk Id"
+          },
+          "document_item_id": {
+            "type": "string",
+            "title": "Document Item Id"
+          },
+          "document_name": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Document Name"
+          },
+          "chapter_id": {
+            "type": "string",
+            "title": "Chapter Id"
+          },
+          "chunk_type": {
+            "type": "string",
+            "title": "Chunk Type"
+          },
+          "chunk_title": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Chunk Title"
+          },
+          "chunk_text": {
+            "type": "string",
+            "title": "Chunk Text"
+          },
+          "vector_score": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Vector Score"
+          },
+          "text_score": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Text Score"
+          },
+          "hybrid_score": {
+            "type": "number",
+            "title": "Hybrid Score"
+          },
+          "metadata": {
+            "additionalProperties": true,
+            "type": "object",
+            "title": "Metadata"
+          }
+        },
+        "type": "object",
+        "required": [
+          "chunk_id",
+          "document_item_id",
+          "chapter_id",
+          "chunk_type",
+          "chunk_text",
+          "hybrid_score"
+        ],
+        "title": "DsmSearchResultItem"
+      },
+      "DsmVersionRead": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "title": "Id"
+          },
+          "label": {
+            "type": "string",
+            "title": "Label"
+          },
+          "source_package": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Source Package"
+          },
+          "status": {
+            "type": "string",
+            "title": "Status"
+          },
+          "renderable_count": {
+            "type": "integer",
+            "title": "Renderable Count"
+          },
+          "minimal_count": {
+            "type": "integer",
+            "title": "Minimal Count"
+          },
+          "excluded_count": {
+            "type": "integer",
+            "title": "Excluded Count"
+          },
+          "notes": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Notes"
+          },
+          "created_at": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date-time"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Created At"
+          },
+          "activated_at": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date-time"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Activated At"
+          }
+        },
+        "type": "object",
+        "required": [
+          "id",
+          "label",
+          "source_package",
+          "status",
+          "renderable_count",
+          "minimal_count",
+          "excluded_count",
+          "notes"
+        ],
+        "title": "DsmVersionRead"
+      },
+      "HTTPValidationError": {
+        "properties": {
+          "detail": {
+            "items": {
+              "$ref": "#/components/schemas/ValidationError"
+            },
+            "type": "array",
+            "title": "Detail"
+          }
+        },
+        "type": "object",
+        "title": "HTTPValidationError"
+      },
+      "ValidationError": {
+        "properties": {
+          "loc": {
+            "items": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "integer"
+                }
+              ]
+            },
+            "type": "array",
+            "title": "Location"
+          },
+          "msg": {
+            "type": "string",
+            "title": "Message"
+          },
+          "type": {
+            "type": "string",
+            "title": "Error Type"
+          },
+          "input": {
+            "title": "Input"
+          },
+          "ctx": {
+            "type": "object",
+            "title": "Context"
+          }
+        },
+        "type": "object",
+        "required": [
+          "loc",
+          "msg",
+          "type"
+        ],
+        "title": "ValidationError"
+      }
+    }
+  }
+}

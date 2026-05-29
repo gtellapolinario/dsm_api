@@ -3,6 +3,7 @@ from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from app.core.database import get_session
+from app.core.errors import require_admin_token
 from app.repositories.dsm_versions import DsmVersionRepository
 from app.schemas.dsm import DsmVersionRead
 from app.services.versioning import DsmVersioningService
@@ -23,7 +24,7 @@ async def current_version(session: AsyncSession = Depends(get_session)):
     return version
 
 
-@router.post("/{version_id}/activate", response_model=DsmVersionRead)
+@router.post("/{version_id}/activate", response_model=DsmVersionRead, dependencies=[Depends(require_admin_token)])
 async def activate_version(version_id: str, session: AsyncSession = Depends(get_session)):
     version = await DsmVersioningService(session).activate(version_id)
     await session.commit()

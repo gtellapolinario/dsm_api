@@ -6,7 +6,7 @@ from pydantic import BaseModel, Field
 
 
 class DsmSearchRequest(BaseModel):
-    query: str = Field(min_length=1)
+    query: str = Field(min_length=1, json_schema_extra={"example": "critérios para transtorno de pânico"})
     version_id: str = "active"
     chapter_id: str | None = None
     item_id: str | None = None
@@ -16,6 +16,14 @@ class DsmSearchRequest(BaseModel):
     use_vector: bool = True
     use_fts: bool = True
     allow_fallback: bool = True
+
+    model_config = {
+        "json_schema_extra": {
+            "examples": [
+                {"query": "critérios para transtorno de pânico", "version_id": "active", "top_k": 8, "use_vector": False, "use_fts": True}
+            ]
+        }
+    }
 
 
 class DsmSearchResultItem(BaseModel):

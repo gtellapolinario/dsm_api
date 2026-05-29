@@ -12,6 +12,21 @@ class DsmImportRequest(BaseModel):
     generate_embeddings: bool = False
     notes: str | None = None
 
+    model_config = {
+        "json_schema_extra": {
+            "examples": [
+                {
+                    "final_json_path": "data/dsm/releases/dsm5_operational_2026_05_28/final_json",
+                    "registry_path": "data/dsm/releases/dsm5_operational_2026_05_28/normalized_registry",
+                    "version_id": "dsm5_operational_2026_05_28",
+                    "label": "DSM-5 Operational Reduction v2C",
+                    "activate": True,
+                    "generate_embeddings": False
+                }
+            ]
+        }
+    }
+
 
 class DsmImportResult(BaseModel):
     version_id: str

@@ -1,0 +1,49 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches: [main, Projetos]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: pgvector/pgvector:pg16
+        env:
+          POSTGRES_DB: dsm_api
+          POSTGRES_USER: dsm
+          POSTGRES_PASSWORD: dsm_password
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U dsm -d dsm_api"
+          --health-interval 5s
+          --health-timeout 5s
+          --health-retries 20
+    env:
+      DATABASE_URL: postgresql+asyncpg://dsm:dsm_password@localhost:5432/dsm_api
+      ADMIN_TOKEN: change-me
+      EMBEDDINGS_ENABLED: "false"
+      EMBEDDINGS_REQUIRED: "false"
+      DSM_RELEASE_ROOT: data/dsm/releases
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install dependencies
+        run: pip install -e '.[dev]'
+      - name: Ruff
+        run: ruff check .
+      - name: Pytest
+        run: pytest -q
+      - name: Alembic upgrade
+        run: alembic upgrade head
+      - name: Validate DSM release
+        run: python app/scripts/validate_dsm_files.py --release-path data/dsm/releases/dsm5_operational_2026_05_28 --report-json validation_report.json --report-md validation_report.md
+      - name: Import DSM release
+        run: python app/scripts/import_dsm.py --release-path data/dsm/releases/dsm5_operational_2026_05_28 --activate
+      - name: Docker build
+        run: docker build .
