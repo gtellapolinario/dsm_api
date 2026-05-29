@@ -1,0 +1,281 @@
+{
+  "status": "BLOCKED",
+  "generated_at": "2026-05-29T15:40:00Z",
+  "repo": "gtellapolinario/dsm_api",
+  "branch": "Projetos",
+  "local_branch": "work",
+  "checks": [
+    {
+      "name": "structure",
+      "status": "PASS",
+      "summary": "Required app/alembic/data/tests/docker/readme files present; Graph files present."
+    },
+    {
+      "name": "dependencies",
+      "status": "PASS_WITH_ENV_WARNING",
+      "summary": "pyproject contains required dependencies; editable install blocked by PyPI/proxy 403."
+    },
+    {
+      "name": "compileall",
+      "status": "PASS",
+      "command": "python -m compileall app"
+    },
+    {
+      "name": "ruff",
+      "status": "PASS",
+      "command": "ruff check ."
+    },
+    {
+      "name": "pytest",
+      "status": "PASS",
+      "command": "pytest -q",
+      "summary": "30 passed, 1 warning"
+    },
+    {
+      "name": "alembic_upgrade",
+      "status": "BLOCKED",
+      "command": "alembic upgrade head",
+      "summary": "No PostgreSQL on localhost:5432."
+    },
+    {
+      "name": "release_validation",
+      "status": "PASS",
+      "command": "python -m app.scripts.validate_dsm_files --release-path data/dsm/releases/dsm5_operational_2026_05_28"
+    },
+    {
+      "name": "ingestion",
+      "status": "BLOCKED",
+      "command": "python -m app.scripts.import_dsm --release-path data/dsm/releases/dsm5_operational_2026_05_28 --activate",
+      "summary": "No PostgreSQL on localhost:5432."
+    },
+    {
+      "name": "openapi",
+      "status": "PASS",
+      "summary": "openapi.json and docs returned HTTP 200."
+    },
+    {
+      "name": "post_ingestion_endpoints",
+      "status": "BLOCKED",
+      "summary": "DB-dependent endpoints returned 500 due unavailable database."
+    },
+    {
+      "name": "graph_status",
+      "status": "PASS",
+      "summary": "Graph status returned HTTP 200."
+    },
+    {
+      "name": "graph_rebuild",
+      "status": "BLOCKED",
+      "summary": "Auth checks pass; rebuild with correct token blocked by no DB."
+    },
+    {
+      "name": "docker",
+      "status": "BLOCKED",
+      "summary": "docker command not found."
+    },
+    {
+      "name": "secret_scan",
+      "status": "PASS",
+      "summary": "No real API keys found; placeholders only."
+    }
+  ],
+  "issues": [
+    {
+      "id": "ISSUE-001",
+      "severity": "critical",
+      "area": "runtime/migration/ingestion/docker",
+      "title": "Operational verification blocked by unavailable PostgreSQL/Docker",
+      "blocks_production": true
+    },
+    {
+      "id": "ISSUE-002",
+      "severity": "high",
+      "area": "migration/model/search",
+      "title": "Embedding dimension configurable in model/settings but fixed to Vector(1536) in migration",
+      "blocks_production": "conditional"
+    },
+    {
+      "id": "ISSUE-003",
+      "severity": "high",
+      "area": "security/runtime",
+      "title": "debug=True default exposes full tracebacks in HTTP 500 responses",
+      "blocks_production": "conditional"
+    },
+    {
+      "id": "ISSUE-004",
+      "severity": "high",
+      "area": "docs/data/routes",
+      "title": "README documents nonexistent item_id tdah",
+      "blocks_production": false
+    },
+    {
+      "id": "ISSUE-005",
+      "severity": "high",
+      "area": "migration/model",
+      "title": "diagnostic_chunks version_id FK exists in migration but not in SQLAlchemy model",
+      "blocks_production": false
+    },
+    {
+      "id": "ISSUE-006",
+      "severity": "medium",
+      "area": "schema/rag/docs",
+      "title": "RAG schema requires question rather than query",
+      "blocks_production": false
+    },
+    {
+      "id": "ISSUE-007",
+      "severity": "medium",
+      "area": "graph/docs/scripts",
+      "title": "validate_dsm_graph does not accept --version-id",
+      "blocks_production": false
+    },
+    {
+      "id": "ISSUE-008",
+      "severity": "medium",
+      "area": "docs/routes",
+      "title": "Agent endpoints are in OpenAPI but not documented in README",
+      "blocks_production": false
+    },
+    {
+      "id": "ISSUE-009",
+      "severity": "low",
+      "area": "runtime/static",
+      "title": "StaticFiles is mounted unconditionally",
+      "blocks_production": false
+    }
+  ],
+  "counts": {
+    "manifest_full": 79,
+    "manifest_short": 81,
+    "manifest_renderable": 160,
+    "manifest_minimal": 26,
+    "manifest_exclude": 24,
+    "manifest_registry": 50,
+    "final_json_files": 21,
+    "final_json_items": 160,
+    "registry_entries": 50,
+    "tests_passed": 30,
+    "routes_openapi": 27,
+    "issues_total": 9,
+    "critical": 1,
+    "high": 4,
+    "medium": 3,
+    "low": 1
+  },
+  "commands": [
+    {
+      "command": "python --version",
+      "status": "PASS",
+      "evidence": "Python 3.14.4"
+    },
+    {
+      "command": "pip install -e \".[dev]\"",
+      "status": "WARN",
+      "evidence": "Tunnel connection failed: 403 Forbidden; no setuptools from PyPI"
+    },
+    {
+      "command": "python -m compileall app",
+      "status": "PASS"
+    },
+    {
+      "command": "ruff check .",
+      "status": "PASS",
+      "evidence": "All checks passed!"
+    },
+    {
+      "command": "pytest -q",
+      "status": "PASS",
+      "evidence": "30 passed, 1 warning"
+    },
+    {
+      "command": "docker compose down -v",
+      "status": "BLOCKED",
+      "evidence": "docker: command not found"
+    },
+    {
+      "command": "docker compose up --build -d",
+      "status": "BLOCKED",
+      "evidence": "docker: command not found"
+    },
+    {
+      "command": "alembic upgrade head",
+      "status": "BLOCKED",
+      "evidence": "Connect call failed localhost:5432"
+    },
+    {
+      "command": "python -m app.scripts.validate_dsm_files --release-path data/dsm/releases/dsm5_operational_2026_05_28",
+      "status": "PASS",
+      "evidence": "Documents: 160; Minimal: 26; Excluded: 24; Errors: 0"
+    },
+    {
+      "command": "python -m app.scripts.import_dsm --release-path data/dsm/releases/dsm5_operational_2026_05_28 --activate",
+      "status": "BLOCKED",
+      "evidence": "Connect call failed localhost:5432"
+    },
+    {
+      "command": "uvicorn app.main:app --host 127.0.0.1 --port 8000",
+      "status": "PASS",
+      "evidence": "Application startup complete"
+    },
+    {
+      "command": "curl http://localhost:8000/openapi.json",
+      "status": "PASS",
+      "evidence": "HTTP 200"
+    },
+    {
+      "command": "curl http://localhost:8000/docs",
+      "status": "PASS",
+      "evidence": "HTTP 200"
+    },
+    {
+      "command": "curl http://localhost:8000/api/health",
+      "status": "PASS",
+      "evidence": "HTTP 200 database unavailable"
+    },
+    {
+      "command": "curl http://localhost:8000/api/dsm/versions/current",
+      "status": "BLOCKED",
+      "evidence": "HTTP 500 without DB"
+    },
+    {
+      "command": "curl \"http://localhost:8000/api/dsm/documents?chapter_id=01\"",
+      "status": "BLOCKED",
+      "evidence": "HTTP 500 without DB"
+    },
+    {
+      "command": "curl -X POST http://localhost:8000/api/dsm/search ...",
+      "status": "BLOCKED",
+      "evidence": "HTTP 500 without DB"
+    },
+    {
+      "command": "curl http://localhost:8000/api/dsm/graph/status",
+      "status": "PASS",
+      "evidence": "HTTP 200"
+    },
+    {
+      "command": "python -m app.scripts.export_dsm_graph --version-id active --persist",
+      "status": "BLOCKED",
+      "evidence": "Connect call failed localhost:5432"
+    },
+    {
+      "command": "python -m app.scripts.validate_dsm_graph --version-id active",
+      "status": "FAIL",
+      "evidence": "unrecognized arguments: --version-id"
+    },
+    {
+      "command": "curl http://localhost:8000/static/graph_test.html",
+      "status": "PASS",
+      "evidence": "HTTP 200"
+    }
+  ],
+  "recommendations": [
+    "Re-run audit with Docker or PostgreSQL/pgvector available.",
+    "Set debug default to false and verify production error handling.",
+    "Align embedding dimension across settings, model and migration.",
+    "Resolve diagnostic_chunks FK mismatch between model and migration.",
+    "Fix README item_id example for TDAH.",
+    "Clarify or alias RAG request field question/query.",
+    "Standardize graph validation CLI documentation.",
+    "Document agent endpoints or hide/protect if experimental."
+  ]
+}
